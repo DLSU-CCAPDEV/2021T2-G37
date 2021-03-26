@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Registration Page</title>
-	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<title> Login Page</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -15,15 +15,21 @@
 		</div>
 
 		<form class="form">
-			<input type="text" placeholder="Full Name" class="input" id="fullname" name="fullname">
-			<input type="text" placeholder="Username" class="input" id="username" name="username">
 			<input type="email" placeholder="Email address" class="input"id="email" name="email">
 			<input type="password" placeholder="Password" class="input" id="password" name="password">
-			<input type="text" placeholder="Delivery Address" class="input" id="deladdr" name="deladdr">
-			<input type="text" placeholder="Contact Number" class="input" d="contactnum" name="contactnum">
-
-		<button id="registerbtn" onclick="alert('You are now a registered user!')"> Sign me up! </button>
 	</form>	
+		<button id="loginbtn">Login</button>
+
+	<div id="remember-me">
+		<input type="checkbox" name="remember">
+		<label for="remember-me"> Remember me </label>
+	</div>
+
+	<div id="footer"> 
+		<a href="register.html" id="noacc"> Don't have an account? Register now! </a><br>
+		<a href="#" id="forgotpass"> Forgot password? </a>
+
+	</div>
 </div>
 
 </body>
