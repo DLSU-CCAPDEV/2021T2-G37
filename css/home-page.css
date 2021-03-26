@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Overpass:wght@200&display=swap');
+
+body {
+    margin: 0px;
+}
+
+.header {
+    background-color: #fb956c;
+    height: 180px;
+}
+
+#logo {
+    margin-top: 55px;
+    width: 100px;
+}
+
+#top-logo {
+    display: flex;
+    justify-content: center;
+}
+
+#container1 {
+    background-color: white;
+    height: 40px;
+}
+
+.navlink {
+    margin-left: 150px;
+    font-size: 25px;
+    font-family: 'Bebas Neue', cursive;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.navbar {
+    margin: 15px;
+}
+
+#navbar1 {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-top: 7px;
+}
+
+#navbar2 {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright{
+    float: right;
+}
+
+.navbtn {
+    margin-top: -140px;
+    margin-left: 200px;
+	margin-right: 4px;
+	background-repeat: no-repeat;
+	width: 375px;
+	height: 375px;
+    zoom: 7%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#account {
+    background-image: url("images/spritesheet.png");
+    background-position: 0px 0px;
+}
+
+#wishlist {
+    background-image: url("images/spritesheet.png");
+    background-position: -1110px 0px;
+
+}
+
+#cart {
+    background-image: url("images/spritesheet.png");
+    background-position: -370px 0px;
+}
+
+#fitem {
+    margin-left: 20px;
+    position: relative;
+    top: -4px;
+}
+
+#search {
+    background-image: url("images/spritesheet.png");
+    background-position: -740px 0px;
+}
+
+#banner {
+    background-image: url("images/bg.jpg");
+	height: 750px;
+    background-size: 3000px;
+	background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#button {
+    display: flex;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 270px;
+}
+
+#discover {
+    font-family: 'Overpass', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+#shopnow {
+    font-family: 'Overpass', sans-serif;
+    font-size: 18px;
+    color: white;
+    height: 60px;
+    width: 170px;
+    background: none;
+    border: 3px solid white;
+    border-radius: 15px;
+}
+
+.content {
+    background-color: white;
+    height: 900px;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+}
+
+.listings {
+    margin: 100px;
+    height: 500px;
+    width: 500px;
+    zoom: 70%;
+}
+
+#thumb1 {
+    background-image: url("images/spritesheet2.png");
+    background-position: 0px 0px;
+}
+
+#thumb2 {
+    background-image: url("images/spritesheet2.png");
+    background-position: -500px 0px;
+}
+
+#thumb3 {
+    background-image: url("images/spritesheet2.png");
+    background-position: -1000px 0px;
+}
+
+.details {
+    font-family: 'Overpass', sans-serif;
+	width: 77px;
+    display: flex;
+	justify-content: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+.name {
+    font-size: 22px;
+}
+
+.price {
+    font-size: 15px;
+}
+
+.footer {
+    background-color: #4d4845;
+    height: 150px;
+}
