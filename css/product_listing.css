@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Overpass:wght@200&display=swap');
+
+body {
+    font-family: 'Overpass', sans-serif;
+    margin: auto;
+    vertical-align: middle;
+}
+
+/** the hr in between the home and the product itself */
+#hr_home{
+    width: 100%;
+}
+
+/*The two columns of the product and the product description*/
+#divwhole {
+    margin-top: 30px;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-bottom: 50px;
+    display: flex;
+}
+  
+#divleft {
+    flex: 20%;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#divright{
+    flex: 30%;
+    
+}
+
+/*Product Image*/
+#prod_image{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+/*Product Name and Price; used for their spacing*/
+.prod_title{
+    margin-bottom: 0px;
+    margin-top: 2px;
+}
+#qty_sold{
+    text-align: right;
+    font-weight: bold;
+}
+
+/*Product Description*/
+#prod_desc{
+    font-size: 16px; 
+    text-align: justify; 
+    margin-bottom: 0px;
+    line-height: 25px;
+}
+#qty_sold{
+    margin-top: 15px;
+    text-align: right;
+    font-weight: bold;
+}
+
+/*Color, Size, QTY text*/
+.prod_details{
+    margin-top: 20px;
+    display: flex;
+}
+.prod_details_text{ 
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+/*Variation Buttons*/
+.btnv {
+    margin-right: 10px;
+    border: none; /* Remove borders */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+    height: 40px;
+    width: 40px;
+  }
+.btnv:focus{ border: 2px solid black;}
+#var1 {background-color: #a09b5e;} #var1:hover {background-color: #b4ae6b;}
+#var2 {background-color: #728b4a;} #var2:hover {background: #8ca860;}
+#var3 {background-color: #70342f;} #var3:hover {background: #8f433c;}
+#var4 {background-color: #444874;} #var4:hover {background: #676db1;}
+
+/*Size Buttons*/
+.btns {
+    margin-right: 10px;
+    border: 1.5px solid black;
+    border-color: black;
+    background-color: white;
+    font-size: 14px;
+    height: 50px;
+    width: 60px;
+    cursor: pointer;
+  }
+.btns:hover{ background: rgb(53, 52, 52); color: white;}
+.btns:focus{ background: rgb(0, 0, 0); color: white;}
+ 
+/*QTY form*/
+input[type=number] {
+    padding: 10px;
+    width: 70px;
+    text-align: center;
+  }
+
+/*Wishlist, Add to Cart, Buy Buttons*/
+.divbtnend{/*container of all buttons indicated right above*/
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    
+}
+.btnend{/*refers to each button indicated right above*/
+    margin-top: 20px;
+    margin-right: 8px;
+    border: none;
+    font-size: 25px; 
+    font-weight: bold;
+    cursor: pointer;
+    padding: 15px 20px;
+    height: 70px;
+  }
+
+/*wishlist button*/
+#btnwishlist {
+    color: black; 
+    background-color: white;
+    font-size: 40px;
+}
+#btnwishlist:hover { color: rgb(250, 74, 74);}
+#btnwishlist:focus{ color: red; border: none;}
+
+/*add to cart button*/
+#btncart {
+    background-color: black;
+    color: white;
+    width: 190px;
+  }
+#btncart:hover {background-color: rgb(44, 42, 42)}
+
+/*buy button*/
+#btnbuy {
+    background-color: rgb(200, 10, 10);
+    color: white;
+    width: 110px;
+  }
+#btnbuy:hover {background-color: rgb(233, 22, 22)}
+
+/*Comments Box*/
+.divcommentwhole{ /*container of all 5 comments*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 65%;
+}
+.divcomment{ /*container per comment*/
+    padding: 0px 10px;
+}
+.rating{
+    margin-top: 15px;
+    margin-bottom: 3px;
+}
+.nameofposter{
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.comment{/*whole text of comment*/
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+#viewcomments{/*view all comments button*/
+    margin-top: 15px;
+    margin-left: auto;
+	margin-right: auto;
+    display: flex;
+    border: 1.5px solid black;
+    border-color: black;
+    background-color: white;
+    font-size: 16px;
+    padding: 12px 25px;
+    cursor: pointer;
+}
+#viewcomments:hover{ background: rgb(53, 52, 52); color: white;}
+#viewcomments:focus{ background: rgb(0, 0, 0); color: white;}
+
+/* HEADER START ---------------------- */
+.header {
+    background-color: #fb956c;
+    height: 180px;
+    margin: 0px;
+}
+
+#logo {
+    margin-top: 55px;
+    width: 100px;
+}
+
+#top-logo {
+    display: flex;
+    justify-content: center;
+}
+
+#container1 {
+    background-color: white;
+    height: 40px;
+}
+
+.navlink {
+    margin-left: 150px;
+    font-size: 25px;
+    font-family: 'Bebas Neue', cursive;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.navbar {
+    margin: 15px;
+}
+
+#navbar1 {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-top: 7px;
+}
+
+#navbar2 {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright{
+    float: right;
+}
+
+.navbtn {
+    margin-top: -140px;
+    margin-left: 200px;
+	margin-right: 4px;
+	background-repeat: no-repeat;
+	width: 375px;
+	height: 375px;
+    zoom: 7%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#account {
+    background-image: url("../images/spritesheet.png");
+    background-position: 0px 0px;
+}
+
+#wishlist {
+    background-image: url("../images/spritesheet.png");
+    background-position: -1110px 0px;
+
+}
+
+#cart {
+    background-image: url("../images/spritesheet.png");
+    background-position: -370px 0px;
+}
+
+#fitem {
+    margin-left: 20px;
+    position: relative;
+    top: -4px;
+}
+
+#search {
+    background-image: url("../images/spritesheet.png");
+    background-position: -740px 0px;
+}
+/* HEADER END -------------------------- */
+
+/* FOOTER START ------------------------- */ 
+footer {
+    background-color: #4d4845;
+    color: white;
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    bottom: 10;
+}
+
+#hr_footer {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 70px;
+}
+
+#footer1 {
+    margin-left: 100px;
+    font-family: 'Overpass', sans-serif;
+    font-size: 14px;
+}
+/* FOOTER END --------------------------- */
