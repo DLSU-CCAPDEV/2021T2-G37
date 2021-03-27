@@ -59,6 +59,10 @@ body {
 	right: 55px;
 }
 
+#loginbtn:hover {
+	cursor: pointer;
+}
+
 #noacc {
 	text-decoration: none;
 	color: black;
