@@ -6,7 +6,7 @@ body {
     min-height: fit-content;
 }
 
-// HEADER START ----------------------
+/* HEADER START ---------------------- */
 .header {
     background-color: #fb956c;
     height: 180px;
@@ -101,7 +101,7 @@ ul {
     background-image: url("../images/spritesheet.png");
     background-position: -740px 0px;
 }
-// HEADER END --------------------------
+/* HEADER END -------------------------- */
 
 #banner {
     background-image: url("../images/bg.png");
@@ -189,7 +189,7 @@ ul {
     margin-bottom: 70px;
 }
 
-// FOOTER START -------------------------
+/* FOOTER START ------------------------- */ 
 footer {
     background-color: #4d4845;
     color: white;
@@ -210,4 +210,4 @@ hr {
     font-family: 'Overpass', sans-serif;
     font-size: 14px;
 }
-// FOOTER END ---------------------------
+/* FOOTER END --------------------------- */
