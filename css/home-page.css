@@ -10,6 +10,7 @@ body {
 .header {
     background-color: #fb956c;
     height: 180px;
+    margin: 0px;
 }
 
 #logo {
