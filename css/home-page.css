@@ -74,18 +74,18 @@ ul {
 }
 
 #account {
-    background-image: url("images/spritesheet.png");
+    background-image: url("../images/spritesheet.png");
     background-position: 0px 0px;
 }
 
 #wishlist {
-    background-image: url("images/spritesheet.png");
+    background-image: url("../images/spritesheet.png");
     background-position: -1110px 0px;
 
 }
 
 #cart {
-    background-image: url("images/spritesheet.png");
+    background-image: url("../images/spritesheet.png");
     background-position: -370px 0px;
 }
 
@@ -96,12 +96,12 @@ ul {
 }
 
 #search {
-    background-image: url("images/spritesheet.png");
+    background-image: url("../images/spritesheet.png");
     background-position: -740px 0px;
 }
 
 #banner {
-    background-image: url("images/bg.jpg");
+    background-image: url("../images/bg.jpg");
 	height: 750px;
     background-size: 3000px;
 	background-position: center center;
@@ -152,17 +152,17 @@ ul {
 }
 
 #thumb1 {
-    background-image: url("images/spritesheet2.png");
+    background-image: url("../images/spritesheet2.png");
     background-position: 0px 0px;
 }
 
 #thumb2 {
-    background-image: url("images/spritesheet2.png");
+    background-image: url("../images/spritesheet2.png");
     background-position: -500px 0px;
 }
 
 #thumb3 {
-    background-image: url("images/spritesheet2.png");
+    background-image: url("../images/spritesheet2.png");
     background-position: -1000px 0px;
 }
 
