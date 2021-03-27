@@ -3,6 +3,7 @@
 
 body {
     margin: 0px;
+    min-height: fit-content;
 }
 
 .header {
@@ -136,16 +137,21 @@ ul {
 
 .content {
     background-color: white;
-    height: 900px;
-}
-
-.thumbnails {
+    min-height: fit-content;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
+.thumbnails {
+    text-align: center;
+    vertical-align: top;
+    display: inline-block;
+    width: 500px;
+}
+
 .listings {
-    margin: 100px;
+    margin: 70px;
     height: 500px;
     width: 500px;
     zoom: 70%;
@@ -166,13 +172,10 @@ ul {
     background-position: -1000px 0px;
 }
 
-.details {
+.name, .price {
     font-family: 'Overpass', sans-serif;
-	width: 77px;
-    display: flex;
-	justify-content: center;
-    flex-direction: row;
-    text-align: center;
+    display: block;
+    margin-left: -35px;
 }
 
 .name {
@@ -181,9 +184,26 @@ ul {
 
 .price {
     font-size: 15px;
+    margin-bottom: 70px;
 }
 
-.footer {
+footer {
     background-color: #4d4845;
+    color: white;
     height: 150px;
+    width: 100%;
+    position: absolute;
+    bottom: 10;
+}
+
+hr {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 70px;
+}
+
+#footer1 {
+    margin-left: 100px;
+    font-family: 'Overpass', sans-serif;
+    font-size: 14px;
 }
