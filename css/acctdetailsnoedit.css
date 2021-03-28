@@ -36,6 +36,10 @@ body {
     text-decoration: inherit;
 }
 
+ul li a:hover{
+    color: #D48166;
+}
+
 .navbar {
     margin: 15px;
 }
