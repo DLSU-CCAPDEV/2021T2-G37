@@ -149,22 +149,6 @@ h2 {
 	width: 80%;
 }
 
-.btn {
-	font-family: 'Bebas Neue', cursive;
-	font-size: 20px;
-	border: 0;
-	background-color: #D48166;
-	color: white;
-	cursor: pointer;
-	position: relative;
-	top: 40px;
-	width: 82%;
-}
-
-.btn:hover {
-	color: #373A36;
-}
-
 /* FOOTER START ------------------------- */ 
 footer {
     background-color: #4d4845;
@@ -191,6 +175,8 @@ hr {
     font-family: 'Overpass', sans-serif;
 }
 /* FOOTER END --------------------------- */
+
+
 
 /*DROPDOWN MENU START*/
 
@@ -252,4 +238,3 @@ hr {
 }
 
 /*DROPDOWN MENU END*/
-

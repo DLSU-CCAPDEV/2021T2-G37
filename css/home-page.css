@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Overpass:wght@200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 body {
     margin: 0px;
 }
@@ -33,6 +33,10 @@ body {
     font-family: 'Bebas Neue', cursive;
     color: inherit;
     text-decoration: inherit;
+}
+
+ul li a:hover{
+    color: #D48166;
 }
 
 .navbar {
@@ -124,6 +128,8 @@ ul {
     font-family: 'Overpass', sans-serif;
     color: white;
     text-align: center;
+    position: relative;
+    left: 70px;
 }
 
 #shopnow {
@@ -135,6 +141,8 @@ ul {
     background: none;
     border: 3px solid white;
     border-radius: 15px;
+    position: relative;
+    left: 70px;
 }
 
 .content {
@@ -211,3 +219,65 @@ hr {
     font-size: 14px;
 }
 /* FOOTER END --------------------------- */
+
+
+/*DROPDOWN MENU START*/
+
+.action {
+    position: relative;
+    left: 105px;
+}
+
+/*account icon */
+.action .profile {
+    position: relative;
+    left: 35px;
+    cursor: pointer;
+}
+
+/*dropdownmenu*/
+.action .dropdownmenu {
+    position: relative;
+    top: 15px;
+    right: 25px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    visibility: hidden;
+}
+
+.action .dropdownmenu.active {
+    visibility: visible;
+}
+
+
+/*arrow in dropdownmenu*/
+.action .dropdownmenu::before {
+    position: absolute;
+    content: '';
+    top: -5px;
+    right: 99.5px;
+    width: 8px;
+    height: 8px;
+    background: white;
+    transform: rotate(45deg);
+}
+
+.action .dropdownmenu li {
+    list-style: none;
+    padding: 5px;
+}
+
+.action .dropdownmenu li a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500px;
+}
+
+/*change color hover over drop down menu options*/
+.action .dropdownmenu li a:hover {
+    color: #D48166
+}
+
+/*DROPDOWN MENU END*/
