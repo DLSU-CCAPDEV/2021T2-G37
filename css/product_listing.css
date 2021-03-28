@@ -11,6 +11,7 @@ body {
 /** the hr in between the home and the product itself */
 #hr_home{
     width: 100%;
+    margin-top: 0px;
 }
 
 /*The two columns of the product and the product description*/
@@ -126,7 +127,8 @@ input[type=number] {
     cursor: pointer;
     padding: 15px 20px;
     height: 70px;
-  }
+}
+.btnend:focus{ outline: none;}
 
 /*wishlist button*/
 #btnwishlist {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <meta name="description" content="Product Listing">
-    <meta name="keyword" content="Product Listin">
+    <meta name="keyword" content="Product Listing">
     <meta name="author" content="MANDADERO, Clarissa Mae S.">
     <head>
         <title>Product Listing</title>
@@ -18,22 +18,12 @@
         <div class="floatleft">
             <ul class="navbar" id="navbar1">
                 <li><a class="navlink" href="home.html">Home</a></li>
-                 <li><a class="navlink" href="register.html">Register</a></li>
-                 <li><a class="navlink" href="login.html">Login</a></li>
+                <li><a class="navlink" href="categories.html">Categories</a></li>
             </ul>
         </div>
         <div class="floatright">
             <ul class="navbar" id="navbar2">
-               <div class="action">
-                        <div class="profile" onclick="dropdownToggle();">
-                            <li class="navbtn" id="account"></li></a>
-                        </div>
-                    <div class="dropdownmenu">
-                        <li> <a href="acctdetailsnoedit.html"> View Account Details </a> </li>
-                        <li> <a href="acctdetails.html"> Edit Account Details </a> </li>
-                        <li> <a href="home-page.html"> Logout </a> </li>
-                    </div>
-                </div>
+                <a class="nav" href="account.html"><li class="navbtn" id="account"></li></a>
                 <a class="nav" href="wishlist.html"><li class="navbtn" id="wishlist"></li></a>
                 <a class="nav" href="cart.html"><li class="navbtn" id="cart"></li></a>
                 <form>
@@ -158,15 +148,9 @@
             <hr>
         </div>
 
-        <button id="viewcomments"> View All Comments </button>
+        <button id="viewcomments"> View All Reviews </button>
     </div>
     <!--div comment end-->
-     <script>
-        function dropdownToggle(){
-            const dropdownToggle = document.querySelector('.dropdownmenu');
-            dropdownToggle.classList.toggle('active');
-        }
-    </script>
 </body>
 
 <!-- FOOTER -->
@@ -175,4 +159,3 @@
     <div id="footer1"><p>©  Clothing & Science</p></div>
 </footer>
 <!-- FOOTER END -->
-</html>
