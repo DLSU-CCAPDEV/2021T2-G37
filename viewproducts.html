@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
-<meta name="description" content="Mini Challenge 1">
-<meta name="keyword" content="CCAPDEV - Mini Challenge 1">
-<meta name="author" content="DESEMBRANA, Anna Patricia B.">
 <head>
-    <title>C&S Home Page</title>
-    <link rel="stylesheet" type="text/css" media="all" href="css/home-page.css">
+    <title>Browse Products</title>
+    <link rel="stylesheet" type="text/css" media="all" href="css/viewproducts.css">
 </head>
 <body>
-    <div id="homepage">
+    <div id="container">
         <!-- HEADER -->
         <div class="header">
             <div id="top-logo">
@@ -45,16 +42,7 @@
             </div>
         </div>
         <!-- HEADER END -->
-        <div id="banner">
-            <div id="button">
-                <h1 id="discover">Discover the Collection</h1>
-                <a href="viewproducts.html">
-                <button id="shopnow" >SHOP NOW</button>
-                </a>
-            </div> 
-        </div>
-
-        <div class="content">
+         <div class="content">
             <div class="thumbnails">
                 <div class="listings" id="thumb1"></div>
                 <span class="name" id="no1">Long Sleeve Sweatshirt</span>
@@ -72,20 +60,30 @@
                 <span class="name" id="no3"> Men's Socks </span>
                 <span class="price" id="no1"> P250.00 </span>
             </div>
+
+              <div class="thumbnails">
+                <div class="listings" id="thumb4"></div>
+                <span class="name" id="no4"> Relaxed Fit Blouse  </span> 
+                <span class="price" id="no1"> P650.00 </span>
+            </div>
+
+            <div class="thumbnails">
+                <div class="listings" id="thumb5"></div>
+                <span class="name" id="no4"> High Rise Denim Jeans </span> 
+                <span class="price" id="no1"> P799.00 </span>
+            </div>
         </div>
-        
-        <!-- FOOTER -->
-        <footer>
+
+         <footer>
             <hr>
             <div id="footer1"><p>©  Clothing & Science</p></div>
         </footer>
-        <!-- FOOTER END -->
     </div>
     <script>
-    	function dropdownToggle(){
-    		const dropdownToggle = document.querySelector('.dropdownmenu');
-    		dropdownToggle.classList.toggle('active');
-    	}
+        function dropdownToggle(){
+            const dropdownToggle = document.querySelector('.dropdownmenu');
+            dropdownToggle.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
