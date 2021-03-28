@@ -11,6 +11,7 @@ body {
     background-color: #fb956c;
     height: 180px;
     margin: 0px;
+    width: 1570px;
 }
 
 #logo {
@@ -112,7 +113,7 @@ footer {
     background-color: #4d4845;
     color: white;
     height: 150px;
-    width: 100%;
+    width: 1570px;
     position: absolute;
     bottom: 10;
 }
