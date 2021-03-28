@@ -103,6 +103,57 @@ ul {
 }
 /* HEADER END -------------------------- */
 
+.content {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Overpass', sans-serif;
+}
+
+h1 {
+    width: 800px;
+    text-align: left;
+}
+
+#button {
+    
+}
+
+#add-all {
+    width: 200px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    text-align: left;
+}
+
+.delete {
+    background: none;
+    border: none;
+    background-image: url('../images/spritesheet.png');
+    background-position: -1490px 0px;
+    height: 375px;
+    width: 375px;
+    zoom: 10%;
+    margin-top: 750px;
+}
+
+.wish {
+    background-color: #e6e2dd;
+    height: 200px;
+    width: 800px;
+    margin: 10px;
+}
+
+.image {
+    width: 170px;
+    height: 170px;
+    margin: 15px;
+}
 
 
 /* FOOTER START ------------------------- */ 
