@@ -29,7 +29,7 @@ body {
 }
 
 .navlink {
-    margin-left: 150px;
+    margin-left: 80px;
     font-size: 25px;
     font-family: 'Bebas Neue', cursive;
     color: inherit;
@@ -109,6 +109,8 @@ ul {
 	height: 750px;
 	width: 540px;
 	margin: auto;
+    position: relative;
+    bottom: 10px;
 }
 
 .profile-info {
