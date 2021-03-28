@@ -25,7 +25,16 @@
             </div>
             <div class="floatright">
                 <ul class="navbar" id="navbar2">
-                    <a class="nav" href="acctdetails.html"><li class="navbtn" id="account"></li></a>
+                    <div class="action">
+                    	<div class="profile" onclick="dropdownToggle();">
+                    		<li class="navbtn" id="account"></li></a>
+                    	</div>
+                    <div class="dropdownmenu">
+                    	<li> <a href="acctdetailsnoedit.html"> View Account Details </a> </li>
+                    	<li> <a href="acctdetails.html"> Edit Account Details </a> </li>
+                    	<li> <a href="#"> Logout </a> </li>
+                    </div>
+                </div>
                     <a class="nav" href="wishlist.html"><li class="navbtn" id="wishlist"></li></a>
                     <a class="nav" href="cart.html"><li class="navbtn" id="cart"></li></a>
                     <form>
@@ -70,5 +79,11 @@
         </footer>
         <!-- FOOTER END -->
     </div>
+    <script>
+    	function dropdownToggle(){
+    		const dropdownToggle = document.querySelector('.dropdownmenu');
+    		dropdownToggle.classList.toggle('active');
+    	}
+    </script>
 </body>
 </html>
