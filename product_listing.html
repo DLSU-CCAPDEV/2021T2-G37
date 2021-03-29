@@ -6,6 +6,19 @@
     <head>
         <title>Product Listing</title>
         <link rel="stylesheet" type="text/css" href="css/product_listing.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <!--Responsible for the slideshow of the product images-->
+        <script>
+            function showSlides(n) {
+                var i;
+                var allImg = document.getElementsByClassName("main_prod_image"); //gets all the images to hide and show later
+                for (i = 0; i < allImg.length; i++) {
+                    allImg[i].style.display = "none"; //hides all product images that were not clicked
+                }    
+                allImg[n].style.display = "block"; //shows the product image that was clicked
+            }
+        </script>
     </head>
 
     <!--header start-->
@@ -39,9 +52,45 @@
     <hr id="hr_home">
     <div id="divwhole">
         <div id="divleft">
-            <div>
-                <img id="prod_image" src="images/product1a.jpg" alt="firstpic" height= "100%" width="100%" object-fit="contain">
+            <!--big product images start-->
+            <div class="divmain_prod">
+                <div id="main_img" class="main_prod_image">
+                    <img id="main_prod_image1" src="images/product1a.jpg" alt="firstpic" height= "100%" width="100%">
+                </div>
+    
+                <div class="main_prod_image">
+                    <img id="prod_image2" src="images/product1b.jpg" alt="secondimage" width="100%" object-fit="contain">
+                </div>
+    
+                <div class="main_prod_image">
+                    <img id="prod_image3" src="images/product1c.jpg" alt="thirdimage" width="100%" object-fit="contain">
+                </div>
+    
+                <div class="main_prod_image">
+                    <img id="prod_image4" src="images/product1d.jpg" alt="fourthimage" width="100%" object-fit="contain">
+                </div>
             </div>
+            <!--big product images end-->
+    
+            <!--small product images start-->
+            <div class="divsmall_prod_image">
+                <div class="small_prod_image">
+                    <img id="prod_image1" class="indiv_small_img" src="images/product1a.jpg" alt="firstimage" width="100%" object-fit="contain" onclick="showSlides(0)">
+                </div>
+    
+                <div class="small_prod_image">
+                    <img id="prod_image2" class="indiv_small_img" src="images/product1b.jpg" alt="secondimage" width="100%" object-fit="contain"onclick="showSlides(1)">
+                </div>
+    
+                <div class="small_prod_image">
+                    <img id="prod_image3" class="indiv_small_img" src="images/product1c.jpg" alt="thirdimage" width="100%" object-fit="contain"onclick="showSlides(2)">
+                </div>
+    
+                <div class="small_prod_image">
+                    <img id="prod_image4" class="indiv_small_img" src="images/product1d.jpg" alt="fourthimage" width="100%" object-fit="contain"onclick="showSlides(3)">
+                </div>
+            </div>
+            <!--small product images end-->
 
         </div>
         <!--div left end-->
@@ -102,6 +151,7 @@
 
     <!--div comment start-->
     <div class="divcommentwhole">
+        <button id="writereview" class="btnreviews">WRITE A REVIEW</button>
         <hr>
         <div class="divcomment">
             <h3 class="rating"> Rating: 5.0 </h3>
@@ -154,7 +204,7 @@
         </div>
 
         <a class="navlink" href="all_reviews.html">
-        <button id="viewcomments"> View All Reviews</button>
+        <button id="viewcomments" class="btnreviews"> View All Reviews</button>
         </a>
     </div>
     <!--div comment end-->

@@ -32,14 +32,35 @@ body {
 
 #divright{
     flex: 30%;
-    
 }
 
 /*Product Image*/
-#prod_image{
+#main_prod_image{
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+}
+.divsmall_prod_image{
+    margin-top: 0px;
+    display: flex;
+    height: 100px;
+}
+.small_prod_image{
+    width: 23%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.indiv_small_img:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+/*Responsible for the hide and show of the product image slideshow*/
+#main_img{
+    display: block;
+}
+.main_prod_image{
+    display: none;
 }
 
 /*Product Name and Price; used for their spacing*/
@@ -85,10 +106,10 @@ body {
     width: 40px;
   }
 .btnv:focus{ border: 2px solid black;}
-#var1 {background-color: #a09b5e;} #var1:hover {background-color: #b4ae6b;}
-#var2 {background-color: #728b4a;} #var2:hover {background: #8ca860;}
-#var3 {background-color: #70342f;} #var3:hover {background: #8f433c;}
-#var4 {background-color: #444874;} #var4:hover {background: #676db1;}
+#var1 {background-color: #aebcc9;} #var1:hover {background-color: #b6c6d4;}
+#var2 {background-color: #677a98;} #var2:hover {background: #839bc2;}
+#var3 {background-color: #3b4053;} #var3:hover {background: #5f6786;}
+#var4 {background-color: black;} #var4:hover {background: rgb(66, 65, 65);}
 
 /*Size Buttons*/
 .btns {
@@ -177,8 +198,19 @@ input[type=number] {
     margin-top: 0px;
     margin-bottom: 15px;
 }
-#viewcomments{/*view all comments button*/
-    margin-top: 15px;
+#writereview{
+    margin-bottom: 5px;
+    width: 80%;
+    justify-content: center;
+    font-weight: bold;
+}
+#writereview:hover{
+    color:rgb(144, 144, 144);
+    border-color: rgb(144, 144, 144);
+}
+.btnreviews{/*view all comments button*/
+    border-radius: 2px;
+    margin-top: 0px;
     margin-left: auto;
 	margin-right: auto;
     display: flex;
@@ -190,7 +222,7 @@ input[type=number] {
     cursor: pointer;
 }
 #viewcomments:hover{ background: rgb(53, 52, 52); color: white;}
-#viewcomments:focus{ background: rgb(0, 0, 0); color: white;}
+.btnreviews:focus{ background: rgb(0, 0, 0); color: white;}
 
 /* HEADER START ---------------------- */
 .header {
