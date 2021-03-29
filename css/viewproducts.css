@@ -10,8 +10,8 @@ body {
 .header {
     background-color: #fb956c;
     height: 180px;
+    width: 100%;
     margin: 0px;
-    width: 1570px;
 }
 
 #logo {
