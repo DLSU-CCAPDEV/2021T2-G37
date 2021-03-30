@@ -63,3 +63,35 @@ body {
     margin-top: 0px;
     margin-bottom: 15px;
 }
+
+/*Edit and delete reviews button*/
+#divbtn_edit_delete{
+    margin-left: 78%;
+}
+.btn_edit_delete{
+    border: 1px solid rgb(170, 165, 165);
+    margin-top: 0px;
+    margin-right: 5px;
+    background-color: white;
+    font-size: 14px;
+    padding: 8px 15px;
+    cursor: pointer;
+    color:rgb(124, 122, 122);
+}
+#btn_edit:hover{
+    color: black;
+    border-color: black;
+}
+#btn_edit:focus{
+    color: white;
+    background-color: black;
+}
+#btn_delete:hover{
+    color: red;
+    border-color: red;
+}
+#btn_delete:focus{
+    color: white;
+    background-color: red;
+    outline: none;
+}

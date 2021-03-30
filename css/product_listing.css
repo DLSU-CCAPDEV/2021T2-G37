@@ -42,6 +42,7 @@ body {
 }
 .divsmall_prod_image{
     margin-top: 0px;
+    margin-bottom: 40px;
     display: flex;
     height: 100px;
 }
@@ -198,15 +199,23 @@ input[type=number] {
     margin-top: 0px;
     margin-bottom: 15px;
 }
+
+/*Write a review and view all reviews button*/
 #writereview{
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     width: 80%;
     justify-content: center;
     font-weight: bold;
+    color: rgb(124, 122, 122);
+    border-color: rgb(170, 165, 165);;
 }
 #writereview:hover{
-    color:rgb(144, 144, 144);
-    border-color: rgb(144, 144, 144);
+    color:black;
+    border-color: black;
+}
+#writereview:focus{
+    color: white;
+    background: black;
 }
 .btnreviews{/*view all comments button*/
     border-radius: 2px;
@@ -222,7 +231,39 @@ input[type=number] {
     cursor: pointer;
 }
 #viewcomments:hover{ background: rgb(53, 52, 52); color: white;}
-.btnreviews:focus{ background: rgb(0, 0, 0); color: white;}
+#viewcomments:focus{ background: rgb(0, 0, 0); color: white;}
+
+/*Edit and delete reviews button*/
+#divbtn_edit_delete{
+    margin-left: 80%;
+}
+.btn_edit_delete{
+    border: 1px solid rgb(170, 165, 165);
+    margin-top: 0px;
+    margin-right: 5px;
+    background-color: white;
+    font-size: 14px;
+    padding: 8px 15px;
+    cursor: pointer;
+    color:rgb(124, 122, 122);
+}
+#btn_edit:hover{
+    color: black;
+    border-color: black;
+}
+#btn_edit:focus{
+    color: white;
+    background-color: black;
+}
+#btn_delete:hover{
+    color: red;
+    border-color: red;
+}
+#btn_delete:focus{
+    color: white;
+    background-color: red;
+    outline: none;
+}
 
 /* HEADER START ---------------------- */
 .header {
