@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="Product Listing">
+    <meta name="keyword" content="Checkout Page">
+    <meta name="author" content="CRUZADA, Carla Jeannine O.">
+	<title> Checkout Page </title>
+	<link rel="stylesheet" type="text/css" href="css/checkoutpage.css">
+  	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<!-- HEADER -->
+        <div class="header">
+            <div id="top-logo">
+                <img id="logo" src="images/logo.png">
+            </div>
+        </div>
+        <div id="container1">
+            <div class="floatleft">
+                <ul class="navbar" id="navbar1">
+                    <li><a class="navlink" href="home-page.html">Home</a></li>
+                    <li><a class="navlink" href="register.html">Register</a></li>
+                    <li><a class="navlink" href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="floatright">
+                <ul class="navbar" id="navbar2">
+                   <div class="action">
+                        <div class="profile" onclick="dropdownToggle();">
+                            <li class="navbtn" id="account"></li></a>
+                        </div>
+                    <div class="dropdownmenu" id="dropmenu">
+                        <li> <a href="acctdetailsnoedit.html"> View Account Details </a> </li>
+                        <li> <a href="acctdetails.html"> Edit Account Details </a> </li>
+                        <li> <a href="home-page.html"> Logout </a> </li>
+                    </div>
+                </div>
+                    <a class="nav" href="wishlist.html"><li class="navbtn" id="wishlist"></li></a>
+                    <a class="nav" href="cart.html"><li class="navbtn" id="cart"></li></a>
+                    <form>
+                        <input type="text" id="fitem" name="fname">
+                    </form>
+                    <a class="nav" href="/search.html"><li class="navbtn" id="search"></li></a>
+                </ul>
+            </div>
+        </div>
+        <!-- HEADER END -->
+       <div class="container">
+            <div class="billing-info">
+                <h1> Billing Details </h1>
+                <h2> Name</h2>
+                <input type="text" class="input" value="Jane Doe" readonly="readonly">
+                <h2> Email</h2>
+                <input type="Email" class="input" value="example@example.com" readonly="readonly">
+                <h2> Delivery Address</h2>
+                <input type="text" class="input" value="B13 L15 Sapphire St. San Pedro, Laguna" readonly="readonly">
+                <h2>Contact Number</h2>
+                <input type="text" class="input" value="09235673413" readonly="readonly">
+
+                <h1> Mode of Payment </h1>
+                <form>
+                  <select id="selectoptions" onchange="choseCredit(this)">
+                      <option value="1"> Credit Card</option>
+                       <option value="2"> Cash On Delivery</option>
+                      <option value="3"> GCASH</option>
+
+                  </select> 
+                </form>
+
+                <div class="creditcardoption" id="creditcardscreen">
+                 <div class="cardcontainer">
+                     <i class="fa fa-cc-visa" style="color: navy;"> </i>
+                     <i class="fa fa-cc-mastercard" style="color: red;"> </i>
+                 </div>
+                 <h2> Name of Cardholder </h2>
+                 <input type="text" class="input" placeholder="Juan Dela Cruz">
+                 <h2> Credit Card Number </h2>
+                 <input type="text" class="input" placeholder="4444-2222-1111-9999">
+                 <h2> Expiry Month </h2>
+                 <input type="text" class="input" placeholder="5">
+                 <h2> Expiry Year </h2>
+                 <input type="text" class="input" placeholder="2023">
+                 <h2> CVV </h2>
+                 <input type="text" class="input" placeholder="911">
+
+                </div>
+                <button class="btn"> Checkout!</button>
+                <button class="btn">  Go Back </button>
+            </div>
+    </div>
+    
+	 <!-- FOOTER -->
+        <footer>
+            <hr>
+            <div id="footer1"><p>©  Clothing & Science </p></div>
+        </footer>
+        <!-- FOOTER END -->
+ <script>
+       function dropdownToggle(){
+            document.getElementById("dropmenu").classList.add("active");
+        }
+
+       function choseCredit(){
+        chosenval = document.getElementById("selectoptions").value;
+        // alert(chosenval);
+
+        if (chosenval != 1) {
+            document.getElementById("creditcardscreen").style.display = "none"; // if not credit card option, do not show
+
+        }
+        else {
+            document.getElementById("creditcardscreen").style.display = ""; // show if credit card option
+        }
+       }
+
+    </script>
+</body>
+</html>
