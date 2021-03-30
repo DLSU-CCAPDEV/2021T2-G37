@@ -36,7 +36,16 @@
         </div>
         <div class="floatright">
             <ul class="navbar" id="navbar2">
-                <a class="nav" href="account.html"><li class="navbtn" id="account"></li></a>
+                <div class="action">
+                        <div class="profile" onclick="dropdownToggle();">
+                            <li class="navbtn" id="account"></li></a>
+                        </div>
+                    <div class="dropdownmenu" id="dropmenu">
+                        <li> <a href="acctdetailsnoedit.html"> View Account Details </a> </li>
+                        <li> <a href="acctdetails.html"> Edit Account Details </a> </li>
+                        <li> <a href="home-page.html"> Logout </a> </li>
+                    </div>
+                </div>
                 <a class="nav" href="wishlist.html"><li class="navbtn" id="wishlist"></li></a>
                 <a class="nav" href="cart.html"><li class="navbtn" id="cart"></li></a>
                 <form>
@@ -247,3 +256,10 @@
     <div id="footer1"><p>©  Clothing & Science</p></div>
 </footer>
 <!-- FOOTER END -->
+
+<script>
+    function dropdownToggle(){
+            document.getElementById('dropmenu').classList.toggle('active');
+        }
+</script>
+</html>

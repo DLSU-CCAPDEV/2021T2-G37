@@ -29,7 +29,7 @@
                     	<div class="profile" onclick="dropdownToggle();">
                     		<li class="navbtn" id="account"></li></a>
                     	</div>
-                    <div class="dropdownmenu">
+                    <div class="dropdownmenu" id="dropmenu">
                     	<li> <a href="acctdetailsnoedit.html"> View Account Details </a> </li>
                     	<li> <a href="acctdetails.html"> Edit Account Details </a> </li>
                     	<li> <a href="home-page.html"> Logout </a> </li>
@@ -83,8 +83,7 @@
     </div>
     <script>
     	function dropdownToggle(){
-    		const dropdownToggle = document.querySelector('.dropdownmenu');
-    		dropdownToggle.classList.toggle('active');
+    	    document.getElementById('dropmenu').classList.toggle('active');
     	}
     </script>
 </body>
