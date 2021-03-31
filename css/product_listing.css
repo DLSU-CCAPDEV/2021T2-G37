@@ -413,6 +413,7 @@ footer {
     padding: 20px;
     border-radius: 15px;
     visibility: hidden;
+    margin-bottom: -150px;
 }
 
 .action .dropdownmenu.active {
