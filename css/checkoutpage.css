@@ -2,10 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Overpass:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-body {
+html, body {
     background-image: url("../images/bg.png");
-    margin: 0;
-    background-repeat: repeat-y;
+    margin: 0px;
+      max-width: 100%;
+    overflow-x: hidden;
+
 }
 
 /* HEADER START ---------------------- */
@@ -13,6 +15,7 @@ body {
     background-color: #fb956c;
     height: 180px;
     width: 100%;
+    margin: 0px;
 }
 
 #logo {
@@ -101,8 +104,7 @@ ul {
 #fitem {
     margin-left: 20px;
     position: relative;
-    top: 13px;
-    right: 100px;
+    top: -4px;
 }
 
 #search {
@@ -179,7 +181,7 @@ h2 {
     color: #373A36;
 }
 
-form {
+#modeofpaymentform {
     position: relative;
     left: 100px;
     bottom: 20px;
