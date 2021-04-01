@@ -13,6 +13,14 @@ a{
     text-decoration: none;
 }
 
+/*Sets the format for all form input*/
+input {
+    width: 60%;
+    height: 25px;
+    font-size: 14px;
+    text-align: center;
+}
+
 #divmain {
 	width: 430px;
 	margin-left: auto;
@@ -31,36 +39,85 @@ a{
 }
 /*Header text*/
 #txtheader{
-    margin-bottom: 8px;
     color: white;
     font-weight: bold;
     font-size: 25px;
+    margin-bottom: 0px;
 }
 
-/*Form*/
-input[type=text] {
-    width: 30%;
-    height: 25px;
-    font-size: 14px;
-    text-align: center;
-  }
+.div_prod_details{
+    margin-bottom: -5px;
+}
 
+.txt_titles{
+    color: white;
+    margin-bottom: 3px;
+    text-align: left;
+    margin-left: 19%;
+}
+
+/*Review div*/
+#div_pdesc{
+    width: 70%;
+    margin: auto;
+    color: white;
+}
+#form_pdesc{
+    margin-bottom: 20px;
+}
+
+#divimg{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.divimg_indiv{
+    margin-right: 10px;
+}
+
+#icon_trash{
+    color: white;
+    cursor: pointer;
+}
+#icon_trash:hover{ color: black; }
+#icon_trash:focus{ color: rgb(158, 154, 154); }
+
+
+/*Add Photos form*/
+#div_add_photos{
+    color: white;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+}
 /*Buttons*/
 .btna{
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 8px;
     margin-right: auto;
     margin-left: auto;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     font-size: 16px; 
     font-weight: bold;
     cursor: pointer;
     padding: 8px 8px;
     height: 40px;
-    width: 45px;
+    width: 70%;
     color: white;
     background-color: #4d4845;
     justify-content: center;
 }
 .btna:hover{ background-color: #535252;}
+.btna:focus{ outline: none;}
+
+#btndelete:hover{ background-color: rgb(165, 21, 21);}
+#btnsave:hover{ background-color: rgb(8, 100, 8);}
+
+#btnsave{
+    margin-top: 20px;
+}
+#btndone{
+    margin-bottom: 30px;
+}
+
