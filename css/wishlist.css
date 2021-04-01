@@ -118,18 +118,29 @@ h1 {
     text-align: left;
 }
 
-#button {
-    
-}
-
 #add-all {
     width: 200px;
-    background-color: red;
+    height: 25px;
+    background-color: rgb(200, 10, 10);
     color: white;
     border: none;
     font-family: 'Overpass', sans-serif;
     font-size: 15px;
-    text-align: left;
+}
+
+.wish {
+    background-color: #e6e2dd;
+    height: 200px;
+    width: 800px;
+    margin: 10px;
+}
+
+.image {
+    width: 500px;
+    height: 500px;
+    zoom: 35%;
+    margin: 25px;
+    border: 10px solid white;
 }
 
 .delete {
@@ -143,17 +154,36 @@ h1 {
     margin-top: 750px;
 }
 
-.wish {
-    background-color: #e6e2dd;
-    height: 200px;
-    width: 800px;
-    margin: 10px;
+.add-cart {
+    width: 375px;
+    height: 375px;
 }
 
-.image {
-    width: 170px;
-    height: 170px;
-    margin: 15px;
+#img1 {
+    background-image: url('../images/spritesheet2.png');
+    background-position: 0px 0px;
+}
+
+
+
+#img2 {
+    background-image: url('../images/spritesheet2.png');
+    background-position: -1000px 0px;
+}
+
+#img3 {
+    background-image: url('../images/spritesheet2.png');
+    background-position: -2000px 0px;
+}
+
+#img4 {
+    background-image: url('../images/spritesheet2.png');
+    background-position: -1500px 0px;
+}
+
+#img5 {
+    background-image: url('../images/spritesheet2.png');
+    background-position: -500px -500px;
 }
 
 
