@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 body {
-    margin: 0px;
+    background-image: url("../images/bg.png");
+    margin: 0;
 }
 
 /* HEADER START ---------------------- */
@@ -11,7 +12,6 @@ body {
     background-color: #fb956c;
     height: 180px;
     width: 100%;
-    margin: 0px;
 }
 
 #logo {
@@ -69,10 +69,10 @@ ul li a:hover{
 .navbtn {
     margin-top: -140px;
     margin-left: 200px;
-	margin-right: 4px;
-	background-repeat: no-repeat;
-	width: 375px;
-	height: 375px;
+    margin-right: 4px;
+    background-repeat: no-repeat;
+    width: 375px;
+    height: 375px;
     zoom: 7%;
 }
 
@@ -100,7 +100,8 @@ ul {
 #fitem {
     margin-left: 20px;
     position: relative;
-    top: -4px;
+    top: 13px;
+    right: 100px;
 }
 
 #search {
@@ -109,13 +110,94 @@ ul {
 }
 /* HEADER END -------------------------- */
 
+.container {
+    background: #E6E2DD;
+    height: 1000px;
+    width: 540px;
+    margin: auto;
+    position: relative;
+    bottom: 10px;
+}
+
+.billing-info {
+    width: 80%;
+    margin-left: 20%;
+    position: relative;
+    top: 70px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    color: #D48166;
+    position: relative;
+    left: 20px;
+    border-bottom: 
+}
+
+h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'Lexend', sans-serif;
+    color: grey;
+}
+
+.input {
+    background-color: #E6E2DD;
+}
+
+.input, p {
+    border: 0;
+    border-bottom: 1px solid #D48166;
+    color: #070707;
+    outline: none;
+    font-size: 15px;
+    width: 80%;
+}
+
+.cardcontainer {
+    font-size: 40px;
+    margin-left: 105px;
+}
+
+.btn {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    border: 0;
+    background-color: #D48166;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    top: 40px;
+    width: 82%;
+    right: 10px;
+}
+
+.btn:hover {
+    color: #373A36;
+}
+
+form {
+    position: relative;
+    left: 100px;
+    bottom: 20px;
+}
+
+
+/* FOOTER START ------------------------- */ 
 footer {
     background-color: #4d4845;
-    color: white;
     height: 150px;
-    width: 1570px;
+    width: 100%;
     position: absolute;
     bottom: 10;
+}
+
+footer p {
+    border: 0;
+    color: white;
+    font-size: 14px;
 }
 
 hr {
@@ -127,9 +209,9 @@ hr {
 #footer1 {
     margin-left: 100px;
     font-family: 'Overpass', sans-serif;
-    font-size: 14px;
 }
 /* FOOTER END --------------------------- */
+
 
 
 /*DROPDOWN MENU START*/
@@ -144,6 +226,7 @@ hr {
     position: relative;
     left: 50px;
     cursor: pointer;
+    width: 50px;
 }
 
 /*dropdownmenu*/
@@ -151,7 +234,7 @@ hr {
     position: relative;
     top: 15px;
     right: 25px;
-    background: #373A36;
+    background: white;
     padding: 20px;
     border-radius: 15px;
     visibility: hidden;
@@ -167,7 +250,7 @@ hr {
     position: absolute;
     content: '';
     top: -5px;
-    right: 99.5px;
+    right: 88px;
     width: 8px;
     height: 8px;
     background: white;
@@ -181,7 +264,7 @@ hr {
 
 .action .dropdownmenu li a{
     text-decoration: none;
-    color: white;
+    color: black;
     font-family: 'Roboto', sans-serif;
     font-weight: 500px;
 }
@@ -192,71 +275,3 @@ hr {
 }
 
 /*DROPDOWN MENU END*/
-
-#container {
-	width: 100%;
-}
-
-.content {
-    display: flex;
-    justify-content: center;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    width: 1500px;
-    position: relative;
-    bottom: 40px;
-    left: 50px;
-}
-
-.thumbnails {
-    text-align: center;
-    vertical-align: top;
-    width: 500px;
-}
-
-.listings {
-    margin: 70px;
-    height: 500px;
-    width: 500px;
-    zoom: 70%;
-}
-
-#thumb1 {
-    background-image: url("../images/spritesheet2.png");
-    background-position: 0px 0px;
-}
-
-#thumb2 {
-    background-image: url("../images/spritesheet2.png");
-    background-position: -500px 0px;
-}
-
-#thumb3 {
-    background-image: url("../images/spritesheet2.png");
-    background-position: -1000px 0px;
-}
-
-#thumb4 {
-	background-image: url("../images/spritesheet2.png");
-    background-position: -1500px 0px;
-}
-
-#thumb5 {
-	background-image: url("../images/spritesheet2.png");
-    background-position: -2000px 0px;
-}
-
-.name, .price {
-    font-family: 'Overpass', sans-serif;
-    display: block;
-    margin-left: -35px;
-}
-
-.name {
-    font-size: 22px;
-}
-
-.price {
-    font-size: 15px;
-    margin-bottom: 70px;
-}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <meta name="description" content="Admin Settings - Edit Product">
+    <meta name="keyword" content="Admin Settings - Edit Product">
+    <meta name="author" content="MANDADERO, Clarissa Mae S.">
+    <head>
+        <title>Admin Settings - Edit Product</title>
+        <link rel="stylesheet" type="text/css" href="css/admin_product_edit.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+
+
+    <body>
+        <div id="divmain">
+            <img id="imglogo" src="images/logo.png" height="120px" width="120px">
+            <br>
+
+            <p id="txtheader">
+            <span class="material-icons">manage_accounts</span>
+            PN # 100456
+            </p>
+
+            <div class="div_prod_details">
+            <p class="txt_titles">Product Name</p>
+                <form id="form_pname" class="form">
+                    <input type="text" placeholder="Ultra Stretch Jeans" class="input" id="text" name="text">
+                </form>
+            </div>
+
+            <div class="div_prod_details">
+                <p class="txt_titles">Price</p>
+                <form id="form_price" class="form">
+                    <input type="text" placeholder="4000" class="input" id="text" name="text">
+                </form>
+            </div>
+
+            <div class="div_prod_details">
+                <p class="txt_titles">Quantity Sold</p>
+                <form id="form_qty_sold" class="form">
+                    <input type="number" placeholder="1026" class="input" id="number" name="number">
+                </form>
+            </div>
+
+            <div class="div_prod_details">
+                <p class="txt_titles"> Product Description </p>
+                <form id="form_pdesc" class="form">
+                    <input type="text" placeholder="Enter new product description" class="input" id="text" name="text">
+                </form>
+            </div>
+
+            <div id="divimg">
+                <div class="divimg_indiv">
+                    <img class="comment_image" src="images/product1a.jpg" alt="rev1" height= "100px">
+                    <br>
+                    <span id="icon_trash" class="material-icons">delete</span>
+                </div>
+                <div class="divimg_indiv">
+                    <img class="comment_image" src="images/product1b.jpg" alt="rev1" height= "100px">
+                    <br>
+                    <span id="icon_trash" class="material-icons">delete</span>
+                </div>
+            </div>
+
+            <div id="div_add_photos">
+                <form id="form_add_photos">
+                    <label for="upload"> Add Photos </label>
+                    <input type="file" id="upload" name="upload">
+                </form>
+            </div>
+
+            <button id="btnsave" class="btna" onclick="alert('Saved Successfully!')"> Save </button>
+            <br>
+            <button id="btndelete" class="btna" onclick="alert('Deleted Successfully!')"> Delete </button>
+            <br>
+            <a href="admin_home_page.html"><button id="btncancel" class="btna"> Cancel </button> </a>
+            <br>
+            <a href="admin_home_page.html"><button id="btndone" class="btna"> Done </button> </a>
+
+        </div>
+    </body>
+</html>

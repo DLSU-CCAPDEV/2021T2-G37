@@ -9,5 +9,5 @@
 ### Members 
 * Carla Jeannine Cruzada
 * Anna Patricia Desembrana
-* Clarisa Mae Mandadero 
+* Clarissa Mae Mandadero 
 
