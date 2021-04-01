@@ -23,6 +23,7 @@
             PN # 100456
             </p>
 
+            <!--PRODUCT NAME TO PRODUCT DESCRIPTION--------------------------------------------------------------------------------------->
             <div class="div_prod_details">
             <p class="txt_titles">Product Name</p>
                 <form id="form_pname" class="form">
@@ -45,9 +46,89 @@
             </div>
 
             <div class="div_prod_details">
+                <p class="txt_titles">Available Quantity</p>
+                <form id="form_available_qty" class="form">
+                    <input type="number" placeholder="305" class="input" id="number" name="number">
+                </form>
+            </div>
+
+            <div class="div_prod_details">
                 <p class="txt_titles"> Product Description </p>
                 <form id="form_pdesc" class="form">
                     <input type="text" placeholder="Enter new product description" class="input" id="text" name="text">
+                </form>
+            </div>
+
+            <!--COLOR--------------------------------------------------------------------------------------->
+            <div class="div_prod_details">
+                <p class="txt_titles"> Color </p>
+                <form id="form_color" class="form">
+                    <input type="text" placeholder="Add new color" class="input" id="text" name="text">
+                </form>
+            </div>
+
+            <div class="div_color">
+                <div class="divindiv_color">
+                    <button id="var1" class="btn_color"></button>
+                    <span id="icon_trash" class="material-icons">delete</span>
+                </div>
+
+                <div class="divindiv_color">
+                    <button id="var2" class="btn_color"></button>
+                    <span id="icon_trash" class="material-icons">delete</span>
+                </div>
+
+                <div class="divindiv_color">
+                    <button id="var3" class="btn_color"></button>
+                    <span id="icon_trash" class="material-icons">delete</span>
+                </div>
+
+                <div class="divindiv_color">
+                    <button id="var4" class="btn_color"></button>
+                    <span id="icon_trash" class="material-icons">delete</span>
+                </div>
+            </div>
+
+            <!--SIZE--------------------------------------------------------------------------------------->
+            <div id ="div_main_size"class="div_prod_details">
+                <p class="txt_titles"> Size </p>
+                <form id="form_size" class="form">
+                    <input type="text" placeholder="Add size" class="input" id="text" name="text">
+                </form>
+            </div>
+
+            <div class="div_size">
+                <div class="divindiv_color">
+                    <button id="size1" class="btn_size">XS</button>
+                    <span id="icon_trash" class="material-icons">delete</span>
+                </div>
+
+                <div class="divindiv_color">
+                    <button id="size2" class="btn_size">S</button>
+                    <span id="icon_trash" class="material-icons">delete</span>
+                </div>
+
+                <div class="divindiv_color">
+                    <button id="size3" class="btn_size">M</button>
+                    <span id="icon_trash" class="material-icons">delete</span>
+                </div>
+
+                <div class="divindiv_color">
+                    <button id="size4" class="btn_size">L</button>
+                    <span id="icon_trash" class="material-icons">delete</span>
+                </div>
+                
+                <div class="divindiv_color">
+                    <button id="size5" class="btn_size">XL</button>
+                    <span id="icon_trash" class="material-icons">delete</span>
+                </div>
+            </div>
+
+            <!--PRODUCT IMAGE--------------------------------------------------------------------------------------->
+            <div id="div_add_photos">
+                <form id="form_add_photos">
+                    <label for="upload"> Add Photos </label>
+                    <input type="file" id="upload" name="upload">
                 </form>
             </div>
 
@@ -64,13 +145,7 @@
                 </div>
             </div>
 
-            <div id="div_add_photos">
-                <form id="form_add_photos">
-                    <label for="upload"> Add Photos </label>
-                    <input type="file" id="upload" name="upload">
-                </form>
-            </div>
-
+            <!--END BUTTONS--------------------------------------------------------------------------------------->
             <button id="btnsave" class="btna" onclick="alert('Saved Successfully!')"> Save </button>
             <br>
             <button id="btndelete" class="btna" onclick="alert('Deleted Successfully!')"> Delete </button>

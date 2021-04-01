@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="css/product_listing.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-        <!--Responsible for the slideshow of the product images-->
+        <!--Responsible for the slideshow of the product images--------------------------------------------------->
         <script>
             function showSlides(n) {
                 var i;
@@ -21,7 +21,7 @@
         </script>
     </head>
 
-    <!--header start-->
+    <!--header start----------------------------------------------------->
     <div class="header">
         <div id="top-logo">
             <img id="logo" src="images/logo.png">
@@ -55,13 +55,14 @@
             </ul>
         </div>
     </div>
-    <!--header end-->
+    <!--header end--------------------------------------------------->
 
 <body>
     <hr id="hr_home">
     <div id="divwhole">
+        <!--div left start--------------------------------------------------->
         <div id="divleft">
-            <!--big product images start-->
+            <!--big product images start--------------------------------------------------->
             <div class="divmain_prod">
                 <div id="main_img" class="main_prod_image">
                     <img id="main_prod_image1" src="images/product1a.jpg" alt="firstpic" height= "100%" width="100%" object-fit="contain">
@@ -79,9 +80,9 @@
                     <img id="prod_image4" src="images/product1d.jpg" alt="fourthimage" width="100%" object-fit="contain">
                 </div>
             </div>
-            <!--big product images end-->
+            <!--big product images end--------------------------------------------------->
     
-            <!--small product images start-->
+            <!--small product images start--------------------------------------------------->
             <div class="divsmall_prod_image">
                 <div class="small_prod_image">
                     <img id="prod_image1" class="indiv_small_img" src="images/product1a.jpg" alt="firstimage" width="100%" object-fit="contain" onclick="showSlides(0)">
@@ -99,12 +100,14 @@
                     <img id="prod_image4" class="indiv_small_img" src="images/product1d.jpg" alt="fourthimage" width="100%" object-fit="contain"onclick="showSlides(3)">
                 </div>
             </div>
-            <!--small product images end-->
+            <!--small product images end--------------------------------------------------->
 
         </div>
-        <!--div left end-->
+        <!--div left end--------------------------------------------------->
     
+        <!--div right start--------------------------------------------------->
         <div id="divright">
+            <!--Product Name and Description--------------------------------------------------->
             <div>
                 <h1 class="prod_title">Ultra Stretch Jeans</h1>
                 <h2 class="prod_title">Php 4,000</h2>
@@ -114,13 +117,15 @@
                 <p id="prod_desc">
                     Clothing and Science become one. This ultra stretch jeans was made possible through our newest technology. Jeans as light as feather and as smooth as baby's skin. Get yours now and become comfy and stylish today!
                 </p>
-                <p id="qty_sold">
-                    Quantity Sold: 1,026
-                </p>
+
+                <p id="qty_sold" class="header_qty">Quantity Sold: 1,026</p>
+                <p id="qty_available" class="header_qty">Available Quantity: 305</p>
+                <p id="pnumber" class="header_qty">Product Number: 100456</p>
             </div>
 
             <hr>
 
+            <!--Variation Color--------------------------------------------------->
             <div class="prod_details">
                 <p class="prod_details_text"> COLOR </p>
                 <button id="var1" class="btnv"></button>
@@ -129,6 +134,7 @@
                 <button id="var4" class="btnv"></button>
             </div>
 
+            <!--Variation Size--------------------------------------------------->
             <div class="prod_details">
                 <p class="prod_details_text"> SIZE </p>
                 <button id="size1" class="btns">XS</button>
@@ -138,6 +144,7 @@
                 <button id="size5" class="btns">XL</button>
             </div>
 
+            <!--QTY--------------------------------------------------->
             <div class="prod_details">
                 <p class="prod_details_text"> QUANTITY </p>
                 <form>
@@ -146,6 +153,7 @@
                 </form>
             </div>
 
+            <!--END BUTTONS--------------------------------------------------->
             <div class="divbtnend">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 <button id="btnbuy"class="btnend">Buy</button>
@@ -153,15 +161,16 @@
                 <button id="btnwishlist"class="btnend"><i class="fa fa-heart"></i></button>
             </div>
         </div>
-        <!--div right end-->
+        <!--div right end--------------------------------------------------->
 
     </div>
-    <!--div whole end-->
+    <!--div whole end--------------------------------------------------->
 
-    <!--div comment start-->
+    <!--div comment start--------------------------------------------------->
     <div class="divcommentwhole">
         <button id="writereview" class="btnreviews">WRITE A REVIEW</button>
         <hr>
+        <!--COMMENT 1--------------------------------------------------->
         <div class="divcomment">
             <h3 class="rating"> Rating: 5.0 </h3>
             <h5 class="nameofposter"> posted by Clarissa </h5>
@@ -182,6 +191,7 @@
             <!--edit delete review button end-->
         </div>
 
+        <!--COMMENT 2--------------------------------------------------->
         <hr>
         <div class="divcomment">
             <h3 class="rating"> Rating: 5.0 </h3>
@@ -197,6 +207,7 @@
             <!--edit delete review button end-->
         </div>
 
+        <!--COMMENT 3--------------------------------------------------->
         <hr>
         <div class="divcomment">
             <h3 class="rating"> Rating: 3.0 </h3>
@@ -212,6 +223,7 @@
             <!--edit delete review button end-->
         </div>
 
+        <!--COMMENT 4--------------------------------------------------->
         <hr>
         <div class="divcomment">
             <h3 class="rating"> Rating: 4.8 </h3>
@@ -227,6 +239,7 @@
             <!--edit delete review button end-->
         </div>
 
+        <!--COMMENT 5--------------------------------------------------->
         <hr>
         <div class="divcomment">
             <h3 class="rating"> Rating: 4.0 </h3>
@@ -243,19 +256,21 @@
             <hr>
         </div>
 
+
+        <!--all reviews button--------------------------------------------------->
         <a class="navlink" href="all_reviews.html">
         <button id="viewcomments" class="btnreviews"> View All Reviews</button>
         </a>
     </div>
-    <!--div comment end-->
+    <!--div comment end--------------------------------------------------->
 </body>
 
-<!-- FOOTER -->
+<!-- FOOTER --------------------------------------------------->
 <footer>
     <hr id="hr_footer">
     <div id="footer1"><p>©  Clothing & Science</p></div>
 </footer>
-<!-- FOOTER END -->
+<!-- FOOTER END --------------------------------------------------->
 
 <script>
    function dropdownToggle(){

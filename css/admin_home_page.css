@@ -17,13 +17,13 @@ body {
 	text-align: center;
 }
 
-/*image logo*/
+/*image logo------------------------------------------------------*/
 #imglogo{
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
 }
-/*Admin Settings text*/
+/*Admin Settings text------------------------------------------------------*/
 #txtadmin{
     margin-bottom: 5px;
     color: white;
@@ -31,7 +31,7 @@ body {
     font-size: 25px;
 }
 
-/*Buttons*/
+/*Buttons------------------------------------------------------*/
 .btna{
     margin-top: 10px;
     margin-right: auto;

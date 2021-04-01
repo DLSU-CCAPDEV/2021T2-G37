@@ -13,8 +13,17 @@ a{
     text-decoration: none;
 }
 
+/*Sets the format for all form input------------------------------------------------------*/
+input {
+    width: 60%;
+    height: 25px;
+    font-size: 14px;
+    text-align: center;
+}
+
 #divmain {
 	width: 430px;
+    height: 100%;
 	margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
@@ -29,7 +38,6 @@ a{
     margin-left: auto;
     margin-right: auto;
 }
-
 /*Header text------------------------------------------------------*/
 #txtheader{
     color: white;
@@ -38,53 +46,49 @@ a{
     margin-bottom: 0px;
 }
 
-/*Name of Poster------------------------------------------------------*/
-#txtname{
+/*Product Details------------------------------------------------------*/
+.div_prod_details{
+    margin-bottom: -5px;
+}
+
+.txt_titles{
     color: white;
+    margin-bottom: 3px;
+    text-align: left;
+    margin-left: 19%;
+}
+
+/*COLOR AND SIZE DIV------------------------------------------------------*/
+.div_var{
+    display: flex;
+}
+.btn_var{
+    margin-left: 6px;
+    margin-top: 10px;
+    border-radius: 2px;
+    height: 25px;
+    width: 25px;
+    padding: 0px;
+    background-color: #4d4845;
     font-weight: bold;
-    font-size: 15px;
-    margin-bottom: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+}
+.btn_var:hover{ background-color: #535252;}
+.btn_var:focus{ outline: none;}
+
+/*Add Photos form------------------------------------------------------*/
+#div_add_photos{
+    color: white;
+    margin-left: 12%;
+    margin-right: auto;
+    margin-bottom: 10px;
     margin-top: 0px;
 }
 
-/*Review text------------------------------------------------------*/
-#divreview{
-    width: 80%;
-    margin: auto;
-    color: white;
-}
-#txtreview{
-    text-align: justify;
-}
-/*Form------------------------------------------------------*/
-input[type=text] {
-    width: 60%;
-    height: 25px;
-    font-size: 14px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/*Product Images------------------------------------------------------*/
-#divimg{
-    display: flex;
-    margin: auto;
-    justify-content: center;
-}
-
-.divimg_indiv{
-    margin-right: 10px;
-}
-
-/*Trash Icons------------------------------------------------------*/
-#icon_trash{
-    color: white;
-    cursor: pointer;
-}
-#icon_trash:hover{ color: black; }
-#icon_trash:focus{ color: rgb(158, 154, 154); }
-
-/*Buttons------------------------------------------------------*/
+/*End Buttons------------------------------------------------------*/
 .btna{
     margin-bottom: 8px;
     margin-right: auto;
@@ -104,13 +108,14 @@ input[type=text] {
 .btna:hover{ background-color: #535252;}
 .btna:focus{ outline: none;}
 
-#btndelete:hover{ background-color: rgb(165, 21, 21);}
-#btnsave:hover{ background-color: rgb(8, 100, 8);}
-
-#btnsave{
+#btnadd{
     margin-top: 20px;
 }
-#btndone{
+#btnadd:hover{ background-color: rgb(8, 100, 8);}
+
+#btncancel{
     margin-bottom: 30px;
 }
+#btncancel:hover{ background-color: rgb(165, 21, 21);}
+
 

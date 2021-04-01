@@ -8,13 +8,13 @@ body {
     vertical-align: middle;
 }
 
-/** the hr in between the home and the product itself */
+/** the hr in between the home and the product itself----------------------------------------------------*/
 #hr_home{
     width: 100%;
     margin-top: 0px;
 }
 
-/*The two columns of the product and the product description*/
+/*The two columns of the product and the product description----------------------------------------------------*/
 #divwhole {
     margin-top: 30px;
     margin-left: 250px;
@@ -34,7 +34,7 @@ body {
     flex: 30%;
 }
 
-/*Product Image*/
+/*Product Image----------------------------------------------------*/
 #main_prod_image{
     margin-left: auto;
     margin-right: auto;
@@ -56,7 +56,7 @@ body {
     border: 1px solid black;
 }
 
-/*Responsible for the hide and show of the product image slideshow*/
+/*Responsible for the hide and show of the product image slideshow----------------------------------------------------*/
 #main_img{
     display: block;
 }
@@ -64,30 +64,28 @@ body {
     display: none;
 }
 
-/*Product Name and Price; used for their spacing*/
+/*Product Name and Price; used for their spacing----------------------------------------------------*/
 .prod_title{
     margin-bottom: 0px;
     margin-top: 2px;
 }
-#qty_sold{
-    text-align: right;
-    font-weight: bold;
-}
 
-/*Product Description*/
+/*Product Description to Product Number----------------------------------------------------*/
 #prod_desc{
     font-size: 16px; 
     text-align: justify; 
     margin-bottom: 0px;
     line-height: 25px;
 }
-#qty_sold{
+.header_qty{
     margin-top: 15px;
-    text-align: right;
     font-weight: bold;
 }
+#qty_sold, #qty_available{
+    margin-bottom: -5px;
+}
 
-/*Color, Size, QTY text*/
+/*Color, Size, QTY text----------------------------------------------------*/
 .prod_details{
     margin-top: 20px;
     display: flex;
@@ -98,7 +96,7 @@ body {
     font-size: 14px;
 }
 
-/*Variation Buttons*/
+/*Color Buttons----------------------------------------------------*/
 .btnv {
     margin-right: 10px;
     border: none; /* Remove borders */
@@ -112,7 +110,7 @@ body {
 #var3 {background-color: #3b4053;} #var3:hover {background: #5f6786;}
 #var4 {background-color: black;} #var4:hover {background: rgb(66, 65, 65);}
 
-/*Size Buttons*/
+/*Size Buttons----------------------------------------------------*/
 .btns {
     margin-right: 10px;
     border: 1.5px solid black;
@@ -126,21 +124,21 @@ body {
 .btns:hover{ background: rgb(53, 52, 52); color: white;}
 .btns:focus{ background: rgb(0, 0, 0); color: white;}
  
-/*QTY form*/
+/*QTY form----------------------------------------------------*/
 input[type=number] {
     padding: 10px;
     width: 70px;
     text-align: center;
   }
 
-/*Wishlist, Add to Cart, Buy Buttons*/
+/*Wishlist, Add to Cart, Buy Buttons----------------------------------------------------*/
 .divbtnend{/*container of all buttons indicated right above*/
     margin-left: auto;
     margin-right: auto;
     display: flex;
     
 }
-.btnend{/*refers to each button indicated right above*/
+.btnend{/*refers to each button indicated right above----------------------------------------------------*/
     margin-top: 20px;
     margin-right: 8px;
     border: none;
@@ -152,7 +150,7 @@ input[type=number] {
 }
 .btnend:focus{ outline: none;}
 
-/*wishlist button*/
+/*wishlist button----------------------------------------------------*/
 #btnwishlist {
     color: black; 
     background-color: white;
@@ -161,7 +159,7 @@ input[type=number] {
 #btnwishlist:hover { color: rgb(250, 74, 74);}
 #btnwishlist:focus{ color: red; border: none;}
 
-/*add to cart button*/
+/*add to cart button----------------------------------------------------*/
 #btncart {
     background-color: black;
     color: white;
@@ -169,7 +167,7 @@ input[type=number] {
   }
 #btncart:hover {background-color: rgb(44, 42, 42)}
 
-/*buy button*/
+/*buy button----------------------------------------------------*/
 #btnbuy {
     background-color: rgb(200, 10, 10);
     color: white;
@@ -177,7 +175,7 @@ input[type=number] {
   }
 #btnbuy:hover {background-color: rgb(233, 22, 22)}
 
-/*Comments Box*/
+/*Comments Box----------------------------------------------------*/
 .divcommentwhole{ /*container of all 5 comments*/
     margin-left: auto;
     margin-right: auto;
@@ -200,8 +198,9 @@ input[type=number] {
     margin-bottom: 15px;
 }
 
-/*Write a review and view all reviews button*/
+/*Write a review and view all reviews button----------------------------------------------------*/
 #writereview{
+    margin-top: 0px;
     margin-bottom: 15px;
     width: 80%;
     justify-content: center;
@@ -219,7 +218,8 @@ input[type=number] {
 }
 .btnreviews{/*view all comments button*/
     border-radius: 2px;
-    margin-top: 0px;
+    margin-top: -20px;
+    margin-bottom: 0px;
     margin-left: auto;
 	margin-right: auto;
     display: flex;
@@ -233,7 +233,7 @@ input[type=number] {
 #viewcomments:hover{ background: rgb(53, 52, 52); color: white;}
 #viewcomments:focus{ background: rgb(0, 0, 0); color: white;}
 
-/*Edit and delete reviews button*/
+/*Edit and delete reviews button----------------------------------------------------*/
 #divbtn_edit_delete{
     margin-left: 80%;
 }
