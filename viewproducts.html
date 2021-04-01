@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="description" content="View Products">
+    <meta name="author" content="CRUZADA, Carla Jeannine O.">
+
     <title>Browse Products</title>
     <link rel="stylesheet" type="text/css" media="all" href="css/viewproducts.css">
 </head>
@@ -37,7 +40,7 @@
                     <form>
                         <input type="text" id="fitem" name="fname">
                     </form>
-                    <a class="nav" href="/search.html"><li class="navbtn" id="search"></li></a>
+                    <a class="nav" href="viewproducts.html"><li class="navbtn" id="search"></li></a>
                 </ul>
             </div>
         </div>
@@ -80,8 +83,8 @@
         </footer>
     </div>
     <script>
-      function dropdownToggle(){
-            document.getElementById('dropmenu').classList.add('active'); // add active class
+     function dropdownToggle(){
+            document.getElementById('dropmenu').classList.toggle('active'); //clicking the account icon makes it appear, clicking it again makes it disappear.
         }
     </script>
 </body>

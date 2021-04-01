@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="description" content="Account Details No edit">
+    <meta name="author" content="CRUZADA, Carla Jeannine O.">
+
 	<title> Account Details </title>
 	<link rel="stylesheet" type="text/css" href="css/acctdetails.css">
   	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -40,7 +43,7 @@
                     <form>
                         <input type="text" id="fitem" name="fname">
                     </form>
-                    <a class="nav" href="/search.html"><li class="navbtn" id="search"></li></a>
+                    <a class="nav" href="viewproducts.html"><li class="navbtn" id="search"></li></a>
                 </ul>
             </div>
         </div>
@@ -70,8 +73,8 @@
         </footer>
         <!-- FOOTER END -->
  <script>
-       function dropdownToggle(){
-            document.getElementById('dropmenu').classList.add('active'); //add active class
+      function dropdownToggle(){
+            document.getElementById('dropmenu').classList.toggle('active'); //clicking the account icon makes it appear, clicking it again makes it disappear.
         }
     </script>
 </body>
