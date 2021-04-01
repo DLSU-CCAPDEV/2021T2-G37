@@ -102,10 +102,16 @@ ul {
     background-image: url("../images/spritesheet.png");
     background-position: -740px 0px;
 }
+
+#hr_home{
+    width: 100%;
+    margin: 0px;
+}
 /* HEADER END -------------------------- */
 
 .content {
     margin-top: 100px;
+    margin-bottom: 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -130,17 +136,46 @@ h1 {
 
 .wish {
     background-color: #e6e2dd;
-    height: 200px;
+    height: 180px;
     width: 800px;
     margin: 10px;
+    padding: 20px;
+    overflow: hidden;
 }
 
 .image {
     width: 500px;
     height: 500px;
     zoom: 35%;
-    margin: 25px;
+    margin: 5px;
     border: 10px solid white;
+    float: left;
+}
+
+.details {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-left: 15px;
+    display: block;
+    float: left;
+}
+
+.price {
+    margin-top: 20px;
+    position: relative;
+    right: 170px;
+    text-align: right;
+    float: right;
+}
+
+.buttons {
+    margin-right: 0px;
+    margin-top: 40px;
+    float: right;
+    display: flex;
+    flex-direction: column;
 }
 
 .delete {
@@ -151,20 +186,23 @@ h1 {
     height: 375px;
     width: 375px;
     zoom: 10%;
-    margin-top: 750px;
+    margin-top: 150px;
 }
 
 .add-cart {
+    background: none;
+    border: none;
+    background-image: url('../images/spritesheet.png');
+    background-position: -450px -415px;
     width: 375px;
     height: 375px;
+    zoom: 10%;
 }
 
 #img1 {
     background-image: url('../images/spritesheet2.png');
     background-position: 0px 0px;
 }
-
-
 
 #img2 {
     background-image: url('../images/spritesheet2.png');
