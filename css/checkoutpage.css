@@ -5,6 +5,7 @@
 body {
     background-image: url("../images/bg.png");
     margin: 0;
+    background-repeat: repeat-y;
 }
 
 /* HEADER START ---------------------- */
