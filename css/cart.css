@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Overpass:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 body {
     margin: 0px;
+    min-height: 100%
 }
 
 /* HEADER START ---------------------- */
@@ -109,7 +111,136 @@ ul {
 }
 /* HEADER END -------------------------- */
 
+.content {
+    font-family: 'Overpass', sans-serif;
+    float: left;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 1000px;
+}
 
+.cart {
+    margin-left: 150px;
+}
+
+label {
+    font-size: 17px;
+}
+
+.item {
+    background-color: #e6e2dd;
+    height: 180px;
+    width: 800px;
+    margin: 10px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.checkbox { 
+    float: left;
+    margin-top: 80px;
+    margin-right: 40px;
+}
+
+.image {
+    width: 500px;
+    height: 500px;
+    zoom: 35%;
+    margin: 5px;
+    border: 10px solid white;
+    float: left;
+}
+
+#img1 {
+    background-image: url('../images/spritesheet2.png');
+    background-position: 0px 0px;
+}
+
+#img2 {
+    background-image: url('../images/spritesheet2.png');
+    background-position: -1000px 0px;
+}
+
+#img3 {
+    background-image: url('../images/spritesheet2.png');
+    background-position: -2000px 0px;
+}
+
+#img4 {
+    background-image: url('../images/spritesheet2.png');
+    background-position: -1500px 0px;
+}
+
+#img5 {
+    background-image: url('../images/spritesheet2.png');
+    background-position: -500px -500px;
+}
+
+.details {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-left: 15px;
+    display: block;
+    float: left;
+    font-size: 13px;
+}
+
+.price {
+    margin-top: 20px;
+    position: relative;
+    right: 170px;
+    text-align: right;
+    float: right;
+    font-size: 14px;
+}
+
+.delete {
+    background: none;
+    background-color: rgb(250, 74, 74);
+    border: none;
+    border-radius: 40px;
+    background-image: url('../images/spritesheet.png');
+    background-position: -1480px -5px;
+    height: 375px;
+    width: 375px;
+    zoom: 10%;
+    margin-top: 150px;
+    float: right;
+}
+
+aside {
+    width: 400px;
+    height: 250px;
+    float: left;
+    background-color: #e6e2dd;
+    margin: 30px;
+    margin-top: 117px;
+}
+
+#btn_checkout {
+    background-color: rgb(200, 10, 10);
+    color: white;
+    margin-right: 8px;
+    border: none;
+    font-family: 'Overpass', sans-serif;
+    font-size: 18px; 
+    font-weight: 1000;
+    height: 35px;
+    padding: 8px;
+}
+
+#hr_sum {
+    margin: 10px;
+    margin-left: 0;
+}
+
+#sum_text {
+    margin: 35px;
+}
 
 /* FOOTER START ------------------------- */ 
 footer {
@@ -118,7 +249,7 @@ footer {
     height: 150px;
     width: 100%;
     position: absolute;
-    bottom: 10;
+    bottom: -800px;
 }
 
 hr {
@@ -133,3 +264,65 @@ hr {
     font-size: 14px;
 }
 /* FOOTER END --------------------------- */
+
+/*DROPDOWN MENU START*/
+
+.action {
+    position: relative;
+    left: 105px;
+}
+
+/*account icon */
+.action .profile {
+    position: relative;
+    left: 50px;
+    cursor: pointer;
+}
+
+/*dropdownmenu*/
+.action .dropdownmenu {
+    position: relative;
+    top: 15px;
+    right: 25px;
+    background: #373A36;
+    padding: 20px;
+    border-radius: 15px;
+    visibility: hidden;
+    margin-bottom: -150px;
+}
+
+.action .dropdownmenu.active {
+    visibility: visible;
+}
+
+
+/*arrow in dropdownmenu*/
+.action .dropdownmenu::before {
+    position: absolute;
+    content: '';
+    top: -5px;
+    right: 99.5px;
+    width: 8px;
+    height: 8px;
+    background: white;
+    transform: rotate(45deg);
+}
+
+.action .dropdownmenu li {
+    list-style: none;
+    padding: 5px;
+}
+
+.action .dropdownmenu li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500px;
+}
+
+/*change color hover over drop down menu options*/
+.action .dropdownmenu li a:hover {
+    color: #D48166
+}
+
+/*DROPDOWN MENU END*/

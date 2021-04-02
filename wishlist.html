@@ -14,20 +14,28 @@
         <div id="container1">
             <div class="floatleft">
                 <ul class="navbar" id="navbar1">
-                    <li><a class="navlink" href="home-page.html">Home</a></li>
-                    <li><a class="navlink" href="register.html">Register</a></li>
-                    <li><a class="navlink" href="login.html">Login</a></li>
+                    <li><a class="navlink" href="home.html">Home</a></li>
+                    <li><a class="navlink" href="categories.html">Categories</a></li>
                 </ul>
             </div>
             <div class="floatright">
                 <ul class="navbar" id="navbar2">
-                    <a class="nav" href="acctdetails.html"><li class="navbtn" id="account"></li></a>
+                    <div class="action">
+                            <div class="profile" onclick="dropdownToggle();">
+                                <li class="navbtn" id="account"></li></a>
+                            </div>
+                        <div class="dropdownmenu" id="dropmenu">
+                            <li> <a href="acctdetailsnoedit.html"> View Account Details </a> </li>
+                            <li> <a href="acctdetails.html"> Edit Account Details </a> </li>
+                            <li> <a href="home-page.html"> Logout </a> </li>
+                        </div>
+                    </div>
                     <a class="nav" href="wishlist.html"><li class="navbtn" id="wishlist"></li></a>
                     <a class="nav" href="cart.html"><li class="navbtn" id="cart"></li></a>
                     <form>
                         <input type="text" id="fitem" name="fname">
                     </form>
-                    <a class="nav" href="/search.html"><li class="navbtn" id="search"></li></a>
+                    <a class="nav" href="viewproducts.html"><li class="navbtn" id="search"></li></a>
                 </ul>
             </div>
         </div>
@@ -37,7 +45,7 @@
 
         <div class="content">
             <h1>Wishlist</h1>
-            <div id="button"><button id="add-all">ADD ALL TO CART</button></div>
+            <button id="add-all">ADD ALL TO CART</button>
         
             <div class="wish">
                 <div class="image" id="img1"></div>
@@ -62,7 +70,7 @@
                         <li><h3>Variation: Gray</h3></li>
                     </ul>
                 </div>
-                <div class="price" id="price1"><h3>250.00</h3></div>
+                <div class="price" id="price1"><h3>P250.00</h3></div>
                 <div class="buttons" id="buttons2">
                     <button class="add-cart" id="add2"></button>
                     <button class="delete" id="del2"></button>
@@ -121,6 +129,11 @@
             <div id="footer1"><p>©  Clothing & Science</p></div>
         </footer>
         <!-- FOOTER END -->
-
     </body>
+
+    <script>
+        function dropdownToggle(){
+                 document.getElementById('dropmenu').classList.toggle('active'); //clicking the account icon makes it appear, clicking it again makes it disappear.
+             }
+     </script>
 </html>

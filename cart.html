@@ -14,20 +14,28 @@
         <div id="container1">
             <div class="floatleft">
                 <ul class="navbar" id="navbar1">
-                    <li><a class="navlink" href="home-page.html">Home</a></li>
-                    <li><a class="navlink" href="register.html">Register</a></li>
-                    <li><a class="navlink" href="login.html">Login</a></li>
+                    <li><a class="navlink" href="home.html">Home</a></li>
+                    <li><a class="navlink" href="categories.html">Categories</a></li>
                 </ul>
             </div>
             <div class="floatright">
                 <ul class="navbar" id="navbar2">
-                    <a class="nav" href="acctdetails.html"><li class="navbtn" id="account"></li></a>
+                    <div class="action">
+                            <div class="profile" onclick="dropdownToggle();">
+                                <li class="navbtn" id="account"></li></a>
+                            </div>
+                        <div class="dropdownmenu" id="dropmenu">
+                            <li> <a href="acctdetailsnoedit.html"> View Account Details </a> </li>
+                            <li> <a href="acctdetails.html"> Edit Account Details </a> </li>
+                            <li> <a href="home-page.html"> Logout </a> </li>
+                        </div>
+                    </div>
                     <a class="nav" href="wishlist.html"><li class="navbtn" id="wishlist"></li></a>
                     <a class="nav" href="cart.html"><li class="navbtn" id="cart"></li></a>
                     <form>
                         <input type="text" id="fitem" name="fname">
                     </form>
-                    <a class="nav" href="/search.html"><li class="navbtn" id="search"></li></a>
+                    <a class="nav" href="viewproducts.html"><li class="navbtn" id="search"></li></a>
                 </ul>
             </div>
         </div>
@@ -36,14 +44,88 @@
         <!-- HEADER END -->
 
         <div class="content">
-
-            <div class="summary">
-                <p>Subtotal: P0.00</p>
-                <p>Shipping Fee: P0.00</p>
-                <hr id="hr_sum">
-                <p>Total: 0.00</p>
-                <button id="btn_checkout">PROCEED TO CHECKOUT</button>
+            <div class="cart">
+                <h1>Cart</h1>
+                <div class="items">
+                    <input type="checkbox" id="select-all">
+                    <label for="select-all">SELECT ALL ITEMS</label>
+                
+                    <div class="item">
+                        <input type="checkbox" class="checkbox" id="item1">
+                        <div class="image" id="img1"></div>
+                        <div class="details" id="det1">
+                            <ul>
+                                <li><h2>Long Sleeve Sweatshirt</h2></li>
+                                <li><h3>Variation: White</h3></li>
+                            </ul>
+                        </div>
+                        <div class="price" id="price1"><h3>P700.00</h3></div>
+                        <button class="delete" id="del1"></button>
+                    </div>
+                    
+                    <div class="item">
+                        <input type="checkbox" class="checkbox" id="item2">
+                        <div class="image" id="img2"></div>
+                        <div class="details" id="det2">
+                            <ul>
+                                <li><h2>Cotton Socks</h2></li>
+                                <li><h3>Variation: Gray</h3></li>
+                            </ul>
+                        </div>
+                        <div class="price" id="price1"><h3>P250.00</h3></div>
+                        <button class="delete" id="del2"></button>
+                    </div>
+        
+                    <div class="item">
+                        <input type="checkbox" class="checkbox" id="item3">
+                        <div class="image" id="img3"></div>
+                        <div class="details" id="det3">
+                            <ul>
+                                <li><h2>Skinny Denim Jeans</h2></li>
+                                <li><h3>Variation: Washed</h3></li>
+                            </ul>
+                        </div>
+                        <div class="price" id="price3"><h3>P990.00</h3></div>
+                        <button class="delete" id="del3"></button>
+                    </div>
+        
+                    <div class="item">
+                        <input type="checkbox" class="checkbox" id="item4">
+                        <div class="image" id="img4"></div>
+                        <div class="details" id="det4">
+                            <ul>
+                                <li><h2>Linen Open Collar Shirt</h2></li>
+                                <li><h3>Variation: Yellow</h3></li>
+                            </ul>
+                        </div>
+                        <div class="price" id="price4"><h3>P700.00</h3></div>
+                        <button class="delete" id="del4"></button>
+                    </div>
+        
+                    <div class="item">
+                        <input type="checkbox" class="checkbox" id="item5">
+                        <div class="image" id="img5"></div>
+                        <div class="details" id="det5">
+                            <ul>
+                                <li><h2>Stretchable Denim Jeans</h2></li>
+                                <li><h3>Variation: Dark Blue</h3></li>
+                            </ul>
+                        </div>
+                        <div class="price" id="price5"><h3>P1,000.00</h3></div>
+                        <button class="delete" id="del5"></button>
+                    </div>
+                </div>
             </div>
+
+            <aside class="summary">
+                <div id="sum_text">
+                    <p>Subtotal: P0.00</p>
+                    <p>Shipping Fee: P0.00</p>
+                    <hr id="hr_sum">
+                    <p>Total: P0.00</p>
+                    <button id="btn_checkout">PROCEED TO CHECKOUT</button>
+                </div>
+            </aside>
         </div>
 
         <!-- FOOTER -->
@@ -53,4 +135,10 @@
         </footer>
         <!-- FOOTER END -->
     </body>
+
+    <script>
+        function dropdownToggle(){
+                 document.getElementById('dropmenu').classList.toggle('active'); //clicking the account icon makes it appear, clicking it again makes it disappear.
+             }
+     </script>
 </html>

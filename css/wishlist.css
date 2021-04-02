@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Overpass:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 body {
     margin: 0px;
@@ -132,7 +133,7 @@ h1 {
     color: white;
     border: none;
     font-family: 'Overpass', sans-serif;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .wish {
@@ -183,9 +184,11 @@ h1 {
 
 .delete {
     background: none;
+    background-color: rgb(250, 74, 74);
     border: none;
+    border-radius: 40px;
     background-image: url('../images/spritesheet.png');
-    background-position: -1490px 0px;
+    background-position: -1480px -5px;
     height: 375px;
     width: 375px;
     zoom: 10%;
@@ -194,9 +197,11 @@ h1 {
 
 .add-cart {
     background: none;
+    background-color: #67f973;;
     border: none;
+    border-radius: 40px;
     background-image: url('../images/spritesheet.png');
-    background-position: -450px -415px;
+    background-position: -440px -415px;
     width: 375px;
     height: 375px;
     zoom: 10%;
@@ -249,3 +254,65 @@ hr {
     font-size: 14px;
 }
 /* FOOTER END --------------------------- */
+
+/*DROPDOWN MENU START*/
+
+.action {
+    position: relative;
+    left: 105px;
+}
+
+/*account icon */
+.action .profile {
+    position: relative;
+    left: 50px;
+    cursor: pointer;
+}
+
+/*dropdownmenu*/
+.action .dropdownmenu {
+    position: relative;
+    top: 15px;
+    right: 25px;
+    background: #373A36;
+    padding: 20px;
+    border-radius: 15px;
+    visibility: hidden;
+    margin-bottom: -150px;
+}
+
+.action .dropdownmenu.active {
+    visibility: visible;
+}
+
+
+/*arrow in dropdownmenu*/
+.action .dropdownmenu::before {
+    position: absolute;
+    content: '';
+    top: -5px;
+    right: 99.5px;
+    width: 8px;
+    height: 8px;
+    background: white;
+    transform: rotate(45deg);
+}
+
+.action .dropdownmenu li {
+    list-style: none;
+    padding: 5px;
+}
+
+.action .dropdownmenu li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500px;
+}
+
+/*change color hover over drop down menu options*/
+.action .dropdownmenu li a:hover {
+    color: #D48166
+}
+
+/*DROPDOWN MENU END*/
