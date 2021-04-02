@@ -301,7 +301,6 @@ ul li a:hover{
 
 .navbar {
     margin: 15px;
-    margin-bottom: 0;
 }
 
 #navbar1 {
@@ -393,37 +392,35 @@ footer {
 
 /*DROPDOWN MENU START*/
 
-.action {
-    position: relative;
-    left: 105px;
-}
 
 /*account icon */
-.action .profile {
+.profile {
     position: relative;
-    left: 50px;
+    right: 35px;
     cursor: pointer;
+    width: 5px;
 }
 
 /*dropdownmenu*/
-.action .dropdownmenu {
+.profile .dropdownmenu {
     position: relative;
     top: 15px;
-    right: 25px;
+    right: 60px;
     background: #373A36;
     padding: 20px;
     border-radius: 15px;
     visibility: hidden;
     margin-bottom: -150px;
+    width: 150px;
 }
 
-.action .dropdownmenu.active {
+.profile .dropdownmenu.active {
     visibility: visible;
 }
 
 
 /*arrow in dropdownmenu*/
-.action .dropdownmenu::before {
+.profile .dropdownmenu::before {
     position: absolute;
     content: '';
     top: -5px;
@@ -432,14 +429,15 @@ footer {
     height: 8px;
     background: white;
     transform: rotate(45deg);
+
 }
 
-.action .dropdownmenu li {
+.profile .dropdownmenu li {
     list-style: none;
     padding: 5px;
 }
 
-.action .dropdownmenu li a{
+.profile .dropdownmenu li a{
     text-decoration: none;
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -447,7 +445,7 @@ footer {
 }
 
 /*change color hover over drop down menu options*/
-.action .dropdownmenu li a:hover {
+.profile .dropdownmenu li a:hover {
     color: #D48166
 }
 

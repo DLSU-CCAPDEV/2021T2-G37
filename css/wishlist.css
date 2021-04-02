@@ -39,7 +39,6 @@ body {
 
 .navbar {
     margin: 15px;
-    margin-bottom: 0;
 }
 
 #navbar1 {
@@ -130,7 +129,7 @@ h1 {
 #add-all {
     width: 200px;
     height: 25px;
-    background-color: black;
+    background-color: rgb(200, 10, 10);
     color: white;
     border: none;
     font-family: 'Overpass', sans-serif;
@@ -185,7 +184,7 @@ h1 {
 
 .delete {
     background: none;
-    background-color: #b55e5e;
+    background-color: rgb(250, 74, 74);
     border: none;
     border-radius: 40px;
     background-image: url('../images/spritesheet.png');
@@ -194,12 +193,11 @@ h1 {
     width: 375px;
     zoom: 10%;
     margin-top: 150px;
-    cursor: pointer;
 }
 
 .add-cart {
     background: none;
-    background-color: #6fa571;;
+    background-color: #67f973;;
     border: none;
     border-radius: 40px;
     background-image: url('../images/spritesheet.png');
@@ -207,7 +205,6 @@ h1 {
     width: 375px;
     height: 375px;
     zoom: 10%;
-    cursor: pointer;
 }
 
 #img1 {
@@ -260,37 +257,35 @@ hr {
 
 /*DROPDOWN MENU START*/
 
-.action {
-    position: relative;
-    left: 105px;
-}
 
 /*account icon */
-.action .profile {
+.profile {
     position: relative;
-    left: 50px;
+    right: 35px;
     cursor: pointer;
+    width: 5px;
 }
 
 /*dropdownmenu*/
-.action .dropdownmenu {
+.profile .dropdownmenu {
     position: relative;
     top: 15px;
-    right: 25px;
+    right: 60px;
     background: #373A36;
     padding: 20px;
     border-radius: 15px;
     visibility: hidden;
     margin-bottom: -150px;
+    width: 150px;
 }
 
-.action .dropdownmenu.active {
+.profile .dropdownmenu.active {
     visibility: visible;
 }
 
 
 /*arrow in dropdownmenu*/
-.action .dropdownmenu::before {
+.profile .dropdownmenu::before {
     position: absolute;
     content: '';
     top: -5px;
@@ -299,14 +294,15 @@ hr {
     height: 8px;
     background: white;
     transform: rotate(45deg);
+
 }
 
-.action .dropdownmenu li {
+.profile .dropdownmenu li {
     list-style: none;
     padding: 5px;
 }
 
-.action .dropdownmenu li a{
+.profile .dropdownmenu li a{
     text-decoration: none;
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -314,7 +310,7 @@ hr {
 }
 
 /*change color hover over drop down menu options*/
-.action .dropdownmenu li a:hover {
+.profile .dropdownmenu li a:hover {
     color: #D48166
 }
 
