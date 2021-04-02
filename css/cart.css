@@ -189,6 +189,13 @@ label {
     font-size: 13px;
 }
 
+/*QTY form----------------------------------------------------*/
+input[type=number] {
+    padding: 5px;
+    width: 50px;
+    text-align: center;
+  }
+
 .price {
     margin-top: 20px;
     position: relative;
@@ -240,6 +247,11 @@ aside {
 
 #sum_text {
     margin: 35px;
+    font-weight: 1000;
+}
+
+#total {
+    color: #e6682d;
 }
 
 /* FOOTER START ------------------------- */ 
