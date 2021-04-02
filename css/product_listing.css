@@ -301,6 +301,7 @@ ul li a:hover{
 
 .navbar {
     margin: 15px;
+    margin-bottom: 0;
 }
 
 #navbar1 {

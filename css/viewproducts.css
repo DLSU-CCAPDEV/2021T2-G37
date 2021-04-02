@@ -45,6 +45,7 @@ ul li a:hover{
 
 .navbar {
     margin: 15px;
+    margin-bottom: 0;
 }
 
 #navbar1 {
@@ -115,7 +116,7 @@ footer {
     background-color: #4d4845;
     color: white;
     height: 150px;
-    width: 1570px;
+    width: 100%;
     position: absolute;
     bottom: 10;
 }

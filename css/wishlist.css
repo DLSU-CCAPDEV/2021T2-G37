@@ -39,6 +39,7 @@ body {
 
 .navbar {
     margin: 15px;
+    margin-bottom: 0;
 }
 
 #navbar1 {
@@ -129,7 +130,7 @@ h1 {
 #add-all {
     width: 200px;
     height: 25px;
-    background-color: rgb(200, 10, 10);
+    background-color: black;
     color: white;
     border: none;
     font-family: 'Overpass', sans-serif;
@@ -184,7 +185,7 @@ h1 {
 
 .delete {
     background: none;
-    background-color: rgb(250, 74, 74);
+    background-color: #b55e5e;
     border: none;
     border-radius: 40px;
     background-image: url('../images/spritesheet.png');
@@ -193,11 +194,12 @@ h1 {
     width: 375px;
     zoom: 10%;
     margin-top: 150px;
+    cursor: pointer;
 }
 
 .add-cart {
     background: none;
-    background-color: #67f973;;
+    background-color: #6fa571;;
     border: none;
     border-radius: 40px;
     background-image: url('../images/spritesheet.png');
@@ -205,6 +207,7 @@ h1 {
     width: 375px;
     height: 375px;
     zoom: 10%;
+    cursor: pointer;
 }
 
 #img1 {

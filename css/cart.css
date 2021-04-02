@@ -40,6 +40,7 @@ body {
 
 .navbar {
     margin: 15px;
+    margin-bottom: 0;
 }
 
 #navbar1 {
@@ -207,7 +208,7 @@ input[type=number] {
 
 .delete {
     background: none;
-    background-color: rgb(250, 74, 74);
+    background-color: #b55e5e;
     border: none;
     border-radius: 40px;
     background-image: url('../images/spritesheet.png');
@@ -217,6 +218,7 @@ input[type=number] {
     zoom: 10%;
     margin-top: 150px;
     float: right;
+    cursor: pointer;
 }
 
 aside {
@@ -313,7 +315,7 @@ hr {
     position: absolute;
     content: '';
     top: -5px;
-    right: 99.5px;
+    right: 90px;
     width: 8px;
     height: 8px;
     background: white;
