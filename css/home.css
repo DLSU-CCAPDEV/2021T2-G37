@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Overpass:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-
 body {
     margin: 0px;
-    min-height: 100%
 }
 
 /* HEADER START ---------------------- */
@@ -38,13 +36,12 @@ body {
     text-decoration: inherit;
 }
 
-.navbar {
-    margin: 15px;
-    margin-bottom: 0;
-}
-
 ul li a:hover{
     color: #D48166;
+}
+
+.navbar {
+    margin: 15px;
 }
 
 #navbar1 {
@@ -109,154 +106,96 @@ ul {
     background-image: url("../images/spritesheet.png");
     background-position: -740px 0px;
 }
-
-#hr_home{
-    width: 100%;
-    margin: 0px;
-}
 /* HEADER END -------------------------- */
 
-.content {
-    font-family: 'Overpass', sans-serif;
-    float: left;
-    margin: 30px;
+#banner {
+    background-image: url("../images/banner.jpg");
+	height: 750px;
+    background-size: 2000px;
+	background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#button {
     display: flex;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    right: 40px;
+    top: 270px;
+}
+
+#discover {
+    font-family: 'Overpass', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+#shopnow {
+    font-family: 'Overpass', sans-serif;
+    font-size: 18px;
+    color: white;
+    height: 60px;
+    width: 170px;
+    background: none;
+    border: 3px solid white;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.content {
+    background-color: white;
+    min-height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
-    min-height: 1000px;
+    align-items: center;
 }
 
-.cart {
-    margin-left: 150px;
-}
-
-label {
-    font-size: 17px;
-}
-
-.item {
-    background-color: #e6e2dd;
-    height: 180px;
-    width: 800px;
-    margin: 10px;
-    padding: 20px;
-    overflow: hidden;
-}
-
-.checkbox { 
-    float: left;
-    margin-top: 80px;
-    margin-right: 40px;
-}
-
-.image {
+.thumbnails {
+    text-align: center;
+    vertical-align: top;
+    display: inline-block;
     width: 500px;
-    height: 500px;
-    zoom: 35%;
-    margin: 5px;
-    border: 10px solid white;
-    float: left;
 }
 
-#img1 {
-    background-image: url('../images/spritesheet2.png');
+.listings {
+    margin: 70px;
+    height: 500px;
+    width: 500px;
+    zoom: 70%;
+}
+
+#thumb1 {
+    background-image: url("../images/spritesheet2.png");
     background-position: 0px 0px;
 }
 
-#img2 {
-    background-image: url('../images/spritesheet2.png');
+#thumb2 {
+    background-image: url("../images/spritesheet2.png");
+    background-position: -500px 0px;
+}
+
+#thumb3 {
+    background-image: url("../images/spritesheet2.png");
     background-position: -1000px 0px;
 }
 
-#img3 {
-    background-image: url('../images/spritesheet2.png');
-    background-position: -2000px 0px;
-}
-
-#img4 {
-    background-image: url('../images/spritesheet2.png');
-    background-position: -1500px 0px;
-}
-
-#img5 {
-    background-image: url('../images/spritesheet2.png');
-    background-position: -500px -500px;
-}
-
-.details {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-top: 15px;
-    margin-left: 15px;
+.name, .price {
+    font-family: 'Overpass', sans-serif;
     display: block;
-    float: left;
-    font-size: 13px;
+    margin-left: -35px;
 }
 
-/*QTY form----------------------------------------------------*/
-input[type=number] {
-    padding: 5px;
-    width: 50px;
-    text-align: center;
-  }
+.name {
+    font-size: 22px;
+}
 
 .price {
-    margin-top: 20px;
-    position: relative;
-    right: 170px;
-    text-align: right;
-    float: right;
-    font-size: 14px;
-}
-
-.delete {
-    background: none;
-    background-color: rgb(250, 74, 74);
-    border: none;
-    border-radius: 40px;
-    background-image: url('../images/spritesheet.png');
-    background-position: -1480px -5px;
-    height: 375px;
-    width: 375px;
-    zoom: 10%;
-    margin-top: 150px;
-    float: right;
-}
-
-aside {
-    width: 400px;
-    height: 250px;
-    float: left;
-    background-color: #e6e2dd;
-    margin: 30px;
-    margin-top: 117px;
-}
-
-#btn_checkout {
-    background-color: rgb(200, 10, 10);
-    color: white;
-    margin-right: 8px;
-    border: none;
-    font-family: 'Overpass', sans-serif;
-    font-size: 18px; 
-    font-weight: 1000;
-    height: 35px;
-    padding: 8px;
-}
-
-#hr_sum {
-    margin: 10px;
-    margin-left: 0;
-}
-
-#sum_text {
-    margin: 35px;
-    font-weight: 1000;
-}
-
-#total {
-    color: #e6682d;
+    font-size: 15px;
+    margin-bottom: 70px;
 }
 
 /* FOOTER START ------------------------- */ 
@@ -266,7 +205,7 @@ footer {
     height: 150px;
     width: 100%;
     position: absolute;
-    bottom: -800px;
+    bottom: 10;
 }
 
 hr {
@@ -281,6 +220,7 @@ hr {
     font-size: 14px;
 }
 /* FOOTER END --------------------------- */
+
 
 /*DROPDOWN MENU START*/
 
@@ -298,7 +238,7 @@ hr {
     position: relative;
     top: 15px;
     right: 60px;
-    background: #373A36;
+    background: white;
     padding: 20px;
     border-radius: 15px;
     visibility: hidden;
@@ -331,14 +271,14 @@ hr {
 
 .profile .dropdownmenu li a{
     text-decoration: none;
-    color: white;
+    color: #373A36;
     font-family: 'Roboto', sans-serif;
     font-weight: 500px;
 }
 
 /*change color hover over drop down menu options*/
 .profile .dropdownmenu li a:hover {
-    color: #D48166
+    color: #fb956c;
 }
 
 /*DROPDOWN MENU END*/
