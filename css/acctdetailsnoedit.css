@@ -43,6 +43,7 @@ ul li a:hover{
 
 .navbar {
     margin: 15px;
+    margin-bottom: 0;
 }
 
 #navbar1 {
@@ -160,7 +161,7 @@ footer {
     height: 150px;
     width: 100%;
     position: absolute;
-    bottom: 10;
+    bottom: 0;
 }
 
 footer p {

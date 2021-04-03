@@ -147,7 +147,6 @@ ul {
 
 .content {
     background-color: white;
-    min-height: fit-content;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -175,12 +174,22 @@ ul {
 
 #thumb2 {
     background-image: url("../images/spritesheet2.png");
-    background-position: -500px 0px;
+    background-position: 0px -500px;
 }
 
 #thumb3 {
     background-image: url("../images/spritesheet2.png");
     background-position: -1000px 0px;
+}
+
+#thumb4 {
+    background-image: url("../images/spritesheet2.png");
+    background-position: -2000px 0px;
+}
+
+#thumb5 {
+    background-image: url("../images/spritesheet2.png");
+    background-position: -1500px 0px;
 }
 
 .name, .price {
@@ -204,20 +213,21 @@ footer {
     color: white;
     height: 150px;
     width: 100%;
-    position: absolute;
-    bottom: -1000px;
 }
 
 hr {
     margin-left: 100px;
     margin-right: 100px;
-    margin-top: 70px;
+    position: relative;
+    top: 70px;
 }
 
 #footer1 {
     margin-left: 100px;
     font-family: 'Overpass', sans-serif;
     font-size: 14px;
+    position: relative;
+    top: 70px;
 }
 /* FOOTER END --------------------------- */
 

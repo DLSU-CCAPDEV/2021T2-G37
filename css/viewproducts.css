@@ -123,20 +123,22 @@ footer {
     color: white;
     height: 150px;
     width: 100%;
-    position: absolute;
-    bottom: 10;
 }
 
-hr {
+#hr_footer {
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 70px;
+    position: relative;
+    top: 70px;
 }
 
 #footer1 {
     margin-left: 100px;
     font-family: 'Overpass', sans-serif;
     font-size: 14px;
+    position: relative;
+    top: 70px;
 }
 /* FOOTER END --------------------------- */
 

@@ -43,6 +43,7 @@ ul li a:hover{
 
 .navbar {
     margin: 15px;
+    margin-bottom: 0;
 }
 
 #navbar1 {
@@ -175,8 +176,6 @@ footer {
     background-color: #4d4845;
     height: 150px;
     width: 100%;
-    position: absolute;
-    bottom: 10;
 }
 
 footer p {
@@ -188,12 +187,15 @@ footer p {
 hr {
     margin-left: 100px;
     margin-right: 100px;
-    margin-top: 70px;
+    position: relative;
+    top: 70px;
 }
 
 #footer1 {
     margin-left: 100px;
     font-family: 'Overpass', sans-serif;
+    position: relative;
+    top: 70px;
 }
 /* FOOTER END --------------------------- */
 

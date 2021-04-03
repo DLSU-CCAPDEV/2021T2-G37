@@ -112,7 +112,7 @@ ul {
 
 #hr_home{
     width: 100%;
-    margin: 0px;
+    margin: 0;
 }
 /* HEADER END -------------------------- */
 
@@ -268,8 +268,7 @@ footer {
     position: absolute;
     bottom: -800px;
 }
-
-hr {
+#hr_footer {
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 70px;
