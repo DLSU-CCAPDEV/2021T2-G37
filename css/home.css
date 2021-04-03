@@ -154,7 +154,7 @@ ul {
     align-items: center;
 }
 
-.thumbnails {
+.thumbnail {
     text-align: center;
     vertical-align: top;
     display: inline-block;
@@ -205,7 +205,7 @@ footer {
     height: 150px;
     width: 100%;
     position: absolute;
-    bottom: 10;
+    bottom: -1000px;
 }
 
 hr {
