@@ -179,7 +179,7 @@ label {
 
 #img5 {
     background-image: url('../images/spritesheet2.png');
-    background-position: -500px -500px;
+    background-position: 0px -500px;
 }
 
 .details {
