@@ -22,3 +22,20 @@ p {
 	font-family: 'Bebas Neue', cursive;
 	font-size: 50px;
 }
+
+button {
+	padding: 15px;
+	border: 0;
+	outline: 0;
+	background-color: #373A36;
+	color: white;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 20px;
+	position: relative;
+	top: 25px;
+	left: 675px;
+}
+
+button:hover {
+	cursor: pointer;
+}
