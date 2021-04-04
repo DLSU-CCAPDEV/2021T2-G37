@@ -8,6 +8,12 @@ body {
     overflow-x: hidden;
 }
 
+/*For links / a href not to have underline and blue text*/
+a{
+    color: inherit; 
+    text-decoration: none;
+}
+
 /* HEADER START ---------------------- */
 .header {
     background-color: #fb956c;

@@ -44,12 +44,14 @@ body {
     margin-top: 0px;
     margin-bottom: 40px;
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
     height: 100px;
 }
 .small_prod_image{
     width: 23%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: 5px;
 }
 .indiv_small_img:hover{
     cursor: pointer;
@@ -105,10 +107,8 @@ body {
     width: 40px;
   }
 .btnv:focus{ border: 2px solid black;}
-#var1 {background-color: #aebcc9;} #var1:hover {background-color: #b6c6d4;}
-#var2 {background-color: #677a98;} #var2:hover {background: #839bc2;}
-#var3 {background-color: #3b4053;} #var3:hover {background: #5f6786;}
-#var4 {background-color: black;} #var4:hover {background: rgb(66, 65, 65);}
+#var1 {background-color: #f3ad0f;} #var1:hover {background-color: #f3b931;}
+#var2 {background-color: #ece4d1;} #var2:hover {background: #f8f1e2;}
 
 /*Size Buttons----------------------------------------------------*/
 .btns {

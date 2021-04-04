@@ -107,10 +107,10 @@ body {
     width: 40px;
   }
 .btnv:focus{ border: 2px solid black;}
-#var1 {background-color: #aebcc9;} #var1:hover {background-color: #b6c6d4;}
-#var2 {background-color: #677a98;} #var2:hover {background: #839bc2;}
-#var3 {background-color: #3b4053;} #var3:hover {background: #5f6786;}
-#var4 {background-color: black;} #var4:hover {background: rgb(66, 65, 65);}
+#var1 {background-color: #f4efeb;} #var1:hover {background-color: #ffffff;}
+#var2 {background-color: #be8b5c;} #var2:hover {background: #dba471;}
+#var3 {background-color: black;} #var3:hover {background: rgb(66, 65, 65);}
+#var4 {background-color: #5e5c47;} #var4:hover {background: #7e7b60;}
 
 /*Size Buttons----------------------------------------------------*/
 .btns {

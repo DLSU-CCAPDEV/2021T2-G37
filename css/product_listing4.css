@@ -107,24 +107,10 @@ body {
     width: 40px;
   }
 .btnv:focus{ border: 2px solid black;}
-#var1 {background-color: #aebcc9;} #var1:hover {background-color: #b6c6d4;}
-#var2 {background-color: #677a98;} #var2:hover {background: #839bc2;}
-#var3 {background-color: #3b4053;} #var3:hover {background: #5f6786;}
-#var4 {background-color: black;} #var4:hover {background: rgb(66, 65, 65);}
+#var1 {background-color: #bebfc1;} #var1:hover {background-color: #d0d2d6;}
+#var2 {background-color: #b1b3c8;} #var2:hover {background: #c4c6dd;}
+#var3 {background-color: #8d5034;} #var3:hover {background: #aa6545;}
 
-/*Size Buttons----------------------------------------------------*/
-.btns {
-    margin-right: 10px;
-    border: 1.5px solid black;
-    border-color: black;
-    background-color: white;
-    font-size: 14px;
-    height: 50px;
-    width: 60px;
-    cursor: pointer;
-  }
-.btns:hover{ background: rgb(53, 52, 52); color: white;}
-.btns:focus{ background: rgb(0, 0, 0); color: white;}
  
 /*QTY form----------------------------------------------------*/
 input[type=number] {
