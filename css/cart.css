@@ -221,6 +221,7 @@ input[type=number] {
     zoom: 10%;
     margin-top: 150px;
     float: right;
+    cursor: pointer;
 }
 
 aside {
@@ -244,6 +245,7 @@ aside {
     font-weight: 1000;
     height: 35px;
     padding: 8px;
+    cursor: pointer;
 }
 
 #hr_sum {

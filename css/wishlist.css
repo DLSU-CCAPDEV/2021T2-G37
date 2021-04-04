@@ -139,6 +139,7 @@ h1 {
     border: none;
     font-family: 'Overpass', sans-serif;
     font-size: 17px;
+    cursor: pointer;
 }
 
 .wish {
@@ -198,6 +199,7 @@ h1 {
     width: 375px;
     zoom: 10%;
     margin-top: 150px;
+    cursor: pointer;
 }
 
 .add-cart {
@@ -210,6 +212,7 @@ h1 {
     width: 375px;
     height: 375px;
     zoom: 10%;
+    cursor: pointer;
 }
 
 #img1 {
