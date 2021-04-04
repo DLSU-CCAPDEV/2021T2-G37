@@ -213,9 +213,6 @@ footer {
     justify-content: center;
     align-content: flex-start;
     flex-wrap: wrap;
-    height: 1200px;
-    position: relative;
-    bottom: 40px;
     left: 50px;
     top: 100px;
 }
