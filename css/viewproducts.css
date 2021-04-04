@@ -237,7 +237,7 @@ footer {
 
 #thumb2 {
     background-image: url("../images/spritesheet2.png");
-    background-position: -500px 0px;
+    background-position: 0px -500px;
 }
 
 #thumb3 {
