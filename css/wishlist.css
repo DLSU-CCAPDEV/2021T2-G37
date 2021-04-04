@@ -240,6 +240,7 @@ h1 {
     background-position: -500px -500px;
 }
 
+/* Removes hyperlink format from text */
 /* unvisited link */
 a:link {
     text-decoration: none;
