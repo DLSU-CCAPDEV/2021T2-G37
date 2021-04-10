@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <meta name="description" content="Product Listing">
+    <meta name="keyword" content="Product Listing">
+    <meta name="author" content="MANDADERO, Clarissa Mae S.">
+    <head>
+        <title>Clothing & Science | Product Listing</title>
+        <link rel="stylesheet" type="text/css" href="../css/product_listing2.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+
+        <!--Responsible for the slideshow of the product images--------------------------------------------------->
+        <script>
+            function showSlides(n) {
+                var i;
+                var allImg = document.getElementsByClassName("main_prod_image"); //gets all the images to hide and show later
+                for (i = 0; i < allImg.length; i++) {
+                    allImg[i].style.display = "none"; //hides all product images that were not clicked
+                }    
+                allImg[n].style.display = "block"; //shows the product image that was clicked
+            }
+        </script>
+    </head>
+
+    <!--header start----------------------------------------------------->
+    <div class="header">
+        <div id="top-logo">
+            <img id="logo" src="../images/logo.png">
+        </div>
+    </div>
+    <div id="container1">
+        <div class="floatleft">
+            <ul class="navbar" id="navbar1">
+                <li><a class="navlink" href="../views/home.html">Home</a></li>
+                <li><a class="navlink" href="../views/register.html">Register</a></li>
+                <li><a class="navlink" href="../views/login.html">Login</a></li>
+            </ul>
+        </div>
+        <div class="floatright">
+            <ul class="navbar" id="navbar2">
+                <div class="profile" onclick="dropdownToggle();">
+                            <li class="navbtn" id="account"></li></a>
+                    <div class="dropdownmenu" id="dropmenu">
+                        <li> <a href="../views/acctdetailsnoedit.html"> View Account Details </a> </li>
+                        <li> <a href="../views/acctdetails.html"> Edit Account Details </a> </li>
+                        <li> <a href="../views/home.html"> Logout </a> </li>
+                    </div>
+                </div>
+                <a class="nav" href="../views/wishlist.html"><li class="navbtn" id="wishlist"></li></a>
+                <a class="nav" href="../views/cart.html"><li class="navbtn" id="cart"></li></a>
+                <form>
+                    <input type="text" id="fitem" name="fname" placeholder="Search our store">
+                </form>
+                <a class="nav" href="../views/viewproducts.html"><li class="navbtn" id="search"></li></a>
+            </ul>
+        </div>
+    </div>
+    <!--header end--------------------------------------------------->
+
+<body>
+    <hr id="hr_home">
+    <div id="divwhole">
+        <!--div left start--------------------------------------------------->
+        <div id="divleft">
+            <!--big product images start--------------------------------------------------->
+            <div class="divmain_prod">
+                <div id="main_img" class="main_prod_image">
+                    <img id="main_prod_image1" src="../images/product2a.jpg" alt="firstpic" height= "100%" width="100%" object-fit="contain">
+                </div>
+    
+                <div class="main_prod_image">
+                    <img id="prod_image2" src="../images/product2b.jpg" alt="secondimage" width="100%" object-fit="contain">
+                </div>
+    
+                <div class="main_prod_image">
+                    <img id="prod_image3" src="../images/product2c.jpg" alt="thirdimage" width="100%" object-fit="contain">
+                </div>
+            </div>
+            <!--big product images end--------------------------------------------------->
+    
+            <!--small product images start--------------------------------------------------->
+            <div class="divsmall_prod_image">
+                <div class="small_prod_image">
+                    <img id="prod_image1" class="indiv_small_img" src="../images/product2a.jpg" alt="firstimage" width="100%" object-fit="contain" onclick="showSlides(0)">
+                </div>
+    
+                <div class="small_prod_image">
+                    <img id="prod_image2" class="indiv_small_img" src="../images/product2b.jpg" alt="secondimage" width="100%" object-fit="contain"onclick="showSlides(1)">
+                </div>
+    
+                <div class="small_prod_image">
+                    <img id="prod_image3" class="indiv_small_img" src="../images/product2c.jpg" alt="thirdimage" width="100%" object-fit="contain"onclick="showSlides(2)">
+                </div>
+            </div>
+            <!--small product images end--------------------------------------------------->
+
+        </div>
+        <!--div left end--------------------------------------------------->
+    
+        <!--div right start--------------------------------------------------->
+        <div id="divright">
+            <!--Product Name and Description--------------------------------------------------->
+            <div>
+                <h1 class="prod_title">High Rise Denim Jeans</h1>
+                <h2 class="prod_title">P 1,490.00</h2>
+            </div>
+
+            <div>
+                <p id="prod_desc">
+                    Introducing a new generation of High Rise fabric. Our most flattering and comfortable high rise jeans yet.
+                </p>
+
+                <p id="qty_sold" class="header_qty">Quantity Sold: 1,040</p>
+                <p id="qty_available" class="header_qty">Available Quantity: 5</p>
+                <p id="pnumber" class="header_qty">Product Number: 100457</p>
+            </div>
+
+            <hr>
+
+            <!--Variation Color--------------------------------------------------->
+            <div class="prod_details">
+                <p class="prod_details_text"> COLOR </p>
+                <button id="var1" class="btnv"></button>
+                <button id="var2" class="btnv"></button>
+                <button id="var3" class="btnv"></button>
+            </div>
+
+            <!--Variation Size--------------------------------------------------->
+            <div class="prod_details">
+                <p class="prod_details_text"> SIZE </p>
+                <button id="size1" class="btns">XS</button>
+                <button id="size2" class="btns">S</button>
+                <button id="size3" class="btns">M</button>
+                <button id="size4" class="btns">L</button>
+                <button id="size5" class="btns">XL</button>
+            </div>
+
+            <!--QTY--------------------------------------------------->
+            <div class="prod_details">
+                <p class="prod_details_text"> QUANTITY </p>
+                <form>
+                    <label for="qty"></label>
+                    <input type="number" id="qty" name="qty" value="1" min="1">
+                </form>
+            </div>
+
+            <!--END BUTTONS--------------------------------------------------->
+            <div class="divbtnend">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <a href="../views/checkoutpage.html"><button id="btnbuy"class="btnend">Buy</button></a>
+                <button id="btncart" class="btnend" onclick="alert('Product successfully added to cart!')")>Add to Cart</button>
+                <button id="btnwishlist"class="btnend" onclick="alert('Product successfully added to wishlist!')"><i class="fa fa-heart"></i></button>
+            </div>
+        </div>
+        <!--div right end--------------------------------------------------->
+
+    </div>
+    <!--div whole end--------------------------------------------------->
+
+    <!--div comment start--------------------------------------------------->
+    <div class="divcommentwhole">
+        <button id="writereview" class="btnreviews">WRITE A REVIEW</button>
+        <hr>
+        <!--COMMENT 1--------------------------------------------------->
+        <div class="divcomment">
+            <h3 class="rating"> Rating: 5.0 </h3>
+            <h5 class="nameofposter"> posted by Ina </h5>
+            <p class="comment">
+                I'm on the heavy side and so finding a pair of high rise jeans is quite hard. But when I found this, I was so glad that it was able to fit my body size!
+            </p>
+            <!--image div 1-->
+            <div id="divimage">
+                <img class="comment_image" src="../images/product2a.jpg" alt="rev1" height= "100px">
+                <img class="comment_image" src="../images/product2b.jpg" alt="rev1" height= "100px">
+            </div>
+            <!--image div 1 end-->
+            <!--edit delete review button start-->
+            <div id="divbtn_edit_delete">
+                <button id="btn_edit" class="btn_edit_delete">Edit</button>
+                <button id="btn_delete" class="btn_edit_delete">Delete</button>
+            </div>
+            <!--edit delete review button end-->
+        </div>
+
+        <!--COMMENT 2--------------------------------------------------->
+        <hr>
+        <div class="divcomment">
+            <h3 class="rating"> Rating: 3.0 </h3>
+            <h5 class="nameofposter"> posted by Nicole </h5>
+            <p class="comment">
+                This new version seem to fit tighter than the old version. I like it. However, its fit is not just for me.
+            </p>
+            <!--edit delete review button start-->
+            <div id="divbtn_edit_delete">
+                <button id="btn_edit" class="btn_edit_delete">Edit</button>
+                <button id="btn_delete" class="btn_edit_delete">Delete</button>
+            </div>
+            <!--edit delete review button end-->
+        </div>
+
+        <!--COMMENT 3--------------------------------------------------->
+        <hr>
+        <div class="divcomment">
+            <h3 class="rating"> Rating: 4.8 </h3>
+            <h5 class="nameofposter"> posted by Carla </h5>
+            <p class="comment">
+                Only high rise jeans suits me. I'm glad this is one of those jeans.
+            </p>
+            <!--edit delete review button start-->
+            <div id="divbtn_edit_delete">
+                <button id="btn_edit" class="btn_edit_delete">Edit</button>
+                <button id="btn_delete" class="btn_edit_delete">Delete</button>
+            </div>
+            <!--edit delete review button end-->
+        </div>
+
+        <!--COMMENT 4--------------------------------------------------->
+        <hr>
+        <div class="divcomment">
+            <h3 class="rating"> Rating: 4.8 </h3>
+            <h5 class="nameofposter"> posted by Anna </h5>
+            <p class="comment">
+                The fit of the pants does not make it hard for the legs to breathe in.
+            </p>
+            <!--edit delete review button start-->
+            <div id="divbtn_edit_delete">
+                <button id="btn_edit" class="btn_edit_delete">Edit</button>
+                <button id="btn_delete" class="btn_edit_delete">Delete</button>
+            </div>
+            <!--edit delete review button end-->
+            <hr>
+        </div>
+
+
+        <!--all reviews button--------------------------------------------------->
+        <a class="navlink" href="../views/all_reviews2.html">
+        <button id="viewcomments" class="btnreviews"> View All Reviews</button>
+        </a>
+    </div>
+    <!--div comment end--------------------------------------------------->
+</body>
+
+<!-- FOOTER --------------------------------------------------->
+<footer>
+    <hr id="hr_footer">
+    <div id="footer1"><p>©  Clothing & Science</p></div>
+</footer>
+<!-- FOOTER END --------------------------------------------------->
+
+<script>
+   function dropdownToggle(){
+            document.getElementById('dropmenu').classList.toggle('active'); //clicking the account icon makes it appear, clicking it again makes it disappear.
+        }
+</script>
+</html>
