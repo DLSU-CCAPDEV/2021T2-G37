@@ -11,7 +11,7 @@
 * Anna Patricia Desembrana
 * Clarissa Mae Mandadero 
 
-## Settint up the server
+## Setting up the server
 ### Create .env file on root dir 
 * HOSTNAME = localhost
 * PORT = 3000
