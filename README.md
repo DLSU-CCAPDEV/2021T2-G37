@@ -22,7 +22,7 @@
 * Type npm install express --save
 * Type npm install body-parser --save 
 
-### Running the server
+## Running the server
 #### When supervisor is installed
 * Type supervisor index.js
 #### No supervisor installed 
