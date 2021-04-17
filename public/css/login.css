@@ -1,0 +1,98 @@
+body {
+	background-color:#D48166
+}
+
+#container {
+	width: 430px;
+	margin: auto;
+	height: 700px;
+	background-color: white;
+	background: rgba(0,0,0,.2);
+	text-align: center;
+}
+
+#header {
+	margin-top: 50px;
+	text-align: center; 
+	position: relative;
+	top: 50px;
+}
+
+#tagline {
+	font-family: 'Satisfy', cursive;
+	font-size: 25px;
+	color: white;
+	margin-left: 20px;
+}
+
+#logo {
+	margin-left: 10px;
+}
+
+.form {
+	margin-top: 20px;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.input {
+	position: relative;
+	top: 50px;
+	width: 93%;
+	padding: 15px;
+	border: 0;
+	outline: 0;
+	background-color: #E6E2DD
+}
+
+#loginbtn {
+	width: 50%;
+	padding: 15px;
+	border: 0;
+	outline: 0;
+	background-color: #373A36;
+	color: white;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 20px;
+	position: relative;
+	top: 170px; 
+	right: 55px;
+}
+
+#loginbtn:hover {
+	cursor: pointer;
+}
+
+#noacc {
+	text-decoration: none;
+	color: black;
+	position: relative;
+	top: 250px;
+}
+
+#noacc:hover {
+	color: #E6E2DD
+}
+
+
+#forgotpass {
+	text-decoration: none;
+	color: black;
+	float: right;
+	position: relative;
+	bottom: 32px;
+	right: 5px;
+}
+
+#forgotpass:hover{
+	color: #E6E2DD
+}
+
+#remember-me {
+	position: relative;
+	top: 40px;
+	float: left;
+	left: 5px;
+}
+
+

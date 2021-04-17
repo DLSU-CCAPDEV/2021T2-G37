@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Overpass:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body {
+	background-image: url("../images/bg.png");
+    margin: 0;
+}
+
+/* HEADER START ---------------------- */
+.header {
+    background-color: #fb956c;
+    height: 180px;
+    width: 100%;
+}
+
+#logo {
+    margin-top: 55px;
+    width: 100px;
+}
+
+#top-logo {
+    display: flex;
+    justify-content: center;
+}
+
+#container1 {
+    background-color: white;
+    height: 40px;
+}
+
+.navlink {
+    margin-left: 80px;
+    font-size: 25px;
+    font-family: 'Bebas Neue', cursive;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+ul li a:hover{
+    color: #D48166;
+}
+
+.navbar {
+    margin: 15px;
+    margin-bottom: 0;
+}
+
+#navbar1 {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-top: 7px;
+}
+
+#navbar2 {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright{
+    float: right;
+}
+
+.navbtn {
+    margin-top: -140px;
+    margin-left: 200px;
+	margin-right: 4px;
+	background-repeat: no-repeat;
+	width: 375px;
+	height: 375px;
+    zoom: 7%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#account {
+    background-image: url("../images/spritesheet.png");
+    background-position: 0px 0px;
+}
+
+#wishlist {
+    background-image: url("../images/spritesheet.png");
+    background-position: -1110px 0px;
+
+}
+
+#cart {
+    background-image: url("../images/spritesheet.png");
+    background-position: -370px 0px;
+}
+
+#fitem {
+    margin-left: 20px;
+    position: relative;
+    top: -4px;
+}
+
+#search {
+    background-image: url("../images/spritesheet.png");
+    background-position: -740px 0px;
+}
+/* HEADER END -------------------------- */
+
+.container {
+	background: #E6E2DD;
+	height: 750px;
+	width: 540px;
+	margin: auto;
+    position: relative;
+    bottom: 10px;
+}
+
+.profile-info {
+	width: 80%;
+	margin-left: 20%;
+	position: relative;
+	top: 70px;
+}
+
+h1 {
+	font-size: 30px;
+	margin-bottom: 35px;
+	text-transform: uppercase;
+	color: #D48166;
+	position: relative;
+	left: 20px;
+}
+
+h2 {
+	font-size: 15px;
+	text-transform: uppercase;
+	font-family: 'Lexend', sans-serif;
+	color: grey;
+}
+
+.input {
+	background-color: #E6E2DD;
+}
+
+.input, p {
+	border: 0;
+	border-bottom: 1px solid #D48166;
+	color: #070707;
+	outline: none;
+	font-size: 15px;
+	width: 80%;
+}
+
+.btn {
+	font-family: 'Bebas Neue', cursive;
+	font-size: 20px;
+	border: 0;
+	background-color: #D48166;
+	color: white;
+	cursor: pointer;
+	position: relative;
+	top: 40px;
+	width: 82%;
+}
+
+.btn:hover {
+	color: #373A36;
+}
+
+/* FOOTER START ------------------------- */ 
+footer {
+    background-color: #4d4845;
+    height: 150px;
+    width: 100%;
+}
+
+footer p {
+    border: 0;
+    color: white;
+    font-size: 14px;
+}
+
+hr {
+    margin-left: 100px;
+    margin-right: 100px;
+    position: relative;
+    top: 70px;
+}
+
+#footer1 {
+    margin-left: 100px;
+    font-family: 'Overpass', sans-serif;
+    position: relative;
+    top: 70px;
+}
+/* FOOTER END --------------------------- */
+
+/*DROPDOWN MENU START*/
+
+
+/*account icon */
+.profile {
+    position: relative;
+    right: 35px;
+    cursor: pointer;
+    width: 5px;
+}
+
+/*dropdownmenu*/
+.profile .dropdownmenu {
+    position: relative;
+    top: 15px;
+    right: 60px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    visibility: hidden;
+    margin-bottom: -150px;
+    width: 150px;
+}
+
+.profile .dropdownmenu.active {
+    visibility: visible;
+}
+
+
+/*arrow in dropdownmenu*/
+.profile .dropdownmenu::before {
+    position: absolute;
+    content: '';
+    top: -5px;
+    right: 99.5px;
+    width: 8px;
+    height: 8px;
+    background: white;
+    transform: rotate(45deg);
+
+}
+
+.profile .dropdownmenu li {
+    list-style: none;
+    padding: 5px;
+}
+
+.profile .dropdownmenu li a{
+    text-decoration: none;
+    color: #373A36;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500px;
+}
+
+/*change color hover over drop down menu options*/
+.profile .dropdownmenu li a:hover {
+    color: #fb956c;
+}
+
+/*DROPDOWN MENU END*/
+

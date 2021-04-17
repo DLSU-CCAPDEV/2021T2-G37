@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+body {
+	background-color: #fb956c;
+}
+
+.container {
+	position: relative;
+	top: 150px;
+}
+
+
+#shipicon {
+	position: relative;
+	left: 645px;
+	height: 200px;
+}
+
+p {
+	text-align: center;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 50px;
+}
+
+button {
+	padding: 15px;
+	border: 0;
+	outline: 0;
+	background-color: #373A36;
+	color: white;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 20px;
+	position: relative;
+	top: 25px;
+	left: 675px;
+}
+
+button:hover {
+	cursor: pointer;
+}
