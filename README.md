@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/logo.png" width="350" title="hover text">
+  <img src="public/images/logo.png" width="350" title="hover text">
 </p>
 
 # Clothing & Science
