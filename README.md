@@ -12,7 +12,7 @@
 * Clarissa Mae Mandadero 
 
 ## Setting up the server
-### Create .env file on root dir 
+### Create .env file on root dir with the following contents
 * HOSTNAME = localhost
 * PORT = 3000
 
