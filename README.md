@@ -11,13 +11,12 @@
 * Anna Patricia Desembrana
 * Clarissa Mae Mandadero 
 
-
+## Settint up the server
 ### Create .env file on root dir 
 * HOSTNAME = localhost
 * PORT = 3000
 
-
-### Setting up the server
+### Install the following modules
 * Open Command Prompt
 * Navigate to the project folder
 * Type npm install express --save
@@ -25,8 +24,8 @@
 
 ### Running the server
 #### When supervisor is installed
-* supervisor index.js
+* Type supervisor index.js
 #### No supervisor installed 
-* node index.js
+* Type node index.js
 
 
