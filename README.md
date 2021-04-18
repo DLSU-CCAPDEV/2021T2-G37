@@ -15,12 +15,14 @@
 ### Create .env file on root dir with the following contents
 * HOSTNAME = localhost
 * PORT = 3000
+* DB_URL = mongodb://localhost:27017
 
 ### Install the following modules
 * Open Command Prompt
 * Navigate to the project folder
 * Type npm install express --save
 * Type npm install body-parser --save 
+* Type npm install mongodb
 
 ## Running the server
 #### When supervisor is installed
