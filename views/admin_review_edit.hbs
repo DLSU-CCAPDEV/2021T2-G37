@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <meta name="description" content="Admin Settings - Edit Review">
+    <meta name="keyword" content="Admin Settings - Edit Review">
+    <meta name="author" content="MANDADERO, Clarissa Mae S.">
+    <head>
+        <title>Clothing & Science | Admin Settings - Edit Review</title>
+        <link rel="stylesheet" type="text/css" href="../css/admin_review_edit.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+    </head>
+
+
+    <body>
+        <div id="divmain">
+            <img id="imglogo" src="../images/logo.png" height="120px" width="120px">
+            <br>
+
+            <p id="txtheader">
+            <span class="material-icons">manage_accounts</span>
+            RN # 100456
+            </p>
+            <p id="txtname">
+                posted by Clarissa
+            </p>
+
+            <div id="divreview">
+                <p id="txtreview">
+                    "The pants was very smooth and very soft. It was also very light and comfortable. This is probably my best buy ever. I am using it everyday. Planning to buy another one. great job C & S!"
+                </p>
+            </div>
+             
+            <form class="form">
+                <input type="text" placeholder="Enter edited review" class="input" id="text" name="text">
+            </form>
+
+            <div id="divimg">
+                <div class="divimg_indiv">
+                    <img class="comment_image" src="../images/product1a.jpg" alt="rev1" height= "100px">
+                    <br>
+                    <span id="icon_trash" class="material-icons">delete</span>
+                </div>
+                <div class="divimg_indiv">
+                    <img class="comment_image" src="../images/product1b.jpg" alt="rev1" height= "100px">
+                    <br>
+                    <span id="icon_trash" class="material-icons">delete</span>
+                </div>
+            </div>
+
+            <button id="btnsave" class="btna" onclick="alert('Saved Successfully!')"> Save </button>
+            <br>
+            <button id="btndelete" class="btna" onclick="alert('Deleted Successfully!')"> Delete </button>
+            <br>
+            <a href="../views/admin_home_page.html"><button id="btncancel" class="btna"> Cancel </button> </a>
+            <br>
+            <a href="../views/admin_home_page.html"><button id="btndone" class="btna"> Done </button> </a>
+
+        </div>
+    </body>
+</html>
