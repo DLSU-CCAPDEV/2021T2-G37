@@ -24,8 +24,8 @@
 
 ## Running the server
 #### When supervisor is installed
-* Type `supervisor index.js
+* Type `supervisor index.js`
 #### No supervisor installed 
-* Type `node index.js
+* Type `node index.js`
 
 
