@@ -15,18 +15,17 @@
 ### Install the following modules
 * Open Command Prompt
 * Navigate to the project folder
-* Type npm install express 
-* Type npm install body-parser 
-* Type npm install mongodb
-* Type npm install express-handlebars
-* Type npm install hbs
-* Type npm install mongoose
-* Type npm install url 
+* Type `npm install express 
+* Type `npm install body-parser 
+* Type `npm install mongodb
+* Type `npm install express-handlebars
+* Type `npm install hbs
+* Type `npm install url 
 
 ## Running the server
 #### When supervisor is installed
-* Type supervisor index.js
+* Type `supervisor index.js
 #### No supervisor installed 
-* Type node index.js
+* Type `node index.js
 
 
