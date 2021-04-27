@@ -31,6 +31,16 @@ const registerController = {
                 res.redirect('/success?fullName=' + fullName + '&userName=' + userName);
             }
         });
+    }, 
+
+    getCheckUsername: function(req, res) {
+
+        var userName = req.query.userName;
+
+        db.findOne('User', {userName: userName}, 'userName', function(result) {
+            res.send(result);
+        });
+
     }
 }
 
