@@ -45,7 +45,7 @@ body {
 	background-color: #E6E2DD
 }
 
-#registerbtn {
+#submit {
 	width: 100.5%;
 	padding: 15px;
 	border: 0;
@@ -58,6 +58,19 @@ body {
 	top: 50px;
 }
 
-#registerbtn:hover {
+#submit:disabled {
+	cursor: not-allowed;
+    color: #A8A8A8;
+    background-color: #E3E3E3;
+    border: 4px solid #E3E3E3;
+}
+
+
+#submit:hover {
 	cursor: pointer;
+}
+
+
+#error:empty {
+	height: 20px;
 }
