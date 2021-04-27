@@ -4,11 +4,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('./models/db.js');
 const exphbs = require('express-handlebars');
-
+const hbs = require('hbs');
 
 const app = express() //initializing an express server and passing to app 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.set('view engine', '.hbs');
+hbs.registerPartials(__dirname + '/views/partials');
 dotenv.config();
 port = process.env.PORT;
 hostname = process.env.HOSTNAME;
@@ -22,8 +23,6 @@ app.use(express.urlencoded({extended: true}));
 
 const indexRouter = require('./routes/router');
 app.use('/', indexRouter);
-
-
 
 app.listen(port, hostname, function() {
     console.log('Server running at: ');

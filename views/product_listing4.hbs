@@ -22,40 +22,7 @@
         </script>
     </head>
 
-    <!--header start----------------------------------------------------->
-    <div class="header">
-        <div id="top-logo">
-            <img id="logo" src="../images/logo.png">
-        </div>
-    </div>
-    <div id="container1">
-        <div class="floatleft">
-            <ul class="navbar" id="navbar1">
-                <li><a class="navlink" href="../views/home.html">Home</a></li>
-                <li><a class="navlink" href="../views/register.html">Register</a></li>
-                <li><a class="navlink" href="../views/login.html">Login</a></li>
-            </ul>
-        </div>
-        <div class="floatright">
-            <ul class="navbar" id="navbar2">
-                <div class="profile" onclick="dropdownToggle();">
-                            <li class="navbtn" id="account"></li></a>
-                    <div class="dropdownmenu" id="dropmenu">
-                        <li> <a href="../views/acctdetailsnoedit.html"> View Account Details </a> </li>
-                        <li> <a href="../views/acctdetails.html"> Edit Account Details </a> </li>
-                        <li> <a href="../views/home.html"> Logout </a> </li>
-                    </div>
-                </div>
-                <a class="nav" href="../views/wishlist.html"><li class="navbtn" id="wishlist"></li></a>
-                <a class="nav" href="../views/cart.html"><li class="navbtn" id="cart"></li></a>
-                <form>
-                    <input type="text" id="fitem" name="fname" placeholder="Search our store">
-                </form>
-                <a class="nav" href="../views/viewproducts.html"><li class="navbtn" id="search"></li></a>
-            </ul>
-        </div>
-    </div>
-    <!--header end--------------------------------------------------->
+    {{> header}}
 
 <body>
     <hr id="hr_home">
@@ -197,12 +164,7 @@
     <!--div comment end--------------------------------------------------->
 </body>
 
-<!-- FOOTER --------------------------------------------------->
-<footer>
-    <hr id="hr_footer">
-    <div id="footer1"><p>©  Clothing & Science</p></div>
-</footer>
-<!-- FOOTER END --------------------------------------------------->
+{{> footer}}
 
 <script>
    function dropdownToggle(){
