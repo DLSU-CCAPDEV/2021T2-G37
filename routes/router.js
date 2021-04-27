@@ -9,6 +9,7 @@ router.get('/home', ctrl.getHome);
 
 router.get('/register', registerctrl.getRegister);
 router.post('/register', registerctrl.postRegister);
+router.get('/getCheckUsername', registerctrl.getCheckUsername)
 
 router.get('/success', successctrl.getSuccess);
 
@@ -19,6 +20,8 @@ router.get('/admin_home_page', ctrl.getAdminHomePage);
 router.get('/wishlist', ctrl.getWishlist);
 router.get('/cart', ctrl.getCart);
 router.get('/viewproducts', ctrl.getViewProducts);
+
+
 
 
 module.exports = router;
