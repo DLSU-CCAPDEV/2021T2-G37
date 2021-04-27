@@ -1,0 +1,49 @@
+body {
+	background-color:#D48166
+}
+
+#container {
+	width: 95%;
+	margin: auto;
+	height: 400px;
+	background-color: white;
+	background: rgba(0,0,0,.2);
+	text-align: center;
+    position: relative;
+    top: 70px;
+}
+
+#header {
+	margin-top: 50px;
+	text-align: center; 
+	position: relative;
+	top: 50px;
+}
+
+#tagline {
+	font-family: 'Satisfy', cursive;
+	font-size: 25px;
+	color: white;
+	margin-left: 20px;
+}
+
+#logo {
+	margin-left: 10px;
+}
+
+#homebtn {
+	padding: 15px;
+	border: 0;
+	outline: 0;
+	background-color: #373A36;
+	color: white;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 20px;
+	position: relative;
+	top: 50px;
+}
+
+#homebtn:hover{
+    cursor: pointer;
+    color: #D48166;
+}
