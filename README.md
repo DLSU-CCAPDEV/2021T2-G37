@@ -21,6 +21,7 @@
 * Type `npm install express-handlebars`
 * Type `npm install hbs`
 * Type `npm install url` 
+* Type `npm install dotenv`
 
 ## Running the server
 #### When supervisor is installed
