@@ -41,10 +41,8 @@ const database = {
             if (err) throw err;
             var database = db.db('database');  
             database.collection(collection) 
-            .fineOne(query, function(err, result){  
+            .findOne(query, function(err, result){  
                 if (err) throw err;
-                res = result;
-                db.close();
                 return callback(result);
             });
         });
