@@ -28,35 +28,35 @@
             <div class="div_prod_details">
                 <p class="txt_titles">Product Number</p>
                     <form id="form_pnumber" class="form">
-                        <input type="text" placeholder="Enter product number" class="input" id="text" name="text">
+                        <input type="text" placeholder="Enter product number" class="input" id="pnum" name="pnum" required>
                     </form>
             </div>
 
             <div class="div_prod_details">
             <p class="txt_titles">Product Name</p>
                 <form id="form_pname" class="form">
-                    <input type="text" placeholder="Enter product mame" class="input" id="text" name="text">
+                    <input type="text" placeholder="Enter product mame" class="input" id="pname" name="pname" required>
                 </form>
             </div>
 
             <div class="div_prod_details">
                 <p class="txt_titles">Price</p>
                 <form id="form_price" class="form">
-                    <input type="text" placeholder="Enter product price" class="input" id="text" name="text">
+                    <input type="text" placeholder="Enter product price" class="input" id="pprice" name="pprice" required>
                 </form>
             </div>
 
             <div class="div_prod_details">
                 <p class="txt_titles">Available Quantity</p>
                 <form id="form_available_qty" class="form">
-                    <input type="number" placeholder="Enter quantity" class="input" id="number" name="number">
+                    <input type="number" placeholder="Enter quantity" class="input" id="pquantity" name="pquantity" required>
                 </form>
             </div>
 
             <div class="div_prod_details">
                 <p class="txt_titles"> Product Description </p>
                 <form id="form_pdesc" class="form">
-                    <input type="text" placeholder="Enter product description" class="input" id="text" name="text">
+                    <input type="text" placeholder="Enter product description" class="input" id="pdetails" name="pdetails" required>
                 </form>
             </div>
 
@@ -67,7 +67,7 @@
                     <button class="btn_var" onclick="alert('Color Added Successfully!')"> <span class="material-icons">add</span> </button> 
                 </div>
                 <form id="form_color" class="form">
-                    <input type="text" placeholder="Add color" class="input" id="text" name="text">
+                    <input type="text" placeholder="Add color" class="input" id="pcolor" name="pcolor" required>
                 </form>
             </div>
 
@@ -78,7 +78,7 @@
                     <button class="btn_var" onclick="alert('Size Added Successfully!')"> <span class="material-icons">add</span> </button> 
                 </div>
                 <form id="form_size" class="form">
-                    <input type="text" placeholder="Add size" class="input" id="text" name="text">
+                    <input type="text" placeholder="Add size" class="input" id="psize" name="psize" required>
                 </form>
             </div>
 
@@ -87,9 +87,11 @@
             <div id="div_add_photos">
                 <form id="form_add_photos">
                     <label for="upload"> Add Photos </label>
-                    <input type="file" id="upload" name="upload">
+                    <input type="file" id="pimage" name="pimage">
                 </form>
             </div>
+
+            <p id="error"><</p>
 
             <!--END BUTTONS--------------------------------------------------------------------------------------->
             <a href="../views/admin_home_page.html"><button id="btnadd" class="btna"> Add Product </button> </a>
