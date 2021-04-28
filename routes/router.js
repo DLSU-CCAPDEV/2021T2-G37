@@ -1,4 +1,4 @@
-const router = require('express');
+const router = require('express')();
 const ctrl = require('../controller/controller.js');
 const registerctrl = require('../controller/registercontroller.js');
 const successctrl = require('../controller/successcontroller.js');
