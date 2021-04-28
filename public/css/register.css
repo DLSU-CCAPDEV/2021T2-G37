@@ -33,6 +33,7 @@ body {
 	margin-top: 20px;
 	border-radius: 5px;
 	padding: 10px;
+	
 }
 
 .input {
@@ -46,7 +47,7 @@ body {
 }
 
 #submit {
-	width: 100.5%;
+	width: 100.3%;
 	padding: 15px;
 	border: 0;
 	outline: 0;
@@ -74,3 +75,12 @@ body {
 #error:empty {
 	height: 20px;
 }
+
+p {
+	position: relative;
+	top: 35px;
+	font-family: 'Roboto', sans-serif;
+	color: black;
+	font-weight: 500px;
+}
+
