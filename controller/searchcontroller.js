@@ -1,5 +1,5 @@
 const db = require('../models/db.js');
-var content = document.getElementById("content");
+//var content = document.getElementById("content");
 
 const searchController = {
 
@@ -8,7 +8,7 @@ const searchController = {
     }, 
     
     getSearchQuery: function(req, res) {
-        var query = req.query.query;
+        var query = req.query.Query;
 
     /*    db.findMany('Products', query, function(result) {
             if(result != null) {

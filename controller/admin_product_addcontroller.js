@@ -26,10 +26,9 @@ const adminprodaddController = {
             pImage: pImage
         }
 
-        db.insertOne('Product', product, function(flag) {
+        db.insertOne('Products', product, function(flag) {
             if(flag) {
-            //    res.redirect('/success?fName=' + fName +'&lName=' + lName + '&idNum=' + idNum);
-            //    or change to alert
+                alert("Successfully added " + pNum);
             }
         });
     },
@@ -41,18 +40,7 @@ const adminprodaddController = {
         db.findOne('Product', {pNum: pNum}, 'pNum', function (result) {
             res.send(result);
         });
-    }
-
-    // check if product name already exists in db (?)
-/*    getCheckName: function (req, res) {
-        var pName = req.query.pname;
-
-        db.findOne('Product', {pName: pName}, 'pName', function (result) {
-            res.send(result);
-        });
-    }
-*/
-    
+    }    
 }
 
 module.exports = adminprodaddController;

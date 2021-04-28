@@ -11,7 +11,7 @@ router.get('/home', ctrl.getHome);
 
 router.get('/register', registerctrl.getRegister);
 router.post('/register', registerctrl.postRegister);
-router.get('/getCheckUsername', registerctrl.getCheckUsername)
+router.get('/getCheckUsername', registerctrl.getCheckUsername);
 
 
 router.get('/acctdetails/:userName', acctctrl.getDetails);

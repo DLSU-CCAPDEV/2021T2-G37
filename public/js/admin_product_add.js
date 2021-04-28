@@ -11,16 +11,16 @@ $(document).ready(function (){
 
 
 
-        $.get('/getCheckUsername', {pNum: pNum}, function(result){
+        $.get('/getCheckNum', {pNum: pNum}, function(result){
 
             if(result.pNum == pNum ){
-                $('#username').css('background-color', 'blue');
+                $('#pnum').css('background-color', 'blue');
                 $('#error').text('Product number already exists.');
-                $('#submit').prop('disabled', true); // disables the add button
+                $('#btnadd').prop('disabled', true); // disables the add button
             }
 
             else {
-                $('#username').css('background-color', '#E3E3E3');
+                $('#pnum').css('background-color', '#E3E3E3');
                 $('#error').text('');
                 $('#btnadd').prop('disabled', false); // enables the add button 
             }
