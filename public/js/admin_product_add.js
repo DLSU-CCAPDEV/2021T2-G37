@@ -8,8 +8,7 @@ $(document).ready(function (){
         //send an HTTP GET request to server that points to the function getCheckProdNum
 
         var pNum = $('#pnum').val();
-
-
+        console.log(pNum);
 
         $.get('/getCheckNum', {pNum: pNum}, function(result){
 

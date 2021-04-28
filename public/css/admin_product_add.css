@@ -46,14 +46,10 @@ input {
     margin-bottom: 0px;
 }
 
-/*Product Details------------------------------------------------------*/
-.div_prod_details{
-    margin-bottom: -5px;
-}
-
+/*Header Input------------------------------------------------------*/
 .txt_titles{
     color: white;
-    margin-bottom: 3px;
+    margin-bottom: -12px;
     text-align: left;
     margin-left: 19%;
 }

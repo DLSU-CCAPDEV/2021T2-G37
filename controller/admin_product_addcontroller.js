@@ -5,30 +5,31 @@ const adminprodaddController = {
         res.render('admin_product_add');
     },
 
-    getAddProd: function (req, res) {
-        var pNum = req.query.pnum;
-        var pName = req.query.pname;
-        var pPrice = req.query.pprice;
-        var pQuantity = req.query.pquantity;
-        var pDescription = req.query.pdetails;
-        var pColor = req.query.pcolor;          // not sure yet; array(?)
-        var pSize = req.query.psize;            // not sure yet; array(?)
-        var pImage = req.query.pimage;          // not sure yet
+    postAddProd: function (req, res) {
+        var pNum = req.body.pnum;
+        var pName = req.body.pname;
+        var pPrice = req.body.pprice;
+        var pQty = req.body.pqty;
+        var pDesc = req.body.pdesc;
+        var pColor = req.body.pcolor;          // not sure yet; array(?)
+        var pSize = req.body.psize;            // not sure yet; array(?)
+        var pImage = req.body.pimage;          // not sure yet
 
         var product = {
-            pNum: pNum,
-            pName: pName,
-            pPrice: pPrice,
-            pQuantity: pQuantity,
-            pDescription: pDescription,
-            pColor: pColor,
-            pSize: pSize,
-            pImage: pImage
+            prodNum: pNum,
+            prodName: pName,
+            prodPrice: pPrice,
+            prodQuantity: pQty,
+            prodDescription: pDesc,
+            prodColor: pColor,
+            prodSize: pSize,
+            prodImage: pImage
         }
 
-        db.insertOne('Products', product, function(flag) {
-            if(flag) {
-                alert("Successfully added " + pNum);
+        db.insertOne('Product', product, function(flag) {
+            if(flag) { // not yet done
+                res.send("Successfully added " + pNum);
+                //res.redirect('/successaddprod?pName=' + pName + '&pNum=' + pNum);
             }
         });
     },

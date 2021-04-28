@@ -5,6 +5,7 @@ const successctrl = require('../controller/successcontroller.js');
 const acctctrl = require('../controller/acctdetailscontroller.js');
 const searchctrl = require('../controller/searchcontroller.js');
 const homectrl = require('../controller/homecontroller.js');
+const addprodctrl = require('../controller/admin_product_addcontroller.js'); // for ading product
 
 router.get('/', ctrl.getHome);
 router.get('/home', ctrl.getHome);
@@ -27,5 +28,9 @@ router.get('/viewproducts', ctrl.getViewProducts);
 
 router.get('/search', searchctrl.getSearch);
 // router.get('/search', searchctrl.);
+
+router.get('/admin_product_add', addprodctrl.getAdminProdAdd);
+router.post('/admin_product_add', addprodctrl.postAddProd);
+router.get('/getCheckNum', addprodctrl.getCheckNum);
 
 module.exports = router;
