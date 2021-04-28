@@ -8,9 +8,9 @@ const searchController = {
     }, 
     
     getSearchQuery: function(req, res) {
-        var query = req.query.;
+        var query = req.query.query;
 
-        db.findMany('Products', query, function(result) {
+    /*    db.findMany('Products', query, function(result) {
             if(result != null) {
                 for(var i = 0; i < result.length; i++) {
                     var prod = {
@@ -22,18 +22,16 @@ const searchController = {
 
                 }
 
-                // render `../views/profile.hbs`
-                res.render('profile', details);
+                res.render('search', details);
             }
-            /*
-                if the user does not exist in the database
-                render the error page
-            */
+            
+            //    if the query does not match any product in the database
+            
             else {
-                // render `../views/error.hbs`
+
                 res.render('error');
             }
-        });
+        }); */
     }
 }
 

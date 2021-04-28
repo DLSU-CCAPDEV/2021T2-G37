@@ -26,6 +26,6 @@ router.get('/cart', ctrl.getCart);
 router.get('/viewproducts', ctrl.getViewProducts);
 
 router.get('/search', searchctrl.getSearch);
-router.get('/search', searchctrl.)
+// router.get('/search', searchctrl.);
 
 module.exports = router;
