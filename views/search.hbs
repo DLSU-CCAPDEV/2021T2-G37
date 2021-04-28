@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="Search ">
+
+    <title>Clothing & Science | Search</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../css/search.css">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+    {{> header}}
+
+    <div id="container">
+        <h1 id="search">Showing results for "{{query}}"</h1>
+        <div id="content">
+        </div>
+    </div>
+
+    {{> footer}}
+
+    <script>
+     function dropdownToggle(){
+            document.getElementById('dropmenu').classList.toggle('active'); //clicking the account icon makes it appear, clicking it again makes it disappear.
+        }
+    </script>
+</body>
+</html>

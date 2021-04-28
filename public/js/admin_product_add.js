@@ -13,7 +13,7 @@ $(document).ready(function (){
 
         $.get('/getCheckUsername', {pNum: pNum}, function(result){
 
-            if(result.pNum == pNum){
+            if(result.pNum == pNum ){
                 $('#username').css('background-color', 'blue');
                 $('#error').text('Product number already exists.');
                 $('#submit').prop('disabled', true); // disables the add button

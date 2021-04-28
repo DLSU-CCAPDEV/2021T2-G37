@@ -151,7 +151,7 @@ ul {
     cursor: pointer;
 }
 
-.content {
+#content {
     background-color: white;
     display: flex;
     flex-wrap: wrap;

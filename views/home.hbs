@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="description" content="Home Page">
-        <meta name="keyword" content="Home Page">
-        <meta name="author" content="DESEMBRANA, Anna Patricia B.">
-
         <title>Clothing & Science | Home Page</title>
         <link rel="stylesheet" type="text/css" media="all" href="../css/home.css">
         <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../public/js/home.js"></script>
     </head>
     <body>
         <div id="homepage">
             {{> header}}
-            <!-- HEADER END -->
+            
             <div id="banner">
                 <div id="button">
                     <h1 id="discover">Discover the Collection</h1>
-                    <a href="../views/viewproducts.html">
+                    <a href="/viewproducts">
                     <button id="shopnow" >SHOP NOW</button>
                     </a>
                 </div> 
             </div>
 
-            <div class="content">
-                <div class="thumbnail">
+            <div id="content">
+ <!--               <div class="thumbnail">
                     <a href="../views/product_listing5.html"><div class="listings" id="thumb1"></div>
                     <span class="name">Long Sleeve Sweatshirt</span>
                     <span class="price"> P1,990.00 </span></a>
@@ -47,16 +45,11 @@
                     <div class="listings" id="thumb5"></div>
                     <span class="name"> Linen Open Collar Shirt </span>
                     <span class="price"> P790.00 </span>
-                </div></a>
+                </div></a>      -->
             </div>
-            
+         
             {{> footer}}
             
         </div>
-        <script>
-            function dropdownToggle(){
-                document.getElementById('dropmenu').classList.toggle('active'); //clicking the account icon makes it appear, clicking it again makes it disappear.
-            }
-        </script>
     </body>
 </html>
