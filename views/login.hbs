@@ -10,6 +10,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 	<link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="/js/login.js"> </script>
 </head>
 <body>
 	<div id="container">
@@ -18,13 +20,15 @@
 			<p id="tagline"> Where Clothing meets Science. </p>
 		</div>
 
-		<form class="form">
-			<input type="email" placeholder="Email address" class="input"id="email" name="email">
-			<input type="password" placeholder="Password" class="input" id="password" name="password">
+		<form class="form" method="POST" action="/login">
+			<input type="text" placeholder="Username" class="input" id="username" name="username" required>
+			<input type="password" placeholder="Password" class="input" id="password" name="password" required>
+			<input type="submit" id="loginbtn" value="LOGIN">
 	</form>	
-	<a href="../views/home.html">
+	<p id="error"><p>
+	{{!-- <a href="../views/home.html">
 		<button id="loginbtn">Login</button>
-	</a>
+	</a> --}}
 
 	<div id="remember-me">
 		<input type="checkbox" name="remember">
