@@ -10,7 +10,29 @@ const dbName = 'clothingandscience';
 
 const database = {
         //doc is a js object 
-    insertOne : function(collection, doc, callback) {
+
+    createDatabase: function() {
+        client.connect(url, options, function(err, db){
+            if (err) throw err;
+            console.log('Database created.');
+            db.close();
+        });
+    },
+    
+    insertOne: function(collection, doc) {
+        client.connect(url, options, function (err, db) {
+            if(err) throw err;
+            var database = db.db(dbName);
+            database.collection(collection).insertOne(doc, function (err, res) {
+                if(err) throw err;
+                console.log('1 document inserted');
+                db.close();
+            });
+        });
+    },
+    
+    
+    insertOneCallback : function(collection, doc, callback) {
         client.connect(url, options, function(err, db){ // connecting to the dataabase 
             if (err) return callback(false)
             var database = db.db(dbName); // connect to a specific database in mongodb 
@@ -19,7 +41,6 @@ const database = {
                 if (err) throw err;
                 console.log('1 document inserted');
                 return callback(true);
-                db.close();
             });
         });
     }, 
