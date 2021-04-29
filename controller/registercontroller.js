@@ -25,7 +25,7 @@ const registerController = {
             contactnum:  contactnum
         }
         
-        db.insertOne('User', acc, function(flag){
+        db.insertOneCallback('User', acc, function(flag){
 
             if (flag){
                 res.redirect('/success?fullName=' + fullName + '&userName=' + userName);
