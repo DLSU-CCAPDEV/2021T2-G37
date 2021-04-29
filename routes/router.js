@@ -17,11 +17,6 @@ router.get('/admin_product_add', addprodctrl.getAdminProdAdd);
 router.post('/admin_product_add', addprodctrl.postAddProd);
 router.get('/getCheckNum', addprodctrl.getCheckNum);
 
-
-router.get('/admin_product_add', addprodctrl.getAdminProdAdd);
-router.post('/admin_product_add', addprodctrl.postAddProd);
-router.get('/getCheckNum', addprodctrl.getCheckNum);
-
 router.get('/register', registerctrl.getRegister);
 router.post('/register', registerctrl.postRegister);
 router.get('/getCheckUsername', registerctrl.getCheckUsername);
