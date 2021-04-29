@@ -35,8 +35,8 @@ const controller = {
         res.render('viewproducts');
     },
 
-    getHomeRegistered: function(req, res) {
-        res.render('homeregistered');
+    getHomeLoggedIn: function(req, res) {
+        res.render('LoggedInHome');
     }
 
     
