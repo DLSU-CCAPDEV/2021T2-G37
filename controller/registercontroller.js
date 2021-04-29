@@ -37,7 +37,7 @@ const registerController = {
 
         var userName = req.query.userName;
 
-        db.findOne('User', {userName: userName}, 'userName', function(result) {
+        db.findOne('User', {userName: userName}, function(result) {
             res.send(result);
         });
 
