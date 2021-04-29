@@ -43,7 +43,7 @@ var acc = {
     userName: "detectiveprincess", 
     email: "detectiveprincess@gmail.com", 
     pw: "puzzlesRDaBomb", 
-    deladdr: "Karasuno Volleyball Court", 
+    deladdr: "Inaba", 
     contactnum: "43109489123"
 };
 
