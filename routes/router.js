@@ -10,7 +10,7 @@ router.get('/home', ctrl.getHome);
 
 const addprodctrl = require('../controller/admin_product_addcontroller.js'); // for ading product
 
-router.get('/search', searchctrl.getSearch);
+//router.get('/search', searchctrl.getSearch);
 // router.get('/search', searchctrl.);
 
 router.get('/admin_product_add', addprodctrl.getAdminProdAdd);
