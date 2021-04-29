@@ -35,9 +35,11 @@ const controller = {
         res.render('viewproducts');
     },
 
-    getSearch: function (req, res) {
-        res.render('search');
-    }    
+    getHomeRegistered: function(req, res) {
+        res.render('homeregistered');
+    }
+
+    
 }
 
 module.exports = controller;
