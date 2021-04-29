@@ -5,6 +5,7 @@ dotenv.config();
 const client = mongodb.MongoClient;
 const url = process.env.DB_URL;
 const options = { useUnifiedTopology: true}
+const dbName = 'clothingandscience';
 
 
 const database = {
@@ -12,7 +13,7 @@ const database = {
     insertOne : function(collection, doc, callback) {
         client.connect(url, options, function(err, db){ // connecting to the dataabase 
             if (err) return callback(false)
-            var database = db.db('database'); // connect to a specific database in mongodb 
+            var database = db.db(dbName); // connect to a specific database in mongodb 
             database.collection(collection) // in this database, go to a specific ollection 
             .insertOne(doc, function(err, res){ //insert this document in the collection, res is result 
                 if (err) throw err;
@@ -26,7 +27,7 @@ const database = {
     insertMany : function(collection, docs) {
         client.connect(url, options, function(err, db){ // connecting to the dataabase 
             if (err) throw err;
-            var database = db.db('database'); // connect to a specific database in mongodb 
+            var database = db.db(dbName); // connect to a specific database in mongodb 
             database.collection(collection) // in this database, go to a specific ollection 
             .insertMany(docs, function(err, res){ //insert this document in the collection, res is result 
                 if (err) throw err;
@@ -39,7 +40,7 @@ const database = {
     findOne: function(collection, query, callback){
         client.connect(url, options, function(err, db){ // connecting to the dataabase 
             if (err) throw err;
-            var database = db.db('database');  
+            var database = db.db(dbName);  
             database.collection(collection) 
             .findOne(query, function(err, result){  
                 if (err) throw err;
@@ -51,7 +52,7 @@ const database = {
     findMany: function(collection, query, sort=null, projection=null){
         client.connect(url, options, function(err, db){
             if (err) throw err;
-            var database = db.db('database');
+            var database = db.db(dbName);
             database.collection(collection)
             .find(query, {projection: projection})
             .sort(sort).toArray(function (err, result){
@@ -65,7 +66,7 @@ const database = {
     deleteOne : function(collection, filter) {
         client.connect(url, options, function(err, db){ // connecting to the dataabase 
             if (err) throw err;
-            var database = db.db('database'); // connect to a specific database in mongodb 
+            var database = db.db(dbName); // connect to a specific database in mongodb 
             database.collection(collection) // in this database, go to a specific ollection 
             .deleteOne(filter, function(err, res){ //insert this document in the collection, res is result 
                 if (err) throw err;
@@ -78,7 +79,7 @@ const database = {
     deleteMany : function(collection, filter) {
         client.connect(url, options, function(err, db){ // connecting to the dataabase 
             if (err) throw err;
-            var database = db.db('database'); // connect to a specific database in mongodb 
+            var database = db.db(dbName); // connect to a specific database in mongodb 
             database.collection(collection) // in this database, go to a specific ollection 
             .deleteMany(filter, function(err, res){ //insert this document in the collection, res is result 
                 if (err) throw err;
@@ -91,7 +92,7 @@ const database = {
     updateOne : function(collection, filter, update) {
         client.connect(url, options, function(err, db){ // connecting to the dataabase 
             if (err) throw err;
-            var database = db.db('database'); // connect to a specific database in mongodb 
+            var database = db.db(dbName); // connect to a specific database in mongodb 
             database.collection(collection) // in this database, go to a specific ollection 
             .updateOne(filter, update, function(err, res){ //insert this document in the collection, res is result 
                 if (err) throw err;
@@ -104,7 +105,7 @@ const database = {
     updateMany : function(collection, filter, update) {
         client.connect(url, options, function(err, db){ // connecting to the dataabase 
             if (err) throw err;
-            var database = db.db('database'); // connect to a specific database in mongodb 
+            var database = db.db(dbName); // connect to a specific database in mongodb 
             database.collection(collection) // in this database, go to a specific ollection 
             .updateOne(filter, update, function(err, res){ //insert this document in the collection, res is result 
                 if (err) throw err;
