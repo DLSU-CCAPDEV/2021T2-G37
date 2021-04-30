@@ -25,6 +25,50 @@ const acctdetailsController = {
             }
 
         });
+    }, 
+
+    loadDetails: function(req, res){
+
+        var query = {userName: req.params.userName};
+    
+        db.findOne('User', query, function(result){
+
+            if(result != null) {
+                var details = {
+                    fullName: result.fullName,
+                    userName: result.userName,
+                    email: result.email,
+                    pw: result.pw,
+                    deladdr: result.deladdr,
+                    contactnum: result.contactnum
+                };
+                //res.render('testing', details);
+                res.render('acctdetails', details);
+            }
+
+        });
+    }, 
+
+    editDetails: function(req, res){
+
+        db.updateOne('User', {"userName":  req.body.username}, {
+            $set: {
+                "fullName" : req.body.fullname,
+                "userName" : req.body.username, 
+                "email": req.body.email, 
+                "pw": req.body.password,
+                "deladdr": req.body.deladdr,
+                "contactnum": req.body.contactnum
+            }
+        }), 
+        res.send('success'); 
+        res.render('acctdetails');
+    },
+
+    deleteacct: function(req, res){
+        db.deleteOne('User', {"userName":  req.body.username});
+        res.send('successdelete')
+
     }
 }
 
