@@ -16,14 +16,14 @@ const adminprodaddController = {
         var pImage = req.body.pimage;          // not sure yet
 
         var product = {
-            prodNum: pNum,
-            prodName: pName,
-            prodPrice: pPrice,
-            prodQuantity: pQty,
-            prodDescription: pDesc,
-            prodColor: pColor,
-            prodSize: pSize,
-            prodImage: pImage
+            pNum: pNum,
+            pName: pName,
+            pPrice: pPrice,
+            pQty: pQty,
+            pDesc: pDesc,
+            pcolor: pColor,
+            pSize: pSize,
+            pImage: pImage
         }
 
         db.insertOne('Product', product, function(flag) {
