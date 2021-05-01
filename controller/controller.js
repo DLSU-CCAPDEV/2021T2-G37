@@ -1,3 +1,6 @@
+const { Db } = require("mongodb");
+const db = require('../models/db.js');
+
 const controller = {
     getHome: function(req, res){
         res.render('home');
@@ -37,9 +40,13 @@ const controller = {
 
     getHomeLoggedIn: function(req, res) {
         res.render('LoggedInHome');
-    }
+    },
 
-    
+    setHome: function(req, res) {
+        db.findAll('Products', function(result) {
+            res.send(result);
+        });
+    }
 }
 
 module.exports = controller;

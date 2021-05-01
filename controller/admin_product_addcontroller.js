@@ -28,7 +28,6 @@ const adminprodaddController = {
 
         db.insertOne('Product', product, function(flag) {
             if(flag) { // not yet done
-                res.send("Successfully added " + pNum);
                 //res.redirect('/successaddprod?pName=' + pName + '&pNum=' + pNum);
             }
         });
@@ -38,7 +37,7 @@ const adminprodaddController = {
     getCheckNum: function (req, res) {
         var pNum = req.query.pnum;
 
-        db.findOne('Product', {pNum: pNum}, 'pNum', function (result) {
+        db.findOne('Products', {pNum: pNum}, 'pNum', function (result) {
             res.send(result);
         });
     }    

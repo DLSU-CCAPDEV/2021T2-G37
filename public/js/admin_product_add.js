@@ -10,6 +10,7 @@ $(document).ready(function (){
         var pNum = $('#pnum').val();
         console.log(pNum);
 
+        // not working yet
         $.get('/getCheckNum', {pNum: pNum}, function(result){
 
             if(result.pNum == pNum ){
@@ -21,7 +22,8 @@ $(document).ready(function (){
             else {
                 $('#pnum').css('background-color', '#E3E3E3');
                 $('#error').text('');
-                $('#btnadd').prop('disabled', false); // enables the add button 
+                $('#btnadd').prop('disabled', false); // enables the add button
+                alert("Successfully added " + pNum); 
             }
 
         });

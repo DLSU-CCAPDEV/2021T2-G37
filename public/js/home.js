@@ -6,3 +6,8 @@ function dropdownToggle(){
 }
 
 // display products in page
+$(document).ready(function (){
+    $.ajax('/setHome', {
+        success: function ()
+    });
+}
