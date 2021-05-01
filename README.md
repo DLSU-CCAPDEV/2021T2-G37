@@ -15,8 +15,8 @@
 ### Install the following modules
 * Open Command Prompt
 * Navigate to the project folder
+* Type `npm install`
 * Type `node add_data.js` to populate the database. 
-* Finally, type `npm install`.
 
 ## Running the server
 #### When supervisor is installed
