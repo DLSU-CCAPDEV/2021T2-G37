@@ -41,6 +41,16 @@ const registerController = {
             res.send(result);
         });
 
+    },
+    
+    getCheckEmail: function(req, res) {
+
+        var email = req.query.email;
+
+        db.findOne('User', {email: email}, function(result) {
+            res.send(result);
+        });
+
     }
 }
 
