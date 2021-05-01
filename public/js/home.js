@@ -7,7 +7,17 @@ function dropdownToggle(){
 
 // display products in page
 $(document).ready(function (){
-    $.ajax('/setHome', {
-        success: function ()
+    $.ajax({url: '/setHome', 
+        success: function (result) {
+            var prods = [];
+            for (i = 0; i < result.; i++) {
+                var prod = {};
+                prod.item_name = result[i].get("prodName");
+                prod.price = result[i].get("prodPrice");
+                prods.push(prod);
+            }
+        //    console.log(prods);  
+        //    $('p').append(data);
+        }
     });
-}
+})

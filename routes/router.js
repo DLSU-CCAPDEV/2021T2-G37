@@ -7,6 +7,8 @@ const loginctrl = require('../controller/logincontroller.js');
 
 router.get('/', ctrl.getHome);
 router.get('/home', ctrl.getHome);
+router.get('/', ctrl.setHome);
+router.get('/home', ctrl.setHome);
 
 const addprodctrl = require('../controller/admin_product_addcontroller.js'); // for ading product
 
