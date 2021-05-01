@@ -35,7 +35,7 @@ const adminprodaddController = {
 
     // check if product number already exists in db
     getCheckNum: function (req, res) {
-        var pNum = req.query.pnum;
+        var pNum = req.query.pNum;
 
         db.findOne('Products', {pNum: pNum}, 'pNum', function (result) {
             res.send(result);
