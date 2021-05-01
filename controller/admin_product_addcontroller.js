@@ -26,7 +26,7 @@ const adminprodaddController = {
             pImage: pImage
         }
 
-        db.insertOne('Product', product, function(flag) {
+        db.insertOne('Products', product, function(flag) {
             if(flag) { // not yet done
                 //res.redirect('/successaddprod?pName=' + pName + '&pNum=' + pNum);
             }
