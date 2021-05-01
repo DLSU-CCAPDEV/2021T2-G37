@@ -20,6 +20,7 @@ router.get('/getCheckNum', addprodctrl.getCheckNum);
 router.get('/register', registerctrl.getRegister);
 router.post('/register', registerctrl.postRegister);
 router.get('/getCheckUsername', registerctrl.getCheckUsername);
+router.get('/getCheckEmail', registerctrl.getCheckEmail);
 router.get('/success', successctrl.getSuccess);
 
 router.get('/login', loginctrl.getLoginPage);
