@@ -26,6 +26,28 @@ $(document).ready(function (){
 
         });
 
-    });
+    }), 
+
+    $('#email').keyup(function(){
+
+        var email = $('#email').val();
+        console.log(email);
+
+        $.get('/getCheckEmail', {email: email}, function(result){
+
+            if(result.email == email){
+                $('#email').css('background-color', '#BC544B');
+                $('#error2').text('Email is already in use.');
+                $('#submit').prop('disabled', true); // disables the submit button
+            }
+
+            else {
+                $('#username').css('background-color', '#E6E2DD');
+                $('#error2').text('');
+                $('#submit').prop('disabled', false); // enables the submit button 
+            }
+
+        });
+    })
 
 });
