@@ -28,7 +28,7 @@ const adminprodaddController = {
 
         db.insertOne('Products', product, function(flag) {
             if(flag) { // not yet done
-                //res.redirect('/successaddprod?pName=' + pName + '&pNum=' + pNum);
+                res.redirect('/success?pName=' + pName + '&pNum=' + pNum);
             }
         });
     },
