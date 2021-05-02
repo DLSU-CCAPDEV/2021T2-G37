@@ -26,8 +26,8 @@ router.get('/getCheckEmail', registerctrl.getCheckEmail);
 router.get('/success', successctrl.getSuccess);
 
 router.get('/login', loginctrl.getLoginPage);
-router.post('/login', loginctrl.findUser);
-router.get('/loginsuccess', ctrl.getHomeLoggedIn);
+router.post('/postlogin', ctrl.getHomeLoggedIn);
+
 
 router.get('/editdetails/:userName', acctctrl.loadDetails);
 router.post('/editdetails', acctctrl.editDetails);
