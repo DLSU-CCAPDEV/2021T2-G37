@@ -11,7 +11,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 	<link rel="shortcut icon" type="image/png" href="../images/favicon.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="/js/login.js"> </script>
+	{{!-- <script src="/js/login.js"> </script> --}}
 </head>
 <body>
 	<div id="container">
@@ -20,7 +20,7 @@
 			<p id="tagline"> Where Clothing meets Science. </p>
 		</div>
 
-		<form class="form" method="POST" action="/login">
+		<form class="form" method="POST" action="/postlogin">
 			<input type="text" placeholder="Username" class="input" id="username" name="username" required>
 			<input type="password" placeholder="Password" class="input" id="password" name="password" required>
 			<input type="submit" id="loginbtn" value="LOGIN">
