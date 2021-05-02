@@ -21,7 +21,9 @@
 ## Running the server
 #### When supervisor is installed
 * Type `supervisor index.js`
+* Navigate to http://localhost:3000 in your browser.
 #### No supervisor installed 
 * Type `node index.js`
+* Navigate to http://localhost:3000 in your browser.
 
 
