@@ -34,10 +34,10 @@ router.post('/LoggedInHome:/userName', ctrl.getHomeLoggedIn);
 router.get('/LoggedInHome', ctrl.getHomeLoggedIn);
 
 //ACCOUNT RELATED
-router.get('/editdetails/:userName', acctctrl.loadDetails);
 router.post('/editdetails', acctctrl.editDetails);
-router.get('/deleteacct', acctctrl.deleteacct);
 router.get('/acctdetails/:userName', acctctrl.getDetails);
+// router.get('/acctdetails/:userName', acctctrl.getDetails);
+
 
 router.get('/delete/:userName', deletectrl.getDeletePage);
 router.post('/delete_account', deletectrl.deleteAccount);
