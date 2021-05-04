@@ -21,10 +21,34 @@ const acctdetailsController = {
                 };
 
                 //res.render('testing', details);
+                res.render('acctdetails', details);
+            }
+
+        });
+    }, 
+
+    getNoEditDetailsView: function(req, res){
+
+        var query = {userName: req.params.userName};
+    
+        db.findOne('User', query, function(result){
+
+            if(result != null) {
+                var details = {
+                    fullName: result.fullName,
+                    userName: result.userName,
+                    email: result.email,
+                    pw: result.pw,
+                    deladdr: result.deladdr,
+                    contactnum: result.contactnum
+                };
+
+                //res.render('testing', details);
                 res.render('acctdetailsnoedit', details);
             }
 
         });
+
     }, 
 
     loadDetails: function(req, res){
@@ -43,7 +67,8 @@ const acctdetailsController = {
                     contactnum: result.contactnum
                 };
                 //res.render('testing', details);
-                res.render('acctdetails', details);
+                //res.render('acctdetails', details);
+                res.redirect('acctdetails/' + query);
             }
 
         });
@@ -51,7 +76,9 @@ const acctdetailsController = {
 
     editDetails: function(req, res){
 
-        db.updateOne('User', {"userName":  req.body.username}, {
+        var username = req.body.username;
+
+        db.updateOne('User', {userName: username}, {
             $set: {
                 "fullName" : req.body.fullname,
                 "userName" : req.body.username, 
@@ -61,8 +88,7 @@ const acctdetailsController = {
                 "contactnum": req.body.contactnum
             }
         }), 
-        res.send('success'); 
-        res.render('acctdetails');
+       res.redirect('acctdetails/' + username);
     },
 
     deleteacct: function(req, res){
