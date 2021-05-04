@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="description" content="Login Page">
+    <meta name="author" content="CRUZADA, Carla Jeannine O.">
+
+	<title> Clothing & Science | Login Page</title>
+	<link rel="stylesheet" type="text/css" href="../css/delete.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	{{!-- <script src="/js/login.js"> </script> --}}
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<img src="../images/logo.png" height="150px" width="150px" id="logo">
+			<p id="tagline"> Where Clothing meets Science. </p>
+		</div>
+
+		<form class="form" method="POST" action="/delete_account">
+			<input type="text" placeholder="Username" class="input" id="username" name="username" required value="{{userName}}">
+			<input type="password" placeholder="Password" class="input" id="password" name="password" required value="{{pw}}">
+			<input type="submit" id="deletebtn" value="DELETE">
+	</form>	
+	</div>
+</div>
+
+</body>
+</html>
