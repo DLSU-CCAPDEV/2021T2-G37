@@ -19,6 +19,8 @@ router.get('/admin_product_add', addprodctrl.getAdminProdAdd);
 router.post('/admin_product_add', addprodctrl.postAddProd);
 router.get('/getCheckNum', addprodctrl.getCheckNum);
 
+
+// REGISTER RELATED
 router.get('/register', registerctrl.getRegister);
 router.post('/register', registerctrl.postRegister);
 router.get('/getCheckUsername', registerctrl.getCheckUsername);
@@ -26,14 +28,20 @@ router.get('/getCheckEmail', registerctrl.getCheckEmail);
 router.get('/success', successctrl.getSuccess);
 
 router.get('/login', loginctrl.getLoginPage);
-router.post('/postlogin', ctrl.getHomeLoggedIn);
+router.post('/postlogin', loginctrl.findUser);
+router.post('/LoggedInHome:/userName', ctrl.getHomeLoggedIn);
 router.get('/LoggedInHome', ctrl.getHomeLoggedIn);
 
-
+//ACCOUNT RELATED
 router.get('/editdetails/:userName', acctctrl.loadDetails);
 router.post('/editdetails', acctctrl.editDetails);
 router.get('/deleteacct', acctctrl.deleteacct);
 router.get('/acctdetails/:userName', acctctrl.getDetails);
+
+router.get('/viewdetails/:userName', acctctrl.getNoEditDetailsView);
+//router.get('/acctdetailsnoedit/:userName', acctctrl.getNoEditDetailsView);
+
+
 
 router.get('/login', ctrl.getLogin);
 router.get('/acctdetailsnoedit', ctrl.getNoEditAcc);
