@@ -27,6 +27,7 @@ router.get('/success', successctrl.getSuccess);
 
 router.get('/login', loginctrl.getLoginPage);
 router.post('/postlogin', ctrl.getHomeLoggedIn);
+router.get('/LoggedInHome', ctrl.getHomeLoggedIn);
 
 
 router.get('/editdetails/:userName', acctctrl.loadDetails);
