@@ -4,6 +4,7 @@ const registerctrl = require('../controller/registercontroller.js');
 const successctrl = require('../controller/successcontroller.js');
 const acctctrl = require('../controller/acctdetailscontroller.js');
 const loginctrl = require('../controller/logincontroller.js');
+const deletectrl = require('../controller/deletecontroller.js');
 
 router.get('/', ctrl.getHome);
 router.get('/home', ctrl.getHome);
@@ -37,6 +38,9 @@ router.get('/editdetails/:userName', acctctrl.loadDetails);
 router.post('/editdetails', acctctrl.editDetails);
 router.get('/deleteacct', acctctrl.deleteacct);
 router.get('/acctdetails/:userName', acctctrl.getDetails);
+
+router.get('/delete/:userName', deletectrl.getDeletePage);
+router.post('/delete_account', deletectrl.deleteAccount);
 
 router.get('/viewdetails/:userName', acctctrl.getNoEditDetailsView);
 //router.get('/acctdetailsnoedit/:userName', acctctrl.getNoEditDetailsView);
