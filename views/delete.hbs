@@ -18,11 +18,12 @@
 		<div id="header">
 			<img src="../images/logo.png" height="150px" width="150px" id="logo">
 			<p id="tagline"> Where Clothing meets Science. </p>
+			<p id="accountname"> {{userName}} </p>
 		</div>
 
 		<form class="form" method="POST" action="/delete_account">
-			<input type="text" placeholder="Username" class="input" id="username" name="username" required value="{{userName}}">
-			<input type="password" placeholder="Password" class="input" id="password" name="password" required value="{{pw}}">
+			<input type="hidden" name="username" value="{{userName}}">
+			<input type="password" placeholder="Password" class="input" id="password" name="password" required>
 			<input type="submit" id="deletebtn" value="DELETE">
 	</form>	
 	</div>
