@@ -25,14 +25,13 @@ const deleteController = {
 
     deleteAccount: function(req, res){
         var username = req.body.username; //name attr from input 
-        var pw = req.body.pw;
+        var curr_pw = req.body.password;
 
         var person = {
             userName: username,
-            pw: pw
+            pw: curr_pw
         };
 
-       
         db.deleteOne('User', person);
         res.redirect('/');
     }
