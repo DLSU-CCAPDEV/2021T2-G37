@@ -25,6 +25,13 @@ body {
 	margin-left: 20px;
 }
 
+#accountname {
+	font-family: 'Satisfy', cursive;
+	font-size: 25px;
+	color: white;
+	margin-left: 20px;
+}
+
 #logo {
 	margin-left: 10px;
 }
