@@ -2,18 +2,15 @@ const db = require('../models/db.js');
 
 const logincontroller = {
 
-    getLoginPage: function(req, res) {
-       res.render('login');
-    },
     
     getLoggedInHome: function(req, res){
-        res.render('LoggedInHome', {userName: req.params.userName});
+        res.render('LoggedInHome', {username: req.params.username});
     },
 
     findUser: function(req, res) {
 
-        var username = req.query.username;
-        var pw = req.query.password;
+        var username = req.body.username;
+        var pw = req.body.password;
 
         var person = {
             userName: username,
@@ -22,7 +19,10 @@ const logincontroller = {
 
         db.findOne('User', person, function(result) {
             if(result != null){
-                res.redirect(307, 'LoggedInHome/' + username);
+                res.redirect('LoggedInHome/' + username);
+                //console.log('LoggedInHome/' + username);
+                //res.render('LoggedInHome')
+                //res.send('succesfully logged in');
             } else {
                 res.send('Incorrect username/ password');
             }
