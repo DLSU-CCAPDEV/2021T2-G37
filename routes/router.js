@@ -28,10 +28,11 @@ router.get('/getCheckUsername', registerctrl.getCheckUsername);
 router.get('/getCheckEmail', registerctrl.getCheckEmail);
 router.get('/success', successctrl.getSuccess);
 
-router.get('/login', loginctrl.getLoginPage);
+
+router.get('/login', ctrl.getLogin);
 router.post('/postlogin', loginctrl.findUser);
-router.post('/LoggedInHome:/userName', ctrl.getHomeLoggedIn);
-router.get('/LoggedInHome', ctrl.getHomeLoggedIn);
+router.get('/LoggedInHome/:userName', loginctrl.getLoggedInHome);
+//router.get('/LoggedInHome', ctrl.getHomeLoggedIn);
 
 //ACCOUNT RELATED
 router.post('/editdetails', acctctrl.editDetails);
@@ -47,7 +48,6 @@ router.get('/viewdetails/:userName', acctctrl.getNoEditDetailsView);
 
 
 
-router.get('/login', ctrl.getLogin);
 router.get('/acctdetailsnoedit', ctrl.getNoEditAcc);
 router.get('/acctdetails', ctrl.getAcctDetails);
 router.get('/admin_home_page', ctrl.getAdminHomePage);
