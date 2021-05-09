@@ -33,7 +33,7 @@ var acc = {
     userName: "bestgirl", 
     email: "bestgirl@gmail.com", 
     pw: "FistOfJustic3", 
-    deladdr: "2/F Palarca Building Quezon Blvd. Cor. Peredes Street Sampaloc 1000, Cafe LeBlanc", 
+    deladdr: "Cafe LeBlanc, 2/F Palarca Building Quezon Blvd. Cor. Peredes Street Sampaloc 1000, Cafe LeBlanc", 
     contactnum: "+639194213030"
 };
 
