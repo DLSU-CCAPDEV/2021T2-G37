@@ -8,8 +8,8 @@ db.createDatabase();
 
 var acc = {
     fullName: "Nicole Kageyama", 
-    userName: "KingOfTheCourt", 
-    email: "kingtobio@gmail.com", 
+    userName: "QueenOfTheCourt", 
+    email: "queenNics@gmail.com", 
     pw: "ihatehinata", 
     deladdr: "1138 Aguilar Street Sta. Cruz 1000, Manila", 
     contactnum: "+639178995055"
