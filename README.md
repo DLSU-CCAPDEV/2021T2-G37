@@ -38,3 +38,13 @@
 | Clarissa Shirogane | detectiveprincess | detectiveprincess@gmail.com |puzzlesRDaBomb  |15/F Ps Bank Center777 Paseo De Roxas Street1226, Makati City 1000 +639209614850|
 | Ina Arisato | bestfemc| darkhour@gmail.com |door-kun   |3 Anonas Street Potrero 1470, Malabon | +639178856212 |
 | Arya Stark| FacelessMan| girlwithnoface@gmail.com |noface   |260 Roosevelt Avenue, San Francisco Del Monte, 1100, Quezon City, Metro Manila| +639176276222 |
+
+
+### Viewing the account details of a user
+
+
+### Editing the account details of a user
+
+
+### Delete account
+
