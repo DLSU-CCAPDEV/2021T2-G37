@@ -44,7 +44,7 @@ var acc = {
     email: "detectiveprincess@gmail.com", 
     pw: "puzzlesRDaBomb", 
     deladdr: "15/F Ps Bank Center777 Paseo De Roxas Street1226, Makati City", 
-    contactnum: "639209614850"
+    contactnum: "+639209614850"
 };
 
 db.insertOne(collection, acc);
@@ -54,7 +54,7 @@ var acc = {
     email: "darkhour@gmail.com", 
     pw: "door-kun", 
     deladdr: "3 Anonas Street Potrero 1470, Malabon", 
-    contactnum: "639178856212"
+    contactnum: "+639178856212"
 };
 
 db.insertOne(collection, acc);
@@ -65,7 +65,7 @@ var acc = {
     email: "girlwithnoface@gmail.com", 
     pw: "noface", 
     deladdr: "260 Roosevelt Avenue, San Francisco Del Monte, 1100, Quezon City, Metro Manila", 
-    contactnum: "639176276222"
+    contactnum: "+639176276222"
 };
 
 db.insertOne(collection, acc);
