@@ -32,7 +32,7 @@ router.get('/success', successctrl.getSuccess);
 router.get('/login', ctrl.getLogin);
 router.post('/postlogin', loginctrl.findUser);
 router.get('/LoggedInHome/:userName', loginctrl.getLoggedInHome);
-//router.get('/LoggedInHome', ctrl.getHomeLoggedIn);
+router.get('/LoggedInHome', ctrl.getHomeLoggedIn);
 
 //ACCOUNT RELATED
 router.post('/editdetails', acctctrl.editDetails);
