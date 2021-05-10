@@ -27,7 +27,7 @@
 * Navigate to http://localhost:3000 in your browser.
 
 
-# Sample User Database
+# User Database
 
 
 | fullName        | userName           | email  | pw           | deladdr                                                            | contactnum                  |
