@@ -5,7 +5,7 @@
     <meta name="author" content="CRUZADA, Carla Jeannine O.">
 
 	<title> Clothing & Science | Login Page</title>
-	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link rel="stylesheet" type="text/css" href="../css/delete.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -18,27 +18,14 @@
 		<div id="header">
 			<img src="../images/logo.png" height="150px" width="150px" id="logo">
 			<p id="tagline"> Where Clothing meets Science. </p>
+			<p id="accountname"> {{userName}} </p>
 		</div>
 
-		<form class="form" method="POST" action="/postlogin">
-			<input type="text" placeholder="Username" class="input" id="username" name="username" required>
+		<form class="form" method="POST" action="/delete_account">
+			<input type="hidden" name="username" value="{{userName}}">
 			<input type="password" placeholder="Password" class="input" id="password" name="password" required>
-			<input type="submit" id="loginbtn" value="LOGIN">
+			<input type="submit" id="deletebtn" value="DELETE">
 	</form>	
-	<p id="error"><p>
-	{{!-- <a href="../views/home.html">
-		<button id="loginbtn">Login</button>
-	</a> --}}
-
-	<div id="remember-me">
-		<input type="checkbox" name="remember">
-		<label for="remember-me"> Remember me </label>
-	</div>
-
-	<div id="footer"> 
-		<a href="/register" id="noacc"> Don't have an account? Register now! </a><br>
-		<a href="#" id="forgotpass"> Forgot password? </a>
-
 	</div>
 </div>
 

@@ -42,7 +42,7 @@ $(document).ready(function (){
             }
 
             else {
-                $('#username').css('background-color', '#E6E2DD');
+                $('#email').css('background-color', '#E6E2DD');
                 $('#error2').text('');
                 $('#submit').prop('disabled', false); // enables the submit button 
             }

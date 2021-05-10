@@ -4,6 +4,7 @@ const registerctrl = require('../controller/registercontroller.js');
 const successctrl = require('../controller/successcontroller.js');
 const acctctrl = require('../controller/acctdetailscontroller.js');
 const loginctrl = require('../controller/logincontroller.js');
+const deletectrl = require('../controller/deletecontroller.js');
 
 router.get('/', ctrl.getHome);
 router.get('/home', ctrl.getHome);
@@ -19,22 +20,34 @@ router.get('/admin_product_add', addprodctrl.getAdminProdAdd);
 router.post('/admin_product_add', addprodctrl.postAddProd);
 router.get('/getCheckNum', addprodctrl.getCheckNum);
 
+
+// REGISTER RELATED
 router.get('/register', registerctrl.getRegister);
 router.post('/register', registerctrl.postRegister);
 router.get('/getCheckUsername', registerctrl.getCheckUsername);
 router.get('/getCheckEmail', registerctrl.getCheckEmail);
 router.get('/success', successctrl.getSuccess);
 
-router.get('/login', loginctrl.getLoginPage);
-router.post('/login', loginctrl.findUser);
-router.get('/loginsuccess', ctrl.getHomeLoggedIn);
-
-router.get('/editdetails/:userName', acctctrl.loadDetails);
-router.post('/editdetails', acctctrl.editDetails);
-router.get('/deleteacct', acctctrl.deleteacct);
-router.get('/acctdetails/:userName', acctctrl.getDetails);
 
 router.get('/login', ctrl.getLogin);
+router.post('/postlogin', loginctrl.findUser);
+router.get('/LoggedInHome/:userName', loginctrl.getLoggedInHome);
+router.get('/LoggedInHome', ctrl.getHomeLoggedIn);
+
+//ACCOUNT RELATED
+router.post('/editdetails', acctctrl.editDetails);
+router.get('/acctdetails/:userName', acctctrl.getDetails);
+// router.get('/acctdetails/:userName', acctctrl.getDetails);
+
+
+router.get('/delete/:userName', deletectrl.getDeletePage);
+router.post('/delete_account', deletectrl.deleteAccount);
+
+router.get('/viewdetails/:userName', acctctrl.getNoEditDetailsView);
+//router.get('/acctdetailsnoedit/:userName', acctctrl.getNoEditDetailsView);
+
+
+
 router.get('/acctdetailsnoedit', ctrl.getNoEditAcc);
 router.get('/acctdetails', ctrl.getAcctDetails);
 router.get('/admin_home_page', ctrl.getAdminHomePage);

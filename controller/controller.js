@@ -39,7 +39,7 @@ const controller = {
     },
 
     getHomeLoggedIn: function(req, res) {
-        res.render('LoggedInHome');
+        res.redirect('LoggedInHome')
     },
 
     setHome: function(req, res) {
