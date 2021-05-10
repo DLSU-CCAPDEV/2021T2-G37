@@ -84,19 +84,6 @@ const database = {
         });
     },
 
-    findAll: function(collection) {
-        client.connect(url, function(err, db) {
-            if (err) throw err;
-            var database = db.db(dbName);
-            database.collection(collection).
-            find({}).toArray(function(err, result) {
-                if (err) throw err;
-                console.log(result);
-                db.close();
-            });
-        });
-    },
-
     deleteOne : function(collection, filter) {
         client.connect(url, options, function(err, db){ // connecting to the dataabase 
             if (err) throw err;

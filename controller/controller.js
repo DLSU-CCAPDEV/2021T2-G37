@@ -4,6 +4,7 @@ const db = require('../models/db.js');
 const controller = {
     getHome: function(req, res){
         res.render('home');
+        
     },
 
     getRegister: function(req, res){
@@ -43,7 +44,7 @@ const controller = {
     },
 
     setHome: function(req, res) {
-        db.findAll('Products', function(result) {
+        db.findMany('Products', function(result) {
             res.send(result);
         });
     }
