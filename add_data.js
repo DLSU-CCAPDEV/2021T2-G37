@@ -90,7 +90,7 @@ var prod = {
     pPrice: "1990.00",
     pQty: "100",
     pDesc: "Clothing and Science become one. This ultra stretch jeans was made possible through our newest technology. Jeans as light as feather and as smooth as baby's skin. Get yours now and become comfy and stylish today!",
-    pcolor: "Blue",
+    pColor: "Blue",
     pSize: "XS",
     pImage: "../images/product1a.jpg"
 }
@@ -101,7 +101,7 @@ var prod = {
     pPrice: "1490.00",
     pQty: "599",
     pDesc: "Introducing a new generation of High Rise fabric. Our most flattering and comfortable high rise jeans yet.",
-    pcolor: "Black",
+    pColor: "Black",
     pSize: "XS",
     pImage: "../images/product2a.jpg"
 }
@@ -114,7 +114,7 @@ var prod = {
     pPrice: "790.00",
     pQty: "658",
     pDesc: "An open collar that makes the most out of the supple and elegant material. An item that has a tasteful, laid-back feel.",
-    pcolor: "Yellow",
+    pColor: "Yellow",
     pSize: "XS",
     pImage: "../images/product3a.jpg"
 }
@@ -127,7 +127,7 @@ var prod = {
     pPrice: "390.00",
     pQty: "1949",
     pDesc: "Your toes stay warm and toasty. A textured, neat knitted fabric.",
-    pcolor: "Gray",
+    pColor: "Gray",
     pSize: "",
     pImage: "../images/product4a.jpg"
 }
@@ -140,7 +140,7 @@ var prod = {
     pPrice: "1990.00",
     pQty: "100",
     pDesc: "Warm and comfortable brushed T-shirt. This item has been updated to make it an easy choice, even when worn on its own.",
-    pcolor: "White",
+    pColor: "White",
     pSize: "XS",
     pImage: "../images/product5a.jpg"
 }
