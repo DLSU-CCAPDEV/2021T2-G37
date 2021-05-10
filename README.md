@@ -35,7 +35,8 @@
 * Navigate to http://localhost:3000 in your browser.
 
 
-# User Database
+# Clothing and Science Database
+### Users
 
 
 | fullName        | userName           | email  | pw           | deladdr                                                            | contactnum                  |
