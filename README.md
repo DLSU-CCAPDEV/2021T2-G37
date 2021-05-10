@@ -58,6 +58,16 @@
 
 
 
+### Product
+| pNum          | pName              | pPrice    | pQty   | pDesc                                | pColor    | pSize   | pImage          |
+|---------------|:------------------:|:---------:|:------:|:------------------------------------:|:---------:|:-------:|----------------:|
+| 100456 | Ultra Stretch Jeans | 1990.00 | 100 | Clothing and Science become one. This ultra stretch jeans was made possible through our newest technology. Jeans as light as feather and as smooth as baby's skin. Get yours now and become comfy and stylish today! | Blue | XS | ../images/product1a.jpg |
+| 100457 | High Rise Jeans | 1490.00 | 599 | Introducing a new generation of High Rise fabric. Our most flattering and comfortable high rise jeans yet. | Black | XS | ../images/product2a.jpg |
+| 100458 | Linen Open Collar Shirt | 790.00 | 658 | An open collar that makes the most out of the supple and elegant material. An item that has a tasteful, laid-back feel. | Yellow | XS | ../images/product3a.jpg |
+| 100459 | Men's Socks | 390.00 | 1949 | Your toes stay warm and toasty. A textured, neat knitted fabric. | Gray |  | ../images/product4a.jpg |
+| 100460 | Long Sleeve Sweatshirt | 1990.00 | 100 | Warm and comfortable brushed T-shirt. This item has been updated to make it an easy choice, even when worn on its own. | White | XS | ../images/product5a.jpg |
+
+
 ### Viewing the account details of a user
 * http://localhost:3000/viewdetails/bestsetter1
 * http://localhost:3000/viewdetails/QueenOfTheCourt
