@@ -11,6 +11,14 @@
 * Anna Patricia Desembrana
 * Clarissa Mae Mandadero 
 
+### Dependencies
+* body-parser
+* dotenv
+* express
+* express-handlebars
+* hbs
+* mongodb
+
 ## Setting up the server
 ### Install the following modules
 * Open Command Prompt
