@@ -21,12 +21,12 @@ const adminprodaddController = {
             pPrice: pPrice,
             pQty: pQty,
             pDesc: pDesc,
-            pcolor: pColor,
+            pColor: pColor,
             pSize: pSize,
             pImage: pImage
         }
 
-        db.insertOneCallback('Products', product, function(flag) {
+        db.insertOneCallback('Product', product, function(flag) {
             if(flag) { // not yet done
                 res.redirect('/success?pName=' + pName + '&pNum=' + pNum);
             }
@@ -37,7 +37,7 @@ const adminprodaddController = {
     getCheckNum: function (req, res) {
         var pNum = req.query.pNum;
 
-        db.findOne('Products', {pNum: pNum}, 'pNum', function (result) {
+        db.findOne('Product', {pNum: pNum}, 'pNum', function (result) {
             res.send(result);
         });
     }    
