@@ -70,3 +70,12 @@ var acc = {
 
 db.insertOne(collection, acc);
 
+//insert admin
+
+var admin = {
+    userName: "admin",
+    email: "xayahsakalam@gmail.com",
+    pw: "xAyaHandRakAn"
+}
+
+db.insertOne('Admin', admin);
