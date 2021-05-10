@@ -41,10 +41,28 @@
 
 
 ### Viewing the account details of a user
+http://localhost:3000/viewdetails/bestsetter1
+http://localhost:3000/viewdetails/QueenOfTheCourt
+http://localhost:3000/viewdetails/bestgirl
+http://localhost:3000/viewdetails/detectiveprincess
+http://localhost:3000/viewdetails/bestfemc
+http://localhost:3000/viewdetails/FacelessMan
 
 
 ### Editing the account details of a user
+http://localhost:3000/acctdetails/bestsetter1
+http://localhost:3000/acctdetails/QueenOfTheCourt
+http://localhost:3000/acctdetails/bestgirl
+http://localhost:3000/acctdetails/detectiveprincess
+http://localhost:3000/acctdetails/bestfemc
+http://localhost:3000/acctdetails/FacelessMan
 
 
 ### Delete account
+http://localhost:3000/delete/bestsetter1
+http://localhost:3000/delete/QueenOfTheCourt
+http://localhost:3000/delete/bestgirl
+http://localhost:3000/delete/detectiveprincess
+http://localhost:3000/delete/bestfemc
+http://localhost:3000/delete/FacelessMan
 
