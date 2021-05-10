@@ -25,7 +25,7 @@ $(document).ready(function (){
         content.appendChild(newLink);
     }
 
-    db.findMany('Products', '', function(result){
+    db.findMany('Product', '', function(result){
         if (result != null){
             for (var i = 0; i < result.length; i++) {
                 displayProd(result[i]);
