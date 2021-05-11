@@ -44,7 +44,7 @@ var acc = {
     userName: "detectiveprincess", 
     email: "detectiveprincess@gmail.com", 
     pw: "puzzlesRDaBomb", 
-    deladdr: "15/F Ps Bank Center777 Paseo De Roxas Street1226, Makati City", 
+    deladdr: "15/F Ps Bank Center 777 Paseo De Roxas Street1226, Makati City", 
     contactnum: "+639209614850"
 };
 
