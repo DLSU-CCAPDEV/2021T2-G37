@@ -34,6 +34,11 @@ router.post('/postlogin', loginctrl.findUser);
 router.get('/LoggedInHome/:userName', loginctrl.getLoggedInHome);
 router.get('/LoggedInHome', ctrl.getHomeLoggedIn);
 
+router.get('/adminlogin', ctrl.getAdminLoginPage);
+router.post('/postadminlogin', loginctrl.findAdmin);
+router.get('/AdminLoggedInHome/:userName', loginctrl.getAdminLoggedInHome);
+router.get('/admin_home', ctrl.getAdminHomeLoggedIn);
+
 //ACCOUNT RELATED
 router.post('/editdetails', acctctrl.editDetails);
 router.get('/acctdetails/:userName', acctctrl.getDetails);
