@@ -4,7 +4,6 @@ const db = require('../models/db.js');
 const controller = {
     getHome: function(req, res){
         res.render('home');
-        
     },
 
     getRegister: function(req, res){
@@ -27,6 +26,10 @@ const controller = {
         res.render('admin_home_page');
     },
 
+    getAdminLoginPage: function(req, res){
+        res.render('admin_login');
+    },
+
     getWishlist: function(req, res){
         res.render('wishlist');
     },
@@ -40,11 +43,15 @@ const controller = {
     },
 
     getHomeLoggedIn: function(req, res) {
-        res.redirect('LoggedInHome')
+        res.render('LoggedInHome');
+    },
+
+    getAdminHomeLoggedIn: function(req, res){
+        res.render('admin_home');
     },
 
     setHome: function(req, res) {
-        db.findMany('Products', function(result) {
+        db.findAll('Products', function(result) {
             res.send(result);
         });
     }
