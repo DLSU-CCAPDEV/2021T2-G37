@@ -94,3 +94,6 @@
 * http://localhost:3000/delete/bestfemc
 * http://localhost:3000/delete/FacelessMan
 
+### Accessing Login page for admin
+http://localhost:3000/adminlogin
+
