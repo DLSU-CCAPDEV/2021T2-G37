@@ -60,5 +60,4 @@ router.get('/wishlist', ctrl.getWishlist);
 router.get('/cart', ctrl.getCart);
 router.get('/viewproducts', ctrl.getViewProducts);
 
-
 module.exports = router;
