@@ -5,7 +5,8 @@ const successctrl = require('../controller/successcontroller.js');
 const acctctrl = require('../controller/acctdetailscontroller.js');
 const loginctrl = require('../controller/logincontroller.js');
 const deletectrl = require('../controller/deletecontroller.js');
-
+const addprodctrl = require('../controller/admin_product_addcontroller.js'); // for adding product
+const deleteprodctrl = require('../controller/admin_product_deletecontroller.js'); // for deleting product
 const validation = require('../helpers/validation.js');
 
 
@@ -14,14 +15,17 @@ router.get('/home', ctrl.getHome);
 router.get('/', ctrl.setHome);
 router.get('/home', ctrl.setHome);
 
-const addprodctrl = require('../controller/admin_product_addcontroller.js'); // for ading product
-
 //router.get('/search', searchctrl.getSearch);
 // router.get('/search', searchctrl.);
 
+//admin add product related
 router.get('/admin_product_add', addprodctrl.getAdminProdAdd);
 router.post('/admin_product_add', addprodctrl.postAddProd);
 router.get('/getCheckNum', addprodctrl.getCheckNum);
+
+//admin delete product related
+router.get('/admin_product_delete', deleteprodctrl.getAdminProdDelete);
+//router.post('/admin_product_delete', deleteprodctrl.postAddProdDelete);
 
 
 // REGISTER RELATED

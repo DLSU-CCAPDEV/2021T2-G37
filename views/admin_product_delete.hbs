@@ -1,0 +1,41 @@
+<<!DOCTYPE html>
+<html>
+    <meta name="description" content="Admin Settings - Add Product">
+    <meta name="keyword" content="Admin Settings - Add Product">
+    <meta name="author" content="MANDADERO, Clarissa Mae S.">
+    <head>
+        <title> Clothing & Science | Admin Settings - Add Product</title>
+        <link rel="stylesheet" type="text/css" href="../css/admin_product_delete.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	    <script src="../public/js/admin_product_add.js"> </script>
+    </head>
+
+
+    <body>
+        <div id="divmain">
+            <img id="imglogo" src="../images/logo.png" height="120px" width="120px">
+            <br>
+
+            <p id="txtheader">
+            <span class="material-icons">manage_accounts</span>
+            DELETE PRODUCT
+            </p>
+
+            <form class="form" method="POST" action="/admin_product_delete" class="form">
+			<p class="txt_titles">Product Number<p>
+            <input type="text" placeholder="Enter product Number" class="input" id="pnum" name="pnum" required>
+            <p id="error"></p>
+			<input type="submit" id="btndelete" class="btna" value="Delete Product">
+
+            </form>	
+
+            <a href="/admin_home_page"><button id="btncancel" class="btna"> Cancel </button> </a>
+
+        </div>
+    </body>
+</html>
