@@ -16,6 +16,7 @@
 	<link rel="shortcut icon" type="image/png" href="../images/favicon.png">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="/js/register.js"> </script>
+	<script src="/js/validator.min.js"> </script>
 
 </head>
 <body>
@@ -26,18 +27,43 @@
 		</div>
 
 		<form class="form" method="POST" action="/register">
+			{{!-- check if not empty --}}
 			<input type="text" placeholder="Full Name" class="input" id="fullname" name="fullname" required>
+			
+			{{!-- check if not empty --}}
 			<input type="text" placeholder="Username" class="input" id="username" name="username" required>
+			
+			
+			{{!-- check if not empty --}}
 			<input type="email" placeholder="Email address" class="input"id="email" name="email" required>
+			
+
+			{{!-- at least 10 characters --}}
 			<input type="password" placeholder="Password" class="input" id="password" name="password" required>
+			
+
+			{{!-- at least 15 characters --}}
 			<input type="text" placeholder="Delivery Address" class="input" id="deladdr" name="deladdr" required>
+			
+
+			{{!-- EXACTLY 11 digits --}}
 			<input type="text" placeholder="Contact Number" class="input" id="contactnum" name="contactnum" required>
+			
+
 			<input type="submit" id="submit" value="Sign me up" onclick="alert('You are now a registered user!')">
 
 		<!-- <button id="registerbtn" onclick="alert('You are now a registered user!')"> Sign me up! </button> -->
 	</form>	
 	<p id="error"><p>
 	<p id="error2"></p>
+	<p id="error3"></p>
+	<p id="fullnameErr" class="error"> {{fullnameErr}} </p>
+	<p id="usernameErr" class="error"> {{usernameErr}} </p>
+	<p id="emailErr" class="error"> {{emailErr}} </p>
+	<p id="passwordErr" class="error"> {{passwordErr}} </p>
+	<p id="deladdrErr" class="error"> {{deladdrErr}} </p>
+	<p id="contactnumErr" class="error"> {{contactnumErr}} </p>
+
 </div>
 
 </body>
