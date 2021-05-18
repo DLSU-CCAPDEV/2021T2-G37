@@ -93,63 +93,55 @@ $(document).ready(function (){
 
     }
 
-    function isUniqueUsername(field){
+    function isUniqueUsername(field, callback){
 
         var userName = validator.trim($('#username').val());
-        var validusername = false;
-
-        // console.log(userName);
-
+      
+ 
         $.get('/getCheckUsername', {userName: userName}, function(result){
 
             if(result.userName == userName){
 
-                if(field.is($('#username'))){
-                    $('#username').css('background-color', '#BC544B');
-                    $('#error').text('Username is already taken.');
-                }
+                if(field.is($('#username')))
+                    $('#usernameErr').text('Username is already taken.');
+                return callback(false);
+                
+            
             }
 
             else {
-                if(field.is($('#username'))){
-                    $('#username').css('background-color', '#E6E2DD');
-                    $('#error').text('');
-                }
-             
-                validusername = true;
+                if(field.is($('#username')))
+                    $('#usernameErr').text('');
+                return callback(true);
+            
             }
+        
         });
-
-        return validusername;
     }
 
-    function isUniqueEmail(field){
+    function isUniqueEmail(field, callback){
 
         var email = validator.trim($('#email').val());
-        var validemail = false;
-
-    
+     
         $.get('/getCheckEmail', {email: email}, function(result){
 
             if(result.email == email){
 
-                if(field.is($('#email'))){
-                    $('#email').css('background-color', '#BC544B');
-                    $('#error2').text('Email is already in use.');
-                }
+                if(field.is($('#email')))
+                    $('#emailErr').text('Email is already in use.');
+                return callback(false);
+                
            
             }
 
             else {
-                if(field.is($('#email'))){
-                    $('#email').css('background-color', '#E6E2DD');
-                    $('#error2').text('');
-                    validemail = true;
-                }
+                if(field.is($('#email')))
+                    $('#emailErr').text('');
+                return callback(true);
+               
             }
         });
         
-        return validemail;
     }
 
     function isPasswordValid(field){
@@ -215,21 +207,25 @@ $(document).ready(function (){
         var filled = checkFilled();
 
         var validpw = isPasswordValid(field);
-
-        var validusername = isUniqueUsername(field);
-
+    
         var validaddr = isDelAddrValid(field);
 
-        var validemail = isUniqueEmail(field);
-
+    
         isValidContactNum(field, function(validcontactnum) {
-            if (filled && validpw && validusername && validaddr && validemail && validcontactnum){
-                $('#submit').prop('disabled', false);
-            }
             
-            else {
-                $('#submit').prop('disabled', true);
-            }
+        
+            isUniqueUsername(field, function(validusername){
+           
+                isUniqueEmail(field, function(validemail){
+                    if (filled && validpw && validcontactnum && validaddr && validusername && validemail) {
+                            $('#submit').prop('disabled', false);
+                        }
+                        
+                        else {
+                            $('#submit').prop('disabled', true);
+                        }
+                    })
+                })
         });
     }
 
@@ -242,14 +238,51 @@ $(document).ready(function (){
 
     $('#username').keyup(function (){
 
+        
         checkField($('#username'), 'Username', $('#usernameErr'));
 
+        // var userName = $('#username').val();
+        // console.log(userName);
+
+        // $.get('/getCheckUsername', {userName: userName}, function(result){
+
+        //     if(result.userName == userName){
+        //         $('#username').css('background-color', '#BC544B');
+        //         $('#error').text('Username is already taken.');
+        //         // $('#submit').prop('disabled', true); // disables the submit button
+        //     }
+
+        //     else {
+        //         $('#username').css('background-color', '#E6E2DD');
+        //         $('#error').text('');
+        //         // $('#submit').prop('disabled', false); // enables the submit button 
+        //     }
+
+        // });
         
     });
 
     $('#email').keyup(function (){
         
         checkField($('#email'), 'Email address', $('#emailErr'));
+
+        // var email = $('#email').val();
+
+        // $.get('/getCheckEmail', {email: email}, function(result){
+
+        //     if(result.email == email){
+        //         $('#email').css('background-color', '#BC544B');
+        //         $('#error2').text('Email is already in use.');
+        //         // $('#submit').prop('disabled', true); // disables the submit button
+        //     }
+
+        //     else {
+        //         $('#email').css('background-color', '#E6E2DD');
+        //         $('#error2').text('');
+        //         // $('#submit').prop('disabled', false); // enables the submit button 
+        //     }
+
+        // });
     });
 
     $('#password').keyup(function (){
