@@ -3,11 +3,9 @@ const db = require('../models/db.js');
 
 const controller = {
     getHome: function(req, res){
- /*       db.findMany('Product', null, null, function(result) {
-            res.render('home', {product: result});
+        db.findMany('Product', null, null, null, function(result) {
+            res.render('home', {thumbnail: result});
         });
-*/
-        res.render('home');
     },
 
     getRegister: function(req, res){
@@ -52,12 +50,6 @@ const controller = {
 
     getAdminHomeLoggedIn: function(req, res){
         res.render('admin_home');
-    },
-
-    setHome: function(req, res) {
-        db.findAll('Products', function(result) {
-            res.send(result);
-        });
     }
 }
 

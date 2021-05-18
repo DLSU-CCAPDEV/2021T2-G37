@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Overpass:wght@200&display=swap');
+
+.image {
+    width: 400px;
+}
+
+.name, .price {
+    font-family: 'Overpass', sans-serif;
+    display: block;
+    margin-left: -35px;
+}
+
+.name {
+    font-size: 22px;
+}
+
+.price {
+    font-size: 15px;
+    margin-bottom: 70px;
+}
+
+.thumbnail {
+    text-align: center;
+    vertical-align: top;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    margin: 70px;
+}
