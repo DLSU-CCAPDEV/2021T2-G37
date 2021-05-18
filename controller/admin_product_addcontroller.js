@@ -13,7 +13,7 @@ const adminprodaddController = {
         var pDesc = req.body.pdesc;
         var pColor = req.body.pcolor;          // not sure yet; array(?)
         var pSize = req.body.psize;            // not sure yet; array(?)
-        var pImage = req.body.pimage;          // not sure yet
+        var pImage = req.body.pimage;          // relative path to image
 
         var product = {
             pNum: pNum,

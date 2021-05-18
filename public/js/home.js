@@ -8,15 +8,15 @@ function dropdownToggle(){
 
 // display products in page
 $(document).ready(function (){
-    $('#product').on('click', '.thumbnail', function () {
+/*    $('#product').on('click', '.thumbnail', function () {
         var partial = $(this).prev().children()[1];
         var pname = {
             pName: partial.innerHTML
         }
 
-        redirect('/productlisting?pName=' + pName);
+//        redirect('/productlisting?pName=' + pName);
 
         window.location.reload();
     });
-
+*/
 })

@@ -3,13 +3,11 @@ const db = require('../models/db.js');
 
 const controller = {
     getHome: function(req, res){
-        db.findMany(Product, null, null, function(result) {
+ /*       db.findMany('Product', null, null, function(result) {
             res.render('home', {product: result});
         });
-    },
-
-    getProductListing: function(req, res){
-        res.render();
+*/
+        res.render('home');
     },
 
     getRegister: function(req, res){
