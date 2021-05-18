@@ -95,6 +95,8 @@ var prod = {
     pImage: "../images/product1a.jpg"
 }
 
+db.insertOne(products, prod);
+
 var prod = {
     pNum: "100457",
     pName: "High Rise Jeans",
