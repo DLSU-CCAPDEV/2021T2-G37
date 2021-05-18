@@ -8,6 +8,10 @@ const controller = {
         });
     },
 
+    getProductListing: function(req, res){
+        res.render();
+    },
+
     getRegister: function(req, res){
         res.render('register');
     }, 

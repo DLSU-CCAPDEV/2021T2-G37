@@ -8,28 +8,15 @@ function dropdownToggle(){
 
 // display products in page
 $(document).ready(function (){
-    
-    function displayProd (product) {
-        // a, div, span, span, /a
-        var newLink = document.createElement("a");
-        var newImg = document.createElement("div");
-        var newName = document.createElement("span");
-        var newPrice = document.createElement("span");
-
-        newName.appendChild(document.createTextNode(product.prodName));
-        newPrice.appendChild(document.createTextNode(products.prodPrice));
-    
-        newLink.appendChild(newName);
-        newLink.appendChild(newPrice);
-
-        content.appendChild(newLink);
-    }
-
-    db.findMany('Product', '', function(result){
-        if (result != null){
-            for (var i = 0; i < result.length; i++) {
-                displayProd(result[i]);
-            }
+    $('#product').on('click', '.thumbnail', function () {
+        var partial = $(this).prev().children()[1];
+        var pname = {
+            pName: partial.innerHTML
         }
+
+        redirect('/productlisting?pName=' + pName);
+
+        window.location.reload();
     });
+
 })
