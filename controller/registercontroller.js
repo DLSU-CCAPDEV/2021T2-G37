@@ -1,3 +1,4 @@
+const { validationResult } = require('express-validator');
 const db = require('../models/db.js');
 
 
@@ -9,28 +10,45 @@ const registerController = {
 
     postRegister: function(req, res) {
 
-        var fullName = req.body.fullname;
-        var userName = req.body.username;
-        var email = req.body.email;
-        var pw = req.body.password;
-        var deladdr = req.body.deladdr;
-        var contactnum = req.body.contactnum;
 
-        var acc = {
-            fullName: fullName, 
-            userName: userName, 
-            email:  email,
-            pw: pw,
-            deladdr: deladdr, 
-            contactnum:  contactnum
+        var errors = validationResult(req);
+
+        if (!errors.isEmpty()){
+            errors = errors.errors;
+
+            var details = {};
+
+            for (i = 0; i < errors.length; i++)
+                details[errors[i].param + 'Error'] = errors[i].msg;
+
+            res.render('register', details);
         }
-        
-        db.insertOneCallback('User', acc, function(flag){
 
-            if (flag){
-                res.redirect('/success?fullName=' + fullName + '&userName=' + userName);
+        else {
+
+            var fullName = req.body.fullname;
+            var userName = req.body.username;
+            var email = req.body.email;
+            var pw = req.body.password;
+            var deladdr = req.body.deladdr;
+            var contactnum = req.body.contactnum;
+    
+            var acc = {
+                fullName: fullName, 
+                userName: userName, 
+                email:  email,
+                pw: pw,
+                deladdr: deladdr, 
+                contactnum:  contactnum
             }
-        });
+            
+            db.insertOneCallback('User', acc, function(flag){
+    
+                if (flag){
+                    res.redirect('/success?fullName=' + fullName + '&userName=' + userName);
+                }
+            });   
+        }
     }, 
 
     getCheckUsername: function(req, res) {
@@ -50,6 +68,16 @@ const registerController = {
         db.findOne('User', {email: email}, function(result) {
             res.send(result);
         });
+
+    }, 
+
+    getCheckContactNum: function(req, res){
+
+        var contactnum = req.query.contactnum; 
+
+        db.findOne('User', {contactnum: contactnum}, function(result){
+            res.send(result);
+        })
 
     }
 }
