@@ -3,7 +3,9 @@ const db = require('../models/db.js');
 
 const controller = {
     getHome: function(req, res){
-        res.render('home');
+        db.findMany(Product, null, null, function(result) {
+            res.render('home', {product: result});
+        });
     },
 
     getRegister: function(req, res){
