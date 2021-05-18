@@ -16,6 +16,7 @@
 * dotenv
 * express
 * express-handlebars
+* express-validator
 * hbs
 * mongodb
 
