@@ -13,7 +13,7 @@ var acc = {
     email: "queenNics@gmail.com", 
     pw: "ihatehinata", 
     deladdr: "1138 Aguilar Street Sta. Cruz 1000, Manila", 
-    contactnum: "+639178995055"
+    contactnum: "63917899505"
 };
 
 db.insertOne(collection, acc);
@@ -24,7 +24,7 @@ var acc = {
     email: "bestsetter@gmail.com", 
     pw: "0nehandt0ss", 
     deladdr: "Unit C D M Building Durian StreetDona Josefa Subdivision Pilar 1740, Las Pinas", 
-    contactnum: "+639165625555"
+    contactnum: "63916562555"
 };
 
 db.insertOne(collection, acc);
@@ -35,7 +35,7 @@ var acc = {
     email: "bestgirl@gmail.com", 
     pw: "FistOfJustic3", 
     deladdr: "Cafe LeBlanc, 2/F Palarca Building Quezon Blvd. Cor. Peredes Street Sampaloc 1000, Cafe LeBlanc", 
-    contactnum: "+639194213030"
+    contactnum: "63919421330"
 };
 
 db.insertOne(collection, acc);
@@ -45,7 +45,7 @@ var acc = {
     email: "detectiveprincess@gmail.com", 
     pw: "puzzlesRDaBomb", 
     deladdr: "15/F Ps Bank Center 777 Paseo De Roxas Street1226, Makati City", 
-    contactnum: "+639209614850"
+    contactnum: "63920961450"
 };
 
 db.insertOne(collection, acc);
@@ -55,7 +55,7 @@ var acc = {
     email: "darkhour@gmail.com", 
     pw: "door-kun", 
     deladdr: "3 Anonas Street Potrero 1470, Malabon", 
-    contactnum: "+639178856212"
+    contactnum: "63917885212"
 };
 
 db.insertOne(collection, acc);
@@ -66,7 +66,7 @@ var acc = {
     email: "girlwithnoface@gmail.com",
     pw: "noface", 
     deladdr: "260 Roosevelt Avenue, San Francisco Del Monte, 1100, Quezon City, Metro Manila", 
-    contactnum: "+639176276222"
+    contactnum: "63917627622"
 };
 
 db.insertOne(collection, acc);
