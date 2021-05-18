@@ -6,6 +6,9 @@ const acctctrl = require('../controller/acctdetailscontroller.js');
 const loginctrl = require('../controller/logincontroller.js');
 const deletectrl = require('../controller/deletecontroller.js');
 
+const validation = require('../helpers/validation.js');
+
+
 router.get('/', ctrl.getHome);
 router.get('/home', ctrl.getHome);
 router.get('/', ctrl.setHome);
@@ -23,8 +26,9 @@ router.get('/getCheckNum', addprodctrl.getCheckNum);
 
 // REGISTER RELATED
 router.get('/register', registerctrl.getRegister);
-router.post('/register', registerctrl.postRegister);
+router.post('/register', validation.postRegisterValidation(), registerctrl.postRegister);
 router.get('/getCheckUsername', registerctrl.getCheckUsername);
+router.get('/getCheckContactNum', registerctrl.getCheckContactNum);
 router.get('/getCheckEmail', registerctrl.getCheckEmail);
 router.get('/success', successctrl.getSuccess);
 
