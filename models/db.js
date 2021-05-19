@@ -31,7 +31,6 @@ const database = {
         });
     },
     
-    
     insertOneCallback : function(collection, doc, callback) {
         client.connect(url, options, function(err, db){ // connecting to the dataabase 
             if (err) return callback(false)
@@ -70,17 +69,30 @@ const database = {
         });
     },
     
-    findMany: function(collection, query, sort=null, projection=null){
+    findMany: function(collection, query, sort=null, projection=null, limit, skip, callback){
         client.connect(url, options, function(err, db){
             if (err) throw err;
             var database = db.db(dbName);
-            database.collection(collection)
-            .find(query, {projection: projection})
-            .sort(sort).toArray(function (err, result){
-                if (err) throw err;
-                console.log(result);
-                db.close();
-            });
+            if (limit == null && skip == null) {
+                database.collection(collection)
+                .find(query, {projection: projection})
+                .sort(sort).toArray(function (err, result){
+                    if (err) throw err;
+                    console.log(result);
+                    return callback(result);
+                    db.close();
+                });
+            } else {    // allows limit or skip of results
+                database.collection(collection)
+                .find(query, {projection: projection})
+                .limit(limit).skip(skip)
+                .sort(sort).toArray(function (err, result){
+                    if (err) throw err;
+                    console.log(result);
+                    return callback(result);
+                    db.close();
+                });
+            }
         });
     },
 

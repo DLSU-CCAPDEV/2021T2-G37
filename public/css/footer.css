@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Overpass:wght@200&display=swap');
+
+/* FOOTER START ------------------------- */ 
+footer {
+    background-color: #4d4845;
+    color: white;
+    height: 150px;
+    width: 100%;
+}
+
+hr {
+    margin-left: 100px;
+    margin-right: 100px;
+    position: relative;
+    top: 70px;
+}
+
+#footer1 {
+    margin-left: 100px;
+    font-family: 'Overpass', sans-serif;
+    font-size: 14px;
+    position: relative;
+    top: 70px;
+}
+/* FOOTER END --------------------------- */

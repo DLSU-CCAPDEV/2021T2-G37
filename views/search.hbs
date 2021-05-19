@@ -13,6 +13,9 @@
     <div id="container">
         <h1 id="search">Showing results for "{{query}}"</h1>
         <div id="content">
+            {{#each thumbnail}}
+                {{> thumbnail}}
+            {{/each}}
         </div>
     </div>
 
