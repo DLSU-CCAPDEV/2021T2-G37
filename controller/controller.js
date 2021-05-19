@@ -3,7 +3,8 @@ const db = require('../models/db.js');
 
 const controller = {
     getHome: function(req, res){
-        db.findMany('Product', null, null, null, function(result) {
+        // display first 5 products in the database
+        db.findMany('Product', null, null, null, 5, 0, function(result) {
             res.render('home', {thumbnail: result});
         });
     },
