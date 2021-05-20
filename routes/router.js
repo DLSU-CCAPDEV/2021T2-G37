@@ -5,6 +5,7 @@ const successctrl = require('../controller/successcontroller.js');
 const acctctrl = require('../controller/acctdetailscontroller.js');
 const loginctrl = require('../controller/logincontroller.js');
 const deletectrl = require('../controller/deletecontroller.js');
+const product_listingctrl = require('../controller/product_listingcontroller.js')
 
 const validation = require('../helpers/validation.js');
 
@@ -53,6 +54,8 @@ router.post('/delete_account', deletectrl.deleteAccount);
 router.get('/viewdetails/:userName', acctctrl.getNoEditDetailsView);
 //router.get('/acctdetailsnoedit/:userName', acctctrl.getNoEditDetailsView);
 
+//PRODUCT LISTING
+router.get('/product_listing/:pName', product_listingctrl.getProduct_Listing);
 
 
 router.get('/acctdetailsnoedit', ctrl.getNoEditAcc);

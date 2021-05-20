@@ -4,10 +4,6 @@ function dropdownToggle(){
 }
 
 $(document).ready(function (){
-
-
-
-
     $('#content').on('click', '.thumbnail', function () {
 
         var partial = $(this).prev();
