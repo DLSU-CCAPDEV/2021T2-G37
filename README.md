@@ -18,6 +18,7 @@
 * express
 * express-handlebars
 * express-validator
+* express-session
 * hbs
 * mongodb
 
