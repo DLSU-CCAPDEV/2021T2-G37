@@ -1,5 +1,8 @@
 const db = require('./models/db.js');
 
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+
 
 const collection = 'User';
 const products = 'Product';
@@ -16,7 +19,17 @@ var acc = {
     contactnum: "63917899505"
 };
 
-db.insertOne(collection, acc);
+bcrypt.hash(acc.pw, saltRounds, function(err, hash){
+    var hashacc = {
+        fullName: "Nicole Kageyama", 
+        userName: "QueenOfTheCourt", 
+        email: "queenNics@gmail.com", 
+        pw: hash, 
+        deladdr: "1138 Aguilar Street Sta. Cruz 1000, Manila", 
+        contactnum: "63917899505"
+    }
+    db.insertOne(collection, hashacc);
+});
 
 var acc = {
     fullName: "Carla Oikawa", 
@@ -27,7 +40,17 @@ var acc = {
     contactnum: "63916562555"
 };
 
-db.insertOne(collection, acc);
+bcrypt.hash(acc.pw, saltRounds, function(err, hash){
+    var hashacc = {
+        fullName: "Carla Oikawa", 
+        userName: "bestsetter1", 
+        email: "bestsetter@gmail.com", 
+        pw: hash, 
+        deladdr: "Unit C D M Building Durian StreetDona Josefa Subdivision Pilar 1740, Las Pinas", 
+        contactnum: "63916562555"
+    }
+    db.insertOne(collection, hashacc);
+});
 
 var acc = {
     fullName: "Anna Nijima", 
@@ -38,7 +61,18 @@ var acc = {
     contactnum: "63919421330"
 };
 
-db.insertOne(collection, acc);
+bcrypt.hash(acc.pw, saltRounds, function(err, hash){
+    var hashacc = {
+        fullName: "Anna Nijima", 
+        userName: "bestgirl", 
+        email: "bestgirl@gmail.com", 
+        pw: hash, 
+        deladdr: "Cafe LeBlanc, 2/F Palarca Building Quezon Blvd. Cor. Peredes Street Sampaloc 1000, Cafe LeBlanc", 
+        contactnum: "63919421330"
+    }
+    db.insertOne(collection, hashacc);
+});
+
 var acc = {
     fullName: "Clarissa Shirogane", 
     userName: "detectiveprincess", 
@@ -48,7 +82,18 @@ var acc = {
     contactnum: "63920961450"
 };
 
-db.insertOne(collection, acc);
+bcrypt.hash(acc.pw, saltRounds, function(err, hash){
+    var hashacc = {
+        fullName: "Clarissa Shirogane", 
+        userName: "detectiveprincess", 
+        email: "detectiveprincess@gmail.com", 
+        pw: hash, 
+        deladdr: "15/F Ps Bank Center 777 Paseo De Roxas Street1226, Makati City", 
+        contactnum: "63920961450"
+    }
+    db.insertOne(collection, hashacc);
+});
+
 var acc = {
     fullName: "Ina Arisato", 
     userName: "bestfemc", 
@@ -58,7 +103,18 @@ var acc = {
     contactnum: "63917885212"
 };
 
-db.insertOne(collection, acc);
+bcrypt.hash(acc.pw, saltRounds, function(err, hash){
+    var hashacc = {
+        fullName: "Ina Arisato", 
+        userName: "bestfemc", 
+        email: "darkhour@gmail.com", 
+        pw: hash, 
+        deladdr: "3 Anonas Street Potrero 1470, Malabon", 
+        contactnum: "63917885212"
+    }
+    db.insertOne(collection, hashacc);
+});
+
 
 var acc = {
     fullName: "Arya Stark", 
@@ -69,7 +125,18 @@ var acc = {
     contactnum: "63917627622"
 };
 
-db.insertOne(collection, acc);
+bcrypt.hash(acc.pw, saltRounds, function(err, hash){
+    var hashacc = {
+        fullName: "Arya Stark", 
+        userName: "FacelessMan", 
+        email: "girlwithnoface@gmail.com",
+        pw: hash, 
+        deladdr: "260 Roosevelt Avenue, San Francisco Del Monte, 1100, Quezon City, Metro Manila", 
+        contactnum: "63917627622"
+    }
+    db.insertOne(collection, hashacc);
+});
+
 
 //insert admin
 
@@ -79,7 +146,14 @@ var admin = {
     pw: "xAyaHandRakAn"
 }
 
-db.insertOne('Admin', admin);
+bcrypt.hash(admin.pw, saltRounds, function(err, hash){
+    var hashacc = {
+        userName: "admin",
+        email: "xayahsakalam@gmail.com",
+        pw: hash
+    }
+    db.insertOne('Admin', hashacc);
+});
 
 
 // Inserts sample products
