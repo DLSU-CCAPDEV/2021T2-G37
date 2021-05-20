@@ -12,6 +12,7 @@
 * Clarissa Mae Mandadero 
 
 ### Dependencies
+* bcrypt
 * body-parser
 * dotenv
 * express
