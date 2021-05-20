@@ -1,4 +1,5 @@
 const db = require('../models/db.js');
+const bcrypt = require('bcrypt');
 
 const logincontroller = {
 
@@ -11,24 +12,35 @@ const logincontroller = {
         res.render('admin_home', {username: req.params.username});
     },
 
+
     findUser: function(req, res) {
 
         var username = req.body.username;
         var pw = req.body.password;
 
-        var person = {
-            userName: username,
-            pw: pw
-        }
+        db.findOne('User', {userName: username}, function(result) {
+            if(result){
 
-        db.findOne('User', person, function(result) {
-            if(result != null){
-                res.redirect('LoggedInHome/' + username);
+                var person = {
+                    userName: result.userName
+                }
+
+                bcrypt.compare(pw, result.pw, function(err, equal){
+                    if (equal) 
+                     res.redirect('LoggedInHome/' + person.userName);
+
+                     else {
+                        var details = {error: 'Username and/or Password is incorrect.'}
+                        res.render('login', details);
+                    }
+                })
+                // res.redirect('LoggedInHome/' + username);
                 //console.log('LoggedInHome/' + username);
                 //res.render('LoggedInHome')
                 //res.send('succesfully logged in');
             } else {
-                res.send('Incorrect username/ password');
+                var details = {error: 'Username and/or Password is incorrect.'}
+                res.render('login', details);
             }
         });
 
@@ -38,22 +50,38 @@ const logincontroller = {
         var username = req.body.username;
         var pw = req.body.password;
 
-        var person = {
-            userName: username,
-            pw: pw
-        }
+        db.findOne('Admin', {userName: username}, function(result) {
+            if (result) {
 
-        db.findOne('Admin', person, function(result) {
-            if(result != null){
-                res.redirect('AdminLoggedInHome/' + username);
-                //console.log('LoggedInHome/' + username);
-                //res.render('LoggedInHome')
-                //res.send('succesfully logged in');
-            } else {
-                res.send('Incorrect username/ password');
+                var admin = {
+                    userName: result.userName
+                }
+
+                bcrypt.compare(pw, result.pw, function(err, equal){
+                    if (equal)
+                        res.redirect('AdminLoggedInHome/' + admin.userName);
+                    
+                    else {
+                        var details = {error: 'Username and/or Password is incorrect.'}
+                        res.render('login', details);
+                    }
+                })
+            }
+            else {
+                var details = {error: 'Username and/or Password is incorrect.'}
+                res.render('login', details);
             }
         });
     }
 }
 
 module.exports = logincontroller;
+
+ // if(result != null){
+            //     res.redirect('AdminLoggedInHome/' + username);
+            //     //console.log('LoggedInHome/' + username);
+            //     //res.render('LoggedInHome')
+            //     //res.send('succesfully logged in');
+            // } else {
+            //     res.send('Incorrect username/ password');
+            // }

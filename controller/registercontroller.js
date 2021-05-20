@@ -1,4 +1,6 @@
 const { validationResult } = require('express-validator');
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 const db = require('../models/db.js');
 
 
@@ -32,22 +34,26 @@ const registerController = {
             var pw = req.body.password;
             var deladdr = req.body.deladdr;
             var contactnum = req.body.contactnum;
-    
-            var acc = {
-                fullName: fullName, 
-                userName: userName, 
-                email:  email,
-                pw: pw,
-                deladdr: deladdr, 
-                contactnum:  contactnum
-            }
-            
-            db.insertOneCallback('User', acc, function(flag){
-    
-                if (flag){
-                    res.redirect('/success?fullName=' + fullName + '&userName=' + userName);
+
+            bcrypt.hash(pw, saltRounds, function(err, hash){
+
+                var acc = {
+                    fullName: fullName, 
+                    userName: userName, 
+                    email:  email,
+                    pw: hash,
+                    deladdr: deladdr, 
+                    contactnum:  contactnum
                 }
-            });   
+                
+                db.insertOneCallback('User', acc, function(flag){
+        
+                    if (flag){
+                        res.redirect('/success?fullName=' + fullName + '&userName=' + userName);
+                    }
+                });   
+
+            });
         }
     }, 
 
