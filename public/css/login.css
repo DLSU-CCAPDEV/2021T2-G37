@@ -1,5 +1,10 @@
 body {
 	background-color:#D48166
+} 
+
+
+p {
+	font-family: 'Roboto', sans-serif;
 }
 
 #container {
@@ -67,15 +72,15 @@ body {
 	text-decoration: none;
 	color: black;
 	position: relative;
-	right: 50px;
-	top: 250px;
+	top: 200px;
+	text-align: center;
+	text-decoration: underline;
+	font-family: 'Bebas Neue', cursive;
 }
 
 #noacc:hover {
 	color: #E6E2DD
 }
-
-
 
 
 #forgotpass {
