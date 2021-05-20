@@ -48,7 +48,7 @@
 
 
 ### User
-#### Note: Passwords of the accounts here are written in plaintext but rest assured once add_data.js is called, these will be hashed.
+#### Note: Passwords of the accounts here are written in plaintext for easy access of the accounts but rest assured once add_data.js is called, these will be hashed.
 
 | fullName        | userName           | email  | pw           | deladdr                                                            | contactnum                  |
 | --------------- |:------------------:|:------:|:------------:|:------------------------------------------------------------------:|:---------------------------:|
