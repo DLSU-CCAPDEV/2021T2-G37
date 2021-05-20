@@ -5,7 +5,23 @@ const logincontroller = {
 
     
     getLoggedInHome: function(req, res){
-        res.render('LoggedInHome', {username: req.params.username});
+
+        var details = {};
+
+        if(req.session.userName) {
+
+            details.flag = true;
+            details.userName = req.session.userName;
+
+            res.render('LoggedInHome', details);
+        }
+
+        else {
+          
+            details.flag = false;
+            res.render('login', details);
+        }
+
     },
     
     getAdminLoggedInHome: function(req, res) {
@@ -26,20 +42,26 @@ const logincontroller = {
                 }
 
                 bcrypt.compare(pw, result.pw, function(err, equal){
-                    if (equal) 
-                     res.redirect('LoggedInHome/' + person.userName);
+                    if (equal) {
 
+                         req.session.userName = person.userName;
+                         console.log(req.session.userName);
+
+                         res.redirect('LoggedInHome/' + person.userName);
+                    }
                      else {
-                        var details = {error: 'Username and/or Password is incorrect.'}
+                        var details = {
+                            flag: false, 
+                            error: 'ID Number and/or Password is incorrect.'
+                        }
                         res.render('login', details);
                     }
                 })
-                // res.redirect('LoggedInHome/' + username);
-                //console.log('LoggedInHome/' + username);
-                //res.render('LoggedInHome')
-                //res.send('succesfully logged in');
             } else {
-                var details = {error: 'Username and/or Password is incorrect.'}
+                var details = {
+                    flag: false, 
+                    error: 'ID Number and/or Password is incorrect.'
+                }
                 res.render('login', details);
             }
         });

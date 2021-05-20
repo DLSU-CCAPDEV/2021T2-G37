@@ -7,14 +7,28 @@ const deleteController = {
        // res.render('delete');
 
        var query = {userName: req.params.userName};
+
+       var details = {};
+
+       if(req.session.userName){
+
+        details.flag = true;
+        details.userName = req.session.userName;
+        }
+
+    else 
+        details.flag = false;
     
         db.findOne('User', query, function(result){
 
             if(result != null) {
-                var details = {
-                    userName: result.userName,
-                    pw: result.pw,
-                };
+                // var details = {
+                //     userName: result.userName,
+                //     pw: result.pw,
+                // };
+
+                details.userName = result.userName,
+                details.pw = result.pw
                 //res.render('testing', details);
                 //res.render('acctdetails', details);
                 res.render('delete', details);
@@ -33,7 +47,12 @@ const deleteController = {
         };
 
         db.deleteOne('User', person);
-        res.redirect('/');
+        
+        req.session.destroy(function(err){
+
+            if(err) throw err;
+            res.redirect('/')
+        });
     }
    
 }

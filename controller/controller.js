@@ -6,7 +6,10 @@ const controller = {
  /*       db.findMany('Product', null, null, function(result) {
             res.render('home', {product: result});
         });
+        
 */
+
+        
         res.render('home');
     },
 
