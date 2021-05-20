@@ -7,6 +7,10 @@ const saltRounds = 10;
 const collection = 'User';
 const products = 'Product';
 
+// const User = require('../models/UserSchema.js');
+// const Admin = require('../models/AdminSchema.js');
+// const Products = require('./models/ProductSchema.js');
+
 db.createDatabase();
 
 
