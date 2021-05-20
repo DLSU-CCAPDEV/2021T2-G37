@@ -16,7 +16,7 @@
     <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
 </head>
 <body>
-	{{> header}}
+	{{> header flag=flag userName=userName}}
     
 	<div class="container">
 			<div class="profile-info">
@@ -26,8 +26,6 @@
 					<input type="text" class="input" value="{{fullName}}" name="fullname">
 					<h2> Username</h2>
 					<input type="text" class="input" value="{{userName}}" name="username">
-					<h2> Password</h2>
-					<input type="Password" class="input" value="{{pw}}" name="password">
 					<h2> Email</h2>
 					<input type="Email" class="input" value="{{email}}" name="email">
 					<h2> Delivery Address</h2>
