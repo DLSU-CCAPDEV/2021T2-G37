@@ -4,6 +4,7 @@ const registerctrl = require('../controller/registercontroller.js');
 const successctrl = require('../controller/successcontroller.js');
 const acctctrl = require('../controller/acctdetailscontroller.js');
 const loginctrl = require('../controller/logincontroller.js');
+const logoutctrl = require('../controller/logoutcontroller.js');
 const deletectrl = require('../controller/deletecontroller.js');
 const addprodctrl = require('../controller/admin_product_addcontroller.js'); // for adding product
 const deleteprodctrl = require('../controller/admin_product_deletecontroller.js'); // for deleting product
@@ -59,7 +60,7 @@ router.post('/delete_account', deletectrl.deleteAccount);
 router.get('/viewdetails/:userName', acctctrl.getNoEditDetailsView);
 //router.get('/acctdetailsnoedit/:userName', acctctrl.getNoEditDetailsView);
 
-
+router.get('/logout', logoutctrl.getLogOut);
 
 router.get('/acctdetailsnoedit', ctrl.getNoEditAcc);
 router.get('/acctdetails', ctrl.getAcctDetails);
