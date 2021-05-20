@@ -42,7 +42,9 @@ const controller = {
     },
 
     getViewProducts: function(req, res){
-        res.render('viewproducts');
+        db.findMany('Product', null, null, null, 10, 0, function(result) {
+            res.render('viewproducts', {thumbnail: result});
+        });
     },
 
     getHomeLoggedIn: function(req, res) {
