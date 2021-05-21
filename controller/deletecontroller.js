@@ -1,5 +1,5 @@
 const db = require('../models/db.js');
-
+const bcrypt = require('bcrypt');
 
 const deleteController = {
 
@@ -39,14 +39,51 @@ const deleteController = {
 
     deleteAccount: function(req, res){
         var username = req.body.username; //name attr from input 
-       
-        db.deleteOne('User', {userName: username});
-        
-        req.session.destroy(function(err){
+        var pw = req.body.password;
 
-            if(err) throw err;
-            res.redirect('/')
-        });
+        db.findOne('User', {userName: username}, function(result){
+
+            if(result){
+
+                bcrypt.compare(pw, result.pw, function(err, equal){
+
+                    if(equal) {
+
+                        db.deleteOne('User', {userName: username});
+        
+                        req.session.destroy(function(err){
+
+                                if(err) throw err;
+                                res.redirect('/')
+                            });
+
+                    }
+                    else {
+                        details = {
+                            userName: username,
+                            error: 'Password is incorrect. Unable to delete.'
+                        }
+                        res.render('delete', details)
+                        // res.redirect('/delete/' + username);
+                    }
+
+                })
+
+            }
+
+        })
+       
+        // db.deleteOne('User', {userName: username});
+        
+        // req.session.destroy(function(err){
+
+        //     if(err) throw err;
+        //     res.redirect('/')
+        // });
+    }, 
+
+    deleteCorrectAccount: function(req, res){
+
     }
    
 }
