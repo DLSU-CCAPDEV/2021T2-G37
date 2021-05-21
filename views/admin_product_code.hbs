@@ -24,13 +24,13 @@
             Enter Product Code
             </p>
              
-            <form class="form">
-                <input type="text" placeholder="Product Code" class="input" id="text" name="text">
+            <form class="form" method="POST" action="/admin_product_code">
+                <input type="text" placeholder="Product Number" class="input" id="pnum" name="pnum">
+                <br>
+                <input type="submit" id="submit" class="btna"> 
             </form>
 
-            <a href="../views/admin_home_page.html"> <button id="btnprev" class="btna"><span class="material-icons">arrow_back</span> </button> </a>
-            <a href="../views/admin_product_edit.html"> <button id="btnnext" class="btna"> <span class="material-icons">arrow_forward</span> </button> </a>
-
+            <a href="/admin_home_page"> <button id="btncancel" class="btna"> Cancel </button> </a>
         </div>
     </body>
 </html>
