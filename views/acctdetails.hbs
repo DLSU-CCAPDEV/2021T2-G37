@@ -10,8 +10,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">	   
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="/js/updatedetails.js"></script>
+	{{!-- <script src="/js/updatedetails.js"></script> --}}
 	<script src="/js/deleteacct.js"></script>
     <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
 </head>
@@ -25,21 +26,25 @@
 					<h2> Name</h2>
 					<input type="text" class="input" value="{{fullName}}" name="fullname">
 					<h2> Username</h2>
-					<input type="text" class="input" value="{{userName}}" name="username" readonly="readonly">
+					<input type="text" class="input" value="{{userName}}" name="username" readonly="readonly" title="Cannot be changed.">
 					<h2> Email</h2>
 					<input type="Email" class="input" value="{{email}}" name="email">
 					<h2> Delivery Address</h2>
 					<input type="text" class="input" value="{{deladdr}}" name="deladdr">
 					<h2>Contact Number</h2>
 					<input type="text" class="input" value="{{contactnum}}" name="contactnum">
-					<input type="submit" class="btn" id="update" value="Update" onclick="prompt('Enter your password: ', 'Password')">
+
+
+					<h2> Input Password</h2>
+					<input type="Password" class="input" value="" name="password" placeholder="Password" id="password">
+					<input type="submit" class="btn" id="update" value="Update">
+					{{!-- <p id="error" class="error"> {{error}} </p> --}}
 					{{!-- <input type="submit" class="btn" id="delete" value="Delete"> --}}
+					{{!-- onclick="prompt('Enter your password: ', 'Password')" --}}
+
 				</form>
-
-				{{!-- <button class="btn" onclick="alert('Successfully updated!')">  Update </button> --}}
-
-				{{!-- <button class="btn" onclick="alert('Successfully deleted!')">  Delete </button> --}}
 			</div>
+					
 	</div>
 
     {{> footer}}
