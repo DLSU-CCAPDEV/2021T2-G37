@@ -37,7 +37,43 @@ const acctdetailsController = {
             }
 
         });
-    }, 
+    },
+    
+    getCheckOutDetails: function(req, res){
+
+        var query = {userName: req.params.userName};
+
+        var details = {};
+
+        if(req.session.userName){
+
+            details.flag = true;
+            details.userName = req.session.userName;
+        }
+
+        else 
+            details.flag = false;
+    
+        db.findOne('User', query, function(result){
+
+            if(result != null) {
+               
+                    details.fullName = result.fullName,
+                    details.email =  result.email,
+                    details.deladdr = result.deladdr,
+                    details.contactnum = result.contactnum
+
+                //res.render('testing', details);
+                res.render('checkoutpage', details);
+            }
+
+            else {
+                res.render('error', details);
+            }
+
+        });
+
+    },
 
     getNoEditDetailsView: function(req, res){
 
@@ -115,6 +151,7 @@ const acctdetailsController = {
         }), 
        res.redirect('acctdetails/' + username);
     },
+
 
     deleteacct: function(req, res){
         db.deleteOne('User', {"userName":  req.body.username});
