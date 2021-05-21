@@ -85,13 +85,13 @@ const logincontroller = {
                     
                     else {
                         var details = {error: 'Username and/or Password is incorrect.'}
-                        res.render('login', details);
+                        res.render('admin_login', details);
                     }
                 })
             }
             else {
                 var details = {error: 'Username and/or Password is incorrect.'}
-                res.render('login', details);
+                res.render('admin_login', details);
             }
         });
     }
