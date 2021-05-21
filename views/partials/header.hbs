@@ -6,7 +6,12 @@
 <div id="container1">
     <div class="floatleft">
         <ul class="navbar" id="navbar1">
-            <li><a class="navlink" href="/LoggedInHome">Home</a></li>
+            <li><a class="navlink" href="/LoggedInHome/{{userName}}">Home</a></li>
+
+            {{#if flag}}
+                <li><a class="navlink" href="/viewdetails/{{userName}}">{{userName}}</a></li>
+            {{/if}}
+
             {{!-- <li><a class="navlink" href="/register">Register</a></li>
             <li><a class="navlink" href="/login">Login</a></li> --}}
         </ul>
@@ -16,11 +21,11 @@
             <div class="profile" onclick="dropdownToggle();">
                     <li class="navbtn" id="account"></li></a>
             <div class="dropdownmenu" id="dropmenu">
-                <li> <a href="/acctdetailsnoedit"> View Account Details </a> </li>
-                <li> <a href="/acctdetails"> Edit Account Details </a> </li>
-                <li><a href="/delete"> Delete Account </a></li>
-                <li> <a href="/home"> Logout </a> </li>
-                <li> <a href="/admin_home_page"> Admin </a>
+                <li> <a href="/viewdetails/{{userName}}"> View Account Details </a> </li>
+                <li> <a href="/acctdetails/{{userName}}"> Edit Account Details </a> </li>
+                <li><a href="/delete/{{userName}}"> Delete Account </a></li>
+                <li> <a href="/logout"> Logout </a> </li>
+                {{!-- <li> <a href="/admin_home_page"> Admin </a> --}}
             </div>
         </div>
             <a class="nav" href="/wishlist"><li class="navbtn" id="wishlist"></li></a>
