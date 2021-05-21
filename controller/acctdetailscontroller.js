@@ -1,4 +1,5 @@
 const db = require('../models/db.js');
+const bcrypt = require('bcrypt');
 
 const acctdetailsController = {
 
@@ -113,44 +114,56 @@ const acctdetailsController = {
 
     }, 
 
-    loadDetails: function(req, res){
-
-        var query = {userName: req.params.userName};
     
-        db.findOne('User', query, function(result){
-
-            if(result != null) {
-                var details = {
-                    fullName: result.fullName,
-                    userName: result.userName,
-                    email: result.email,
-                    pw: result.pw,
-                    deladdr: result.deladdr,
-                    contactnum: result.contactnum
-                };
-                //res.render('testing', details);
-                //res.render('acctdetails', details);
-                res.redirect('acctdetails/' + query);
-            }
-
-        });
-    }, 
-
     editDetails: function(req, res){
 
         var username = req.body.username;
+        var fullname = req.body.fullname;
+        var email = req.body.email;
+        var deladdr = req.body.deladdr;
+        var contactnum = req.body.contactnum;
+        var pw = req.body.password;
 
-        db.updateOne('User', {userName: username}, {
-            $set: {
-                "fullName" : req.body.fullname,
-                "userName" : req.body.username, 
-                "email": req.body.email, 
-                "deladdr": req.body.deladdr,
-                "contactnum": req.body.contactnum
-            }
-        }), 
-       res.redirect('acctdetails/' + username);
+    //     db.updateOne('User', {userName: username}, {
+    //         $set: {
+    //             "fullName" : req.body.fullname,
+    //             "userName" : req.body.username, 
+    //             "email": req.body.email, 
+    //             "deladdr": req.body.deladdr,
+    //             "contactnum": req.body.contactnum
+    //         }
+    //     }), 
+    //    res.redirect('acctdetails/' + username)
+    db.findOne('User', {userName: username}, function(result){
+
+        if(result){
+
+            bcrypt.compare(pw, result.pw, function(err, equal){
+
+                if(equal) {
+
+                    db.updateOne('User', {userName: username}, {
+                        $set: {
+                            "fullName" : req.body.fullname,
+                            "userName" : req.body.username, 
+                            "email": req.body.email, 
+                            "deladdr": req.body.deladdr,
+                            "contactnum": req.body.contactnum
+                        }
+                    }), 
+                   res.redirect('acctdetails/' + username);
+                }
+                else {
+                    res.redirect('acctdetails/' + username);
+                }
+
+            })
+
+        }
+
+    })
     },
+
 }
 
 module.exports = acctdetailsController; 
