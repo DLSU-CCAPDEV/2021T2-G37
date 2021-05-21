@@ -118,22 +118,9 @@ const acctdetailsController = {
     editDetails: function(req, res){
 
         var username = req.body.username;
-        var fullname = req.body.fullname;
-        var email = req.body.email;
-        var deladdr = req.body.deladdr;
-        var contactnum = req.body.contactnum;
         var pw = req.body.password;
 
-    //     db.updateOne('User', {userName: username}, {
-    //         $set: {
-    //             "fullName" : req.body.fullname,
-    //             "userName" : req.body.username, 
-    //             "email": req.body.email, 
-    //             "deladdr": req.body.deladdr,
-    //             "contactnum": req.body.contactnum
-    //         }
-    //     }), 
-    //    res.redirect('acctdetails/' + username)
+   
     db.findOne('User', {userName: username}, function(result){
 
         if(result){
