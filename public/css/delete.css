@@ -2,6 +2,10 @@ body {
 	background-color:#D48166
 }
 
+p {
+	font-family: 'Roboto', sans-serif;
+}
+
 #container {
 	width: 430px;
 	margin: auto;
