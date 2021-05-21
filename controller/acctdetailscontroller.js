@@ -151,13 +151,6 @@ const acctdetailsController = {
         }), 
        res.redirect('acctdetails/' + username);
     },
-
-
-    deleteacct: function(req, res){
-        db.deleteOne('User', {"userName":  req.body.username});
-        res.send('successdelete')
-
-    }
 }
 
 module.exports = acctdetailsController; 
