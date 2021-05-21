@@ -6,17 +6,24 @@ const adminproddeleteController = {
     },
 
     postDeleteProd: function (req, res) {
-        var pNum = req.query.pnum;
+        var pNum = req.body.pnum;
 
-        db.deleteOne('Product', pNum);
+        db.findOne('Product', {pNum: pNum}, function(result){
+            if(result){
+                db.deleteOne('Product', {pNum: pNum});
+                res.redirect('/admin_home_page');
+            }
+
+        });
+
     },
 
     // not yet working
     // check if product number already exists in db
-    getCheckNum: function (req, res) {
-        var pNum = req.query.pNum;
+    getCheckNumDelete: function (req, res) {
+        var pNum = req.body.pnum;
 
-        db.findOne('Product', {pNum: pNum}, 'pNum', function (result) {
+        db.findOne('Product', {pNum: pNum}, function (result) {
             res.send(result);
         });
     } 

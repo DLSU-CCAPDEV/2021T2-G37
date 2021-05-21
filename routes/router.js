@@ -27,7 +27,7 @@ router.get('/getCheckNum', addprodctrl.getCheckNum);
 //admin delete product related
 router.get('/admin_product_delete', deleteprodctrl.getAdminProdDelete);
 router.post('/admin_product_delete', deleteprodctrl.postDeleteProd);
-router.get('/getCheckNumDelete', deleteprodctrl.getCheckNum);
+router.get('/getCheckNumDelete', deleteprodctrl.getCheckNumDelete);
 
 // REGISTER RELATED
 router.get('/register', registerctrl.getRegister);
