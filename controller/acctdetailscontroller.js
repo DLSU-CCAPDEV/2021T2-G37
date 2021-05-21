@@ -109,7 +109,6 @@ const acctdetailsController = {
                 "fullName" : req.body.fullname,
                 "userName" : req.body.username, 
                 "email": req.body.email, 
-                "pw": req.body.password,
                 "deladdr": req.body.deladdr,
                 "contactnum": req.body.contactnum
             }
