@@ -39,14 +39,8 @@ const deleteController = {
 
     deleteAccount: function(req, res){
         var username = req.body.username; //name attr from input 
-        var curr_pw = req.body.password;
-
-        var person = {
-            userName: username,
-            pw: curr_pw
-        };
-
-        db.deleteOne('User', person);
+       
+        db.deleteOne('User', {userName: username});
         
         req.session.destroy(function(err){
 
