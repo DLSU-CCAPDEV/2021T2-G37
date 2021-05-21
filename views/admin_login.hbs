@@ -9,6 +9,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">	  
 	<link rel="shortcut icon" type="image/png" href="../images/favicon.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	{{!-- <script src="/js/login.js"> </script> --}}
@@ -25,7 +26,7 @@
 			<input type="password" placeholder="Password" class="input" id="password" name="password" required>
 			<input type="submit" id="loginbtn" value="LOGIN">
 	</form>	
-	<p id="error"><p>
+	<p id="error" class="error"> {{error}} <p>
 	{{!-- <a href="../views/home.html">
 		<button id="loginbtn">Login</button>
 	</a> --}}
