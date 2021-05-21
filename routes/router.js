@@ -69,4 +69,6 @@ router.get('/wishlist', ctrl.getWishlist);
 router.get('/cart', ctrl.getCart);
 router.get('/viewproducts', ctrl.getViewProducts);
 
+router.get('/checkout/:userName', acctctrl.getCheckOutDetails);
+
 module.exports = router;
