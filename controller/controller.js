@@ -45,6 +45,10 @@ const controller = {
         res.render('cart');
     },
 
+    getCheckOut: function(req, res){
+        res.render('checkoutpage');
+    },
+
     getViewProducts: function(req, res){
         res.render('viewproducts');
     },
@@ -61,6 +65,10 @@ const controller = {
         db.findAll('Products', function(result) {
             res.send(result);
         });
+    },
+
+    getAbout: function(req, res){
+        res.render('about');
     }
 }
 
