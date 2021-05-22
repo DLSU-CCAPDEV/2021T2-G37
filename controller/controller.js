@@ -53,6 +53,16 @@ const controller = {
 
     getAdminHomeLoggedIn: function(req, res){
         res.render('admin_home');
+    },
+
+    getSearch: function(req, res){
+        var query = req.query.fitem;
+        
+        db.findMany('Product', {fName: query}, null, null, null, null, function(result) {
+            
+            res.render('search', {thumbnail: result});
+        });
+
     }
 }
 

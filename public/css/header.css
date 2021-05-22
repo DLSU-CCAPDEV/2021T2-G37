@@ -99,8 +99,11 @@ ul {
     top: -4px;
 }
 
-#search {
+#submit {
     background-image: url("../images/spritesheet.png");
     background-position: -740px 0px;
+    border: none;
+    cursor: pointer;
+    color: transparent;
 }
 /* HEADER END -------------------------- */
