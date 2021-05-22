@@ -136,6 +136,8 @@ ul {
     font-family: 'Overpass', sans-serif;
     color: white;
     text-align: center;
+    position: relative;
+    right: 90px;
 }
 
 #shopnow {
@@ -149,6 +151,8 @@ ul {
     border-radius: 15px;
     text-align: center;
     cursor: pointer;
+    position: relative;
+    right: 90px;
 }
 
 #content {
