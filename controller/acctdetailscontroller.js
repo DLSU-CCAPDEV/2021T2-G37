@@ -59,6 +59,7 @@ const acctdetailsController = {
 
             if(result != null) {
                
+                    details.userName = result.userName,
                     details.fullName = result.fullName,
                     details.email =  result.email,
                     details.deladdr = result.deladdr,
