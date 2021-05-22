@@ -352,7 +352,6 @@ var = {
     rev: "I'm on the heavy side and so finding a shirt that fits me perfectly is a struggle. But this shirt is a miracle!",
     img1: "../images/product3a.jpg",
     img2: "../images/product3b.jpg",
-    img3: ""
 }
 
 db.insertOne(reviews, rev);
