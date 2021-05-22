@@ -6,12 +6,13 @@ const acctctrl = require('../controller/acctdetailscontroller.js');
 const loginctrl = require('../controller/logincontroller.js');
 const logoutctrl = require('../controller/logoutcontroller.js');
 const deletectrl = require('../controller/deletecontroller.js');
+const checkoutctrl = require('../controller/checkoutcontroller.js');
 const addprodctrl = require('../controller/admin_product_addcontroller.js'); // for adding product
 const deleteprodctrl = require('../controller/admin_product_deletecontroller.js'); // for deleting product
 const editcodeprodctrl = require('../controller/admin_product_editcodecontroller.js'); // first step in editing a product; concerned only with the product code
 const maineditprodctrl = require('../controller/admin_product_maineditcontroller.js'); // second step in editing a product, concerned with the MAIN editing
 const validation = require('../helpers/validation.js');
-
+const validationCheckOut = require('../helpers/validation-checkout.js');
 
 router.get('/', ctrl.getHome);
 router.get('/home', ctrl.getHome);
@@ -80,5 +81,7 @@ router.get('/cart', ctrl.getCart);
 router.get('/viewproducts', ctrl.getViewProducts);
 
 router.get('/checkout/:userName', acctctrl.getCheckOutDetails);
+router.post('/checkout', validationCheckOut.postCheckOutValidation(), checkoutctrl.postCheckOut);
+router.get('/confirmation/:userName', checkoutctrl.getConfirmationPage);
 
 module.exports = router;
