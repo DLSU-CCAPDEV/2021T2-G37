@@ -18,6 +18,7 @@ router.get('/', ctrl.getHome);
 router.get('/home', ctrl.getHome);
 router.get('/', ctrl.setHome);
 router.get('/home', ctrl.setHome);
+router.get('/about', ctrl.getAbout);
 
 //router.get('/search', searchctrl.getSearch);
 // router.get('/search', searchctrl.);
