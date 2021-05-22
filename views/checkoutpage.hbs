@@ -10,8 +10,12 @@
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">	
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/js/validator.min.js"> </script>
+    <script src="/js/checkoutpage.js"> </script>
 </head>
 <body>
     {{> header}}
@@ -43,26 +47,42 @@
                      <i class="fa fa-cc-visa" style="color: navy;"> </i>
                      <i class="fa fa-cc-mastercard" style="color: red;"> </i>
                  </div>
-                 <h2> Name of Cardholder </h2>
-                 <input type="text" class="input" placeholder="Juan Dela Cruz">
-                 <h2> Credit Card Number </h2>
-                 <input type="text" class="input" placeholder="4444-2222-1111-9999">
-                 <h2> Expiry Month </h2>
-                 <input type="text" class="input" placeholder="5">
-                 <h2> Expiry Year </h2>
-                 <input type="text" class="input" placeholder="2023">
-                 <h2> CVV </h2>
-                 <input type="text" class="input" placeholder="911">
 
+                 <form method="POST" action="/checkout">
+                    <input type="hidden" name="username" value="{{userName}}">
+                    <h2> Name of Cardholder </h2>
+                    <input type="text" class="input" id="cardholder" placeholder="Name" name="cardholder" required>
+                     <p id="cardholderErr" class="error"> {{cardholderErr}} </p>
+                    <h2> Credit Card Number </h2>
+                    <input type="text" class="input" id="creditcardnum" placeholder="4444-2222-1111-9999" name="creditcardnum" required>
+                    <p id="creditcardErr" class="error"> {{creditcardErr}} </p>
+                    <h2> Expiry Month </h2>
+                    <input type="text" class="input" id="expirymonth" placeholder="Month" name="expirymonth" required>
+                    <p id="expirymonthErr" class="error"> {{expirymonthErr}} </p>
+                    <h2> Expiry Year </h2>
+                    <input type="text" class="input" id="expiryyear" placeholder="Year" name="expiryyear" required>
+                     <p id="expiryyearErr" class="error"> {{expiryyearErr}} </p>
+                    <h2> CVV </h2>
+                    <input type="text" class="input" id="cvv" placeholder="CVV" name="cvv" required>
+                    <p id="cvvErr" class="error"> {{cvvErr}} </p>
+                    <input class="btn" type="submit" id="btncheckout" value="Checkout!">
+                    
+                 </form>
+                    {{!-- <p id="cardholderErr" class="error"> {{cardholderErr}} </p>
+                    <p id="creditcardErr" class="error"> {{creditcardErr}} </p>
+                    <p id="expirymonthErr" class="error"> {{expirymonthErr}} </p>
+                    <p id="expiryyearErr" class="error"> {{expiryyearErr}} </p>
+                    <p id="cvvErr" class="error"> {{cvvErr}} </p> --}}
                 </div>
-                <a href="../views/confirmationpage.html">
-                 <button class="btn" id="btncheckout"> Checkout!</button> 
+                <a href="/confirmation/{{userName}}">
+                 <button class="btn" id="btncheckout2" hidden> Checkout!</button> 
                 </a>
-                <a href="../views/cart.html">
+                {{!-- <a href="../views/cart.html">
                 <button class="btn" id="btngoback">  Go Back </button>
-              </a>
+              </a> --}}
             </div>
     </div>
+    
     
 	{{> footer}}
     
@@ -77,7 +97,7 @@
 
         if (chosenval != 1) {
             document.getElementById("creditcardscreen").style.display = "none"; // if not credit card option, do not show
-
+            document.getElementById('btncheckout2').hidden = false;
         }
         else {
             document.getElementById("creditcardscreen").style.display = ""; // show if credit card option
