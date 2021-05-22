@@ -135,10 +135,20 @@ var prod = {
     pName: "Ultra Stretch Jeans",
     pPrice: "1990.00",
     pQty: "100",
+    qtySold: "0",
     pDesc: "Clothing and Science become one. This ultra stretch jeans was made possible through our newest technology. Jeans as light as feather and as smooth as baby's skin. Get yours now and become comfy and stylish today!",
-    pColor: "Blue",
-    pSize: "XS",
-    pImage: "../images/product1a.jpg"
+    pColor1: "Blue",
+    pColor2: "Navy",
+    pColor3: "Black",
+    pColor4: "Brown",
+    pSize1: "XS",
+    pSize2: "S",
+    pSize3: "M",
+    pSize4: "L",
+    pImage1: "../images/product1a.jpg",
+    pImage2: "../images/product1b.jpg",
+    pImage3: "../images/product1c.jpg",
+    pImage4: "../images/product1d.jpg"
 }
 
 db.insertOne(products, prod);
@@ -148,10 +158,20 @@ var prod = {
     pName: "High Rise Jeans",
     pPrice: "1490.00",
     pQty: "599",
+    qtySold: "0",
     pDesc: "Introducing a new generation of High Rise fabric. Our most flattering and comfortable high rise jeans yet.",
-    pColor: "Black",
-    pSize: "XS",
-    pImage: "../images/product2a.jpg"
+    pColor1: "Red",
+    pColor2: "Orange",
+    pColor3: "Blue",
+    pColor4: "",
+    pSize1: "S",
+    pSize2: "M",
+    pSize3: "L",
+    pSize4: "",
+    pImage1: "../images/product2a.jpg",
+    pImage2: "../images/product2b.jpg",
+    pImage3: "../images/product2c.jpg",
+    pImage4: ""
 }
 
 db.insertOne(products, prod);
@@ -161,10 +181,20 @@ var prod = {
     pName: "Linen Open Collar Shirt",
     pPrice: "790.00",
     pQty: "658",
+    qtySold: "0",
     pDesc: "An open collar that makes the most out of the supple and elegant material. An item that has a tasteful, laid-back feel.",
-    pColor: "Yellow",
-    pSize: "XS",
-    pImage: "../images/product3a.jpg"
+    pColor1: "Yellow",
+    pColor2: "Red",
+    pColor3: "",
+    pColor4: "",
+    pSize1: "XS",
+    pSize2: "S",
+    pSize3: "",
+    pSize4: "",
+    pImage1: "../images/product3a.jpg",
+    pImage2: "../images/product3a.jpg",
+    pImage3: "../images/product3a.jpg",
+    pImage4: ""
 }
 
 db.insertOne(products, prod);
@@ -174,10 +204,20 @@ var prod = {
     pName: "Men's Socks",
     pPrice: "390.00",
     pQty: "1949",
+    qtySold: "0",
     pDesc: "Your toes stay warm and toasty. A textured, neat knitted fabric.",
-    pColor: "Gray",
-    pSize: "",
-    pImage: "../images/product4a.jpg"
+    pColor1: "Gray",
+    pColor2: "Black",
+    pColor3: "White",
+    pColor4: "",
+    pSize1: "",
+    pSize2: "",
+    pSize3: "",
+    pSize4: "",
+    pImage1: "../images/product4a.jpg",
+    pImage2: "../images/product4b.jpg",
+    pImage3: "../images/product4c.jpg",
+    pImage4: ""
 }
 
 db.insertOne(products, prod);
@@ -187,10 +227,20 @@ var prod = {
     pName: "Long Sleeve Sweatshirt",
     pPrice: "1990.00",
     pQty: "100",
+    qtySold: "0",
     pDesc: "Warm and comfortable brushed T-shirt. This item has been updated to make it an easy choice, even when worn on its own.",
-    pColor: "White",
-    pSize: "XS",
-    pImage: "../images/product5a.jpg"
+    pColor1: "White",
+    pColor2: "Blue",
+    pColor3: "Black",
+    pColor4: "Brown",
+    pSize1: "S",
+    pSize2: "M",
+    pSize3: "L",
+    pSize4: "XL",
+    pImage1: "../images/product5a.jpg",
+    pImage2: "../images/product5b.jpg",
+    pImage3: "../images/product5c.jpg",
+    pImage4: "../images/product5d.jpg"
 }
 
 db.insertOne(products, prod);

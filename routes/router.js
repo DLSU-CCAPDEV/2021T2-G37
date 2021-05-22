@@ -9,7 +9,7 @@ const deletectrl = require('../controller/deletecontroller.js');
 const addprodctrl = require('../controller/admin_product_addcontroller.js'); // for adding product
 const deleteprodctrl = require('../controller/admin_product_deletecontroller.js'); // for deleting product
 const editcodeprodctrl = require('../controller/admin_product_editcodecontroller.js'); // first step in editing a product; concerned only with the product code
-const maineditprodctrl = require('../controller/admin_product_editcodecontroller.js'); // second step in editing a product, concerned with the MAIN editing
+const maineditprodctrl = require('../controller/admin_product_maineditcontroller.js'); // second step in editing a product, concerned with the MAIN editing
 const validation = require('../helpers/validation.js');
 
 
@@ -37,6 +37,7 @@ router.post('/admin_product_code', editcodeprodctrl.postCodeProd);
 //admin MAIN edit product related 
 //NOT YET DONE
 router.get('/editproduct/:', maineditprodctrl.getAdminProdEdit);
+router.get('/admin_product_edit', maineditprodctrl.getAdminProdEdit);
 
 // REGISTER RELATED
 router.get('/register', registerctrl.getRegister);

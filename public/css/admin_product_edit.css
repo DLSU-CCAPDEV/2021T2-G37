@@ -22,14 +22,14 @@ input {
 }
 
 #divmain {
-	width: 430px;
+    width: 430px;
     height: 100%;
-	margin-left: auto;
+    margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
     margin-bottom: 50px;
-	background: rgba(0,0,0,.2);
-	text-align: center;
+    background: rgba(0,0,0,.2);
+    text-align: center;
 }
 
 /*image logo------------------------------------------------------*/
@@ -52,7 +52,7 @@ input {
 
 .txt_titles{
     color: white;
-    margin-bottom: 3px;
+    margin-bottom: -15px;
     text-align: left;
     margin-left: 19%;
 }
@@ -148,13 +148,7 @@ input {
 .btna:hover{ background-color: #535252;}
 .btna:focus{ outline: none;}
 
-#btndelete:hover{ background-color: rgb(165, 21, 21);}
-#btnsave:hover{ background-color: rgb(8, 100, 8);}
-
-#btnsave{
-    margin-top: 20px;
-}
-#btndone{
+#btncancel{
     margin-bottom: 30px;
 }
 
