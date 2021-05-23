@@ -388,7 +388,7 @@ var rev = {
     userName: "Kent",
     rating: 5.0,
     rev: "A bit tight but very smooth. Nice quality socks..",
-    img1: "../images/product4a.jpg".
+    img1: "../images/product4a.jpg",
     img2: "../images/product4b.jpg"
 }
 
