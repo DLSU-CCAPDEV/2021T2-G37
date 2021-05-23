@@ -12,7 +12,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	    <script src="../public/js/admin_product_delete.js"> </script>
+	    <script src="/js/validator.min.js" type="text/javascript"></script>
+        <script src="/js/admin_product_delete.js"> </script>
     </head>
 
 
@@ -29,7 +30,7 @@
             <form class="form" method="POST" action="/admin_product_delete" class="form">
 			<p class="txt_titles">Product Number<p>
             <input type="text" placeholder="Enter product Number" class="input" id="pnum" name="pnum" required>
-            <p id="error"></p>
+            <br><p id="pnumerror" class="error">{{pnumerror}}</p>
 			<input type="submit" id="btndelete" class="btna" value="Delete Product">
 
             </form>	

@@ -1,3 +1,4 @@
+const { validationResult } = require('express-validator');
 const db = require('../models/db.js');
 
 const adminproddeleteController = {
@@ -6,33 +7,48 @@ const adminproddeleteController = {
     },
 
     postDeleteProd: function (req, res) {
-        var pNum = req.body.pnum;
+        var errors = validationResult(req);
 
-        db.findOne('Product', {pNum: pNum}, function(result){
-            if(result){
-                db.deleteOne('Product', {pNum: pNum});
-                var details = {
-                    pNum: pNum,
-                    action: "was deleted successfully."
-                }
-                res.render("admin_success", details);
-            }
-            else{
-                var details = {
-                    pNum: pNum,
-                    action: "does not exist."
-                }
-                res.render("admin_success", details);
-            }
+        if (!errors.isEmpty()) {
+            errors = errors.errors;
+           // console.log("---------------");
+            var details = {};
+            for(i = 0; i < errors.length; i++){
+                details[errors[i].param + 'error'] = errors[i].msg;
+                //console.log("heeey " + errors[i].msg);
+;            }
 
-        });
+            res.render('admin_product_delete', details);
+        }
+
+        else {
+            var pNum = req.body.pnum;
+
+            db.findOne('Product', {pNum: pNum}, function(result){
+                if(result){
+                    db.deleteOne('Product', {pNum: pNum});
+                    var details = {
+                        pNum: pNum,
+                        action: "was deleted successfully."
+                    }
+                    res.render("admin_success", details);
+                }
+                else{
+                    var details = {
+                        pNum: pNum,
+                        action: "does not exist."
+                    }
+                    res.render("admin_success", details);
+                }
+
+            });
+        }
 
     },
 
-    // not yet working
     // check if product number already exists in db
     getCheckNumDelete: function (req, res) {
-        var pNum = req.body.pnum;
+        var pNum = req.query.pNum;
 
         db.findOne('Product', {pNum: pNum}, function (result) {
             res.send(result);

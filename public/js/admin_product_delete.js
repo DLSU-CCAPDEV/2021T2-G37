@@ -1,37 +1,83 @@
-$(document).ready(function (){
 
+$(document).ready(function () {
 
-    // attach the event keyup to the html element that represents the product number
+    function isFilled() {
+        var pNum = validator.trim($('#pnum').val());
 
-    $('#pnum').keyup(function(){
+        var pNumEmpty = validator.isEmpty(pNum);
 
-        //send an HTTP GET request to server that points to the function getCheckProdNum
+        return !pNumEmpty;
+    }
 
-        var pNum = $('#pnum').val();
-        console.log(pNum);
+    /* 
+    start of validation 
+    */
+    function isValidPNum(field, callback) {
+        var pNum = validator.trim($('#pnum').val());
+        var isValidLength = validator.isLength(pNum, {min: 6});
 
-        if (pNum == '') {
-            $('#error').text('');
+        if(isValidLength){
+            $.get('/getCheckNumDelete', {pNum: pNum}, function (result) {
+
+                if(result.pNum == pNum) {
+                       if(field.is($('#pnum')))
+                           $('#pnumerror').text('');
+               
+                       return callback(true);
+           
+                   }
+           
+                   else {
+                       if(field.is($('#pnum')))
+                           $('#pnumerror').text('Product Number does not exist.');
+           
+                       return callback(false);
+                   }
+               });
         }
-        else{
-            $.get('/getCheckNumDelete', {pNum: pNum}, function(result){
+        else {
+            
+            if(field.is($('#pnum')))
+                $('#pnumerror').text('Product Number should be at least 6 characters.');
+             
+                return callback(false);
+            }
+    }
 
-                if(result.pNum == pNum ){
-                    $('#pnum').css('background-color', '#E3E3E3');
-                    $('#error').text('');
-                    $('#btndelete').prop('disabled', false); // enables the add button
-                    alert("Successfully deleted " + pNum); 
-                }
+    /*
+    validatefield function 
+    */
+    
+    function validateField(field, fieldName, error) {
+        var value = validator.trim(field.val());
+        var empty = validator.isEmpty(value);
 
-                else {
-                    $('#pnum').css('background-color', 'blue');
-                    $('#error').text('Product number does not exist.');
-                    $('#btndelete').prop('disabled', true); // disables the add button
-                }
-
-            });
+        if(empty) {
+            field.prop('value', '');
+            error.text(fieldName + ' should not be empty.');
         }
 
+        else
+            error.text('');
+
+        var filled = isFilled();
+
+        /*
+        start of valid pnum
+        */
+        isValidPNum(field, function (validPNum) {
+            if(filled && validPNum)
+                $('#btndelete').prop('disabled', false);
+            else
+                $('#btndelete').prop('disabled', true);
+        });
+    }
+
+    /*
+    start of keyup
+    */
+    $('#pnum').keyup(function () {
+        validateField($('#pnum'), 'Product Number', $('#pnumerror'));
     });
 
 });

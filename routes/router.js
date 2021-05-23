@@ -15,6 +15,7 @@ const maineditprodctrl = require('../controller/admin_product_maineditcontroller
 const validation = require('../helpers/validation.js');
 const validationCheckOut = require('../helpers/validation-checkout.js');
 const validationAdminAddProd = require('../helpers/validation-adminaddprod.js');
+const validationAdminDeleteProd = require('../helpers/validation-admindeleteprod.js');
 
 router.get('/', ctrl.getHome);
 router.get('/home', ctrl.getHome);
@@ -36,13 +37,12 @@ router.get('/getCheckNumAdd', addprodctrl.getCheckNumAdd);
 
 //admin delete product related
 router.get('/admin_product_delete', deleteprodctrl.getAdminProdDelete);
-router.post('/admin_product_delete', deleteprodctrl.postDeleteProd);
+router.post('/admin_product_delete', validationAdminDeleteProd.postAdminDeleteProdValidation(), deleteprodctrl.postDeleteProd);
 router.get('/getCheckNumDelete', deleteprodctrl.getCheckNumDelete);
 
 //admin edit product code related
 router.get('/admin_product_code', editcodeprodctrl.getAdminProdCode);
 router.post('/admin_product_code', editcodeprodctrl.postCodeProd);
-//admin MAIN edit product related 
 //admin MAIN edit product related 
 router.post('/editproduct/:pNum', maineditprodctrl.postAdminProdEdit); //used to render data for the admin_product_edit.hbs
 router.get('/admin_product_edit', maineditprodctrl.getAdminProdMainEdit); 
