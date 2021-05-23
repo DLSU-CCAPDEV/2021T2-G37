@@ -10,6 +10,7 @@ const checkoutctrl = require('../controller/checkoutcontroller.js');
 const addprodctrl = require('../controller/admin_product_addcontroller.js'); // for adding product
 const deleteprodctrl = require('../controller/admin_product_deletecontroller.js'); // for deleting product
 const editcodeprodctrl = require('../controller/admin_product_editcodecontroller.js'); // first step in editing a product; concerned only with the product code
+const reviewctrl = require('../controller/reviewcontroller.js'); // for adding a review
 const maineditprodctrl = require('../controller/admin_product_maineditcontroller.js'); // second step in editing a product, concerned with the MAIN editing
 const validation = require('../helpers/validation.js');
 const validationCheckOut = require('../helpers/validation-checkout.js');
@@ -22,6 +23,10 @@ router.get('/about', ctrl.getAbout);
 
 //router.get('/search', searchctrl.getSearch);
 // router.get('/search', searchctrl.);
+
+//review ctrl
+router.get('/addreview', reviewctrl.getAddReview);
+router.get('/editreview', reviewctrl.getEditReview);
 
 //admin add product related
 router.get('/admin_product_add', addprodctrl.getAdminProdAdd);
