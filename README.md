@@ -22,6 +22,9 @@
 * hbs
 * mongodb
 
+### Third Party Libraries
+* Font Awesome
+
 ## Setting up the server
 ### Install the following modules
 * Open Command Prompt
