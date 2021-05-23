@@ -408,7 +408,7 @@ var rev = {
     userName: "Juan",
     rating: 5.0,
     rev: "If you're looking for something to be part of your capsule wardrobe, this is definitely one of the must have pieces. It's affordable, fit is perfect plus it is extremely soft! I ended buying 3 different colors!",
-    img1: "../images/product5a.jpg".
+    img1: "../images/product5a.jpg",
     img2: "../images/product5b.jpg"
 }
 
@@ -424,7 +424,7 @@ db.insertOne(reviews, rev);
 var rev = {
     pNum: 100460,
     userName: "",
-    rating: ,
+    rating: "",
     rev: ""
 }
 
