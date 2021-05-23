@@ -38,8 +38,7 @@ router.get('/admin_product_code', editcodeprodctrl.getAdminProdCode);
 router.post('/admin_product_code', editcodeprodctrl.postCodeProd);
 //admin MAIN edit product related 
 //NOT YET DONE
-router.get('/editproduct/:', maineditprodctrl.getAdminProdEdit);
-router.get('/admin_product_edit', maineditprodctrl.getAdminProdEdit);
+router.post('/editproduct/:pNum', maineditprodctrl.postAdminProdEdit);
 
 // REGISTER RELATED
 router.get('/register', registerctrl.getRegister);

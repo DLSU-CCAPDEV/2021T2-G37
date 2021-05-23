@@ -152,4 +152,29 @@ input {
     margin-bottom: 30px;
 }
 
+/*Edit Buttons------------------------------------------------------*/
+.btne{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: auto;
+    margin-left: auto;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px; 
+    cursor: pointer;
+    padding: 5px 5px;
+    height: 30px;
+    width: 120px;
+    color: white;
+    background-color: black;
+    justify-content: center;
+}
+.btne:hover{ background-color: #353333;}
+.btne:focus{ outline: none;}
+
+.pimage{
+    margin-right: auto;
+    margin-left: 15%;
+    justify-content: center;
+}
 

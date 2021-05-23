@@ -21,52 +21,137 @@
 
             <p id="txtheader">
             <span class="material-icons">manage_accounts</span>
-            PN # 100456
+            PN # {{pNum}}
             </p>
 
             <!--PRODUCT NAME TO PRODUCT DESCRIPTION--------------------------------------------------------------------------------------->
-            <form class="form" method="POST" action="/admin_product_add" class="form">
-            <p class="txt_titles">Product Name<p>
-            <input type="text" placeholder="Enter product name" class="input" id="pname" name="pname">
-            <p class="txt_titles">Product Price<p>
-            <input type="number" placeholder="Enter product price" class="input" id="pprice" name="pprice">
-            <p class="txt_titles">Available Quantity<p>
-            <input type="number" placeholder="Enter available quantity" class="input" id="pqty" name="pqty">
-            <p class="txt_titles">Quantity Sold<p>
-            <input type="number" placeholder="Enter quantity sold" class="input" id="qtySold" name="qtySold">
-            <p class="txt_titles">Product Description<p>
-            <input type="text" placeholder="Enter product description" class="input" id="pdesc" name="pdesc">
-            <p class="txt_titles">Color 1 (optional)<p>
-            <input type="text" placeholder="Enter color" class="input" id="pcolor1" name="pcolor1">
-            <p class="txt_titles">Color 2 (optional)<p>
-            <input type="text" placeholder="Enter color" class="input" id="pcolor2" name="pcolor2">
-            <p class="txt_titles">Color 3 (optional)<p>
-            <input type="text" placeholder="Enter color" class="input" id="pcolor3" name="pcolor3">
-            <p class="txt_titles">Color 4 (optional)<p>
-            <input type="text" placeholder="Enter color" class="input" id="pcolor4" name="pcolor4">
-            <p class="txt_titles">Size 1<p>
-            <input type="text" placeholder="Enter size" class="input" id="psize1" name="psize1">
-            <p class="txt_titles">Size 2<p>
-            <input type="text" placeholder="Enter size" class="input" id="psize2" name="psize2">
-            <p class="txt_titles">Size 3<p>
-            <input type="text" placeholder="Enter size" class="input" id="psize3" name="psize3">
-            <p class="txt_titles">Size 4<p>
-            <input type="text" placeholder="Enter size" class="input" id="psize4" name="psize4">
-            <p class="txt_titles">Product Image 1<p>
-            <input type="file" id="pimage1" name="pimage1">
-            <p class="txt_titles">Product Image 2<p>
-            <input type="file" id="pimage2" name="pimage2">
-            <p class="txt_titles">Product Image 3<p>
-            <input type="file" id="pimage3" name="pimage3">
-            <p class="txt_titles">Product Image 4<p>
-            <input type="file" id="pimage4" name="pimage4">
-            <p id="error"></p>
-            <input type="submit" id="btnadd" class="btna" value="Edit Product">
-
+            <form class="form" method="POST" action="/admin_product_edit_pname" class="form">
+            <p class="txt_titles">Product Name</p><br>
+            <input type="text" placeholder="{{pName}}" class="input" id="pname" name="pname">
+            <br>
+            <input type="submit" id="btnedit" class="btne" value="Edit Name">
             </form>
 
+            <form class="form" method="POST" action="/admin_product_edit_pprice" class="form">
+            <p class="txt_titles">Product Price</p><br>
+            <input type="number" placeholder="{{pPrice}}" class="input" id="pprice" name="pprice">
+            <br>
+            <input type="submit" id="btnedit" class="btne" value="Edit Price">
+            </form>
+
+            <form class="form" method="POST" action="/admin_product_edit_pqty" class="form">
+            <p class="txt_titles">Available Quantity</p><br>
+            <input type="number" placeholder="{{pQty}}" class="input" id="pqty" name="pqty">
+            <br>
+            <input type="submit" id="btnedit" class="btne" value="Edit QTY">
+            </form>
+
+            <form class="form" method="POST" action="/admin_product_edit_qtysold" class="form">
+            <p class="txt_titles">Quantity Sold</p><br>
+            <input type="number" placeholder="{{qtySold}}" class="input" id="qtySold" name="qtySold">
+            <br>
+            <input type="submit" id="btnedit" class="btne" value="Edit QTY Sold">
+            </form>
+
+            <form class="form" method="POST" action="/admin_product_edit_pdesc" class="form">
+            <p class="txt_titles">Product Description</p><br>
+            <input type="text" placeholder="{{pDesc}}" class="input" id="pdesc" name="pdesc">
+            <br>
+            <input type="submit" id="btnedit" class="btne" value="Edit Description">
+            </form>
+
+            <form class="form" method="POST" action="/admin_product_edit_pcolor1" class="form">
+            <p class="txt_titles">Color 1 (optional)</p><br>
+            <input type="text" placeholder="{{pColor1}}" class="input" id="pcolor1" name="pcolor1">
+            <br>
+            <input type="submit" id="btnedit" class="btne" value="Edit Color 1">
+            </form>
+
+            <form class="form" method="POST" action="/admin_product_edit_pcolor2" class="form">
+            <p class="txt_titles">Color 2 (optional)</p><br>
+            <input type="text" placeholder="{{pColor2}}" class="input" id="pcolor2" name="pcolor2">
+            <br>
+            <input type="submit" id="btnedit" class="btne" value="Edit Color 2">
+            </form>
+
+            <form class="form" method="POST" action="/admin_product_edit_pcolor3" class="form">
+            <p class="txt_titles">Color 3 (optional)</p><br>
+            <input type="text" placeholder="{{pColor3}}" class="input" id="pcolor3" name="pcolor3">
+            <br>
+            <input type="submit" id="btnedit" class="btne" value="Edit Color 3">
+            </form>
+            
+            <form class="form" method="POST" action="/admin_product_edit_pcolor4" class="form">
+            <p class="txt_titles">Color 4 (optional)</p><br>
+            <input type="text" placeholder="{{pColor4}}" class="input" id="pcolor4" name="pcolor4">
+            <br>
+            <input type="submit" id="btnedit" class="btne" value="Edit Color 4">
+            </form>
+
+            <form class="form" method="POST" action="/admin_product_edit_psize1" class="form">
+            <p class="txt_titles">Size 1</p><br>
+            <input type="text" placeholder="{{pSize1}}" class="input" id="psize1" name="psize1">
+            <br>
+            <input type="submit" id="btnedit" class="btne" value="Edit Size 1">
+            </form>
+
+            <form class="form" method="POST" action="/admin_product_edit_psize2" class="form">
+            <p class="txt_titles">Size 2</p><br>
+            <input type="text" placeholder="{{pSize2}}" class="input" id="psize2" name="psize2">
+            <br>
+            <input type="submit" id="btnedit" class="btne" value="Edit Size 2">
+            </form>
+
+            <form class="form" method="POST" action="/admin_product_edit_psize3" class="form">
+            <p class="txt_titles">Size 3</p><br>
+            <input type="text" placeholder="{{pSize3}}" class="input" id="psize3" name="psize3">
+            <br>
+            <input type="submit" id="btnedit" class="btne" value="Edit Size 3">
+            </form>
+
+            <form class="form" method="POST" action="/admin_product_edit_psize4" class="form">
+            <p class="txt_titles">Size 4</p><br>
+            <input type="text" placeholder="{{pSize4}}" class="input" id="psize4" name="psize4">
+            <br>
+            <input type="submit" id="btnedit" class="btne" value="Edit Size 4">
+            </form>
+
+            <form class="form" method="POST" action="/admin_product_edit_pimage1" class="form">
+            <p class="txt_titles">Product Image 1</p>
+                <img id="imglogo" src="{{pImage1}}" height="120px" width="120px"><br>
+            <input type="file" class ="pimage" id="pimage1" name="pimage1">
+            <br>
+            <input type="submit" id="btnedit" class="btne" value="Edit Image 1">
+            </form>
+
+            <form class="form" method="POST" action="/admin_product_edit_pimage2" class="form">
+            <p class="txt_titles">Product Image 2</p>
+            <img id="imglogo" src="{{pImage2}}" height="120px" width="120px"><br>
+            <input type="file" class ="pimage" id="pimage2" name="pimage2">
+            <br>
+            <input type="submit" id="btnedit" class="btne" value="Edit Image 2">
+            </form>
+
+            <form class="form" method="POST" action="/admin_product_edit_pimage3" class="form">
+            <p class="txt_titles">Product Image 3</p>
+            <img id="imglogo" src="{{pImage3}}" height="120px" width="120px"><br>
+            <input type="file" class ="pimage" id="pimage3" name="pimage3">
+            <br>
+            <input type="submit" id="btnedit" class="btne" value="Edit Image 3">
+            </form>
+
+            <form class="form" method="POST" action="/admin_product_edit_pimage4" class="form">
+            <p class="txt_titles">Product Image 4</p>
+            <img id="imglogo" src="{{pImage4}}" height="120px" width="120px"><br>
+            <input type="file" class ="pimage" id="pimage4" name="pimage4">
+            <br>
+            <input type="submit" id="btnedit" class="btne" value="Edit Image 4">
+            </form>
+
+            <p id="error"></p>
+
             <!--END BUTTONS--------------------------------------------------------------------------------------->
-            <a href="/admin_home_page"><button id="btncancel" class="btna"> Cancel </button> </a>
+            <a href="/admin_home_page"><button id="btncancel" class="btna"> Done </button> </a>
 
         </div>
     </body>
