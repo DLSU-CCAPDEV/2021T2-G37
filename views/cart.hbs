@@ -19,7 +19,11 @@
                     <input type="checkbox" id="select-all">
                     <label for="select-all">SELECT ALL ITEMS</label>
                 
-                    <div class="item">
+                    {{#each item}} 
+                        {{> item}}
+                    {{/each}}
+
+<!--                    <div class="item">
                         <input type="checkbox" class="checkbox" id="item1">
                         <a href="../views/product_listing5.html"><div class="image" id="img1"></div></a>
                         <div class="details" id="det1">
@@ -117,6 +121,7 @@
                         <div class="price" id="price5"><h3>P 1,990.00</h3></div>
                         <button class="delete" id="del5"></button>
                     </div>
+                    -->
                 </div>
             </div>
 
@@ -135,9 +140,4 @@
         
     </body>
 
-    <script>
-        function dropdownToggle(){
-                 document.getElementById('dropmenu').classList.toggle('active'); //clicking the account icon makes it appear, clicking it again makes it disappear.
-             }
-     </script>
 </html>

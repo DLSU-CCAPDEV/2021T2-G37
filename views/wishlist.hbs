@@ -15,7 +15,11 @@
         <div class="content">
             <h1>Wishlist</h1>
             <button id="add-all" onclick="alert('Succesfully added to cart!')">ADD ALL TO CART</button>
-        
+
+            {{#each}}
+                {{> wish}}
+            {{/each}}
+<!--
             <div class="wish">
                 <a href="../views/product_listing5.html"><div class="image" id="img1"></div></a>
                 <div class="details" id="det1">
@@ -95,14 +99,8 @@
                 </div>
             </div>
         </div>
-
+-->
         {{> footer}}
         
     </body>
-
-    <script>
-        function dropdownToggle(){
-                 document.getElementById('dropmenu').classList.toggle('active'); //clicking the account icon makes it appear, clicking it again makes it disappear.
-             }
-     </script>
 </html>

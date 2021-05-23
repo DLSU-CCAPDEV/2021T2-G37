@@ -6,7 +6,7 @@ const acctctrl = require('../controller/acctdetailscontroller.js');
 const loginctrl = require('../controller/logincontroller.js');
 const deletectrl = require('../controller/deletecontroller.js');
 const product_listingctrl = require('../controller/product_listingcontroller.js')
-
+const addprodctrl = require('../controller/admin_product_addcontroller.js'); // for adding product
 
 const validation = require('../helpers/validation.js');
 
@@ -14,8 +14,7 @@ const validation = require('../helpers/validation.js');
 router.get('/', ctrl.getHome);
 router.get('/home', ctrl.getHome);
 
-const addprodctrl = require('../controller/admin_product_addcontroller.js'); // for ading product
-const controller = require('../controller/controller.js');
+
 
 //router.get('/search', searchctrl.getSearch);
 // router.get('/search', searchctrl.);
@@ -57,8 +56,8 @@ router.get('/viewdetails/:userName', acctctrl.getNoEditDetailsView);
 //router.get('/acctdetailsnoedit/:userName', acctctrl.getNoEditDetailsView);
 
 //PRODUCT LISTING
-//router.get('/product_listing/:pName', product_listingctrl.getProduct_Listing);
-
+router.get('/product_listing/:pName', product_listingctrl.getProduct_Listing);
+router.get('/delete_review', product_listingctrl.getDeleteReview);
 
 router.get('/search', ctrl.getSearch);
 

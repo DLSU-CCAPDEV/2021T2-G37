@@ -99,7 +99,7 @@ ul {
     top: -4px;
 }
 
-#submit {
+#search {
     background-image: url("../images/spritesheet.png");
     background-position: -740px 0px;
     border: none;
@@ -107,3 +107,10 @@ ul {
     color: transparent;
 }
 /* HEADER END -------------------------- */
+
+
+/** the hr in between the home and the product itself----------------------------------------------------*/
+#hr_home{
+    width: 100%;
+    margin-top: 0px;
+}
