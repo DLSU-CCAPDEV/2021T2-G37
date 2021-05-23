@@ -96,8 +96,9 @@ $(document).ready(function (){
     function isUniqueUsername(field, callback){
 
         var userName = validator.trim($('#username').val());
-      
+        var isValidLength = validator.isLength(userName, {min: 1});
  
+        if (isValidLength){
         $.get('/getCheckUsername', {userName: userName}, function(result){
 
             if(result.userName == userName){
@@ -106,7 +107,6 @@ $(document).ready(function (){
                     $('#usernameErr').text('Username is already taken.');
                 return callback(false);
                 
-            
             }
 
             else {
@@ -116,13 +116,23 @@ $(document).ready(function (){
             
             }
         
-        });
+         })
+      }
+
+      else {
+            
+        if(field.is($('#username')))
+         $('#usernameErr').text('Username should not be empty');
+         return callback(false);
+        }
     }
 
     function isUniqueEmail(field, callback){
 
         var email = validator.trim($('#email').val());
-     
+        var isValidLength = validator.isLength(email, {min: 1});
+
+        if (isValidLength){
         $.get('/getCheckEmail', {email: email}, function(result){
 
             if(result.email == email){
@@ -131,16 +141,22 @@ $(document).ready(function (){
                     $('#emailErr').text('Email is already in use.');
                 return callback(false);
                 
-           
+
             }
 
             else {
                 if(field.is($('#email')))
                     $('#emailErr').text('');
                 return callback(true);
-               
             }
         });
+      }
+
+      else {
+        if(field.is($('#email')))
+            $('#emailErr').text('Email should not be empty');
+        return callback(true);
+    }
         
     }
 
