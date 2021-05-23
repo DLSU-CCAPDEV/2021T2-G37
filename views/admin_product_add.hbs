@@ -12,7 +12,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="../public/js/admin_product_add.js"> </script>
+        <script src="/js/validator.min.js" type="text/javascript"></script>
+        <script src="/js/admin_product_add.js"> </script>
     </head>
 
 
@@ -28,33 +29,57 @@
 
             <form class="form" method="POST" action="/admin_product_add" class="form">
             <p class="txt_titles">Product Number</p><br>
-            <input type="text" placeholder="Enter product Number" class="input" id="pnum" name="pnum" required>
+            <input type="text" placeholder="Product Number" class="input" id="pnum" name="pnum" required>
+            <br><p id="pnumerror" class="error">{{pnumerror}}</p>
+
             <p class="txt_titles">Product Name</p><br>
-            <input type="text" placeholder="Enter product name" class="input" id="pname" name="pname" required>
+            <input type="text" placeholder="Product Name" class="input" id="pname" name="pname" required>
+            <br><p id="pnameerror" class="error">{{pnameerror}}</p>
+
             <p class="txt_titles">Product Price</p><br>
-            <input type="number" placeholder="Enter product price" class="input" id="pprice" name="pprice" required>
-            <p class="txt_titles">Available Quantity</p><br>
-            <input type="number" placeholder="Enter quantity" class="input" id="pqty" name="pqty" required>
+            <input type="number" placeholder="Product Price" class="input" id="pprice" name="pprice" required>
+            <br><p id="ppriceerror" class="error">{{ppriceerror}}</p>
+
             <p class="txt_titles">Product Description</p><br>
-            <input type="text" placeholder="Enter product description" class="input" id="pdesc" name="pdesc" required>
+            <input type="text" placeholder="Product Description" class="input" id="pdesc" name="pdesc" required>
+            <br><p id="pdescerror" class="error">{{pdescerror}}</p>
+
             <p class="txt_titles">Color 1 (optional)</p><br>
-            <input type="text" placeholder="Enter color" class="input" id="pcolor1" name="pcolor1">
+            <input type="text" placeholder="Color 1" class="input" id="pcolor1" name="pcolor1">
+            <!--<br><p id="pcolor1error" class="error">{{pcolor1error}}</p>-->
+
             <p class="txt_titles">Color 2 (optional)</p><br>
-            <input type="text" placeholder="Enter color" class="input" id="pcolor2" name="pcolor2">
+            <input type="text" placeholder="Color 2" class="input" id="pcolor2" name="pcolor2">
+            <!--<br><p id="pcolor2error" class="error">{{pcolor2error}}</p>-->
+
             <p class="txt_titles">Color 3 (optional)</p><br>
-            <input type="text" placeholder="Enter color" class="input" id="pcolor3" name="pcolor3">
+            <input type="text" placeholder="Color 3" class="input" id="pcolor3" name="pcolor3">
+            <!--<br><p id="pcolor3error" class="error">{{pcolor3error}}</p>-->
+
             <p class="txt_titles">Color 4 (optional)</p><br>
-            <input type="text" placeholder="Enter color" class="input" id="pcolor4" name="pcolor4">
+            <input type="text" placeholder="Color 4" class="input" id="pcolor4" name="pcolor4">
+            <!--<br><p id="pcolor4error" class="error">{{pcolor4error}}</p>-->
+
             <p class="txt_titles">Size 1 (optional)</p><br>
-            <input type="text" placeholder="Enter size" class="input" id="psize1" name="psize1">
+            <input type="text" placeholder="Size 1" class="input" id="psize1" name="psize1">
+           <!-- <br><p id="psize1error" class="error">{{psize1error}}</p>-->
+
             <p class="txt_titles">Size 2 (optional)</p><br>
-            <input type="text" placeholder="Enter size" class="input" id="psize2" name="psize2">
+            <input type="text" placeholder="Size 2" class="input" id="psize2" name="psize2">
+            <!--<br><p id="psize2error" class="error">{{psize2error}}</p>-->
+
             <p class="txt_titles">Size 3 (optional)</p><br>
-            <input type="text" placeholder="Enter size" class="input" id="psize3" name="psize3">
+            <input type="text" placeholder="Size 3" class="input" id="psize3" name="psize3">
+            <!--<br><p id="psize3error" class="error">{{psize3error}}</p>-->
+
             <p class="txt_titles">Size 4 (optional)</p><br>
-            <input type="text" placeholder="Enter size" class="input" id="psize4" name="psize4">
+            <input type="text" placeholder="Size 4" class="input" id="psize4" name="psize4">
+            <!--<br><p id="psize4error" class="error">{{psize4error}}</p>-->
+
             <p class="txt_titles">Product Image 1</p><br>
-            <input type="file" id="pimage1" name="pimage1" required>
+            <input type="file" id="pimage1" name="pimage1" placeholder="Product Image 1" required>
+            <!--<br><p id="pimage1error" class="error">{{pimage1error}}</p>-->
+
             <p class="txt_titles">Product Image 2 (optional)</p><br>
             <input type="file" id="pimage2" name="pimage2">
             <p class="txt_titles">Product Image 3 (optional)</p><br>
@@ -65,6 +90,7 @@
             <input type="submit" id="btnadd" class="btna" value="Add Product">
 
             </form> 
+
 
             <a href="/admin_home_page"><button id="btncancel" class="btna"> Cancel </button> </a>
 

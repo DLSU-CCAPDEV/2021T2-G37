@@ -14,10 +14,6 @@ var ProductSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.Decimal128,
         required: true
     },
-    pQty: {
-        type: Number,
-        required: true
-    },
     pDesc: {
         type: String,
         required: true

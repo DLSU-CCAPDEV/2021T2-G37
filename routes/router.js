@@ -14,6 +14,7 @@ const reviewctrl = require('../controller/reviewcontroller.js'); // for adding a
 const maineditprodctrl = require('../controller/admin_product_maineditcontroller.js'); // second step in editing a product, concerned with the MAIN editing
 const validation = require('../helpers/validation.js');
 const validationCheckOut = require('../helpers/validation-checkout.js');
+const validationAdminAddProd = require('../helpers/validation-adminaddprod.js');
 
 router.get('/', ctrl.getHome);
 router.get('/home', ctrl.getHome);
@@ -30,8 +31,8 @@ router.get('/editreview', reviewctrl.getEditReview);
 
 //admin add product related
 router.get('/admin_product_add', addprodctrl.getAdminProdAdd);
-router.post('/admin_product_add', addprodctrl.postAddProd);
-router.get('/getCheckNum', addprodctrl.getCheckNum);
+router.post('/admin_product_add', validationAdminAddProd.postAdminAddProdValidation(), addprodctrl.postAddProd);
+router.get('/getCheckNumAdd', addprodctrl.getCheckNumAdd);
 
 //admin delete product related
 router.get('/admin_product_delete', deleteprodctrl.getAdminProdDelete);
