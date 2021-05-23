@@ -25,14 +25,14 @@
 ### Third Party Libraries
 * Font Awesome
 
-## Setting up the server
+## Setting up the server locally
 ### Install the following modules
 * Open Command Prompt
 * Navigate to the project folder
 * Type `npm install`
 * Type `node add_data.js` to populate the database. 
 
-## Running the server
+## Running the server locally
 #### When supervisor is installed
 * Type `supervisor index.js`
 * Navigate to http://localhost:3000 in your browser.
