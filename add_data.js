@@ -246,7 +246,7 @@ var prod = {
 
 db.insertOne(products, prod);
 
-var = {
+var rev = {
     pNum: 100456,
     userName: "Clarissa",
     rating: 5.0,
@@ -255,7 +255,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100456,
     userName: "Ina",
     rating: 5.0,
@@ -264,7 +264,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100456,
     userName: "Nicole",
     rating: 3.0,
@@ -273,7 +273,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100456,
     userName: "Carla",
     rating: 4.8,
@@ -282,7 +282,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100456,
     userName: "Clar",
     rating: 5.0,
@@ -291,7 +291,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100456,
     userName: "Anna",
     rating: 4.0,
@@ -300,7 +300,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100456,
     userName: "Patricia",
     rating: 5.0,
@@ -309,7 +309,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100457,
     userName: "Nicole",
     rating: 3.0,
@@ -318,7 +318,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100457,
     userName: "Carla",
     rating: 4.8,
@@ -327,7 +327,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100457,
     userName: "Anna",
     rating: 4.8,
@@ -336,7 +336,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100457,
     userName: "Anna",
     rating: 4.8,
@@ -345,7 +345,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100458,
     userName: "Ina",
     rating: 5.0,
@@ -356,7 +356,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100458,
     userName: "Nicole", 
     rating: 3.0,
@@ -365,7 +365,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100458,
     userName: "Carla",
     rating: 4.8,
@@ -374,7 +374,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100458,
     userName: "Anna",
     rating: 4.0,
@@ -383,7 +383,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100459,
     userName: "Kent",
     rating: 5.0,
@@ -394,7 +394,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100459,
     userName: "Kyle",
     rating: 5.0,
@@ -403,7 +403,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100460,
     userName: "Juan",
     rating: 5.0,
@@ -412,7 +412,7 @@ var = {
     img2: "../images/product5b.jpg"
 }
 
-var = {
+var rev = {
     pNum: 100460,
     userName: "Dos",
     rating: 5.0,
@@ -421,7 +421,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100460,
     userName: "",
     rating: ,
@@ -430,7 +430,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100460,
     userName: "Trish",
     rating: 4.0,
@@ -439,7 +439,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100460,
     userName: "John",
     rating: 4.0,
@@ -448,7 +448,7 @@ var = {
 
 db.insertOne(reviews, rev);
 
-var = {
+var rev = {
     pNum: 100460,
     userName: "Mary",
     rating: 5.0,
