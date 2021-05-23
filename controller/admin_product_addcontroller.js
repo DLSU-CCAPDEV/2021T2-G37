@@ -20,7 +20,7 @@ const adminprodaddController = {
         var pSize2 = req.body.psize2; 
         var pSize3 = req.body.psize3; 
         var pSize4 = req.body.psize4;         
-        var pImage1 = req.body.pimage1;          // relative path to image
+        var pImage1 = req.body.pimage1;         
         var pImage2 = req.body.pimage2;
         var pImage3 = req.body.pimage3;
         var pImage4 = req.body.pimage4;
@@ -48,7 +48,18 @@ const adminprodaddController = {
 
         db.insertOneCallback('Product', product, function(flag) {
             if(flag) { // not yet done
-                res.redirect('/success?pName=' + pName + '&pNum=' + pNum);
+                var details = {
+                    pNum: pNum,
+                    action: "was added successfully."
+                }
+                res.render("admin_success", details);
+            }
+            else{
+                var details = {
+                    pNum: pNum,
+                    action: "was not added successfully."
+                }
+                res.render("admin_success", details);
             }
         });
     },

@@ -11,7 +11,18 @@ const adminproddeleteController = {
         db.findOne('Product', {pNum: pNum}, function(result){
             if(result){
                 db.deleteOne('Product', {pNum: pNum});
-                res.redirect('/admin_home_page');
+                var details = {
+                    pNum: pNum,
+                    action: "was deleted successfully."
+                }
+                res.render("admin_success", details);
+            }
+            else{
+                var details = {
+                    pNum: pNum,
+                    action: "does not exist."
+                }
+                res.render("admin_success", details);
             }
 
         });

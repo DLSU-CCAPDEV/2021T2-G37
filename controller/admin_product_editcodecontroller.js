@@ -5,40 +5,19 @@ const adminprodeditcodeController = {
         res.render('admin_product_code');
     },
 
-    /*
-    getAdminProdEdit: function (req, res) {
-        var pNum = req.params.pNum;
-
-        console.log("success2");
-        db.findOne('Product', {pNum: pNum}, function(result){
-            if(result){
-                //db.deleteOne('Product', {pNum: pNum});
-                //res.redirect('/admin_home_page');
-                var details = {
-                    pNum: result.pNum,
-                    pName: result.pName
-                };
-                console.log("success3");
-                res.render('admin_product_edit', details);
-                //res.redirect(307, 'editproduct/' + pNum);
-            }
-            else{
-                res.send("Product Number does not exist.");
-            }
-
-        });
-    },
-*/
     postCodeProd: function (req, res) {
         var pNum = req.body.pnum;
 
-        console.log("hey " + pNum);
         db.findOne('Product', {pNum: pNum}, function(result){
             if(result){
                 res.redirect(307, 'editproduct/' + pNum);
             }
             else{
-                res.send("Product Number does not exist.");
+                var details = {
+                    pNum: pNum,
+                    action: "does not exist."
+                }
+                res.render("admin_success", details);
             }
 
         });

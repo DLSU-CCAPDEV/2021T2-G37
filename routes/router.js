@@ -37,8 +37,10 @@ router.get('/getCheckNumDelete', deleteprodctrl.getCheckNumDelete);
 router.get('/admin_product_code', editcodeprodctrl.getAdminProdCode);
 router.post('/admin_product_code', editcodeprodctrl.postCodeProd);
 //admin MAIN edit product related 
-//NOT YET DONE
-router.post('/editproduct/:pNum', maineditprodctrl.postAdminProdEdit);
+//admin MAIN edit product related 
+router.post('/editproduct/:pNum', maineditprodctrl.postAdminProdEdit); //used to render data for the admin_product_edit.hbs
+router.get('/admin_product_edit', maineditprodctrl.getAdminProdMainEdit); 
+router.post('/admin_product_edit', maineditprodctrl.postAdminProdMainEdit); // main editing happens here
 
 // REGISTER RELATED
 router.get('/register', registerctrl.getRegister);
