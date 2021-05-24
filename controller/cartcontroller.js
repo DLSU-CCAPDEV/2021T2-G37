@@ -15,14 +15,16 @@ const cartController = {
         }
 
         db.findMany('Cart', {userName: userName}, null, null, null, null, function(result) {
-            details.pNum = result.pNum;
-            details.pName = result.pName;
-            details.pPrice = result.pPrice;
-            details.pSize = result.pSize;
-            details.pColor = result.pColor;
-            details.pQty = result.pQty;
+            var item = {
+                pNum: result.pNum,
+                pName: result.pName,
+                pPrice: result.pPrice,
+                pSize: result.pSize,
+                pColor: result.pColor,
+                pQty: result.pQty
+            }
             
-            res.render('cart', details);
+            res.render('cart', {details: details, item: item});
         });
 
 

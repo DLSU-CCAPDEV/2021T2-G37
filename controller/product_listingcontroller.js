@@ -21,21 +21,28 @@ const product_listingController = {
 
         db.findOne('Product', {pNum: pNum}, function(result) {
             details.pNum = pNum;
-            details.pName = result.pName;
-            details.pPrice = result.pPrice;
-            details.pDesc = result.pDesc;
-            details.pColor1 = result.pColor1;
-            details.pColor2 = result.pColor2; 
-            details.pColor3 = result.pColor3; 
-            details.pColor4 = result.pColor4; 
-            details.pSize1 = result.pSize1;
-            details.pSize2 = result.pSize2; 
-            details.pSize3 = result.pSize3; 
-            details.pSize4 = result.pSize4; 
-            details.pImage1 = result.pImage1;
-            details.pImage2 = result.pImage2; 
-            details.pImage3 = result.pImage3; 
-            details.pImage4 = result.pImage4;
+
+            try {
+                details.pName = result.pName;
+                details.pPrice = result.pPrice;
+                details.pDesc = result.pDesc;
+                details.pColor1 = result.pColor1;
+                details.pColor2 = result.pColor2; 
+                details.pColor3 = result.pColor3; 
+                details.pColor4 = result.pColor4; 
+                details.pSize1 = result.pSize1;
+                details.pSize2 = result.pSize2; 
+                details.pSize3 = result.pSize3; 
+                details.pSize4 = result.pSize4; 
+                details.pImage1 = result.pImage1;
+                details.pImage2 = result.pImage2; 
+                details.pImage3 = result.pImage3; 
+                details.pImage4 = result.pImage4;
+            } catch {
+                details = null;
+            }
+
+            
 
             res.render('product_listing', details);
         });
@@ -47,12 +54,10 @@ const product_listingController = {
         var pName = req.query.pName;
         var pPrice = req.query.pPrice;
         var pQty = req.query.pQty;
-        var pColor = req.query.pColor;
-        var pSize = req.query.pSize;
-        var pImage = req.query.pImage;
+    //    var pColor = req.query.pColor;
+    //    var pSize = req.query.pSize;
+    //    var pImage = req.query.pImage;
         
-        console.log(1);
-
         var wish = {
             userName: userName,
             pNum: pNum,
@@ -76,8 +81,6 @@ const product_listingController = {
     //    var pColor = req.query.pColor;
     //    var pSize = req.query.pSize;
     //    var pImage = req.query.pImage;
-
-        console.log(pNum);
 
         var item = {
             userName: userName,
