@@ -20,6 +20,7 @@ const product_listingController = {
         }
 
         db.findOne('Product', {pNum: pNum}, function(result) {
+            details.pNum = pNum;
             details.pName = result.pName;
             details.pPrice = result.pPrice;
             details.pDesc = result.pDesc;

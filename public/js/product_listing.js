@@ -8,8 +8,7 @@ $(document).ready(function (){
         var pPrice = document.getElementById("pprice").innerHTML.substring("P ".length);
         var pQty = document.getElementById("qty").value;
 
-        alert(1);
-
+        alert("Added to Wishlist!");
         if (userName != "") {
             var item = {
                 userName: userName,
@@ -34,7 +33,8 @@ $(document).ready(function (){
         var pPrice = document.getElementById("pprice").innerHTML.substring("P ".length);
         var pQty = document.getElementById("qty").value;
 
-        alert(2);
+
+        alert("Added to Cart!");
         if (userName != "") {
             var item = {
                 userName: userName,
