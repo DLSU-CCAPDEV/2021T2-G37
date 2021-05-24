@@ -65,9 +65,10 @@ const database = {
             .findOne(query, function(err, result){  
                 if (err) throw err;
                 return callback(result);
+                db.close();
             });
         });
-    },
+    }, 
     
     findMany: function(collection, query, sort=null, projection=null, limit, skip, callback){
         client.connect(url, options, function(err, db){

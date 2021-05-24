@@ -7,6 +7,8 @@ const loginctrl = require('../controller/logincontroller.js');
 const deletectrl = require('../controller/deletecontroller.js');
 const product_listingctrl = require('../controller/product_listingcontroller.js')
 const addprodctrl = require('../controller/admin_product_addcontroller.js'); // for adding product
+const wishctrl = require('../controller/wishlistcontroller.js');
+const cartctrl = require('../controller/cartcontroller.js');
 
 const validation = require('../helpers/validation.js');
 
@@ -14,10 +16,7 @@ const validation = require('../helpers/validation.js');
 router.get('/', ctrl.getHome);
 router.get('/home', ctrl.getHome);
 
-
-
-//router.get('/search', searchctrl.getSearch);
-// router.get('/search', searchctrl.);
+router.get('/search', ctrl.getSearch);
 
 router.get('/admin_product_add', addprodctrl.getAdminProdAdd);
 router.post('/admin_product_add', addprodctrl.postAddProd);
@@ -56,16 +55,24 @@ router.get('/viewdetails/:userName', acctctrl.getNoEditDetailsView);
 //router.get('/acctdetailsnoedit/:userName', acctctrl.getNoEditDetailsView);
 
 //PRODUCT LISTING
-router.get('/product_listing/:pName', product_listingctrl.getProduct_Listing);
-router.get('/delete_review', product_listingctrl.getDeleteReview);
+router.get('/product_listing/:pNum', product_listingctrl.getProduct_Listing);
+router.get('/getAddWishlist', product_listingctrl.getAddWishlist);
+router.get('/getAddCart', product_listingctrl.getAddCart);
+
+router.get('/addAlltoCart', wishctrl.getAddAlltoCart);
+router.get('/addToCart', wishctrl.getAddtoCart);
+router.get('/deleteWish', wishctrl.getDeleteWish);
 
 router.get('/search', ctrl.getSearch);
 
 router.get('/acctdetailsnoedit', ctrl.getNoEditAcc);
 router.get('/acctdetails', ctrl.getAcctDetails);
 router.get('/admin_home_page', ctrl.getAdminHomePage);
-router.get('/wishlist', ctrl.getWishlist);
-router.get('/cart', ctrl.getCart);
+router.get('/wishlist', wishctrl.getWishlist);
+router.get('/cart', cartctrl.getCart);
 router.get('/viewproducts', ctrl.getViewProducts);
+router.get('/checkout', ctrl.getCheckoutPage);
+
+
 
 module.exports = router;

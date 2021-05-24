@@ -1,4 +1,3 @@
-const { Db } = require("mongodb");
 const db = require('../models/db.js');
 
 const controller = {
@@ -33,18 +32,20 @@ const controller = {
         res.render('admin_login');
     },
 
-    getWishlist: function(req, res){
-        res.render('wishlist');
-    },
-
     getCart: function(req, res){
-        res.render('cart');
+        db.findMany('Cart', null, null, null, null, null, function(result) {
+            res.render('cart', {item: result});
+        });
     },
 
     getViewProducts: function(req, res){
-        db.findMany('Product', null, null, null, 10, 0, function(result) {
+        db.findMany('Product', null, null, null, 15, 0, function(result) {
             res.render('viewproducts', {thumbnail: result});
         });
+    },
+
+    getCheckoutPage: function(req, res) {
+        res.render('checkoutpage');
     },
 
     getHomeLoggedIn: function(req, res) {
@@ -57,9 +58,9 @@ const controller = {
 
     getSearch: function(req, res){
         var query = req.query.fitem;
+        console.log(query);
         
-        db.findMany('Product', {fName: query}, null, null, null, null, function(result) {
-            
+        db.findMany('Product', {pName: query}, null, null, null, null, function(result) {    
             res.render('search', {thumbnail: result});
         });
 

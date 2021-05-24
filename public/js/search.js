@@ -1,8 +1,8 @@
 $(document).ready(function (){
-    $('#content').on('click', '.thumbnail', function () {
+    $('#container').on('click', '.thumbnail', function () {
 
-        var partial = $(this).prev();
-        var pnum = {
+        var partial = $(this).attr('id');
+        var pNum = {
             pNum: partial.innerHTML
         }
 

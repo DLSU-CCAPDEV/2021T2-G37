@@ -21,16 +21,16 @@
             <div class="dropdownmenu" id="dropmenu">
                 <li> <a href="/acctdetailsnoedit"> View Account Details </a> </li>
                 <li> <a href="/acctdetails"> Edit Account Details </a> </li>
-                <li><a href="/delete"> Delete Account </a></li>
+                <li> <a href="/delete"> Delete Account </a></li>
                 <li> <a href="/home"> Logout </a> </li>
                 <li> <a href="/admin_home_page"> Admin </a>
             </div>
         </div>
             <a class="nav" href="/wishlist"><li class="navbtn" id="wishlist"></li></a>
             <a class="nav" href="/cart"><li class="navbtn" id="cart"></li></a>
-            <form method="GET">
+            <form id="searchbar" method="GET" action="/search">
                 <input type="text" id="fitem" name="fitem" placeholder="Search our store">
-                <input type="submit" id="search">
+                <input type="submit" id="search" value="Search">
             </form>
         </ul>
     </div>

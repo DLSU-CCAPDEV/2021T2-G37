@@ -96,21 +96,19 @@ ul {
 #fitem {
     margin-left: 20px;
     position: relative;
-    top: -4px;
+    bottom: 8px;
 }
 
 #search {
     background-image: url("../images/spritesheet.png");
     background-position: -740px 0px;
+    position: relative;
+    bottom: 8px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
     border: none;
     cursor: pointer;
     color: transparent;
 }
 /* HEADER END -------------------------- */
-
-
-/** the hr in between the home and the product itself----------------------------------------------------*/
-#hr_home{
-    width: 100%;
-    margin-top: 0px;
-}
