@@ -132,9 +132,9 @@ bcrypt.hash(admin.pw, saltRounds, function(err, hash){
 // Inserts sample products
 // ** Colors and Sizes to be fixed **
 var prod = {
-    pNum: "100456",
+    pNum: 100456,
     pName: "Ultra Stretch Jeans",
-    pPrice: "1990.00",
+    pPrice: 1990.00,
     pDesc: "Clothing and Science become one. This ultra stretch jeans was made possible through our newest technology. Jeans as light as feather and as smooth as baby's skin. Get yours now and become comfy and stylish today!",
     pColor1: "Blue",
     pColor2: "Navy",
@@ -153,9 +153,9 @@ var prod = {
 db.insertOne(products, prod);
 
 var prod = {
-    pNum: "100457",
+    pNum: 100457,
     pName: "High Rise Jeans",
-    pPrice: "1490.00",
+    pPrice: 1490.00,
     pDesc: "Introducing a new generation of High Rise fabric. Our most flattering and comfortable high rise jeans yet.",
     pColor1: "Red",
     pColor2: "Orange",
@@ -174,9 +174,9 @@ var prod = {
 db.insertOne(products, prod);
 
 var prod = {
-    pNum: "100458",
+    pNum: 100458,
     pName: "Linen Open Collar Shirt",
-    pPrice: "790.00",
+    pPrice: 790.00,
     pDesc: "An open collar that makes the most out of the supple and elegant material. An item that has a tasteful, laid-back feel.",
     pColor1: "Yellow",
     pColor2: "Red",
@@ -195,9 +195,9 @@ var prod = {
 db.insertOne(products, prod);
 
 var prod = {
-    pNum: "100459",
+    pNum: 100459,
     pName: "Men's Socks",
-    pPrice: "390.00",
+    pPrice: 390.00,
     pDesc: "Your toes stay warm and toasty. A textured, neat knitted fabric.",
     pColor1: "Gray",
     pColor2: "Black",
@@ -216,9 +216,9 @@ var prod = {
 db.insertOne(products, prod);
 
 var prod = {
-    pNum: "100460",
+    pNum: 100460,
     pName: "Long Sleeve Sweatshirt",
-    pPrice: "1990.00",
+    pPrice: 1990.00,
     pDesc: "Warm and comfortable brushed T-shirt. This item has been updated to make it an easy choice, even when worn on its own.",
     pColor1: "White",
     pColor2: "Blue",
