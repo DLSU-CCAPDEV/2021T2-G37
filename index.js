@@ -12,7 +12,7 @@ hbs.registerPartials(__dirname + '/views/partials');
 dotenv.config();
 port = process.env.PORT || 3000;
 
-hostname = process.env.HOSTNAME;
+
 
 app.use(express.static('public'));
 
@@ -25,6 +25,17 @@ app.use(session({
     'saveUninitialized': false, 
     'store': new MongoStore(options)
 }));
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://admin:<1234>@test-project.h70ee.mongodb.net/clothingandscience?retryWrites=true&w=majority";
+const uri = process.env.MONGODB_URI;
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
 
 const indexRouter = require('./routes/router');
 app.use('/', indexRouter);
