@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 const express = require('express');
 const hbs = require('hbs');
 const session = require('express-session');
-
+const MongoStore = require('connect-mongo')(session);
 
 
 const app = express() //initializing an express server and passing to app 
@@ -10,8 +10,9 @@ const app = express() //initializing an express server and passing to app
 app.set('view engine', '.hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 dotenv.config();
-port = process.env.PORT || 3000
-hostname = process.env.HOSTNAME;
+port = process.env.PORT || 3000;
+
+
 
 app.use(express.static('public'));
 
@@ -22,6 +23,7 @@ app.use(session({
     'secret': 'ccapdev-session', 
     'resave': false, 
     'saveUninitialized': false, 
+    'store': new MongoStore(options)
 }));
 
 const MongoClient = require('mongodb').MongoClient;
