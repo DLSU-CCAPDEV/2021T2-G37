@@ -95,13 +95,13 @@ router.get('/getAddWishlist', product_listingctrl.getAddWishlist);
 router.get('/getAddCart', product_listingctrl.getAddCart);
 
 //WISHLIST RELATED
-router.get('/wishlist', wishctrl.getWishlist);
+router.get('/wishlist/:userName', wishctrl.getWishlist);
 router.get('/addAlltoCart', wishctrl.getAddAlltoCart);
 router.get('/addToCart', wishctrl.getAddtoCart);
 router.get('/deleteWish', wishctrl.getDeleteWish);
 
 //CART RELATED
-router.get('/cart', cartctrl.getCart);
+router.get('/cart/:userName', cartctrl.getCart);
 router.get('/deleteItem', cartctrl.getDeleteItem);
 
 
