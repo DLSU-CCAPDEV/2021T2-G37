@@ -100,8 +100,6 @@ router.get('/search', ctrl.getSearch);
 router.get('/viewproducts', ctrl.getViewProducts);
 router.get('/viewproducts/:userName', ctrl.getViewProducts);
 
-router.get('/getCheckSession', ctrl.getCheckSession);
-
 //PRODUCT LISTING RELATED
 router.get('/product_listing/:pNum', product_listingctrl.getProduct_Listing);
 router.get('/getAddWishlist', product_listingctrl.getAddWishlist);

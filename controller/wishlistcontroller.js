@@ -8,23 +8,23 @@ const wishController = {
         if(req.session.userName) {
             details.flag = true;
             details.userName = req.session.userName;
-
-            db.findMany('Wishlist', {userName: userName}, null, null, null, null, function(result) {
-                res.render('wishlist', {
-                    details: details, 
-                    pName: result.pName,
-                    pPrice: result.pPrice,
-                    pSize: result.pSize,
-                    pColor: result.pColor,
-                    pQty: result.pQty
-                });
-            });
         }
 
         else {
             details.flag = false;
             res.render('login');
         }
+
+        db.findMany('Wishlist', {userName: userName}, null, null, null, null, function(result) {
+            details.pNum = result.pNum;
+            details.pName = result.pName;
+            details.pPrice = result.pPrice;
+            details.pSize = result.pSize;
+            details.pColor = result.pColor;
+            details.pQty = result.pQty;
+            
+            res.render('wishlist', details);
+        });
     },
 
     getAddAlltoCart: function (req, res) {

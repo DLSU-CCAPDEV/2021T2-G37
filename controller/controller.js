@@ -59,12 +59,6 @@ const controller = {
         });
 
     },
-
-    getCheckSession: function(req, res) {
-        var userName = req.session.userName;
-        alert(userName);
-        res.send(userName);
-    }
 }
 
 module.exports = controller;

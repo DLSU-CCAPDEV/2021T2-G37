@@ -8,16 +8,23 @@ const cartController = {
         if(userName != "") {
             details.flag = true;
             details.userName = req.session.userName;
-
-            db.findMany('Cart', {userName: userName}, null, null, null, null, function(result) {
-                res.render('cart', {details: details, item: result});
-            });
         }
-
         else {
             details.flag = false;
             res.render("login");
         }
+
+        db.findMany('Cart', {userName: userName}, null, null, null, null, function(result) {
+            details.pNum = result.pNum;
+            details.pName = result.pName;
+            details.pPrice = result.pPrice;
+            details.pSize = result.pSize;
+            details.pColor = result.pColor;
+            details.pQty = result.pQty;
+            
+            res.render('cart', details);
+        });
+
 
     },
 
