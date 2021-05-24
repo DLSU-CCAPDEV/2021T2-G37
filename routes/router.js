@@ -10,7 +10,8 @@ const checkoutctrl = require('../controller/checkoutcontroller.js');
 const addprodctrl = require('../controller/admin_product_addcontroller.js'); // for adding product
 const deleteprodctrl = require('../controller/admin_product_deletecontroller.js'); // for deleting product
 const editcodeprodctrl = require('../controller/admin_product_editcodecontroller.js'); // first step in editing a product; concerned only with the product code
-const reviewctrl = require('../controller/reviewcontroller.js'); // for adding a review
+const reviewcodectrl = require('../controller/reviewcodecontroller.js'); // for editing code a review; first step in editing
+const revieweditctrl = require('../controller/revieweditcontroller.js'); // for main editing a review; second step in editing
 const wishctrl = require('../controller/wishlistcontroller.js');
 const cartctrl = require('../controller/cartcontroller.js');
 const product_listingctrl = require('../controller/product_listingcontroller.js')
@@ -19,15 +20,24 @@ const validation = require('../helpers/validation.js');
 const validationCheckOut = require('../helpers/validation-checkout.js');
 const validationAdminAddProd = require('../helpers/validation-adminaddprod.js');
 const validationAdminDeleteProd = require('../helpers/validation-admindeleteprod.js');
+const validationReviewCode = require('../helpers/validation-reviewcode.js');
+const validationReviewEdit = require('../helpers/validation-reviewedit.js');
 
 
 router.get('/', ctrl.getHome);
 router.get('/home', ctrl.getHome);
 //router.get('/about', ctrl.getAbout);
 
-//review ctrl
-router.get('/addreview', reviewctrl.getAddReview);
-router.get('/editreview', reviewctrl.getEditReview);
+//review related
+router.get('/editreviewcode', reviewcodectrl.getEditReviewCode);
+router.post('/editreviewcode', validationReviewCode.postReviewCodeValidation(), reviewcodectrl.postEditReviewCode);
+router.get('/getCheckNumCode', reviewcodectrl.getRevNumCode);
+router.get('/addreview', reviewcodectrl.getAddReview);
+//main edit review
+router.post('/editreview/:rNum', revieweditctrl.postEditReview); //used to render data for the reviewedit.hbs
+router.get('/editreview', revieweditctrl.getEditReview);
+router.post('/editreview', validationReviewEdit.postReviewEditValidation(), revieweditctrl.postEditMainReview);
+router.get('/getCheckNumEdit', revieweditctrl.getRevNumEdit);
 
 //admin add product related
 router.get('/admin_product_add', addprodctrl.getAdminProdAdd);

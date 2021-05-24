@@ -3,11 +3,11 @@ var mongoose = require('mongoose');
 
 var ReviewSchema = new mongoose.Schema({
     rNum: {
-        type: Number,
+        type: String,
         required: true
     },
     pNum: {
-        type: Number,
+        type: String,
         required: true
     },
     userName: {
@@ -15,7 +15,7 @@ var ReviewSchema = new mongoose.Schema({
         required: true
     },
     rating: {
-        type: mongoose.Schema.Types.Decimal128,
+        type: String,
         required: true
     },
     rev: {
