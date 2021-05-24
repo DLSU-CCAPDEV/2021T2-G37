@@ -69,12 +69,14 @@ router.get('/admin_home', ctrl.getAdminHomeLoggedIn);
 //ACCOUNT RELATED
 router.post('/editdetails', acctctrl.editDetails);
 router.get('/acctdetails/:userName', acctctrl.getDetails);
+// router.get('/acctdetails/:userName', acctctrl.getDetails);
 
 
 router.get('/delete/:userName', deletectrl.getDeletePage);
 router.post('/delete_account', deletectrl.deleteAccount);
 
 router.get('/viewdetails/:userName', acctctrl.getNoEditDetailsView);
+//router.get('/acctdetailsnoedit/:userName', acctctrl.getNoEditDetailsView);
 
 router.get('/logout', logoutctrl.getLogOut);
 
