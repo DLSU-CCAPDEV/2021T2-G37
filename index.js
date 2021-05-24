@@ -5,13 +5,13 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 
 
-
 const app = express() //initializing an express server and passing to app 
 
 app.set('view engine', '.hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 dotenv.config();
-port = process.env.PORT;
+port = process.env.PORT || 3000;
+
 hostname = process.env.HOSTNAME;
 
 app.use(express.static('public'));
