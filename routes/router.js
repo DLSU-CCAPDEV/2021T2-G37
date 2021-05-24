@@ -101,12 +101,9 @@ router.get('/addToCart', wishctrl.getAddtoCart);
 router.get('/deleteWish', wishctrl.getDeleteWish);
 
 //CART RELATED
-<<<<<<< HEAD
+
 router.get('/cart/:userName', cartctrl.getCart);
-=======
-router.get('/cart', cartctrl.getCart);
->>>>>>> parent of 0ab597d (Revert "Merge branch 'main' of https://github.com/DLSU-CCAPDEV/2021T2-G37 into main")
-router.get('/deleteItem', cartctrl.getDeleteItem);
+//router.get('/deleteItem', cartctrl.getDeleteItem);
 
 
 module.exports = router;
