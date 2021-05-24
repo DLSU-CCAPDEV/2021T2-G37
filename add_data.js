@@ -241,7 +241,7 @@ var rev = {
     pNum: "100456",
     userName: "QueenOfTheCourt",
     rating: "5.0",
-    rev: "The pants was very smooth and very soft. It was also very light and comfortable. This is probably my best buy ever. I am using it everyday. Planning to buy another one. great job C & S!"
+    rev: "The pants was very smooth and very soft. It was also very light and comfortable. This is probably my best buy ever. I am using it everyday. Planning to buy another one. great job C & S!",
     img1: "",
     img2: ""
 }
@@ -253,7 +253,7 @@ var rev = {
     pNum: "100456",
     userName: "QueenOfTheCourt",
     rating: "5.0",
-    rev: "I'm on the heavy side and so wearing jeans is a struggle. But this pair let's me wear jeans again without difficulty (even though I haven't lost any weight)"
+    rev: "I'm on the heavy side and so wearing jeans is a struggle. But this pair let's me wear jeans again without difficulty (even though I haven't lost any weight)",
     img1: "",
     img2: ""
 }
@@ -265,7 +265,7 @@ var rev = {
     pNum: "100456",
     userName: "QueenOfTheCourt",
     rating: "3.0",
-    rev: "This new version seem to fit tighter than the old version. I like it. However, this new version is mid rise, while the old version is high rise. Would’ve been better if they made this high rise too. EZY usually meant high rise in Uniqlo lingo. Puzzled why they made this mid rise."
+    rev: "This new version seem to fit tighter than the old version. I like it. However, this new version is mid rise, while the old version is high rise. Would’ve been better if they made this high rise too. EZY usually meant high rise in Uniqlo lingo. Puzzled why they made this mid rise.",
     img1: "",
     img2: ""
 }
@@ -277,7 +277,7 @@ var rev = {
     pNum: "100456",
     userName: "QueenOfTheCourt",
     rating: "4.8",
-    rev: "This is so comfy and stretchable, I like the fit and it is not too skinny fit on me."
+    rev: "This is so comfy and stretchable, I like the fit and it is not too skinny fit on me.",
     img1: "",
     img2: ""
 }
@@ -289,7 +289,7 @@ var rev = {
     pNum: "100456",
     userName: "bestsetter1",
     rating: "5.0",
-    rev: "Great quality jeans! I got this in color blue. These are made to move pants and an all-day-every-day comfort. The material on the inside feels soft against your skin."
+    rev: "Great quality jeans! I got this in color blue. These are made to move pants and an all-day-every-day comfort. The material on the inside feels soft against your skin.",
     img1: "",
     img2: ""
 }
@@ -301,7 +301,7 @@ var rev = {
     pNum: "100456",
     userName: "bestsetter1",
     rating: "4.0",
-    rev: "The pants are not too skinny and indeed give a good amount of stretch. The fit is more on the slim cut side rather than on skin-hugging skinny cut. Elastic waist band is a welcome bonus."
+    rev: "The pants are not too skinny and indeed give a good amount of stretch. The fit is more on the slim cut side rather than on skin-hugging skinny cut. Elastic waist band is a welcome bonus.",
     img1: "",
     img2: ""
 }
@@ -313,7 +313,7 @@ var rev = {
     pNum: "100456",
     userName: "bestsetter1",
     rating: "5.0",
-    rev: "Very much satisfied with my purchase. It fits me very well. Hoping for more shades of blue for this kind of ankle jeans. Thank you so much C & S."
+    rev: "Very much satisfied with my purchase. It fits me very well. Hoping for more shades of blue for this kind of ankle jeans. Thank you so much C & S.",
     img1: "",
     img2: ""
 }
@@ -325,7 +325,7 @@ var rev = {
     pNum: "100457",
     userName: "bestsetter1",
     rating: "3.0",
-    rev: "This new version seem to fit tighter than the old version. I like it. However, its fit is not just for me."
+    rev: "This new version seem to fit tighter than the old version. I like it. However, its fit is not just for me.",
     img1: "",
     img2: ""
 }
@@ -337,7 +337,7 @@ var rev = {
     pNum: "100457",
     userName: "bestgirl",
     rating: "4.8",
-    rev: "Only high rise jeans suits me. I'm glad this is one of those jeans."
+    rev: "Only high rise jeans suits me. I'm glad this is one of those jeans.",
     img1: "",
     img2: ""
 }
@@ -349,7 +349,7 @@ var rev = {
     pNum: "100457",
     userName: "bestgirl",
     rating: "4.8",
-    rev: "The fit of the pants does not make it hard for the legs to breathe in."
+    rev: "The fit of the pants does not make it hard for the legs to breathe in.",
     img1: "",
     img2: ""
 }
@@ -361,7 +361,7 @@ var rev = {
     pNum: "100457",
     userName: "bestgirl",
     rating: "4.8",
-    rev: "The fit of the pants does not make it hard for the legs to breathe in."
+    rev: "The fit of the pants does not make it hard for the legs to breathe in.",
     img1: "",
     img2: ""
 }
@@ -385,7 +385,7 @@ var rev = {
     pNum: "100458",
     userName: "detectiveprincess", 
     rating: 3.0,
-    rev: "This new version seem to fit tighter than the old version. I like it. However, the fit of this shirt for me is weird."
+    rev: "This new version seem to fit tighter than the old version. I like it. However, the fit of this shirt for me is weird.",
     img1: "",
     img2: ""
 }
@@ -397,7 +397,7 @@ var rev = {
     pNum: "100458",
     userName: "detectiveprincess",
     rating: "4.8",
-    rev: "This is so stylish and comfortable at the same time!"
+    rev: "This is so stylish and comfortable at the same time!",
     img1: "",
     img2: ""
 }
@@ -409,7 +409,7 @@ var rev = {
     pNum: "100458",
     userName: "detectiveprincess",
     rating: "4.0",
-    rev: "The shirt embraces my body wonderfully."
+    rev: "The shirt embraces my body wonderfully.",
     img1: "",
     img2: ""
 }
@@ -433,7 +433,7 @@ var rev = {
     pNum: "100459",
     userName: "bestfemc",
     rating: "5.0",
-    rev: "This one is comfortable to wear and nice fit on my feet"
+    rev: "This one is comfortable to wear and nice fit on my feet",
     img1: "",
     img2: ""
 }
@@ -446,8 +446,6 @@ var rev = {
     userName: "bestfemc",
     rating: "5.0",
     rev: "If you're looking for something to be part of your capsule wardrobe, this is definitely one of the must have pieces. It's affordable, fit is perfect plus it is extremely soft! I ended buying 3 different colors!",
-    img1: "../images/product5a.jpg",
-    img2: "../images/product5b.jpg"
     img1: "",
     img2: ""
 }
@@ -457,7 +455,7 @@ var rev = {
     pNum: "100460",
     userName: "bestfemc",
     rating: "5.0",
-    rev: "It fits well. Nice and comfortable. Store personnel are helpful and accomodating. Affordable!"
+    rev: "It fits well. Nice and comfortable. Store personnel are helpful and accomodating. Affordable!",
     img1: "",
     img2: ""
 }
@@ -469,7 +467,7 @@ var rev = {
     pNum: "100460",
     userName: "bestfemc",
     rating: "4.1",
-    rev: "Amazing pants. Fits very well. I love it."
+    rev: "Amazing pants. Fits very well. I love it.",
     img1: "",
     img2: ""
 }
@@ -481,7 +479,7 @@ var rev = {
     pNum: "100460",
     userName: "bestfemc",
     rating: "4.0",
-    rev: "The texture, the color even the size fits perfectly. I hope there are lots of colors to choose from. Perfect for cold weather as well."
+    rev: "The texture, the color even the size fits perfectly. I hope there are lots of colors to choose from. Perfect for cold weather as well.",
     img1: "",
     img2: ""
 }
@@ -493,7 +491,7 @@ var rev = {
     pNum: "100460",
     userName: "bestfemc",
     rating: "4.0",
-    rev: "I ordered this shirt last december because i thought that the design was nice. The order arrived and i was right, the shirt was very worth the price. But i wish u can add a larger size. I hope u can add a xxl size because i want to wear this design."
+    rev: "I ordered this shirt last december because i thought that the design was nice. The order arrived and i was right, the shirt was very worth the price. But i wish u can add a larger size. I hope u can add a xxl size because i want to wear this design.",
     img1: "",
     img2: ""
 }
@@ -505,7 +503,7 @@ var rev = {
     pNum: "100460",
     userName: "bestfemc",
     rating: "5.0",
-    rev: "Hubby loves this.. He has this in 3 colors... Perfect fit... Okay for rounds and clinic..."
+    rev: "Hubby loves this.. He has this in 3 colors... Perfect fit... Okay for rounds and clinic...",
     img1: "",
     img2: ""
 }

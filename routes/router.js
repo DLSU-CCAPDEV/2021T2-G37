@@ -104,7 +104,7 @@ router.get('/deleteWish', wishctrl.getDeleteWish);
 
 //CART RELATED
 router.get('/cart/:userName', cartctrl.getCart);
-router.get('/deleteItem', cartctrl.getDeleteItem);
+//router.get('/deleteItem', cartctrl.getDeleteItem);
 
 
 module.exports = router;
