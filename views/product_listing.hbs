@@ -22,10 +22,8 @@
         </script>
     </head>
 
-    {{> header}}
-
 <body>
-    <hr id="hr_home">
+    {{> header}}
 
     <div id="divwhole">
         <!--div left start--------------------------------------------------->
@@ -134,7 +132,7 @@
     <!--div comment start--------------------------------------------------->
     <div class="divcommentwhole">  
         <button id="writereview" class="btnreviews">WRITE A REVIEW</button>
-        <hr>
+        <hr id="hr_rev">
 
         {{#each review}}
             {{> review}}

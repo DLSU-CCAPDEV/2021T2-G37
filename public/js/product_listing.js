@@ -1,5 +1,4 @@
 $(document).ready(function (){
-    alert(1);
 
     $('#btnwishlist').click(function () {
         var pNum = document.getElementById("pnumber").innerHTML.substring("Product Number: ".length);

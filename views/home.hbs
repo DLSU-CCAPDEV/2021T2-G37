@@ -3,6 +3,7 @@
     <head>
         <title>Clothing & Science | Home Page</title>
         <link rel="stylesheet" type="text/css" media="all" href="../css/home.css">
+        <link rel="stylesheet" type="text/css" media="all" href="../css/header.css">
         <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript" src="../public/js/home.js"></script>
@@ -13,8 +14,38 @@
     </head>
     <body>
         <div id="homepage">
-
-            {{> header}}
+            <div class="header">
+                <div id="top-logo">
+                    <img id="logo" src="../images/logo.png">
+                </div>
+            </div>
+            <div id="container1">
+                <div class="floatleft">
+                    <ul class="navbar" id="navbar1">
+                        <li><a class="navlink" href="/">Home</a></li>
+                        <li><a class="navlink" href="/register">Register</a></li>
+                        <li><a class="navlink" href="/login">Login</a></li>
+                        <li><a class="navlink" href="/about">About</a></li>
+                    </ul>
+                </div>
+                <div class="floatright">
+                    <ul class="navbar" id="navbar2">
+                        {{!-- <div class="profile" onclick="dropdownToggle();">
+                                <li class="navbtn" id="account"></li></a>
+                        <div class="dropdownmenu" id="dropmenu">
+                            <li> <a href="/acctdetailsnoedit"> View Account Details </a> </li>
+                            <li> <a href="/acctdetails"> Edit Account Details </a> </li>
+                            <li> <a href="/home"> Logout </a> </li>
+                            <li> <a href="/admin_home_page"> Admin </a>
+                        </div>
+                    </div> --}}
+                        <form>
+                            <input type="text" id="fitem" name="fname" placeholder="Search our store">
+                        </form>
+                        <a class="nav" href="/search"><li class="navbtn" id="search"></li></a>
+                    </ul>
+                </div>
+            </div>
 
             <div id="banner">
                 <div id="button">

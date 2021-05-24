@@ -13,6 +13,7 @@ const editcodeprodctrl = require('../controller/admin_product_editcodecontroller
 const reviewctrl = require('../controller/reviewcontroller.js'); // for adding a review
 const wishctrl = require('../controller/wishlistcontroller.js');
 const cartctrl = require('../controller/cartcontroller.js');
+const product_listingctrl = require('../controller/product_listingcontroller.js')
 const maineditprodctrl = require('../controller/admin_product_maineditcontroller.js'); // second step in editing a product, concerned with the MAIN editing
 const validation = require('../helpers/validation.js');
 const validationCheckOut = require('../helpers/validation-checkout.js');
@@ -22,7 +23,7 @@ const validationAdminDeleteProd = require('../helpers/validation-admindeleteprod
 
 router.get('/', ctrl.getHome);
 router.get('/home', ctrl.getHome);
-router.get('/about', ctrl.getAbout);
+//router.get('/about', ctrl.getAbout);
 
 //review ctrl
 router.get('/addreview', reviewctrl.getAddReview);
@@ -83,25 +84,25 @@ router.get('/acctdetailsnoedit', ctrl.getNoEditAcc);
 router.get('/acctdetails', ctrl.getAcctDetails);
 router.get('/admin_home_page', ctrl.getAdminHomePage);
 
-
-router.get('/viewproducts', ctrl.getViewProducts);
-
 router.get('/checkout/:userName', acctctrl.getCheckOutDetails);
 router.post('/checkout', validationCheckOut.postCheckOutValidation(), checkoutctrl.postCheckOut);
 router.get('/confirmation/:userName', checkoutctrl.getConfirmationPage);
 
 router.get('/search', ctrl.getSearch);
+router.get('/viewproducts', ctrl.getViewProducts);
 
-//PRODUCT LISTING
+//PRODUCT LISTING RELATED
 router.get('/product_listing/:pNum', product_listingctrl.getProduct_Listing);
 router.get('/getAddWishlist', product_listingctrl.getAddWishlist);
 router.get('/getAddCart', product_listingctrl.getAddCart);
 
-router.get('/wishlist', ctrl.getWishlist);
+//WISHLIST RELATED
+router.get('/wishlist', wishctrl.getWishlist);
 router.get('/addAlltoCart', wishctrl.getAddAlltoCart);
 router.get('/addToCart', wishctrl.getAddtoCart);
 router.get('/deleteWish', wishctrl.getDeleteWish);
 
+//CART REKATED
 router.get('/cart', cartctrl.getCart);
 
 
