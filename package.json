@@ -4,7 +4,8 @@
   "description": "<p align=\"center\">   <img src=\"images/logo.png\" width=\"350\" title=\"hover text\"> </p>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node.js"
   },
   "author": "Cruzada, Desembrana, Mandadero",
   "license": "ISC",
