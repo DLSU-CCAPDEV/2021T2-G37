@@ -15,15 +15,6 @@ hostname = process.env.HOSTNAME;
 
 app.use(express.static('public'));
 
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://admin:<1234>@test-project.h70ee.mongodb.net/clothingandscience?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
-
 
 app.use(express.urlencoded({extended: true}));
 
