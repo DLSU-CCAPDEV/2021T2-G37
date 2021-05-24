@@ -13,6 +13,12 @@ const logincontroller = {
             details.flag = true;
             details.userName = req.session.userName;
 
+
+            db.findMany('Product', null, null, null, 5, 0, function(result) {
+                res.render('LoggedInHome', {details: details, thumbnail: result});
+            });
+            
+            
             res.render('LoggedInHome', details);
         }
 

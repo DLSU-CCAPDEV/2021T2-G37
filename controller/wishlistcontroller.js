@@ -2,9 +2,22 @@ const db = require('../models/db.js');
 
 const wishController = {
     getWishlist: function(req, res){
-        db.findMany('Wishlist', null, null, null, null, null, function(result) {
-            res.render('wishlist', {wish: result});
-        });
+        var userName = req.params.userName;
+        
+        if(req.params.userName) {
+            
+
+            db.findMany('Wishlist', {userName: userName}, null, null, null, null, function(result) {
+                res.render('wishlist', {wish: result});
+            });
+        }
+
+        else {
+
+            res.render("/login");
+        }
+
+
     },
 
     getAddAlltoCart: function (req, res) {
