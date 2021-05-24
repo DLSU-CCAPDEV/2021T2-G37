@@ -22,8 +22,6 @@ const validationAdminDeleteProd = require('../helpers/validation-admindeleteprod
 
 router.get('/', ctrl.getHome);
 router.get('/home', ctrl.getHome);
-router.get('/', ctrl.setHome);
-router.get('/home', ctrl.setHome);
 router.get('/about', ctrl.getAbout);
 
 //review ctrl
