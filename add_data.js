@@ -187,8 +187,8 @@ var prod = {
     pSize3: "",
     pSize4: "",
     pImage1: "../images/product3a.jpg",
-    pImage2: "../images/product3a.jpg",
-    pImage3: "../images/product3a.jpg",
+    pImage2: "../images/product3b.jpg",
+    pImage3: "",
     pImage4: ""
 }
 
@@ -237,8 +237,9 @@ var prod = {
 db.insertOne(products, prod);
 
 var rev = {
+    rNum: 500450,
     pNum: 100456,
-    userName: "Clarissa",
+    userName: "QueenOfTheCourt",
     rating: 5.0,
     rev: "The pants was very smooth and very soft. It was also very light and comfortable. This is probably my best buy ever. I am using it everyday. Planning to buy another one. great job C & S!"
 }
@@ -246,8 +247,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500451,
     pNum: 100456,
-    userName: "Ina",
+    userName: "QueenOfTheCourt",
     rating: 5.0,
     rev: "I'm on the heavy side and so wearing jeans is a struggle. But this pair let's me wear jeans again without difficulty (even though I haven't lost any weight)"
 }
@@ -255,8 +257,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500452,
     pNum: 100456,
-    userName: "Nicole",
+    userName: "QueenOfTheCourt",
     rating: 3.0,
     rev: "This new version seem to fit tighter than the old version. I like it. However, this new version is mid rise, while the old version is high rise. Would’ve been better if they made this high rise too. EZY usually meant high rise in Uniqlo lingo. Puzzled why they made this mid rise."
 }
@@ -264,8 +267,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500453,
     pNum: 100456,
-    userName: "Carla",
+    userName: "QueenOfTheCourt",
     rating: 4.8,
     rev: "This is so comfy and stretchable, I like the fit and it is not too skinny fit on me."
 }
@@ -273,8 +277,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500454,
     pNum: 100456,
-    userName: "Clar",
+    userName: "bestsetter1",
     rating: 5.0,
     rev: "Great quality jeans! I got this in color blue. These are made to move pants and an all-day-every-day comfort. The material on the inside feels soft against your skin."
 }
@@ -282,8 +287,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500455,
     pNum: 100456,
-    userName: "Anna",
+    userName: "bestsetter1",
     rating: 4.0,
     rev: "The pants are not too skinny and indeed give a good amount of stretch. The fit is more on the slim cut side rather than on skin-hugging skinny cut. Elastic waist band is a welcome bonus."
 }
@@ -291,8 +297,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500456,
     pNum: 100456,
-    userName: "Patricia",
+    userName: "bestsetter1",
     rating: 5.0,
     rev: "Very much satisfied with my purchase. It fits me very well. Hoping for more shades of blue for this kind of ankle jeans. Thank you so much C & S."
 }
@@ -300,8 +307,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500457,
     pNum: 100457,
-    userName: "Nicole",
+    userName: "bestsetter1",
     rating: 3.0,
     rev: "This new version seem to fit tighter than the old version. I like it. However, its fit is not just for me."
 }
@@ -309,8 +317,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500458,
     pNum: 100457,
-    userName: "Carla",
+    userName: "bestgirl",
     rating: 4.8,
     rev: "Only high rise jeans suits me. I'm glad this is one of those jeans."
 }
@@ -318,8 +327,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500459,
     pNum: 100457,
-    userName: "Anna",
+    userName: "bestgirl",
     rating: 4.8,
     rev: "The fit of the pants does not make it hard for the legs to breathe in."
 }
@@ -327,8 +337,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500460,
     pNum: 100457,
-    userName: "Anna",
+    userName: "bestgirl",
     rating: 4.8,
     rev: "The fit of the pants does not make it hard for the legs to breathe in."
 }
@@ -336,8 +347,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500461,
     pNum: 100458,
-    userName: "Ina",
+    userName: "detectiveprincess",
     rating: 5.0,
     rev: "Im on the heavy side and so finding a shirt that fits me perfectly is a struggle. But this shirt is a miracle!",
     img1: "../images/product3a.jpg",
@@ -347,8 +359,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500462,
     pNum: 100458,
-    userName: "Nicole", 
+    userName: "detectiveprincess", 
     rating: 3.0,
     rev: "This new version seem to fit tighter than the old version. I like it. However, the fit of this shirt for me is weird."
 }
@@ -356,8 +369,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500463,
     pNum: 100458,
-    userName: "Carla",
+    userName: "detectiveprincess",
     rating: 4.8,
     rev: "This is so stylish and comfortable at the same time!"
 }
@@ -365,8 +379,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500464,
     pNum: 100458,
-    userName: "Anna",
+    userName: "detectiveprincess",
     rating: 4.0,
     rev: "The shirt embraces my body wonderfully."
 }
@@ -374,8 +389,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500465,
     pNum: 100459,
-    userName: "Kent",
+    userName: "bestfemc",
     rating: 5.0,
     rev: "A bit tight but very smooth. Nice quality socks..",
     img1: "../images/product4a.jpg",
@@ -385,8 +401,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500466,
     pNum: 100459,
-    userName: "Kyle",
+    userName: "bestfemc",
     rating: 5.0,
     rev: "This one is comfortable to wear and nice fit on my feet"
 }
@@ -394,8 +411,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500467,
     pNum: 100460,
-    userName: "Juan",
+    userName: "bestfemc",
     rating: 5.0,
     rev: "If you're looking for something to be part of your capsule wardrobe, this is definitely one of the must have pieces. It's affordable, fit is perfect plus it is extremely soft! I ended buying 3 different colors!",
     img1: "../images/product5a.jpg",
@@ -403,8 +421,9 @@ var rev = {
 }
 
 var rev = {
+    rNum: 500468,
     pNum: 100460,
-    userName: "Dos",
+    userName: "bestfemc",
     rating: 5.0,
     rev: "It fits well. Nice and comfortable. Store personnel are helpful and accomodating. Affordable!"
 }
@@ -412,17 +431,19 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500469,
     pNum: 100460,
-    userName: "",
-    rating: "",
-    rev: ""
+    userName: "bestfemc",
+    rating: 4.1,
+    rev: "Amazing pants. Fits very well. I love it."
 }
 
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500470,
     pNum: 100460,
-    userName: "Trish",
+    userName: "bestfemc",
     rating: 4.0,
     rev: "The texture, the color even the size fits perfectly. I hope there are lots of colors to choose from. Perfect for cold weather as well."
 }
@@ -430,8 +451,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500471,
     pNum: 100460,
-    userName: "John",
+    userName: "bestfemc",
     rating: 4.0,
     rev: "I ordered this shirt last december because i thought that the design was nice. The order arrived and i was right, the shirt was very worth the price. But i wish u can add a larger size. I hope u can add a xxl size because i want to wear this design."
 }
@@ -439,8 +461,9 @@ var rev = {
 db.insertOne(reviews, rev);
 
 var rev = {
+    rNum: 500472,
     pNum: 100460,
-    userName: "Mary",
+    userName: "bestfemc",
     rating: 5.0,
     rev: "Hubby loves this.. He has this in 3 colors... Perfect fit... Okay for rounds and clinic..."
 }
