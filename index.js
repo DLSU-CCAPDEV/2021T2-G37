@@ -2,6 +2,7 @@ const dotenv = require('dotenv');
 const express = require('express');
 const hbs = require('hbs');
 const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 
 
 
@@ -22,6 +23,7 @@ app.use(session({
     'secret': 'ccapdev-session', 
     'resave': false, 
     'saveUninitialized': false, 
+    'store': new MongoStore(options)
 }));
 
 const indexRouter = require('./routes/router');
