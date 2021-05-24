@@ -69,12 +69,14 @@ router.get('/admin_home', ctrl.getAdminHomeLoggedIn);
 //ACCOUNT RELATED
 router.post('/editdetails', acctctrl.editDetails);
 router.get('/acctdetails/:userName', acctctrl.getDetails);
+// router.get('/acctdetails/:userName', acctctrl.getDetails);
 
 
 router.get('/delete/:userName', deletectrl.getDeletePage);
 router.post('/delete_account', deletectrl.deleteAccount);
 
 router.get('/viewdetails/:userName', acctctrl.getNoEditDetailsView);
+//router.get('/acctdetailsnoedit/:userName', acctctrl.getNoEditDetailsView);
 
 router.get('/logout', logoutctrl.getLogOut);
 
@@ -100,9 +102,8 @@ router.get('/addAlltoCart', wishctrl.getAddAlltoCart);
 router.get('/addToCart', wishctrl.getAddtoCart);
 router.get('/deleteWish', wishctrl.getDeleteWish);
 
-//CART RELATED
+//CART REKATED
 router.get('/cart', cartctrl.getCart);
-router.get('/deleteItem', cartctrl.getDeleteItem);
 
 
 module.exports = router;
