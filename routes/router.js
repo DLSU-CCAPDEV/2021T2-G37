@@ -12,6 +12,7 @@ const deleteprodctrl = require('../controller/admin_product_deletecontroller.js'
 const editcodeprodctrl = require('../controller/admin_product_editcodecontroller.js'); // first step in editing a product; concerned only with the product code
 const reviewcodectrl = require('../controller/reviewcodecontroller.js'); // for editing code a review; first step in editing
 const revieweditctrl = require('../controller/revieweditcontroller.js'); // for main editing a review; second step in editing
+const reviewdeletectrl = require('../controller/reviewdeletecontroller.js'); // for deleting editing a review; second step in editing
 const wishctrl = require('../controller/wishlistcontroller.js');
 const cartctrl = require('../controller/cartcontroller.js');
 const product_listingctrl = require('../controller/product_listingcontroller.js')
@@ -22,6 +23,7 @@ const validationAdminAddProd = require('../helpers/validation-adminaddprod.js');
 const validationAdminDeleteProd = require('../helpers/validation-admindeleteprod.js');
 const validationReviewCode = require('../helpers/validation-reviewcode.js');
 const validationReviewEdit = require('../helpers/validation-reviewedit.js');
+const validationReviewDelete = require('../helpers/validation-reviewdelete.js');
 
 
 router.get('/', ctrl.getHome);
@@ -38,6 +40,12 @@ router.post('/editreview/:rNum', revieweditctrl.postEditReview); //used to rende
 router.get('/editreview', revieweditctrl.getEditReview);
 router.post('/editreview', validationReviewEdit.postReviewEditValidation(), revieweditctrl.postEditMainReview);
 router.get('/getCheckNumEdit', revieweditctrl.getRevNumEdit);
+
+// review delete related
+router.get('/reviewdeletecode', reviewdeletectrl.getReviewDeleteCode);
+router.get('/reviewdelete', reviewdeletectrl.getReviewDelete);
+router.post('/reviewdelete', validationReviewDelete.postReviewDeleteValidation(), reviewdeletectrl.postReviewDelete);
+router.get('/getCheckReviewDelete', reviewdeletectrl.getCheckReviewDelete);
 
 //admin add product related
 router.get('/admin_product_add', addprodctrl.getAdminProdAdd);
