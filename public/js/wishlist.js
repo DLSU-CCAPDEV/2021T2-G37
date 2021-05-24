@@ -10,12 +10,13 @@ $(document).ready(function (){
     });
 
     $('.buttons').on('click', '.add-cart', function () {
-
+        var userName = req.session.userName;
         var pNum = $(this).parent().parent().attr('id');
         var pName = $(this).parent().prev().prev().children()[0];
         var pPrice = $(this).parent().prev();
 
         var wish = {
+            userName: userName,
             pNum: pNum,
             pName: pName.innerHTML,
             pPrice: pPrice.innerHTML,
