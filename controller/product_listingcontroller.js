@@ -11,7 +11,7 @@ const product_listingController = {
     },
 
     getAddWishlist: function (req, res) {
-    //    var userName = req.query.userName;
+        var userName = req.session.userName;
         var pNum = req.query.pNum;
         var pName = req.query.pName;
         var pPrice = req.query.pPrice;
@@ -23,7 +23,7 @@ const product_listingController = {
         console.log(pNum);
 
         var wish = {
-        //    userName: userName,
+            userName: userName,
             pNum: pNum,
             pName: pName,
             pPrice: pPrice,
@@ -37,9 +37,7 @@ const product_listingController = {
     },
 
     getAddCart: function (req, res) {
-    //   var userName = req.query.userName;
-
-        
+        var userName = req.session.userName;
         var pNum = req.query.pNum;
         var pName = req.query.pName;
         var pPrice = req.query.pPrice;
@@ -51,7 +49,7 @@ const product_listingController = {
         console.log(pNum);
 
         var item = {
-    //        userName: userName,
+            userName: userName,
             pNum: pNum,
             pName: pName,
             pPrice: pPrice,
