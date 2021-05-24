@@ -32,6 +32,7 @@ client.connect(err => {
   // perform actions on the collection object
   client.close();
 });
+const uri = process.env.MONGODB_URI;
 
 const indexRouter = require('./routes/router');
 app.use('/', indexRouter);
