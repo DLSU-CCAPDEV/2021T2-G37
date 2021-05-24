@@ -31,10 +31,10 @@
         </div>
             <a class="nav" href="/wishlist"><li class="navbtn" id="wishlist"></li></a>
             <a class="nav" href="/cart"><li class="navbtn" id="cart"></li></a>
-            <form>
-                <input type="text" id="fitem" name="fname" placeholder="Search our store">
+            <form id="searchbar" method="GET" action="/search">
+                <input type="text" id="fitem" name="fitem" placeholder="Search our store">
+                <input type="submit" id="search" value="Search">
             </form>
-            <a class="nav" href="/search"><li class="navbtn" id="search"></li></a>
         </ul>
     </div>
 </div>

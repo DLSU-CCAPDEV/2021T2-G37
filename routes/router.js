@@ -11,20 +11,20 @@ const addprodctrl = require('../controller/admin_product_addcontroller.js'); // 
 const deleteprodctrl = require('../controller/admin_product_deletecontroller.js'); // for deleting product
 const editcodeprodctrl = require('../controller/admin_product_editcodecontroller.js'); // first step in editing a product; concerned only with the product code
 const reviewctrl = require('../controller/reviewcontroller.js'); // for adding a review
+const wishctrl = require('../controller/wishlistcontroller.js');
+const cartctrl = require('../controller/cartcontroller.js');
 const maineditprodctrl = require('../controller/admin_product_maineditcontroller.js'); // second step in editing a product, concerned with the MAIN editing
 const validation = require('../helpers/validation.js');
 const validationCheckOut = require('../helpers/validation-checkout.js');
 const validationAdminAddProd = require('../helpers/validation-adminaddprod.js');
 const validationAdminDeleteProd = require('../helpers/validation-admindeleteprod.js');
 
+
 router.get('/', ctrl.getHome);
 router.get('/home', ctrl.getHome);
 router.get('/', ctrl.setHome);
 router.get('/home', ctrl.setHome);
 router.get('/about', ctrl.getAbout);
-
-//router.get('/search', searchctrl.getSearch);
-// router.get('/search', searchctrl.);
 
 //review ctrl
 router.get('/addreview', reviewctrl.getAddReview);
@@ -84,12 +84,27 @@ router.get('/logout', logoutctrl.getLogOut);
 router.get('/acctdetailsnoedit', ctrl.getNoEditAcc);
 router.get('/acctdetails', ctrl.getAcctDetails);
 router.get('/admin_home_page', ctrl.getAdminHomePage);
-router.get('/wishlist', ctrl.getWishlist);
-router.get('/cart', ctrl.getCart);
+
+
 router.get('/viewproducts', ctrl.getViewProducts);
 
 router.get('/checkout/:userName', acctctrl.getCheckOutDetails);
 router.post('/checkout', validationCheckOut.postCheckOutValidation(), checkoutctrl.postCheckOut);
 router.get('/confirmation/:userName', checkoutctrl.getConfirmationPage);
+
+router.get('/search', ctrl.getSearch);
+
+//PRODUCT LISTING
+router.get('/product_listing/:pNum', product_listingctrl.getProduct_Listing);
+router.get('/getAddWishlist', product_listingctrl.getAddWishlist);
+router.get('/getAddCart', product_listingctrl.getAddCart);
+
+router.get('/wishlist', ctrl.getWishlist);
+router.get('/addAlltoCart', wishctrl.getAddAlltoCart);
+router.get('/addToCart', wishctrl.getAddtoCart);
+router.get('/deleteWish', wishctrl.getDeleteWish);
+
+router.get('/cart', cartctrl.getCart);
+
 
 module.exports = router;

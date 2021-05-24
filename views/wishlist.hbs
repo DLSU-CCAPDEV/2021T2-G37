@@ -8,6 +8,8 @@
         <title>Clothing & Science | Wishlist</title>
         <link rel="stylesheet" type="text/css" media="all" href="../css/wishlist.css">
         <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="/js/wishlist.js"></script>
     </head>
     <body>
         {{> header}}
@@ -15,94 +17,12 @@
         <div class="content">
             <h1>Wishlist</h1>
             <button id="add-all" onclick="alert('Succesfully added to cart!')">ADD ALL TO CART</button>
-        
-            <div class="wish">
-                <a href="../views/product_listing5.html"><div class="image" id="img1"></div></a>
-                <div class="details" id="det1">
-                    <ul>
-                        <a href="../views/product_listing5.html"><li><h2>Long Sleeve Sweatshirt</h2></li></a>
-                        <li><h3>Variation: White</h3></li>
-                        <li><h3>Size: L</h3></li>
-                    </ul>
-                </div>
-                <div class="price" id="price1"><h3>P 1,990.00</h3></div>
-                <div class="buttons" id="buttons1">
-                    <button class="add-cart" id="add1"></button>
-                    <button class="delete" id="del1"></button>
-                </div>
-            </div>
 
-            <div class="wish">
-                <a href="../views/product_listing4.html"><div class="image" id="img2"></div></a>
-                <div class="details" id="det2">
-                    <ul>
-                        <a href="../views/product_listing4.html"><li><h2>Men's Socks</h2></li></a>
-                        <li><h3>Variation: Light Blue</h3></li>
-                    </ul>
-                </div>
-                <div class="price" id="price1"><h3>P 390.00</h3></div>
-                <div class="buttons" id="buttons2">
-                    <button class="add-cart" id="add2"></button>
-                    <button class="delete" id="del2"></button>
-                </div>
-            </div>
-
-            <div class="wish">
-                <a href="../views/product_listing2.html"><div class="image" id="img3"></div></a>
-                <div class="details" id="det3">
-                    <ul>
-                        <a href="../views/product_listing2.html"></a><li><h2>High Rise Denim Jeans</h2></li></a>
-                        <li><h3>Variation: Blue</h3></li>
-                        <li><h3>Size: M</h3></li>
-                    </ul>
-                </div>
-                <div class="price" id="price3"><h3>P 1,490.00</h3></div>
-                <div class="buttons" id="buttons1">
-                    <button class="add-cart" id="add3"></button>
-                    <button class="delete" id="del3"></button>
-                </div>
-            </div>
-
-            <div class="wish">
-                <a href="../views/product_listing3.html"><div class="image" id="img4"></div></a>
-                <div class="details" id="det4">
-                    <ul>
-                        <a href="../views/product_listing3.html"></a><li><h2>Linen Open Collar Shirt</h2></li></a>
-                        <li><h3>Variation: Yellow</h3></li>
-                        <li><h3>Size: S</h3></li>
-                    </ul>
-                </div>
-                <div class="price" id="price4"><h3>P 790.00</h3></div>
-                <div class="buttons" id="buttons4">
-                    <button class="add-cart" id="add4"></button>
-                    <button class="delete" id="del4"></button>
-                </div>
-            </div>
-
-            <div class="wish">
-                <a href="../views/product_listing1.html"><div class="image" id="img5"></div></a>
-                <div class="details" id="det5">
-                    <ul>
-                        <a href="../views/product_listing1.html"><li><h2>Ultra Stretch Jeans</h2></li></a>
-                        <li><h3>Variation: Blue</h3></li>
-                        <li><h3>Size: M</h3></li>
-                    </ul>
-                </div>
-                <div class="price" id="price1"><h3>P 1,990.00</h3></div>
-                <div class="buttons" id="buttons1">
-                    <button class="add-cart" id="add5"></button>
-                    <button class="delete" id="del5"></button>
-                </div>
-            </div>
-        </div>
+            {{#each wish}}
+                {{> wish}}
+            {{/each}}
 
         {{> footer}}
         
     </body>
-
-    <script>
-        function dropdownToggle(){
-                 document.getElementById('dropmenu').classList.toggle('active'); //clicking the account icon makes it appear, clicking it again makes it disappear.
-             }
-     </script>
 </html>
