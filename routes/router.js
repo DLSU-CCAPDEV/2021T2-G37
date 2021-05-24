@@ -69,14 +69,12 @@ router.get('/admin_home', ctrl.getAdminHomeLoggedIn);
 //ACCOUNT RELATED
 router.post('/editdetails', acctctrl.editDetails);
 router.get('/acctdetails/:userName', acctctrl.getDetails);
-// router.get('/acctdetails/:userName', acctctrl.getDetails);
 
 
 router.get('/delete/:userName', deletectrl.getDeletePage);
 router.post('/delete_account', deletectrl.deleteAccount);
 
 router.get('/viewdetails/:userName', acctctrl.getNoEditDetailsView);
-//router.get('/acctdetailsnoedit/:userName', acctctrl.getNoEditDetailsView);
 
 router.get('/logout', logoutctrl.getLogOut);
 
@@ -103,7 +101,11 @@ router.get('/addToCart', wishctrl.getAddtoCart);
 router.get('/deleteWish', wishctrl.getDeleteWish);
 
 //CART RELATED
+<<<<<<< HEAD
 router.get('/cart/:userName', cartctrl.getCart);
+=======
+router.get('/cart', cartctrl.getCart);
+>>>>>>> parent of 0ab597d (Revert "Merge branch 'main' of https://github.com/DLSU-CCAPDEV/2021T2-G37 into main")
 router.get('/deleteItem', cartctrl.getDeleteItem);
 
 
