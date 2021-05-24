@@ -1,38 +1,52 @@
 $(document).ready(function (){
 
+    
+
     $('#btnwishlist').click(function () {
-        var userName = req.session.userName;
+        var userName = $.get('/getCheckSession');
         var pNum = document.getElementById("pnumber").innerHTML.substring("Product Number: ".length);
         var pName = document.getElementById("pname").innerHTML;
         var pPrice = document.getElementById("pprice").innerHTML.substring("P ".length);
         var pQty = document.getElementById("qty").value;
 
-        var item = {
-            userName: userName,
-            pNum: pNum,
-            pName: pName,
-            pPrice: pPrice,
-            pQty: pQty
+        if () {
+            var item = {
+                userName: userName,
+                pNum: pNum,
+                pName: pName,
+                pPrice: pPrice,
+                pQty: pQty
+            } 
+            
+            $.get('/getAddWishlist', item);
         } 
-        
-        $.get('/getAddWishlist', item);
+        else {
+            $.get('/login');
+        }
+
     });
 
     $('#btncart').click(function () {
-        var userName = req.session.userName;
+        alert($.get('/getCheckSession'));
+    //    var userName = $.get('/getCheckSession');
         var pNum = document.getElementById("pnumber").innerHTML.substring("Product Number: ".length);
         var pName = document.getElementById("pname").innerHTML;
         var pPrice = document.getElementById("pprice").innerHTML.substring("P ".length);
         var pQty = document.getElementById("qty").value;
 
-        var item = {
-            userName: userName,
-            pNum: pNum,
-            pName: pName,
-            pPrice: pPrice,
-            pQty: pQty
+        if () {
+            var item = {
+                userName: userName,
+                pNum: pNum,
+                pName: pName,
+                pPrice: pPrice,
+                pQty: pQty
+            }
+    
+            $.get('/getAddCart', item);
+        } 
+        else {
+            $.get('/login');
         }
-
-        $.get('/getAddCart', item);
     });
 });

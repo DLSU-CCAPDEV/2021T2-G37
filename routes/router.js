@@ -88,6 +88,9 @@ router.get('/confirmation/:userName', checkoutctrl.getConfirmationPage);
 
 router.get('/search', ctrl.getSearch);
 router.get('/viewproducts', ctrl.getViewProducts);
+router.get('/viewproducts/:userName', ctrl.getViewProducts);
+
+router.get('/getCheckSession', ctrl.getCheckSession);
 
 //PRODUCT LISTING RELATED
 router.get('/product_listing/:pNum', product_listingctrl.getProduct_Listing);
@@ -99,11 +102,11 @@ router.get('/wishlist/:userName', wishctrl.getWishlist);
 router.get('/addAlltoCart', wishctrl.getAddAlltoCart);
 router.get('/addToCart', wishctrl.getAddtoCart);
 router.get('/deleteWish', wishctrl.getDeleteWish);
+router.get('/getCheckWish', wishctrl.getCheckWish);
 
 //CART RELATED
-
 router.get('/cart/:userName', cartctrl.getCart);
-//router.get('/deleteItem', cartctrl.getDeleteItem);
+router.get('/deleteItem', cartctrl.getDeleteItem);
 
 
 module.exports = router;

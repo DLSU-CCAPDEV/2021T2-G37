@@ -23,7 +23,7 @@
     </head>
 
 <body>
-    {{> header}}
+    {{> header flag=flag userName=userName}}
 
     <div id="divwhole">
         <!--div left start--------------------------------------------------->
@@ -92,10 +92,10 @@
             <!--Variation Color--------------------------------------------------->
             <div class="prod_details">
                 <p class="prod_details_text"> COLOR </p>
-                <button id="var1" class="btnv" style="background-color:"{{pColor1}}></button>
-                <button id="var2" class="btnv" style="background-color:"{{pColor2}}></button>
-                <button id="var3" class="btnv" style="background-color:"{{pColor3}}></button>
-                <button id="var4" class="btnv" style="background-color:"{{pColor4}}></button>
+                <button id="var1" class="btnv" style="background-color:{{pColor1}}"></button>
+                <button id="var2" class="btnv" style="background-color:{{pColor2}}"></button>
+                <button id="var3" class="btnv" style="background-color:{{pColor3}}"></button>
+                <button id="var4" class="btnv" style="background-color:{{pColor4}}"></button>
             </div>
 
             <!--Variation Size--------------------------------------------------->
@@ -131,11 +131,6 @@
     <!--div comment start--------------------------------------------------->
     <div class="divcommentwhole">  
         <button id="writereview" class="btnreviews">WRITE A REVIEW</button>
-        <hr id="hr_rev">
-
-        {{#each review}}
-            {{> review}}
-        {{/each}}
 
         <!--all reviews button--------------------------------------------------->
         <a class="navlink" href="../views/all_reviews1.html">

@@ -2,10 +2,23 @@ const db = require('../models/db.js');
 
 const cartController = {
     getCart: function(req, res){
-        var userName = req.params.userName;
-        db.findMany('Cart', {userName: userName}, null, null, null, null, function(result) {
-            res.render('cart', {item: result});
-        });
+        var details = {};
+        var userName = req.session.userName;
+        
+        if(userName != "") {
+            details.flag = true;
+            details.userName = req.session.userName;
+
+            db.findMany('Cart', {userName: userName}, null, null, null, null, function(result) {
+                res.render('cart', {details: details, item: result});
+            });
+        }
+
+        else {
+            details.flag = false;
+            res.render("login");
+        }
+
     },
 
     getDeleteItem: function(req, res) {

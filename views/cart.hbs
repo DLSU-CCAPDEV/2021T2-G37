@@ -10,7 +10,7 @@
         <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
     </head>
     <body>
-        {{>header}}
+        {{>header flag=flag userName=userName}}
 
         <div class="content">
             <div class="cart">
@@ -25,15 +25,18 @@
                 </div>
             </div>
 
-            <aside class="summary">
+            <a href="/checkoutpage/{{userName}}"><button id="btn_checkout">PROCEED TO CHECKOUT</button></a>
+
+<!--            <aside class="summary">
                 <div id="sum_text">
                     <p>Subtotal: P 6,650.00</p>
                     <p>Shipping Fee: P 49.00</p>
                     <hr id="hr_sum">
                     <p>Total: <span id="total">P 6,669.00</span></p> 
-                    <a href="/checkoutpage"><button id="btn_checkout">PROCEED TO CHECKOUT</button></a>
+                    <a href="/checkoutpage/{{userName}}"><button id="btn_checkout">PROCEED TO CHECKOUT</button></a>
                 </div>
             </aside>
+-->
         </div>
 
         {{> footer}}

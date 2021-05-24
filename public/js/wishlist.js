@@ -23,7 +23,7 @@ $(document).ready(function (){
             pQty: pQty
         }
 
-        $.get('/addToCart', );
+        $.get('/addToCart', wish);
         window.location.reload();
     });
 

@@ -2,22 +2,29 @@ const db = require('../models/db.js');
 
 const wishController = {
     getWishlist: function(req, res){
-        var userName = req.params.userName;
-        
-        if(req.params.userName) {
-            
+        var details = {};
+        var userName = req.session.userName;
+
+        if(req.session.userName) {
+            details.flag = true;
+            details.userName = req.session.userName;
 
             db.findMany('Wishlist', {userName: userName}, null, null, null, null, function(result) {
-                res.render('wishlist', {wish: result});
+                res.render('wishlist', {
+                    details: details, 
+                    pName: result.pName,
+                    pPrice: result.pPrice,
+                    pSize: result.pSize,
+                    pColor: result.pColor,
+                    pQty: result.pQty
+                });
             });
         }
 
         else {
-
-            res.render("/login");
+            details.flag = false;
+            res.render('login');
         }
-
-
     },
 
     getAddAlltoCart: function (req, res) {
@@ -44,6 +51,15 @@ const wishController = {
         }
 
         db.deleteOne('Wishlist', item);
+    },
+
+    getCheckWish: function (req, res) {
+
+        var userName = req.session.userName;
+
+        db.findOne('Wishlist', {userName: userName}, null, null, null, null, function(result) {
+            res.send(result);
+        });
     }
 }
 

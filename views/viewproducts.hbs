@@ -10,14 +10,14 @@
 </head>
 <body>
     <div id="container">
-        {{> header}}
+        {{> header flag=flag userName=userName}}
          <div class="content">
             {{#each thumbnail}}
                 {{> thumbnail}}
             {{/each}}
         </div>
 
-    {{> footer}}
+        {{> footer}}
     
     </div>
 </body>

@@ -35,7 +35,7 @@ const controller = {
     getViewProducts: function(req, res){
         db.findMany('Product', null, null, null, 15, 0, function(result) {
             res.render('viewproducts', {thumbnail: result});
-        });
+        });        
     },
 
     getCheckoutPage: function(req, res) {
@@ -58,6 +58,12 @@ const controller = {
             res.render('search', {thumbnail: result});
         });
 
+    },
+
+    getCheckSession: function(req, res) {
+        var userName = req.session.userName;
+        alert(userName);
+        res.send(userName);
     }
 }
 
