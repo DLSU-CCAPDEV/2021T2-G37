@@ -38,6 +38,27 @@ const controller = {
         });        
     },
 
+    getLoggedInViewProducts: function(req, res){
+        var details = {};
+
+        if(req.session.userName) {
+
+            details.flag = true;
+            details.userName = req.session.userName;
+        
+        }
+
+        else {
+          
+            details.flag = false;
+            res.render('login', details);
+        }
+
+        db.findMany('Product', null, null, null, 15, 0, function(result) {
+            res.render('viewproducts', {details: details, thumbnail: result});
+        });        
+    },
+
     getCheckoutPage: function(req, res) {
         res.render('checkoutpage');
     },
@@ -52,14 +73,36 @@ const controller = {
 
     getSearch: function(req, res){
         var query = req.query.fitem;
-//        query = {pName: query};
-        console.log(query);
         
         db.findMany('Product', {pName: { '$regex' : query, $options: 'i' }}, null, null, null, null, function(result) {    
             res.render('search', {query: query, thumbnail: result});
         });
 
     },
+
+    getLoggedInSearch: function(req, res) {
+        var query = req.query.fitem;
+        var details = {};
+
+        if(req.session.userName) {
+
+            details.flag = true;
+            details.userName = req.session.userName;
+        
+        }
+
+        else {
+          
+            details.flag = false;
+            res.render('login', details);
+        }
+
+        db.findMany('Product', {pName: { '$regex' : query, $options: 'i' }}, null, null, null, null, function(result) {    
+            res.render('search', {details: details, query: query, thumbnail: result});
+        });    
+    
+
+    }
 }
 
 module.exports = controller;

@@ -105,8 +105,9 @@ router.post('/checkout', validationCheckOut.postCheckOutValidation(), checkoutct
 router.get('/confirmation/:userName', checkoutctrl.getConfirmationPage);
 
 router.get('/search', ctrl.getSearch);
+router.get('/LoggedInSearch', ctrl.getLoggedInSearch);
 router.get('/viewproducts', ctrl.getViewProducts);
-router.get('/viewproducts/:userName', ctrl.getViewProducts);
+router.get('/LoggedInViewProducts/:userName', ctrl.getLoggedInViewProducts);
 
 //PRODUCT LISTING RELATED
 router.get('/product_listing/:pNum', product_listingctrl.getProduct_Listing);
