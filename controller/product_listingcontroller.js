@@ -56,7 +56,7 @@ const product_listingController = {
         var pQty = req.query.pQty;
     //    var pColor = req.query.pColor;
     //    var pSize = req.query.pSize;
-    //    var pImage = req.query.pImage;
+        var pImage = req.query.pImage;
         
         var wish = {
             userName: userName,
@@ -66,7 +66,7 @@ const product_listingController = {
             pQty: pQty,
     //        pColor: pColor,
     //        pSize: pSize,
-    //        pImage: pImage
+            pImage: pImage
         }
 
         db.insertOne('Wishlist', wish);
@@ -80,7 +80,7 @@ const product_listingController = {
         var pQty = req.query.pQty;
     //    var pColor = req.query.pColor;
     //    var pSize = req.query.pSize;
-    //    var pImage = req.query.pImage;
+        var pImage = req.query.pImage;
 
         var item = {
             userName: userName,
@@ -90,7 +90,7 @@ const product_listingController = {
             pQty: pQty,
     //        pColor: pColor,
     //        pSize: pSize,
-    //        pImage: pImage
+            pImage: pImage
         }
 
         db.insertOne('Cart', item);

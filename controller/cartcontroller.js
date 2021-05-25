@@ -11,20 +11,18 @@ const cartController = {
         }
         else {
             details.flag = false;
-            res.render("login");
+            res.render('login');
         }
 
         db.findMany('Cart', {userName: userName}, null, null, null, null, function(result) {
-            var item = {
-                pNum: result.pNum,
-                pName: result.pName,
-                pPrice: result.pPrice,
-                pSize: result.pSize,
-                pColor: result.pColor,
-                pQty: result.pQty
-            }
+            details.pNum = result.pNum;
+            details.pName = result.pName;
+            details.pImage = result.pImage;
+            details.pPrice = result.pPrice;
+            details.pColor = result.pColor;
+            details.pQty = result.pQty;
             
-            res.render('cart', {details: details, item: item});
+            res.render('cart', details);
         });
 
 

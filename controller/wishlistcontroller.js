@@ -3,11 +3,11 @@ const db = require('../models/db.js');
 const wishController = {
     getWishlist: function(req, res){
         var details = {};
-        var query  = {userName: req.session.userName};
+        var userName  = req.params.userName;
 
         if(req.session.userName) {
             details.flag = true;
-            details.userName = req.session.userName;
+            details.userName = req.params.userName;
         }
 
         else {
@@ -15,18 +15,23 @@ const wishController = {
             res.render('login');
         }
 
-        db.findMany('Wishlist', query, null, null, null, null, function(result) {
+        db.findMany('Wishlist', {userName: userName}, null, null, null, null, function(result) {
+            details.pNum = result.pNum;
+            details.pName = result.pName;
+            details.pImage = result.pImage;
+            details.pPrice = result.pPrice;
+            details.pColor = result.pColor;
+            details.pQty = result.pQty;
 
-
-            var wish = {
+/*            var wish = {
                 pNum: result.pNum,
                 pName: result.pName,
                 pPrice: result.pPrice,
                 pColor: result.pColor,
                 pQty: result.pQty
             }
-            
-            res.render('wishlist', {details: details, wish: wish});
+ */           
+            res.render('wishlist', result);
         });
     },
 
