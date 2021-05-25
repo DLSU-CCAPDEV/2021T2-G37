@@ -25,7 +25,36 @@ const controller = {
     },
 
     getAdminHomePage: function(req, res){
-        res.render('admin_home_page');
+
+        var query = {userName: req.params.userName};
+
+        var details = {};
+
+        if(req.session.userName){
+
+            details.flag = true;
+            details.userName = req.session.userName;
+
+        }
+
+        else 
+            details.flag = false;
+    
+
+        db.findOne('Admin', query, function(result){
+
+            if(result != null) {
+
+                
+                    details.userName = result.userName,
+            
+                //res.render('testing', details);
+                res.render('admin_home_page', details);
+            }
+
+        });
+                
+        // res.render('admin_home_page', details);
     },
 
     getAdminLoginPage: function(req, res){

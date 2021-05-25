@@ -19,8 +19,11 @@
 <div id="container1">
     <div class="floatleft">
         <ul class="navbar" id="navbar1">
-            <li><a class="navlink" href="/admin_home">Home</a></li>
-            <li><a class="navlink" href="/admin_home_page">Admin</a></li>
+            <li><a class="navlink" href="/AdminLoggedInHome/{{userName}}">Home</a></li>
+
+            {{#if flag}}
+            <li><a class="navlink" href="/admin_home_page/{{userName}}">{{userName}} </a></li>
+            {{/if}}
             {{!-- <li><a class="navlink" href="/register">Register</a></li>
             <li><a class="navlink" href="/login">Login</a></li> --}}
         </ul>
@@ -33,7 +36,7 @@
                 {{!-- <li> <a href="/acctdetailsnoedit"> View Account Details </a> </li>
                 <li> <a href="/acctdetails"> Edit Account Details </a> </li>
                 <li><a href="/delete"> Delete Account </a></li> --}}
-                 <li> <a href="/admin_home_page"> Admin Home Page </a>
+                 <li> <a href="/admin_home_page/{{userName}}"> Admin Home Page </a>
                 <li> <a href="/logout"> Logout </a> </li>
                
             </div>
