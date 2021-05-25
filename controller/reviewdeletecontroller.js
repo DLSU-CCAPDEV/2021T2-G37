@@ -15,11 +15,9 @@ const reviewdeleteController = {
 
         if (!errors.isEmpty()) {
             errors = errors.errors;
-           // console.log("---------------");
             var details = {};
             for(i = 0; i < errors.length; i++){
                 details[errors[i].param + 'error'] = errors[i].msg;
-                //console.log("heeey " + errors[i].msg);
 ;            }
 
             res.render('reviewdelete', details);

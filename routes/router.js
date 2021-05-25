@@ -10,17 +10,19 @@ const checkoutctrl = require('../controller/checkoutcontroller.js');
 const addprodctrl = require('../controller/admin_product_addcontroller.js'); // for adding product
 const deleteprodctrl = require('../controller/admin_product_deletecontroller.js'); // for deleting product
 const editcodeprodctrl = require('../controller/admin_product_editcodecontroller.js'); // first step in editing a product; concerned only with the product code
+const maineditprodctrl = require('../controller/admin_product_maineditcontroller.js'); // second step in editing a product, concerned with the MAIN editing
 const reviewcodectrl = require('../controller/reviewcodecontroller.js'); // for editing code a review; first step in editing
 const revieweditctrl = require('../controller/revieweditcontroller.js'); // for main editing a review; second step in editing
 const reviewdeletectrl = require('../controller/reviewdeletecontroller.js'); // for deleting editing a review; second step in editing
 const wishctrl = require('../controller/wishlistcontroller.js');
 const cartctrl = require('../controller/cartcontroller.js');
 const product_listingctrl = require('../controller/product_listingcontroller.js')
-const maineditprodctrl = require('../controller/admin_product_maineditcontroller.js'); // second step in editing a product, concerned with the MAIN editing
 const validation = require('../helpers/validation.js');
 const validationCheckOut = require('../helpers/validation-checkout.js');
 const validationAdminAddProd = require('../helpers/validation-adminaddprod.js');
 const validationAdminDeleteProd = require('../helpers/validation-admindeleteprod.js');
+const validationAdminEditCodeProd = require('../helpers/validation-admineditcode.js');
+const validationAdminEditMainProd = require('../helpers/validation-admineditmainprod.js');
 const validationReviewCode = require('../helpers/validation-reviewcode.js');
 const validationReviewEdit = require('../helpers/validation-reviewedit.js');
 const validationReviewDelete = require('../helpers/validation-reviewdelete.js');
@@ -59,11 +61,13 @@ router.get('/getCheckNumDelete', deleteprodctrl.getCheckNumDelete);
 
 //admin edit product code related
 router.get('/admin_product_code', editcodeprodctrl.getAdminProdCode);
-router.post('/admin_product_code', editcodeprodctrl.postCodeProd);
+router.post('/admin_product_code', validationAdminEditCodeProd.postAdminEditCodeValidation(), editcodeprodctrl.postCodeProd);
+router.get('/getCheckNumCodeProd', editcodeprodctrl.getEditCodeProd);
 //admin MAIN edit product related 
 router.post('/editproduct/:pNum', maineditprodctrl.postAdminProdEdit); //used to render data for the admin_product_edit.hbs
 router.get('/admin_product_edit', maineditprodctrl.getAdminProdMainEdit); 
-router.post('/admin_product_edit', maineditprodctrl.postAdminProdMainEdit); // main editing happens here
+router.post('/admin_product_edit', validationAdminEditMainProd.postAdminEditMainValidation(),maineditprodctrl.postAdminProdMainEdit); // main editing happens here
+router.get('/getCheckNumCodeMainProd', maineditprodctrl.getEditCodeMainProd);
 
 // REGISTER RELATED
 router.get('/register', registerctrl.getRegister);

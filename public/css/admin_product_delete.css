@@ -75,7 +75,7 @@ input {
 
 #btndelete{
     margin-top: 20px;
-    margin-bottom: -5px;
+    margin-bottom: 10px;
 }
 #btndelete:hover{ background-color: rgb(8, 100, 8);}
 
