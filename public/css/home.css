@@ -33,8 +33,8 @@ a{
     font-family: 'Overpass', sans-serif;
     color: white;
     text-align: center;
-    position: relative;
-    right: 90px;
+    position: absolute;
+    right: 470px;
 }
 
 #shopnow {
@@ -48,8 +48,9 @@ a{
     border-radius: 15px;
     text-align: center;
     cursor: pointer;
-    position: relative;
-    right: 90px;
+    position: absolute;
+    top: 50px;
+    right: 550px;
 }
 
 #content {

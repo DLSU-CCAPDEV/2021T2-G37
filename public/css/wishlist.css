@@ -6,6 +6,10 @@ body {
     margin: 0px;
 }
 
+#container {
+    min-height: 1000px;
+}
+
 /* HEADER START ---------------------- */
 .header {
     background-color: #fb956c;
