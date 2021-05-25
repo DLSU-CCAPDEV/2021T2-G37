@@ -1,18 +1,5 @@
 $(document).ready(function (){
 
-    var userName = document.getElementById("user").innerHTML;
-    var pNum = document.getElementById("pnumber").innerHTML.substring("Product Number: ".length);
-
-    $.get('/checkWish', {userName: userName, pNum: pNum}, function (result) {
-        
-        if(result.userName.equals(userName) && result.pNum.equals(pNum)) {
-            $('#btnwishlist').css('color', 'rgb(250, 74, 74)');
-        } else {
-            $('#btnwishlist').css('color', 'black; ');
-
-        }
-    })
-
     $('#btnwishlist').click(function () {
         var userName = document.getElementById("user").innerHTML;
         var pNum = document.getElementById("pnumber").innerHTML.substring("Product Number: ".length);
@@ -50,7 +37,7 @@ $(document).ready(function (){
         var pQty = document.getElementById("qty").value;
 
         if (userName != "") {
-            
+
             alert("Added to Cart!");
             var item = {
                 userName: userName,

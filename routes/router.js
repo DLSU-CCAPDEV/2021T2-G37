@@ -123,8 +123,6 @@ router.get('/wishlist/:userName', wishctrl.getWishlist);
 router.get('/addAlltoCart', wishctrl.getAddAlltoCart);
 router.get('/addToCart', wishctrl.getAddtoCart);
 router.get('/deleteWish', wishctrl.getDeleteWish);
-router.get('/getCheckWish', wishctrl.getCheckWish);
-router.get('/checkWish', wishctrl.getCheckWish);
 
 //CART RELATED
 router.get('/cart/:userName', cartctrl.getCart);

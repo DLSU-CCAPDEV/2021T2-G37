@@ -31,10 +31,6 @@ $(document).ready(function (){
 
         var pNum = $(this).parent().parent().attr('id');
 
-        var wish = {
-            pNum: pNum
-        }
-
         $.get('/deleteWish', pNum);
         window.location.reload();
     });
