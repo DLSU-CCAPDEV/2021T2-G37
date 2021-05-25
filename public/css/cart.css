@@ -112,9 +112,9 @@ aside {
     font-family: 'Overpass', sans-serif;
     font-size: 18px; 
     font-weight: 1000;
-    position: relative;
-    left: 650px;
-    top: 30px;
+    position: absolute;
+    right: 100px;
+    top: 370px;
     height: 35px;
     padding: 8px;
     cursor: pointer;

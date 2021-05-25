@@ -28,7 +28,6 @@ $(document).ready(function (){
     });
 
     $('.buttons').on('click', '.delete', function () {
-
         var pNum = $(this).parent().parent().attr('id');
 
         $.get('/deleteWish', pNum);

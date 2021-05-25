@@ -22,16 +22,8 @@ const wishController = {
             details.pPrice = result.pPrice;
             details.pColor = result.pColor;
             details.pQty = result.pQty;
-
-/*            var wish = {
-                pNum: result.pNum,
-                pName: result.pName,
-                pPrice: result.pPrice,
-                pColor: result.pColor,
-                pQty: result.pQty
-            }
- */           
-            res.render('wishlist', {flag: details.flag, userName: details.userName, thumbnail: result});
+ 
+            res.render('wishlist', {flag: details.flag, userName: details.userName, wish: result});
         });
     },
 
@@ -53,23 +45,16 @@ const wishController = {
     },
 
     getDeleteWish: function (req, res) {
+        var userName = req.params.userName;
         var pNum = req.query.pNum;
 
-        var item = {
+        var wish = {
+            userName: userName,
             pNum: pNum
         }
 
-        db.deleteOne('Wishlist', item);
+        db.deleteOne('Wishlist', wish);
     },
-
-    getCheckWish: function (req, res) {
-
-        var userName = req.session.userName;
-
-        db.findOne('Wishlist', {userName: userName}, null, null, null, null, function(result) {
-            res.send(result);
-        });
-    }
 }
 
 module.exports = wishController;

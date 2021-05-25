@@ -21,8 +21,8 @@ const cartController = {
             details.pPrice = result.pPrice;
             details.pColor = result.pColor;
             details.pQty = result.pQty;
-            
-            res.render('cart', details);
+ 
+            res.render('cart', {flag: details.flag, userName: details.userName, item: result});
         });
 
 
