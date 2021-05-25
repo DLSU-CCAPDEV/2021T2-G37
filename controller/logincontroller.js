@@ -41,7 +41,7 @@ const logincontroller = {
             details.pImage2 = result.pImage2; 
             details.pImage3 = result.pImage3; 
             details.pImage4 = result.pImage4;
-            
+
             res.render('LoggedInHome', {flag: details.flag, userName: details.userName, thumbnail: result});
         });
 
