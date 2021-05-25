@@ -37,7 +37,7 @@ const cartController = {
             pNum: pNum
         }
 
-        db.deleteOne('Cart', wish);
+        db.deleteOne('Cart', item);
     }
 
 }

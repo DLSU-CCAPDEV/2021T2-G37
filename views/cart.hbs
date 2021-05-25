@@ -8,6 +8,8 @@
         <title>Clothing & Science | Cart</title>
         <link rel="stylesheet" type="text/css" media="all" href="../css/cart.css">
         <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="/js/cart.js"></script>
     </head>
     <body>
         {{>header flag=flag userName=userName}}
@@ -16,8 +18,8 @@
                 <div class="cart">
                     <h1>Cart</h1>
                     <div class="items">
-                        <input type="checkbox" id="select-all">
-                        <label for="select-all">SELECT ALL ITEMS</label>
+                    <!--    <input type="checkbox" id="select-all">
+                        <label for="select-all">SELECT ALL ITEMS</label> -->
                     
                         {{#each item}} 
                             {{> item}}

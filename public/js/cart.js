@@ -1,7 +1,7 @@
 $(document).ready(function (){
     $('.buttons').on('click', '.delete', function () {
         var userName = window.location.href.substring("http://localhost:3000/cart/".length);
-        var pNum = $(this).parent().attr('id');
+        var pNum = $(this).parent().parent().attr('id');
 
         var item = {
             userName: userName,
