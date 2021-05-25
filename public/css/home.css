@@ -74,18 +74,11 @@ a{
     zoom: 70%;
 }
 
-.name, .price {
+#search {
     font-family: 'Overpass', sans-serif;
-    display: block;
-    margin-left: -35px;
+    position: relative;
+    bottom: 8px;
+    left: 5px;
+    height: 30px;
+    cursor: pointer;
 }
-
-.name {
-    font-size: 22px;
-}
-
-.price {
-    font-size: 15px;
-    margin-bottom: 70px;
-}
-

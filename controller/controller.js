@@ -52,10 +52,11 @@ const controller = {
 
     getSearch: function(req, res){
         var query = req.query.fitem;
+//        query = {pName: query};
         console.log(query);
         
-        db.findMany('Product', {pName: query}, null, null, null, null, function(result) {    
-            res.render('search', {thumbnail: result});
+        db.findMany('Product', {pName: { '$regex' : query, $options: 'i' }}, null, null, null, null, function(result) {    
+            res.render('search', {query: query, thumbnail: result});
         });
 
     },

@@ -108,16 +108,12 @@ ul {
 }
 
 #search {
-    background-image: transparent url("../images/spritesheet.png") no-repeat top;
-    background-position: -740px 0px;
+    font-family: 'Overpass', sans-serif;
     position: relative;
     bottom: 8px;
     left: 5px;
-    width: 30px;
     height: 30px;
-    border: none;
     cursor: pointer;
-    color: transparent;
 }
 
 /*DROPDOWN MENU START*/

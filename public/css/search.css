@@ -7,3 +7,13 @@ body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
+#container {
+    min-height: 1000px;
+}
+
+#squery {
+    font-family: 'Overpass', sans-serif;
+    margin-left: 60px;
+    margin-top: 70px;
+}

@@ -40,10 +40,10 @@
                             <li> <a href="/admin_home_page"> Admin </a>
                         </div>
                     </div> --}}
-                        <form>
-                            <input type="text" id="fitem" name="fname" placeholder="Search our store">
-                        </form>
-                        <a class="nav" href="/search"><li class="navbtn" id="search"></li></a>
+                    <form id="searchbar" method="GET" action="/search">
+                        <input type="text" id="fitem" name="fitem" placeholder="Search our store">
+                        <input type="submit" id="search" value="Search">
+                    </form>
                     </ul>
                 </div>
             </div>
