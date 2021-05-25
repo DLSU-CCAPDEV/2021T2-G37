@@ -266,8 +266,8 @@ var rev = {
     userName: "QueenOfTheCourt",
     rating: "3.0",
     rev: "This new version seem to fit tighter than the old version. I like it. However, this new version is mid rise, while the old version is high rise. Would’ve been better if they made this high rise too. EZY usually meant high rise in Uniqlo lingo. Puzzled why they made this mid rise.",
-    img1: "",
-    img2: ""
+    img1: "../images/product1a.jpg",
+    img2: "../images/product1b.jpg"
 }
 
 db.insertOne(reviews, rev);
@@ -278,7 +278,7 @@ var rev = {
     userName: "QueenOfTheCourt",
     rating: "4.8",
     rev: "This is so comfy and stretchable, I like the fit and it is not too skinny fit on me.",
-    img1: "",
+    img1: "../images/product1a.jpg",
     img2: ""
 }
 
@@ -326,8 +326,8 @@ var rev = {
     userName: "bestsetter1",
     rating: "3.0",
     rev: "This new version seem to fit tighter than the old version. I like it. However, its fit is not just for me.",
-    img1: "",
-    img2: ""
+    img1: "../images/product2a.jpg",
+    img2: "../images/product2b.jpg"
 }
 
 db.insertOne(reviews, rev);
@@ -446,8 +446,8 @@ var rev = {
     userName: "bestfemc",
     rating: "5.0",
     rev: "If you're looking for something to be part of your capsule wardrobe, this is definitely one of the must have pieces. It's affordable, fit is perfect plus it is extremely soft! I ended buying 3 different colors!",
-    img1: "",
-    img2: ""
+    img1: "../images/product5a.jpg",
+    img2: "../images/product5b.jpg"
 }
 
 var rev = {
