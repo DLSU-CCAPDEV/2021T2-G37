@@ -28,16 +28,19 @@ const wishController = {
     },
 
     getAddAlltoCart: function (req, res) {
-        db.findMany('Wishlist', null, null, null, null, null, function(result) {
+        var userName = req.params.userName;
+
+        db.findMany('Wishlist', {userName: userName}, null, null, null, null, function(result) {
             db.insertMany('Cart', result);
         });
     },
 
     getAddtoCart: function (req, res) {
+        var userName = req.params.userName;
         var pNum = req.query.pNum;
 
-
         var item = {
+            userName: userName,
             pNum: pNum
         }
 

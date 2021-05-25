@@ -19,8 +19,7 @@ $(document).ready(function (){
             userName: userName,
             pNum: pNum,
             pName: pName.innerHTML,
-            pPrice: pPrice.innerHTML,
-            pQty: pQty
+            pPrice: pPrice.innerHTML
         }
 
         $.get('/addToCart', wish);

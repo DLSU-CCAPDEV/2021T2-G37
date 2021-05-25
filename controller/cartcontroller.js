@@ -29,13 +29,16 @@ const cartController = {
     },
 
     getDeleteItem: function(req, res) {
+        var userName = req.params.userName;
         var pNum = req.query.pNum;
 
         var item = {
+            userName: userName,
             pNum: pNum
         }
 
         db.deleteOne('Cart', item);
+
     }
 }
 
