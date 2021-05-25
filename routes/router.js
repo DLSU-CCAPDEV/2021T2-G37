@@ -14,6 +14,7 @@ const maineditprodctrl = require('../controller/admin_product_maineditcontroller
 const reviewcodectrl = require('../controller/reviewcodecontroller.js'); // for editing code a review; first step in editing
 const revieweditctrl = require('../controller/revieweditcontroller.js'); // for main editing a review; second step in editing
 const reviewdeletectrl = require('../controller/reviewdeletecontroller.js'); // for deleting editing a review; second step in editing
+const addreviewctrl = require('../controller/reviewaddcontroller.js');
 const wishctrl = require('../controller/wishlistcontroller.js');
 const cartctrl = require('../controller/cartcontroller.js');
 const product_listingctrl = require('../controller/product_listingcontroller.js')
@@ -26,13 +27,17 @@ const validationAdminEditMainProd = require('../helpers/validation-admineditmain
 const validationReviewCode = require('../helpers/validation-reviewcode.js');
 const validationReviewEdit = require('../helpers/validation-reviewedit.js');
 const validationReviewDelete = require('../helpers/validation-reviewdelete.js');
-
+const validationReviewAdd = require('../helpers/validation-reviewadd.js');
 
 router.get('/', ctrl.getHome);
 router.get('/home', ctrl.getHome);
 router.get('/about', ctrl.getAbout);
 
-//review related
+//add review related
+router.get('/addreview/:pNum', addreviewctrl.getAddReview);
+router.post('/addreview', validationReviewAdd.postReviewAddValidation(),addreviewctrl.postAddReview); // main editing happens here
+
+//edit review related
 router.get('/editreviewcode', reviewcodectrl.getEditReviewCode);
 router.post('/editreviewcode', validationReviewCode.postReviewCodeValidation(), reviewcodectrl.postEditReviewCode);
 router.get('/getCheckNumCode', reviewcodectrl.getRevNumCode);
