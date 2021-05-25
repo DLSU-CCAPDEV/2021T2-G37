@@ -27,7 +27,7 @@
             Edit Review # {{rNum}}
             </p>
 
-            <form method="POST" action="/editreview">
+            <form method="POST" action="/editreview/{{adminusername}}">
                 <input type="hidden" name="rnum" value="{{rNum}}">
                 <p class="txt_titles">Product Number: {{pNum}}</p><br>
                 <input type="hidden" class="input" placeholder="pnum" id="pnum" name="pnum" value="{{pNum}}">
@@ -57,7 +57,7 @@
             </form> 
 
 
-            <a href="/admin_home_page"><button id="btncancel" class="btna"> Cancel </button> </a>
+            <a href="/admin_home_page/{{adminusername}}"><button id="btncancel" class="btna"> Cancel </button> </a>
 
         </div>
     </body>

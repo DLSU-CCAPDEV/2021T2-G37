@@ -27,7 +27,7 @@
             DELETE PRODUCT
             </p>
 
-            <form class="form" method="POST" action="/admin_product_delete" class="form">
+            <form class="form" method="POST" action="/admin_product_delete/{{userName}}" class="form">
 			<p class="txt_titles">Product Number<p>
             <input type="text" placeholder="Enter product Number" class="input" id="pnum" name="pnum" required>
             <br><p id="pnumerror" class="error">{{pnumerror}}</p>
@@ -35,7 +35,7 @@
 
             </form>	
 
-            <a href="/admin_home_page"><button id="btncancel" class="btna"> Cancel </button> </a>
+            <a href="/admin_home_page/{{userName}}"><button id="btncancel" class="btna"> Cancel </button> </a>
 
         </div>
     </body>

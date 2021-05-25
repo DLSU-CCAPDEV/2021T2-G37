@@ -27,7 +27,7 @@
             DELETE REVIEW
             </p>
 
-            <form class="form" method="POST" action="/reviewdelete" class="form">
+            <form class="form" method="POST" action="/reviewdelete/{{adminusername}}" class="form">
 			<p class="txt_titles">Review Number<p>
             <input type="text" placeholder="Review Number" class="input" id="rnum" name="rnum" required>
             <br><p id="rnumerror" class="error">{{rnumerror}}</p>
@@ -35,7 +35,7 @@
 
             </form>	
 
-            <a href="/admin_home_page"><button id="btncancel" class="btna"> Cancel </button> </a>
+            <a href="/admin_home_page/{{adminusername}}"><button id="btncancel" class="btna"> Cancel </button> </a>
 
         </div>
     </body>

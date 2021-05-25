@@ -17,7 +17,8 @@ const reviewdeletectrl = require('../controller/reviewdeletecontroller.js'); // 
 const addreviewctrl = require('../controller/reviewaddcontroller.js');
 const wishctrl = require('../controller/wishlistcontroller.js');
 const cartctrl = require('../controller/cartcontroller.js');
-const product_listingctrl = require('../controller/product_listingcontroller.js')
+const product_listingctrl = require('../controller/product_listingcontroller.js');
+const viewallreviewsctrl = require('../controller/viewallreviewscontroller.js');
 const validation = require('../helpers/validation.js');
 const validationCheckOut = require('../helpers/validation-checkout.js');
 const validationAdminAddProd = require('../helpers/validation-adminaddprod.js');
@@ -37,41 +38,40 @@ router.get('/about', ctrl.getAbout);
 router.get('/addreview/:pNum', addreviewctrl.getAddReview);
 router.post('/addreview', validationReviewAdd.postReviewAddValidation(),addreviewctrl.postAddReview); // main editing happens here
 
+//view all reviews related
+router.get('/viewallreviews/:pNum', viewallreviewsctrl.getViewAllReviews);
+
 //edit review related
-router.get('/editreviewcode', reviewcodectrl.getEditReviewCode);
-router.post('/editreviewcode', validationReviewCode.postReviewCodeValidation(), reviewcodectrl.postEditReviewCode);
+router.get('/editreviewcode/:userName', reviewcodectrl.getEditReviewCode);
+router.post('/editreviewcode/:userName', validationReviewCode.postReviewCodeValidation(), reviewcodectrl.postEditReviewCode);
 router.get('/getCheckNumCode', reviewcodectrl.getRevNumCode);
-router.get('/addreview', reviewcodectrl.getAddReview);
 //main edit review
-router.post('/editreview/:rNum', revieweditctrl.postEditReview); //used to render data for the reviewedit.hbs
-router.get('/editreview', revieweditctrl.getEditReview);
-router.post('/editreview', validationReviewEdit.postReviewEditValidation(), revieweditctrl.postEditMainReview);
+router.get('/editreview/:userName', revieweditctrl.getEditReview);
+router.post('/editreview/:userName', validationReviewEdit.postReviewEditValidation(), revieweditctrl.postEditMainReview);
 router.get('/getCheckNumEdit', revieweditctrl.getRevNumEdit);
 
 // review delete related
-router.get('/reviewdeletecode', reviewdeletectrl.getReviewDeleteCode);
-router.get('/reviewdelete', reviewdeletectrl.getReviewDelete);
-router.post('/reviewdelete', validationReviewDelete.postReviewDeleteValidation(), reviewdeletectrl.postReviewDelete);
+router.get('/reviewdelete/:userName', reviewdeletectrl.getReviewDelete);
+router.post('/reviewdelete/:userName', validationReviewDelete.postReviewDeleteValidation(), reviewdeletectrl.postReviewDelete);
 router.get('/getCheckReviewDelete', reviewdeletectrl.getCheckReviewDelete);
 
 //admin add product related
-router.get('/admin_product_add', addprodctrl.getAdminProdAdd);
-router.post('/admin_product_add', validationAdminAddProd.postAdminAddProdValidation(), addprodctrl.postAddProd);
+router.get('/admin_product_add/:userName', addprodctrl.getAdminProdAdd);
+router.post('/admin_product_add/:userName', validationAdminAddProd.postAdminAddProdValidation(), addprodctrl.postAddProd);
 router.get('/getCheckNumAdd', addprodctrl.getCheckNumAdd);
 
 //admin delete product related
-router.get('/admin_product_delete', deleteprodctrl.getAdminProdDelete);
-router.post('/admin_product_delete', validationAdminDeleteProd.postAdminDeleteProdValidation(), deleteprodctrl.postDeleteProd);
+router.get('/admin_product_delete/:userName', deleteprodctrl.getAdminProdDelete);
+router.post('/admin_product_delete/:userName', validationAdminDeleteProd.postAdminDeleteProdValidation(), deleteprodctrl.postDeleteProd);
 router.get('/getCheckNumDelete', deleteprodctrl.getCheckNumDelete);
 
 //admin edit product code related
-router.get('/admin_product_code', editcodeprodctrl.getAdminProdCode);
-router.post('/admin_product_code', validationAdminEditCodeProd.postAdminEditCodeValidation(), editcodeprodctrl.postCodeProd);
+router.get('/admin_product_code/:userName', editcodeprodctrl.getAdminProdCode);
+router.post('/admin_product_code/:userName', validationAdminEditCodeProd.postAdminEditCodeValidation(), editcodeprodctrl.postCodeProd);
 router.get('/getCheckNumCodeProd', editcodeprodctrl.getEditCodeProd);
 //admin MAIN edit product related 
-router.post('/editproduct/:pNum', maineditprodctrl.postAdminProdEdit); //used to render data for the admin_product_edit.hbs
-router.get('/admin_product_edit', maineditprodctrl.getAdminProdMainEdit); 
-router.post('/admin_product_edit', validationAdminEditMainProd.postAdminEditMainValidation(),maineditprodctrl.postAdminProdMainEdit); // main editing happens here
+router.get('/admin_product_edit/:userName', maineditprodctrl.getAdminProdMainEdit); 
+router.post('/admin_product_edit/:userName', validationAdminEditMainProd.postAdminEditMainValidation(),maineditprodctrl.postAdminProdMainEdit); // main editing happens here
 router.get('/getCheckNumCodeMainProd', maineditprodctrl.getEditCodeMainProd);
 
 // REGISTER RELATED

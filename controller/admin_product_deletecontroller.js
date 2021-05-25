@@ -3,7 +3,11 @@ const db = require('../models/db.js');
 
 const adminproddeleteController = {
     getAdminProdDelete: function (req, res) {
-        res.render('admin_product_delete');
+        var userName = req.params.userName;
+        var details = {
+            userName: userName
+        }
+        res.render('admin_product_delete', details);
     },
 
     postDeleteProd: function (req, res) {
@@ -27,14 +31,8 @@ const adminproddeleteController = {
                     db.deleteOne('Product', {pNum: pNum});
                     var details = {
                         pNum: pNum,
+                        userName: req.params.userName,
                         action: "was deleted successfully."
-                    }
-                    res.render("admin_success", details);
-                }
-                else{
-                    var details = {
-                        pNum: pNum,
-                        action: "does not exist."
                     }
                     res.render("admin_success", details);
                 }

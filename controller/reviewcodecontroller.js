@@ -3,12 +3,13 @@ const db = require('../models/db.js');
 const Review = require('../models/ReviewSchema.js');
 
 const reviewCodeController = {
-    getAddReview: function (req, res) {
-        res.render('review_add');
-    },
 
     getEditReviewCode: function (req, res) {
-        res.render('review_edit_code');
+        var adminusername = req.params.userName;
+        var details = {
+            adminusername: adminusername
+        }
+        res.render('review_edit_code', details);
     },
 
     
@@ -31,7 +32,18 @@ const reviewCodeController = {
 
             db.findOne('Review', {rNum: rNum}, function(result){
                 if(result){
-                    res.redirect(307, 'editreview/' + rNum);
+                    var review = {
+                        adminusername: req.params.userName,
+                        rNum: result.rNum,
+                        pNum: result.pNum,
+                        userName: result.userName,
+                        rev: result.rev,
+                        rating: result.rating,
+                        img1: result.img1,
+                        img2: result.img2
+                    }
+    
+                    res.render('review_edit', review);
                 }
 
             });
@@ -39,7 +51,7 @@ const reviewCodeController = {
 
     },
 
-    // check if product number already exists in db
+    // check if review number already exists in db
     getRevNumCode: function (req, res) {
         var rNum = req.query.rNum;
 
