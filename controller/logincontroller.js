@@ -1,5 +1,6 @@
 const db = require('../models/db.js');
 const bcrypt = require('bcrypt');
+const { $where } = require('../models/ProductSchema.js');
 
 const logincontroller = {
 
@@ -18,7 +19,9 @@ const logincontroller = {
         else {
           
             details.flag = false;
-            res.render('login', details);
+            db.findMany('Product', null, null, null, 5, 0, function(result) {
+                res.render('home', {thumbnail: result});
+            });
         }
 
         db.findMany('Product', null, null, null, 5, 0, function(result) {

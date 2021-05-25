@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="Search ">
+
+    <title>Clothing & Science | Search</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../css/search.css">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+    <script type="text/javascript" src="/js/search.js"></script>
+</head>
+<body>
+    {{> header flag=flag userName=userName}}
+
+    <div id="container">
+        <h1 id="squery">Showing results for "{{query}}"</h1>
+        <div id="content">
+            {{#each thumbnail}}
+                {{> thumbnail}}
+            {{/each}}
+        </div>
+    </div>
+
+    {{> footer}}
+
+</body>
+</html>

@@ -51,11 +51,13 @@ const controller = {
         else {
           
             details.flag = false;
-            res.render('login', details);
+            db.findMany('Product', null, null, null, 15, 0, function(result) {
+                res.render('viewproducts', result);
+            });   
         }
 
         db.findMany('Product', null, null, null, 15, 0, function(result) {
-            res.render('viewproducts', {details: details, thumbnail: result});
+            res.render('LoggedInViewProducts', {details: details, thumbnail: result});
         });        
     },
 
@@ -88,17 +90,18 @@ const controller = {
 
             details.flag = true;
             details.userName = req.session.userName;
-        
         }
 
         else {
           
             details.flag = false;
-            res.render('login', details);
+            db.findMany('Product', {pName: { '$regex' : query, $options: 'i' }}, null, null, null, null, function(result) {    
+                res.render('search', {query: query, thumbnail: result});
+            });    
         }
 
         db.findMany('Product', {pName: { '$regex' : query, $options: 'i' }}, null, null, null, null, function(result) {    
-            res.render('search', {details: details, query: query, thumbnail: result});
+            res.render('LoggedInSearch', {details: details, query: query, thumbnail: result});
         });    
     
 
