@@ -11,6 +11,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="/js/validator.min.js" type="text/javascript"></script>
+        <script src="/js/admin_edit_main.js"> </script>
     </head>
 
 
@@ -27,26 +30,18 @@
             <!--PRODUCT NAME TO PRODUCT DESCRIPTION--------------------------------------------------------------------------------------->
             <form class="form" method="POST" action="/admin_product_edit" class="form">
             <input type="hidden" name="pnum" value="{{pNum}}">
+
             <p class="txt_titles">Product Name</p><br>
-            <input type="text" value="{{pName}}" class="input" id="pname" name="pname">
-            <br>
+            <input type="text" placeholder="Product Name" value="{{pName}}" class="input" id="pname" name="pname">
+            <p id="pnameerror" class="error">{{pnameerror}}</p>
 
             <p class="txt_titles">Product Price</p><br>
-            <input type="number" value="{{pPrice}}" class="input" id="pprice" name="pprice">
-            <br>
-
-
-            <p class="txt_titles">Available Quantity</p><br>
-            <input type="number" value="{{pQty}}" class="input" id="pqty" name="pqty">
-            <br>
-
-            <p class="txt_titles">Quantity Sold</p><br>
-            <input type="number" value="{{qtySold}}" class="input" id="qtySold" name="qtySold">
-            <br>
+            <input type="text" placeholder="Product Price" value="{{pPrice}}" class="input" id="pprice" name="pprice">
+            <p id="ppriceerror" class="error">{{ppriceerror}}</p>
 
             <p class="txt_titles">Product Description</p><br>
-            <input type="text" value="{{pDesc}}" class="input" id="pdesc" name="pdesc">
-            <br>
+            <input type="text" placeholder="Product Description" value="{{pDesc}}" class="input" id="pdesc" name="pdesc">
+            <p id="pdescerror" class="error">{{pdescerror}}</p>
 
             <p class="txt_titles">Color 1 (optional)</p><br>
             <input type="text" value="{{pColor1}}" class="input" id="pcolor1" name="pcolor1">
@@ -81,7 +76,7 @@
             <br>
 
             <p class="txt_titles">Product Image 1</p>
-                <img id="imglogo" src="{{pImage1}}" height="120px" width="120px"><br>
+            <img id="imglogo" src="{{pImage1}}" height="120px" width="120px"><br>
             <input type="file" class ="pimage" id="pimage1" name="pimage1" value={{pImage1}}>
             <br>
 
@@ -100,8 +95,7 @@
             <input type="file" class ="pimage" id="pimage4" name="pimage4" value={{pImage4}}>
             <br>
 
-            <p id="error"></p>
-            <input type="submit" id="btnedit" class="btne" value="Edit">
+            <input type="submit" id="btnedit" name="btnedit" class="btne" value="Edit">
             </form>
 
             <!--END BUTTONS--------------------------------------------------------------------------------------->
