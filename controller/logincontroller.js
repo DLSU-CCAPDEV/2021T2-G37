@@ -17,6 +17,7 @@ const logincontroller = {
         }
 
         else {
+          
             details.flag = false;
             db.findMany('Product', null, null, null, 5, 0, function(result) {
                 res.render('home', {thumbnail: result});
@@ -40,14 +41,26 @@ const logincontroller = {
             details.pImage2 = result.pImage2; 
             details.pImage3 = result.pImage3; 
             details.pImage4 = result.pImage4;
-
+            
             res.render('LoggedInHome', {flag: details.flag, userName: details.userName, thumbnail: result});
         });
 
     },
     
     getAdminLoggedInHome: function(req, res) {
-        res.render('admin_home', {username: req.params.username});
+
+        var details = {};
+
+        if(req.session.userName) {
+
+            details.flag = true;
+            details.userName = req.session.userName;
+        
+        }
+        else 
+            details.flag = false;
+        
+        res.render('admin_home', details);
     },
 
 
@@ -102,9 +115,12 @@ const logincontroller = {
                 }
 
                 bcrypt.compare(pw, result.pw, function(err, equal){
-                    if (equal)
+                    if (equal){
+
+                        req.session.userName = admin.userName;
+                        console.log(req.session.userName);
                         res.redirect('AdminLoggedInHome/' + admin.userName);
-                    
+                    }
                     else {
                         var details = {error: 'Username and/or Password is incorrect.'}
                         res.render('admin_login', details);
