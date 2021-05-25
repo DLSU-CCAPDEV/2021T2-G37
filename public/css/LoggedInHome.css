@@ -27,8 +27,8 @@ body {
     font-family: 'Overpass', sans-serif;
     color: white;
     text-align: center;
-    position: relative;
-    right: 20px;
+    position: absolute;
+    right: 385px;
 }
 
 #shopnow {
@@ -42,8 +42,9 @@ body {
     border-radius: 15px;
     text-align: center;
     cursor: pointer;
-    position: relative;
-    right: 25px;
+    position: absolute;
+    top: 50px;
+    right: 465px;
 }
 
 .content {
