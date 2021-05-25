@@ -86,7 +86,6 @@ router.get('/LoggedInHome', ctrl.getHomeLoggedIn);
 router.get('/adminlogin', ctrl.getAdminLoginPage);
 router.post('/postadminlogin', loginctrl.findAdmin);
 router.get('/AdminLoggedInHome/:userName', loginctrl.getAdminLoggedInHome);
-router.get('/admin_home', ctrl.getAdminHomeLoggedIn);
 
 //ACCOUNT RELATED
 router.post('/editdetails', acctctrl.editDetails);
@@ -102,7 +101,7 @@ router.get('/logout', logoutctrl.getLogOut);
 
 router.get('/acctdetailsnoedit', ctrl.getNoEditAcc);
 router.get('/acctdetails', ctrl.getAcctDetails);
-router.get('/admin_home_page', ctrl.getAdminHomePage);
+router.get('/admin_home_page/:userName', ctrl.getAdminHomePage);
 
 router.get('/checkout/:userName', acctctrl.getCheckOutDetails);
 router.post('/checkout', validationCheckOut.postCheckOutValidation(), checkoutctrl.postCheckOut);
