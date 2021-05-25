@@ -28,7 +28,7 @@ const validationReviewDelete = require('../helpers/validation-reviewdelete.js');
 
 router.get('/', ctrl.getHome);
 router.get('/home', ctrl.getHome);
-//router.get('/about', ctrl.getAbout);
+router.get('/about', ctrl.getAbout);
 
 //review related
 router.get('/editreviewcode', reviewcodectrl.getEditReviewCode);

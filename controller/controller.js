@@ -103,9 +103,15 @@ const controller = {
         db.findMany('Product', {pName: { '$regex' : query, $options: 'i' }}, null, null, null, null, function(result) {    
             res.render('LoggedInSearch', {details: details, query: query, thumbnail: result});
         });    
-    
 
+    },
+
+    getAbout: function (req, res) {
+        res.render('about');
+        
     }
+
+
 }
 
 module.exports = controller;
