@@ -17,7 +17,6 @@ const logincontroller = {
         }
 
         else {
-            console("No user");
             details.flag = false;
             db.findMany('Product', null, null, null, 5, 0, function(result) {
                 res.render('home', {thumbnail: result});
