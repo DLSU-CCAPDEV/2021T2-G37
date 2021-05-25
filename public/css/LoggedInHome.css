@@ -28,7 +28,7 @@ body {
     color: white;
     text-align: center;
     position: relative;
-    left: 30px;
+    right: 20px;
 }
 
 #shopnow {
@@ -43,7 +43,7 @@ body {
     text-align: center;
     cursor: pointer;
     position: relative;
-    left: 30px;
+    right: 25px;
 }
 
 .content {

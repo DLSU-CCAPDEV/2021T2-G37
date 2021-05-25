@@ -10,4 +10,5 @@ $(document).ready(function (){
         $.get('/deleteItem', pNum);
         window.location.reload();
     });
-}
+
+});

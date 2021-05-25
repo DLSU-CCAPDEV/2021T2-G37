@@ -31,7 +31,7 @@ const wishController = {
                 pQty: result.pQty
             }
  */           
-            res.render('wishlist', result);
+            res.render('wishlist', {flag: details.flag, userName: details.userName, thumbnail: result});
         });
     },
 
