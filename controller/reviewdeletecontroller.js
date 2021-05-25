@@ -3,11 +3,11 @@ const db = require('../models/db.js');
 
 const reviewdeleteController = {
     getReviewDelete: function (req, res) {
-        res.render('reviewdelete');
-    },
-
-    getReviewDeleteCode: function(req, res){
-        res.render("reviewdelete");
+        var adminusername = req.params.userName;
+        var details = {
+            adminusername: adminusername
+        }
+        res.render('reviewdelete', details);
     },
 
     postReviewDelete: function (req, res) {
@@ -31,6 +31,7 @@ const reviewdeleteController = {
                     db.deleteOne('Review', {rNum: rNum});
                     var details = {
                         rNum: rNum,
+                        adminusername: req.params.userName,
                         action: "was deleted successfully."
                     }
                     res.render("review_success", details);

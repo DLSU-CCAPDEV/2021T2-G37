@@ -28,7 +28,7 @@
             </p>
 
             <!--PRODUCT NAME TO PRODUCT DESCRIPTION--------------------------------------------------------------------------------------->
-            <form class="form" method="POST" action="/admin_product_edit" class="form">
+            <form class="form" method="POST" action="/admin_product_edit/{{userName}}" class="form">
             <input type="hidden" name="pnum" value="{{pNum}}">
 
             <p class="txt_titles">Product Name</p><br>
@@ -99,7 +99,7 @@
             </form>
 
             <!--END BUTTONS--------------------------------------------------------------------------------------->
-            <a href="/admin_home_page"><button id="btncancel" class="btna"> Cancel </button> </a>
+            <a href="/admin_home_page/{{userName}}"><button id="btncancel" class="btna"> Cancel </button> </a>
 
         </div>
     </body>

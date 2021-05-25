@@ -4,7 +4,11 @@ const Product = require('../models/ProductSchema.js');
 
 const adminprodeditcodeController = {
     getAdminProdCode: function (req, res) {
-        res.render('admin_product_code');
+        var userName = req.params.userName;
+        var details = {
+            userName: userName
+        }
+        res.render('admin_product_code', details);
     },
 
     postCodeProd: function (req, res) {
@@ -25,16 +29,31 @@ const adminprodeditcodeController = {
 
             db.findOne('Product', {pNum: pNum}, function(result){
                 if(result){
-                    res.redirect(307, 'editproduct/' + pNum);
-                }
-                else{
-                    var details = {
-                        pNum: pNum,
-                        action: "does not exist."
+                    var product = {
+                        userName: req.params.userName,
+                        pNum: result.pNum,
+                        pName: result.pName,
+                        pPrice: result.pPrice,
+                        pQty: result.pQty,
+                        qtySold: result.qtySold,
+                        pDesc: result.pDesc,
+                        pColor1: result.pColor1,
+                        pColor2: result.pColor2,
+                        pColor3: result.pColor3,
+                        pColor4: result.pColor4,
+                        pSize1: result.pSize1,
+                        pSize2: result.pSize2,
+                        pSize3: result.pSize3,
+                        pSize4: result.pSize4,
+                        pImage1: result.pImage1,
+                        pImage2: result.pImage2,
+                        pImage3: result.pImage3,
+                        pImage4: result.pImage4
                     }
-                    res.render("admin_success", details);
+    
+                    res.render('admin_product_edit', product);
                 }
-
+    
             });
         }
 

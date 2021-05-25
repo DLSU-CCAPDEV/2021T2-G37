@@ -4,7 +4,11 @@ const Product = require('../models/ProductSchema.js');
 
 const adminprodaddController = {
     getAdminProdAdd: function (req, res) {
-        res.render('admin_product_add');
+        var userName = req.params.userName;
+        var details = {
+            userName: userName
+        }
+        res.render('admin_product_add', details);
     },
 
     postAddProd: function (req, res) {
@@ -62,14 +66,8 @@ const adminprodaddController = {
                 if(flag) { // not yet done
                     var details = {
                         pNum: pNum,
+                        userName: req.params.userName,
                         action: "was added successfully."
-                    }
-                    res.render("admin_success", details);
-                }
-                else{
-                    var details = {
-                        pNum: pNum,
-                        action: "was not added successfully."
                     }
                     res.render("admin_success", details);
                 }

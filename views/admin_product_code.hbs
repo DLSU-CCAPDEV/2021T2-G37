@@ -27,13 +27,13 @@
             Enter Product Code
             </p>
              
-            <form class="form" method="POST" action="/admin_product_code">
+            <form class="form" method="POST" action="/admin_product_code/{{userName}}">
                 <input type="text" placeholder="Product Number" class="input" id="pnum" name="pnum">
                 <br><p id="pnumerror" class="error">{{pnumerror}}</p>
                 <input type="submit" id="submit" name="submit" class="btna"> 
             </form>
 
-            <a href="/admin_home_page"> <button id="btncancel" class="btna"> Cancel </button> </a>
+            <a href="/admin_home_page/{{userName}}"> <button id="btncancel" class="btna"> Cancel </button> </a>
         </div>
     </body>
 </html>

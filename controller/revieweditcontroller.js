@@ -5,28 +5,11 @@ const Review = require('../models/ReviewSchema.js');
 const reviewEditController = {
 
     getEditReview: function (req, res) {
-        res.render('review_edit');
-    },
-
-    postEditReview: function (req, res) {
-        var rNum = req.params.rNum;
-
-        db.findOne('Review', {rNum: rNum}, function(result){
-            if(result){
-                var review = {
-                    rNum: result.rNum,
-                    pNum: result.pNum,
-                    userName: result.userName,
-                    rev: result.rev,
-                    rating: result.rating,
-                    img1: result.img1,
-                    img2: result.img2
-                }
-
-                res.render('review_edit', review);
-            }
-
-        });
+        var adminusername = req.params.userName;
+        var details = {
+            adminusername: adminusername
+        }
+        res.render('review_edit', details);
     },
 
     postEditMainReview: function (req, res) {
@@ -39,13 +22,8 @@ const reviewEditController = {
             var details = {};
             for(i = 0; i < errors.length; i++){
                 details[errors[i].param + 'error'] = errors[i].msg;
-                console.log(errors[i].msg) + " hey";
             }
 
-            var details = {
-                rNum: rNum,
-                action: "was not edited successfully."
-            }
             res.render("review_success", details);
         }
 
@@ -83,6 +61,7 @@ const reviewEditController = {
     
                     var details = {
                         rNum: rNum,
+                        adminusername: req.params.userName,
                         action: "was edited successfully."
                     }
                     res.render("review_success", details);
@@ -92,7 +71,7 @@ const reviewEditController = {
 
     },
 
-    // check if product number already exists in db
+    // check if review number already exists in db
     getRevNumEdit: function (req, res) {
         var rNum = req.query.rnum;
 
