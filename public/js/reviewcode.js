@@ -13,7 +13,7 @@ $(document).ready(function () {
     */
     function isValidRNum(field, callback) {
         var rNum = validator.trim($('#rnum').val());
-        var isValidLength = validator.isLength(rNum, {min: 6});
+        var isValidLength = validator.isLength(rNum, {min: 7});
 
         if(isValidLength){
             $.get('/getCheckNumCode', {rNum: rNum}, function (result) {
@@ -29,7 +29,7 @@ $(document).ready(function () {
            
                    else {
                        if(field.is($('#rnum')))
-                           $('#rnumerror').text(result.rNum + ' Review Number does not exist. ' + rNum);
+                           $('#rnumerror').text('Review Number does not exist.');
            
                        return callback(false);
                    }
@@ -38,7 +38,7 @@ $(document).ready(function () {
         else {
             
             if(field.is($('#rnum')))
-                $('#rnumerror').text('Review Number should be at least 6 characters.');
+                $('#rnumerror').text('Review Number should be at least 7 characters.');
              
                 return callback(false);
             }

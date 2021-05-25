@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html>
     <head> 
-        <title> Welcome! </title>
-        <link rel="stylesheet" type="text/css" href="../css/review.css">
+        <title> Write a Review </title>
+        <link rel="stylesheet" type="text/css" href="../css/admin_product_add.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="/js/validator.min.js" type="text/javascript"></script>
+        <script src="/js/reviewadd.js"> </script>
     </head>
 
     <body>
-        <div id="container">
-            <div id="header">
-                <img src="../images/logo.png" height="150px" width="150px" id="logo">
-                <p id="tagline"> Product Name </p>
-		    </div>
-            <form>
-                <input type="number" class="input" placeholder="Enter rating here" name="rating"><br>
-				<input type="text" class="input" placeholder="Enter review here" name="review"><br>
-                <input type="submit" id="homebtn" value="Add">
-            </form>
-            <a href="/admin_home_page"><button id="homebtn"> Cancel </button></a>
+        <div id="divmain">
+            <img id="imglogo" src="../images/logo.png" height="120px" width="120px">
+            <br>
+
+            <p id="txtheader">Write a Review</p>    
+
+            <form class="form" method="POST" action="/addreview" class="form">
+            <input type="hidden" name="pnum" value="{{pNum}}">
+            <input type="hidden" name="username" value="{{userName}}">
+
+            <p class="txt_titles">Product Number: {{pNum}}</p>
+            <p class="txt_titles">Username: @{{userName}}</p><br>
+            <p class="txt_titles">Rating</p><br>
+            <input type="text" placeholder="Rating" class="input" id="rating" name="rating" required>
+            <br><p id="ratingerror" class="error">{{ratingerror}}</p>
+
+            <p class="txt_titles">Review</p><br>
+            <input type="text" placeholder="Review" class="input" id="review" name="review" required>
+            <br><p id="reviewerror" class="error">{{reviewerror}}</p>
+
+            <p class="txt_titles">Image 1 (optional)</p><br>
+            <input type="file" id="img1" name="img1">
+            <p class="txt_titles">Image 2 (optional)</p><br>
+            <input type="file" id="img2" name="img2">
+
+            <input type="submit" id="btnadd" class="btna" value="Add Review">
+
+            </form> 
+
+
+            <a href="/product_listing/{{pNum}}"><button id="btncancel" class="btna"> Cancel </button> </a>
+
         </div>
     </body>
 </html>
