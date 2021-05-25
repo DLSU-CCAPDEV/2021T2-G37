@@ -28,18 +28,18 @@ const cartController = {
 
     },
 
-    getDeleteItem: function(req, res) {
-        var userName = req.params.userName;
+    getDeleteItem: function (req, res) {
+        var username = req.query.userName;
         var pNum = req.query.pNum;
 
         var item = {
-            userName: userName,
+            userName: username,
             pNum: pNum
         }
 
-        db.deleteOne('Cart', item);
-
+        db.deleteOne('Cart', wish);
     }
+
 }
 
 module.exports = cartController;

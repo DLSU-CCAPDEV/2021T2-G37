@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clothing & Science | Product Listing</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="../css/product_listing.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="/js/product_listing.js"></script>
+        
+
+        <!--Responsible for the slideshow of the product images--------------------------------------------------->
+        <script>
+            function showSlides(n) {
+                var i;
+                var allImg = document.getElementsByClassName("main_prod_image"); //gets all the images to hide and show later
+                for (i = 0; i < allImg.length; i++) {
+                    allImg[i].style.display = "none"; //hides all product images that were not clicked
+                }    
+                allImg[n].style.display = "block"; //shows the product image that was clicked
+            }
+        </script>
+    </head>
+
+<body>
+    {{> header flag=flag userName=userName}}
+
+    <div id="divwhole">
+        <!--div left start--------------------------------------------------->
+        <div id="divleft">
+            <!--big product images start--------------------------------------------------->
+            <div class="divmain_prod">
+                <div id="main_img" class="main_prod_image">
+                    <img id="main_prod_image1" src={{pImage1}} alt="firstpic" height= "100%" width="100%" object-fit="contain">
+                </div>
+
+                <div class="main_prod_image">
+                    <img id="prod_image2" src={{pImage2}} alt="secondimage" width="100%" object-fit="contain">
+                </div>
+
+                <div class="main_prod_image">
+                    <img id="prod_image3" src={{pImage3}} alt="thirdimage" width="100%" object-fit="contain">
+                </div>
+
+                <div class="main_prod_image">
+                    <img id="prod_image4" src={{pImage4}} alt="fourthimage" width="100%" object-fit="contain">
+                </div>
+            </div>
+            <!--big product images end--------------------------------------------------->
+
+            <!--small product images start--------------------------------------------------->
+            <div class="divsmall_prod_image">
+                <div class="small_prod_image">
+                    <img id="prod_image1" class="indiv_small_img" src={{pImage1}} alt="firstimage" width="100%" object-fit="contain" onclick="showSlides(0)">
+                </div>
+
+                <div class="small_prod_image">
+                    <img id="prod_image2" class="indiv_small_img" src={{pImage2}} alt="secondimage" width="100%" object-fit="contain"onclick="showSlides(1)">
+                </div>
+
+                <div class="small_prod_image">
+                    <img id="prod_image3" class="indiv_small_img" src={{pImage3}} alt="thirdimage" width="100%" object-fit="contain"onclick="showSlides(2)">
+                </div>
+
+                <div class="small_prod_image">
+                    <img id="prod_image4" class="indiv_small_img" src={{pImage4}} alt="fourthimage" width="100%" object-fit="contain"onclick="showSlides(3)">
+                </div>
+            </div>
+            <!--small product images end--------------------------------------------------->
+
+        </div>
+        <!--div left end--------------------------------------------------->
+
+        <!--div right start--------------------------------------------------->
+        <div id="divright">
+            <!--Product Name and Description--------------------------------------------------->
+            <div>
+                <h1 id="pname" class="prod_title">{{pName}}</h1>
+                <h2 id="pprice" class="prod_title">P {{pPrice}}</h2>
+            </div>
+
+            <div>
+                <p id="prod_desc">
+                    {{pDesc}}
+                </p>
+
+                <p id="pnumber" class="header_qty">Product Number: {{pNum}}</p>
+            </div>
+
+            <hr>
+
+            <!--Variation Color--------------------------------------------------->
+            <div class="prod_details">
+                <p class="prod_details_text"> COLOR </p>
+                <button id="var1" class="btnv" style="background-color:{{pColor1}}"></button>
+                <button id="var2" class="btnv" style="background-color:{{pColor2}}"></button>
+                <button id="var3" class="btnv" style="background-color:{{pColor3}}"></button>
+                <button id="var4" class="btnv" style="background-color:{{pColor4}}"></button>
+            </div>
+
+            <!--Variation Size--------------------------------------------------->
+            <div class="prod_details">
+                <p class="prod_details_text"> SIZE </p>
+                <button id="size1" class="btns">{{pSize1}}</button>
+                <button id="size2" class="btns">{{pSize2}}</button>
+                <button id="size3" class="btns">{{pSize3}}</button>
+                <button id="size4" class="btns">{{pSize4}}</button>
+            </div>
+
+            <!--QTY--------------------------------------------------->
+            <div class="prod_details">
+                <p class="prod_details_text"> QUANTITY </p>
+                <form>
+                    <label for="qty"></label>
+                    <input type="number" id="qty" name="qty" value="1" min="1">
+                </form>
+            </div>
+
+            <!--END BUTTONS--------------------------------------------------->
+            <div class="divbtnend">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <button id="btncart" class="btnend">Add to Cart</button>
+                <button id="btnwishlist" class="btnend"><i class="fa fa-heart"></i></button>
+            </div>
+        </div>
+        <!--div right end--------------------------------------------------->
+
+    </div>
+    <!--div whole end--------------------------------------------------->
+
+    <!--div comment start--------------------------------------------------->
+    <div class="divcommentwhole">  
+        <button id="writereview" class="btnreviews">WRITE A REVIEW</button>
+
+        <!--all reviews button--------------------------------------------------->
+        <a class="navlink" href="../views/all_reviews1.html">
+        <button id="viewcomments" class="btnreviews"> View All Reviews</button>
+        </a>
+    </div>
+    <!--div comment end--------------------------------------------------->
+
+    {{> footer}}
+
+</body>
+
