@@ -21,8 +21,9 @@ $(document).ready(function (){
         var pPrice = document.getElementById("pprice").innerHTML.substring("P ".length);
         var pQty = document.getElementById("qty").value;
 
-        alert("Added to Wishlist!");
         if (userName != "") {
+
+            alert("Added to Wishlist!");
             var item = {
                 userName: userName,
                 pNum: pNum,
@@ -48,9 +49,9 @@ $(document).ready(function (){
         var pPrice = document.getElementById("pprice").innerHTML.substring("P ".length);
         var pQty = document.getElementById("qty").value;
 
-
-        alert("Added to Cart!");
         if (userName != "") {
+            
+            alert("Added to Cart!");
             var item = {
                 userName: userName,
                 pNum: pNum,
