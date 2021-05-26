@@ -28,9 +28,19 @@ const wishController = {
     },
 
     getAddAlltoCart: function (req, res) {
-        var userName = window.location.href.substring("http://localhost:3000/wishlist/".length);
+        var userName = req.query.userName;
 
-        db.findMany('Wishlist', {userName: userName}, null, null, null, null, function(result) {
+        db.findMany('Wishlist', {userName: userName}, null, {
+            _id: 0,
+            userName: 1,
+            pNum: 1,
+            pName: 1,
+            pImage: 1,
+            pPrice: 1,
+            pColor: 1,
+            pQty: 1
+        }, null, null, function(result) {
+
             db.insertMany('Cart', result);
         });
     },

@@ -34,7 +34,13 @@ $(document).ready(function (){
     });
 
     $('#add-all').click(function () {
-        $.get('/addAlltoCart');
+        var userName = window.location.href.substring("http://localhost:3000/wishlist/".length);
+
+        var name = {
+            userName: userName
+        }
+
+        $.get('/addAlltoCart', name);
 
     });
 })
