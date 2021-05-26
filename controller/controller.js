@@ -94,8 +94,19 @@ const controller = {
     },
 
     getViewProducts: function(req, res){
+        var details = {};
+
+        if(req.session.userName){
+            details.flag = true;
+            details.userName = req.params.userName;
+        }
+
+        else {
+            details.flag = false;
+        }
+
         db.findMany('Product', null, null, null, 15, 0, function(result) {
-            res.render('viewproducts', {thumbnail: result});
+            res.render('viewproducts', {flag: details.flag, userName: details.userName, thumbnail: result});
         });        
     },
 

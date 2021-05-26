@@ -112,6 +112,7 @@ router.post('/checkout', validationCheckOut.postCheckOutValidation(), checkoutct
 router.get('/confirmation/:userName', checkoutctrl.getConfirmationPage);
 
 router.get('/search', ctrl.getSearch);
+router.get('/viewproducts', ctrl.getViewProducts);
 router.get('/viewproducts/:userName', ctrl.getViewProducts);
 
 //PRODUCT LISTING RELATED
