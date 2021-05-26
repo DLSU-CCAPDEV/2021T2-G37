@@ -32,6 +32,7 @@ const validationReviewAdd = require('../helpers/validation-reviewadd.js');
 
 router.get('/', ctrl.getHome);
 router.get('/home', ctrl.getHome);
+router.get('/home/:userName', ctrl.getHome);
 router.get('/about', ctrl.getAbout);
 
 //add review related
@@ -85,8 +86,6 @@ router.get('/success', successctrl.getSuccess);
 
 router.get('/login', ctrl.getLogin);
 router.post('/postlogin', loginctrl.findUser);
-router.get('/LoggedInHome/:userName', loginctrl.getLoggedInHome);
-router.get('/LoggedInHome', ctrl.getHomeLoggedIn);
 
 router.get('/adminlogin', ctrl.getAdminLoginPage);
 router.post('/postadminlogin', loginctrl.findAdmin);
@@ -113,9 +112,7 @@ router.post('/checkout', validationCheckOut.postCheckOutValidation(), checkoutct
 router.get('/confirmation/:userName', checkoutctrl.getConfirmationPage);
 
 router.get('/search', ctrl.getSearch);
-router.get('/LoggedInSearch', ctrl.getLoggedInSearch);
-router.get('/viewproducts', ctrl.getViewProducts);
-router.get('/LoggedInViewProducts/:userName', ctrl.getLoggedInViewProducts);
+router.get('/viewproducts/:userName', ctrl.getViewProducts);
 
 //PRODUCT LISTING RELATED
 router.get('/product_listing/:pNum', product_listingctrl.getProduct_Listing);
