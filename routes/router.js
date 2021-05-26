@@ -113,6 +113,7 @@ router.get('/confirmation/:userName', checkoutctrl.getConfirmationPage);
 
 router.get('/search', ctrl.getSearch);
 router.get('/viewproducts/:userName', ctrl.getViewProducts);
+router.get('/viewproducts', ctrl.getViewProducts);
 
 //PRODUCT LISTING RELATED
 router.get('/product_listing/:pNum', product_listingctrl.getProduct_Listing);
