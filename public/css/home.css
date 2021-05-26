@@ -13,15 +13,15 @@ a{
 
 #banner {
     background-image: url("../images/banner.jpg");
-	height: 750px;
+    height: 750px;
     background-size: 2000px;
-	background-position: center center;
+    background-position: center center;
     background-repeat: no-repeat;
 }
 
 #button {
     display: flex;
-	justify-content: center;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
