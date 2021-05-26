@@ -46,25 +46,7 @@ const maineditprodController = {
             db.findOne('Product', {pNum: pNum}, function(result){
                 if(result){
 
-                    // checks if size, color, and image values were blank since they are optional. If blank, then it keeps the old value
-                    if(pColor1 == "")
-                        pColor1 = result.pColor1;
-                    if(pColor2 == "")
-                        pColor2 = result.pColor2;
-                    if(pColor3 == "")
-                        pColor3 = result.pColor3;
-                    if(pColor4 == "")
-                        pColor4 = result.pColor4;
-
-                    if(pSize1 == "")
-                        pSize1 = result.pSize1;
-                    if(pSize2 == "")
-                        pSize2 = result.pSize2;
-                    if(pSize3 == "")
-                        pSize3 = result.pSize3;
-                    if(pSize4 == "")
-                        pSize4 = result.pSize4;
-
+                    // checks if image values were blank. If blank, then it keeps the old value
                     if(pImage1 == "")
                         pImage1 = result.pImage1;
                     if(pImage2 == "")
